@@ -95,9 +95,9 @@ def main():
         x,y = polar_to_cartesian(200, np.pi)
         x, y = cordinate(x,y)
         ex.testUI(x, y)
-    #ex.show()
-    #sys.exit(app.exec())
-    ex.exec()
+    ex.show()
+    sys.exit(app.exec())
+    #ex.exec()
     n += 1
     n %= 2
     print(n)

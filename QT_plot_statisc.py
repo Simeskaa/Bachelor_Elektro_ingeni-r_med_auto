@@ -68,7 +68,7 @@ class Example(QWidget):
    def testUI(self,x,y):
       #  self.text = "hello world"
       self.UiComponents(x,y)
-      self.show()
+      #self.show()
 
 
    def UiComponents(self, x, y):
@@ -127,6 +127,7 @@ def cordinate(x, y):  # bære navn trengs
    return x_new, y_new
 
 def polar_to_cartesian(r, vinkel):
+   #vinkel += np.pi
    x = r * np.cos(vinkel)
    y = r * np.sin(vinkel)
    return x,y
@@ -134,11 +135,22 @@ def polar_to_cartesian(r, vinkel):
 def main():
    app = QApplication(sys.argv)
    ex = Example()
-   x,y = polar_to_cartesian(300, np.pi)
-   print(f'x er {x}, y er {y}')
-   x, y = cordinate(x,y)
-   print(f'x er {x}, y er {y}')
-   ex.testUI(x, y)
+   x1,y1 = polar_to_cartesian(200, np.pi)
+   x1, y1 = cordinate(x1, y1)
+   ex.testUI(x1, y1)
+   x2, y2 = polar_to_cartesian(200, np.pi / 2)
+   x2, y2 = cordinate(x2, y2)
+   ex.testUI(x2, y2)
+   x3, y3 = polar_to_cartesian(200, np.pi / 3)
+   x3, y3 = cordinate(x3, y3)
+   ex.testUI(x3, y3)
+   x3, y3 = polar_to_cartesian(200, np.pi / 4)
+   x3, y3 = cordinate(x3, y3)
+   ex.testUI(x3, y3)
+   #print(f'x er {x}, y er {y}')
+
+   #print(f'x er {x}, y er {y}')
+   ex.show()
    sys.exit(app.exec())
 
 if __name__ == '__main__':
