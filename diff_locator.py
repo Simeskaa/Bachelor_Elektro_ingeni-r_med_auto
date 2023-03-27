@@ -23,7 +23,7 @@ mic_positions = np.array([
     [triangle_side_length/2, triangle_side_length*np.sqrt(3)/2, 0.0],  # Microphone 3 at (0.5, sqrt(3)/2, 0)
 ])
 
-def angle_calc(deg, length):
+def angle_calculator(deg, length):
     angle = deg % 180
     angle %= 60
     hyp = length - (length * (angle/60))
@@ -58,6 +58,28 @@ def sample_to_time(sample):
     t = sample/samplerate
     return t
 
+def angle_of_arrival_calculator(time1, time2, time3, length):
+    c = 343  # Speed of sound in m/s
+    t1 = time1 * c
+    t2 = time2 * c
+    t3 = time3 * c
+
+    if t1 < t2 and t1 < t3:
+        x = t1 / length
+        y = np.sqrt(t2**2 - length**2 * x**2)
+        angle = np.arctan2(y, length * x) * 180 / np.pi
+    elif t2 < t1 and t2 < t3:
+        x = (length - t2) / length
+        y = np.sqrt(t3**2 - length**2 * (1 - x)**2)
+        angle = np.arctan2(y, length * (1 - x)) * 180 / np.pi
+    else:
+        x = (length - t3) / length
+        y = np.sqrt(t2**2 - length**2 * (1 - x)**2)
+        angle = 180 - np.arctan2(y, length * (1 - x)) * 180 / np.pi
+
+    return angle
+
+
 yn1 = convolve(xn_rx_1)
 yn2 = convolve(xn_rx_2)
 yn3 = convolve(xn_rx_3)
@@ -70,9 +92,12 @@ t1 = sample_to_time(sample1)
 t2 = sample_to_time(sample2)
 t3 = sample_to_time(sample3)
 
-print(angle_calc(75, 12))
+print(angle_calculator(15, 12))
+#angle = angle_calc(t1, t2, t3)
+#print("Angle of arrival:", angle)
 
-print("Mic1 starter:", sample1, "time:", round(t1, 3), "offsett(s):", 0)
+print("Mic1 starter:", sample1, "time:", round(t1, 3), "offsett(s):", round(t1, 1))
 print("Mic2 starter:", sample2, "time:", round(t2, 3), "offsett(ms):", round(t2-t1, 4)*10**3)
 print("Mic3 starter:", sample3, "time:", round(t3, 3), "offsett(ms):", round(t3-t1, 4)*10**3)
 
+print(angle_of_arrival_calculator(0, t2-t1, t3-t1, 12))
