@@ -114,7 +114,6 @@ class Example(QWidget):
       # qp.drawText(1000, 5000, "315")
       # qp.drawText(1000, 5000, "330")
       # qp.drawText(1000, 5000, "345")
-
       qp.setPen(QColor(Qt.black))
       qp.drawEllipse(350, 350, 2, 2)
       qp.drawEllipse(200, 200, 300, 300)
@@ -125,13 +124,11 @@ class Example(QWidget):
 def cordinate(x, y):  # bære navn trengs
    x_new = x + 350
    y_new = -y + 350
-   return y_new, x_new
+   return x_new, y_new
 
 def polar_to_cartesian(r, vinkel):
-   print(r,vinkel)
    x = r * np.cos(vinkel)
    y = r * np.sin(vinkel)
-   print(x,y)
    return x,y
 
 def main():
@@ -140,10 +137,8 @@ def main():
    x,y = polar_to_cartesian(300, np.pi)
    print(f'x er {x}, y er {y}')
    x, y = cordinate(x,y)
-   #print(x,y)
+   print(f'x er {x}, y er {y}')
    ex.testUI(x, y)
-   #print('test')
-   #ex.UiComponents(x,y) #legg x,y cordinate inn i classen, sånn an e nå vil ikkje luringen visa
    sys.exit(app.exec())
 
 if __name__ == '__main__':
