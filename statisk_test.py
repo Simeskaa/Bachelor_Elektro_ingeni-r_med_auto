@@ -75,35 +75,22 @@ def angle_calc2(tdoas: list, spd_sound: float, spacing: float):
     print(angle)
     return angle
 
-def angle_calc3(tdoas: list, spd_sound: float, spacing: float):
-    tdoas_temp = copy.copy(tdoas)
-    tdoas_temp = tdoas_temp[1:]
-    print(tdoas_temp)
-    ref = np.argmin(tdoas_temp[1:])
-    if ref == 0:
-        print("t2 is ref")
-
-    elif ref == 1:
-        print("t3 is ref")
-    diff = (max(tdoas_temp[0], tdoas_temp[1]) - min(tdoas_temp[0], tdoas_temp[1]))
-    dist = diff * spd_sound
-    angle = np.arccos(dist / spacing) * 180 / np.pi
-    return angle
-
 def angle_calc4(tdoas: list, spd_sound: float, spacing: float):
-    tdoas_temp = copy.copy(tdoas)
-    tdoas_temp = tdoas_temp[1:]
-    time_diff = tdoas_temp[2] - tdoas_temp[1]
+    #tdoas_temp = copy.copy(tdoas)
+    #tdoas_temp = tdoas_temp[1:]
+    #print(tdoas_temp)
+    time_diff = tdoas[2] - tdoas[1]
     dist = time_diff * spd_sound
-    angle = np.arccos(dist / spacing) * 180 / np.pi
-
-    "if mic1 >= mic 2 or mic 1>= mic2:" \
-    "angle + nåe"
+    angle = np.arccos(dist / spacing)
+    print(dist)
+    print(angle)
+    if tdoas[0] > tdoas[3]:
+        angle = 2*np.pi - angle
     return angle
 
 
-print("samplerate:", samplerate)
-print("Antall sampler:", len(xn_rx_1))
+#print("samplerate:", samplerate)
+#print("Antall sampler:", len(xn_rx_1))
 
 
 yn1 = convolve(xn_rx_1)
@@ -118,9 +105,9 @@ t1 = sample_to_time(sample1)
 t2 = sample_to_time(sample2)
 t3 = sample_to_time(sample3)
 
-print("Mic1 starter:", sample1, "time:", round(t1, 3), "offsett(s):", 0)
-print("Mic2 starter:", sample2, "time:", round(t2, 3), "offsett(ms):", round(t2-t1, 4)*10**3)
-print("Mic3 starter:", sample3, "time:", round(t3, 3), "offsett(ms):", round(t3-t1, 4)*10**3)
+#print("Mic1 starter:", sample1, "time:", round(t1, 3), "offsett(s):", 0)
+#print("Mic2 starter:", sample2, "time:", round(t2, 3), "offsett(ms):", round(t2-t1, 4)*10**3)
+#print("Mic3 starter:", sample3, "time:", round(t3, 3), "offsett(ms):", round(t3-t1, 4)*10**3)
 
 
 
@@ -139,27 +126,26 @@ if False:
 
 #--------------------------------------------------------------------------
 
-#toa = [t1, t2, t3]
-toa = [t1, t2, t3]
-print(f't1 = {t1} t2 = {t2} t3 = {t3}')
+#hånd generert timestamps
+t1 = 0.0
+t2 = 0.019
+t3 = 0.029
+t4 = t3 + t2
+
+toa = [t2, t4, t1, t3]
+print(f't1 = {toa[0]}, t2 = {toa[1]}, t3 = {toa[2]}, t4 = {toa[3]}, angle = {angle_calc4(toa, 343.0, 12.*np.sqrt(2.))*180/(np.pi)}')
+"""
 ref = np.argmin(toa)
 tdoas = [float(toa[0] - toa[ref]), float(toa[1] - toa[ref]), float(toa[2]- toa[ref])]
-print("angle from", toa, "is:", angle_calc3(toa, 434.0, 12))
+"""
+#vinkel beregning
+vinkel = angle_calc4(toa, 343.0, 12.*np.sqrt(2.))
 
-#print("ANGLE:", angle_calc2(tdoas, 434.0, 12))
-#vinkel = angle_calc2(tdoas, 434.0, 12)
-
-
-
-# app = QApplication(sys.argv)
-# ex = Example()
-# print(vinkel)
-# vinkel_rad = vinkel*(np.pi/180)
-# print(vinkel_rad)
-# x,y = polar_to_cartesian(200, vinkel_rad)
-# print(f'x er {x}, y er {y}')
-# x, y = cordinate(x,y)
-# print(f'x er {x}, y er {y}')
-# ex.testUI(x, y)
-# #ex.show()
-# sys.exit(app.exec())
+#plotting av vinkel
+app = QApplication(sys.argv)
+ex = Example()
+x,y = polar_to_cartesian(200, vinkel)
+x, y = cordinate(x,y)
+ex.testUI(x, y)
+ex.show()
+sys.exit(app.exec())
