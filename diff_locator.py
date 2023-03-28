@@ -30,7 +30,7 @@ def angle_calculator(deg, length):
     mot = hyp * np.sin(30 * np.pi / 180)
     hos = hyp * np.cos(30 * np.pi / 180)
     dist = np.sqrt(np.square(length-mot) + np.square(hos))
-    print("angle:", angle)
+    #print("angle:", angle)
     # print("dist:", dist)
     # print("hyp:", hyp)
     # print("mot:", mot)
@@ -96,8 +96,13 @@ print(angle_calculator(15, 12))
 #angle = angle_calc(t1, t2, t3)
 #print("Angle of arrival:", angle)
 
-print("Mic1 starter:", sample1, "time:", round(t1, 3), "offsett(s):", round(t1, 1))
-print("Mic2 starter:", sample2, "time:", round(t2, 3), "offsett(ms):", round(t2-t1, 4)*10**3)
-print("Mic3 starter:", sample3, "time:", round(t3, 3), "offsett(ms):", round(t3-t1, 4)*10**3)
+#print("Mic1 starter:", sample1, "time:", round(t1, 3), "offsett(s):", round(t1, 1))
+#print("Mic2 starter:", sample2, "time:", round(t2, 3), "offsett(ms):", round(t2-t1, 4)*10**3)
+#print("Mic3 starter:", sample3, "time:", round(t3, 3), "offsett(ms):", round(t3-t1, 4)*10**3)
 
-print(angle_of_arrival_calculator(0, t2-t1, t3-t1, 12))
+#print(angle_of_arrival_calculator(0, t2-t1, t3-t1, 12))
+empty = []
+for i in range(358):
+    empty.append(angle_calculator(i+1, 12))
+
+print(empty)

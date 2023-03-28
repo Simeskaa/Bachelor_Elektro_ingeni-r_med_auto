@@ -3,8 +3,7 @@ import numpy as np                          # Importer funksjonalitet fra numpy 
 import scipy.signal as sig                  # Importerer signalbehandlingsmodulen til scipy
 import matplotlib.pyplot as plt             # Importer pyplot modulen i matplotlib med prefiks "plt"
 from scipy.io import wavfile
-from chatTriangulation import SoundTriangulation
-
+import copy
 
 
 samplerate, data = wavfile.read('lyd_filer/shhtut_10.wav')
@@ -26,7 +25,6 @@ mic_positions = np.array([
     [triangle_side_length/2, triangle_side_length*np.sqrt(3)/2, 0.0],  # Microphone 3 at (0.5, sqrt(3)/2, 0)
 ])
 
-st = SoundTriangulation(mic_positions)
 
 def convolve(signal):
     yn = sig.correlate(signal, pulse)
@@ -51,7 +49,7 @@ def angle_calc(tdoas: list, spd_sound: float, spacing: float):
     return angle
 
 def angle_calc2(tdoas: list, spd_sound: float, spacing: float):
-    tdoas_temp = tdoas
+    tdoas_temp = copy.copy(tdoas)
     ref = np.argmin(tdoas_temp)
     if ref == 0:
         offsett = 90
@@ -65,19 +63,21 @@ def angle_calc2(tdoas: list, spd_sound: float, spacing: float):
     else:
         print("ref: multiple or error")
 
-    print(tdoas_temp)
+    #print(tdoas_temp)
+    print(f"temp:{tdoas_temp}, norm:{tdoas}")
     tdoas_temp.remove(tdoas_temp[ref])
-    print(tdoas_temp)
+    print(f"temp:{tdoas_temp}, norm:{tdoas}")
+    #print(tdoas_temp)
     diff = (max(tdoas_temp[1], tdoas_temp[0]) - min(tdoas_temp[1], tdoas_temp[0])) # *10**-3 uncomment if in millis
-    print("diff:", diff)
+    #print("diff:", diff)
     dist = diff * spd_sound
-    print("dist:", dist)
+    #print("dist:", dist)
     angle = offsett - np.arccos(dist/spacing) * 180/np.pi
     return angle
 
 
-print("samplerate:", samplerate)
-print("Antall sampler:", len(xn_rx_1))
+# print("samplerate:", samplerate)
+# print("Antall sampler:", len(xn_rx_1))
 
 
 yn1 = convolve(xn_rx_1)
@@ -92,15 +92,15 @@ t1 = sample_to_time(sample1)
 t2 = sample_to_time(sample2)
 t3 = sample_to_time(sample3)
 
-print("Mic1 starter:", sample1, "time:", round(t1, 3), "offsett(s):", 0)
-print("Mic2 starter:", sample2, "time:", round(t2, 3), "offsett(ms):", round(t2-t1, 4)*10**3)
-print("Mic3 starter:", sample3, "time:", round(t3, 3), "offsett(ms):", round(t3-t1, 4)*10**3)
+# print("Mic1 starter:", sample1, "time:", round(t1, 3), "offsett(s):", 0)
+# print("Mic2 starter:", sample2, "time:", round(t2, 3), "offsett(ms):", round(t2-t1, 4)*10**3)
+# print("Mic3 starter:", sample3, "time:", round(t3, 3), "offsett(ms):", round(t3-t1, 4)*10**3)
 
 
 
 #--------------------------------------------------------------------------
 
-if True:
+if False:
     plt.close(2); plt.figure(2, figsize=(9, 3))
     plt.plot(yn1, color='blue')
     plt.plot(yn2, color='red')
@@ -112,12 +112,12 @@ if True:
     plt.show()
 
 #--------------------------------------------------------------------------
+toa = [t1, t2, t3]
+ref = np.argmin(toa)
+print("ref:", ref)
+tdoas2 = [float(t1 - toa[ref]), float(t2 - toa[ref]), float(t3 - toa[ref])]
+print("angle from", tdoas2, "is:", angle_calc2(tdoas=tdoas2, spd_sound=434.0, spacing=12))
 
-doa1 = float((t2-t1))
-doa2 = float((t3-t1))
-tdoas = [0, doa1, doa2]
-
-#print(angle_calc(tdoas, 434.0, 12))
-print("angle from", tdoas, "is:", angle_calc2(tdoas, 434.0, 12))
+print(angle_calc2(tdoas2, 434.0, 12))
 
 
