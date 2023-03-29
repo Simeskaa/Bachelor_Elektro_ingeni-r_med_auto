@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Open the CSV file
-with open('data1.csv', 'r') as csv_file:
+with open('data2.csv', 'r') as csv_file:
     # Read the CSV file using a CSV reader
     csv_reader = csv.reader(csv_file)
 
