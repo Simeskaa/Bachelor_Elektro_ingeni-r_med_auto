@@ -25,12 +25,15 @@ class Dialog(QDialog):
         main_layout.setSizeConstraint(QLayout.SetMinimumSize)
 
         self._main_layout = main_layout
+
         self.setLayout(self._main_layout)
 
         self.setWindowTitle("Dynamic Layouts")
 
     def rotate_widgets(self):
         count = len(self._rotable_widgets)
+        #rint("hei")
+
         if count % 2 == 1: #usikker på koffe
             raise AssertionError("Number of widgets must be even")
 
@@ -126,4 +129,7 @@ if __name__ == '__main__':
 
     app = QApplication(sys.argv)
     dialog = Dialog()
+    #dialog.show()
+    print('hei')
     dialog.exec()
+    print('hallo')

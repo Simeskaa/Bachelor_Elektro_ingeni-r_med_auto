@@ -139,6 +139,7 @@ def main():
    x, y = cordinate(x,y)
    print(f'x er {x}, y er {y}')
    ex.testUI(x, y)
+
    sys.exit(app.exec())
 
 if __name__ == '__main__':
