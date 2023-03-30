@@ -21,7 +21,7 @@ with open('data2.csv', 'r') as csv_file:
 
     x_values = np.arange(len(y_values))
 
-    big = 4095
+    big = max(y_values)
     for i in range(len(y_values)):
         y_values[i] = float(y_values[i])/big
 
@@ -30,7 +30,7 @@ with open('data2.csv', 'r') as csv_file:
 plt.plot(x_values, y_values)
 
 # Set the title and axis labels
-plt.title('Data1 Plot')
+plt.title('Plot (Clap)')
 plt.xlabel('Samples')
 plt.ylabel('Data')
 
