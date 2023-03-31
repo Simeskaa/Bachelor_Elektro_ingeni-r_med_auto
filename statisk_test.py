@@ -88,22 +88,39 @@ def angle_calc4(tdoas: list, spd_sound: float, spacing: float):
         angle = 2*np.pi - angle
     return angle
 
+def angle_calc5(tdoas: dict, spd_sound: float, spacing_big: float, spacing_little: float):
+    angle_m2_m3 = np.arccos((tdoas['m2'] - tdoas['m3'])*spd_sound/spacing_big)
+    angle_m1_m4 = np.arccos((tdoas['m4'] - tdoas['m1']) * spd_sound / spacing_big)
+    angle_m2_m4 = np.arccos((tdoas['m2'] - tdoas['m4']) * spd_sound / spacing_little)
+    angle_m1_m3 = np.arccos((tdoas['m3'] - tdoas['m1']) * spd_sound / spacing_little)
+    angle_m2_m1 = np.arccos((tdoas['m2'] - tdoas['m1']) * spd_sound / spacing_little)
+    angle_m4_m3 = np.arccos((tdoas['m4'] - tdoas['m3']) * spd_sound / spacing_little)
+
+    list_angles = [angle_m2_m3, angle_m1_m4, angle_m2_m4, angle_m1_m3, angle_m2_m1, angle_m4_m3]
+    if tdoas['m1'] > tdoas['m4']:
+        for i in range(len(list_angles)):
+            list_angles[i] = 2*np.pi - list_angles[i]
+
+    for i in range(len(list_angles)):
+        list_angles[i] = list_angles[i] * 180/np.pi
+
+    print(list_angles)
 
 #print("samplerate:", samplerate)
 #print("Antall sampler:", len(xn_rx_1))
 
 
-yn1 = convolve(xn_rx_1)
-yn2 = convolve(xn_rx_2)
-yn3 = convolve(xn_rx_3)
-
-sample1 = np.argmax(yn1)-len(pulse)+1
-sample2 = np.argmax(yn2)-len(pulse)+1
-sample3 = np.argmax(yn3)-len(pulse)+1
-
-t1 = sample_to_time(sample1)
-t2 = sample_to_time(sample2)
-t3 = sample_to_time(sample3)
+# yn1 = convolve(xn_rx_1)
+# yn2 = convolve(xn_rx_2)
+# yn3 = convolve(xn_rx_3)
+#
+# sample1 = np.argmax(yn1)-len(pulse)+1
+# sample2 = np.argmax(yn2)-len(pulse)+1
+# sample3 = np.argmax(yn3)-len(pulse)+1
+#
+# t1 = sample_to_time(sample1)
+# t2 = sample_to_time(sample2)
+# t3 = sample_to_time(sample3)
 
 #print("Mic1 starter:", sample1, "time:", round(t1, 3), "offsett(s):", 0)
 #print("Mic2 starter:", sample2, "time:", round(t2, 3), "offsett(ms):", round(t2-t1, 4)*10**3)
@@ -132,20 +149,23 @@ t2 = 0.019
 t3 = 0.029
 t4 = t3 + t2
 
-toa = [t2, t4, t1, t3]
-print(f't1 = {toa[0]}, t2 = {toa[1]}, t3 = {toa[2]}, t4 = {toa[3]}, angle = {angle_calc4(toa, 343.0, 12.*np.sqrt(2.))*180/(np.pi)}')
+toa = [t1, t2, t1, t3]
+mic = {'m1':t3, 'm2':t4, 'm3':t1, 'm4':t2}
+
+angle_calc5(mic, 343.0, 12.*np.sqrt(2.), 12.)
+#print(f't1 = {toa[0]}, t2 = {toa[1]}, t3 = {toa[2]}, t4 = {toa[3]}, angle = {angle_calc4(toa, 343.0, 12.*np.sqrt(2.))*180/(np.pi)}')
 """
 ref = np.argmin(toa)
 tdoas = [float(toa[0] - toa[ref]), float(toa[1] - toa[ref]), float(toa[2]- toa[ref])]
 """
 #vinkel beregning
-vinkel = angle_calc4(toa, 343.0, 12.*np.sqrt(2.))
-
-#plotting av vinkel
-app = QApplication(sys.argv)
-ex = Example()
-x,y = polar_to_cartesian(200, vinkel)
-x, y = cordinate(x,y)
-ex.testUI(x, y)
-ex.show()
-sys.exit(app.exec())
+# vinkel = angle_calc4(toa, 343.0, 12.*np.sqrt(2.))
+#
+# #plotting av vinkel
+# app = QApplication(sys.argv)
+# ex = Example()
+# x,y = polar_to_cartesian(200, vinkel)
+# x, y = cordinate(x,y)
+# ex.testUI(x, y)
+# ex.show()
+# sys.exit(app.exec())
