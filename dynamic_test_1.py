@@ -83,3 +83,5 @@ if __name__ == '__main__':
     #time.sleep(5)
     dialog.exec()
 
+    #invoke later eller invoke wait kø system
+
