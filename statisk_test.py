@@ -109,7 +109,7 @@ def angle_calc5(tdoas: dict, spd_sound: float, spacing_big: float, spacing_littl
     for i in range(len(list_angles)):
         list_angles[i] = list_angles[i] * 180/np.pi
 
-    #print(list_angles)
+    print(list_angles)
     #print(angle)
     return angle
 
@@ -168,15 +168,15 @@ ref = np.argmin(toa)
 tdoas = [float(toa[0] - toa[ref]), float(toa[1] - toa[ref]), float(toa[2]- toa[ref])]
 """
 #vinkel beregning
-vinkel = angle_calc4(toa, 343.0, 12.*np.sqrt(2.))
+#vinkel = angle_calc4(toa, 343.0, 12.*np.sqrt(2.))
 
 #plotting av vinkel
 app = QApplication(sys.argv)
 ex = Example()
-x,y = polar_to_cartesian(200, vinkel)
-x, y = cordinate(x,y)
+#x,y = polar_to_cartesian(200, vinkel)
+#x, y = cordinate(x,y)
 
-
+#print(angle_list)
 cart_cord = polar_to_cartesian_list_version(1000, angle_list)
 print(cart_cord)
 center_cord = cordinate_list_version(cart_cord)

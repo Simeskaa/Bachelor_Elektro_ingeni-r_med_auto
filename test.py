@@ -1,4 +1,5 @@
 import numpy as np
+from math import acos
 
 # print(np.arccos(-9.88 / 12) * (180 / np.pi), np.arccos(9.88 / 12) * (180 / np.pi))
 # print(np.sqrt(2) * 12)
@@ -12,3 +13,4 @@ for i in range(6):
     liste[m] = 1
 
 print(liste)
+

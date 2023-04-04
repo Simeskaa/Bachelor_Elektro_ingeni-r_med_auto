@@ -144,8 +144,8 @@ class Example(QWidget):
       #list_line['l_1'].intersects(list_line['l_5'])
       #veit = list_line['l_1'].intersects(list_line['l_6'])
       #return veit
-      for i in range(len(list_line)):
-         print(list_line[f'l_{i+1}'])
+      #for i in range(len(list_line)):
+         #print(list_line[f'l_{i+1}'])
 
 
 def cordinate(x, y):  # bære navn trengs
