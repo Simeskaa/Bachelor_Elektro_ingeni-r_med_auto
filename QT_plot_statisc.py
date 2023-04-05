@@ -126,7 +126,7 @@ class Example(QWidget):
       #QLine(350,450)
       list_line = {}
       for i in range(6):
-      name = f'l_{i+1}'
+         name = f'l_{i+1}'
          #start_cord
          list_line[name] = QLineF(start_cord[f'x_{i+1}'], start_cord[f'y_{i+1}'], end_cord[f'x_{i+1}'], end_cord[f'y_{i+1}'])
          #list_line[name].isNull()
