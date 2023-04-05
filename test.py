@@ -12,5 +12,11 @@ for i in range(6):
     m = f'm{i+1}'
     liste[m] = 1
 
+for i in range(6):
+    m = f'm{i+1}'
+    liste[m] = liste[m] + 1
+
 print(liste)
+
+
 
