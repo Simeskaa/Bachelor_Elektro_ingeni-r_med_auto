@@ -7,16 +7,33 @@ from math import acos
 # print((3 - 2) * 2 / 3)
 # a = 3 - 2
 # print(a * 2 / 3)
-liste = {}
-for i in range(6):
-    m = f'm{i+1}'
-    liste[m] = 1
+# liste = {}
+# for i in range(6):
+#     m = f'm{i+1}'
+#     liste[m] = 1
+#
+# for i in range(6):
+#     m = f'm{i+1}'
+#     liste[m] = liste[m] + 1
+#
+# print(liste)
 
-for i in range(6):
-    m = f'm{i+1}'
-    liste[m] = liste[m] + 1
-
-print(liste)
-
-
+def main_1():
+    # toad_78 = [0, 0.019, 0.029, 0.048]
+    # toad_45 = [0.0, 0.0, 0.027, 0.027]
+    # toad_34 = [0., (1.37 + 0.92) / 343, (1.37 + 0.92 + 9.506) / 343, (1.37 + 0.92 + 9.506 + 1.438 + 0.809) / 343]
+    #
+    # t1 = toad_45[0]
+    # t2 = toad_45[1]
+    # t3 = toad_45[2]
+    # t4 = toad_45[3]
+    #
+    # mic = {'m1': t1, 'm2': t3, 'm3': t2, 'm4': t4}
+    #
+    # ref = np.argmin(mic)
+    # print(ref)
+    #angle_m2_m1 = np.arccos((0.035 * 343 % 12) / 12 ) * 180/np.pi
+    print(1,-1,1 >= 0)
+if __name__ == '__main__':
+    main_1()
 
