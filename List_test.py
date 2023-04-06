@@ -31,3 +31,4 @@ def angle_calc2(tdoas: list, spd_sound: float, spacing: float):
     #print("dist:", dist)
     angle = offsett - np.arccos(dist/spacing) * 180/np.pi
     return angle
+

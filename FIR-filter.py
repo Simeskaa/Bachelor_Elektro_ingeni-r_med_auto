@@ -38,6 +38,8 @@ if False:
 hn = pulse[::-1]
 yn = np.convolve(hn, xn_rx)
 
+print(hn)
+
 if False:
     plt.close(2); plt.figure(2,figsize=(9, 3))
 
@@ -58,7 +60,10 @@ if True:
     plt.plot(f, Hw_amp)
 
 
-    #plt.close(3); plt.figure(3)
+    plt.close(3); plt.figure(3)
+    #plt.semilogy(f, Hw_amp)
     #plt.semilogy(np.fft.fft(np.abs(xn_rx)))
+
+    plt.plot(f, Hw_amp)
     plt.show()
     #print(np.argmax(Hw))
