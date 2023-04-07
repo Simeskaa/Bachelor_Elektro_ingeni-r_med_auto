@@ -84,6 +84,17 @@ yn1 = convolve(xn_rx_1)
 yn2 = convolve(xn_rx_2)
 yn3 = convolve(xn_rx_3)
 
+plt.close(); plt.figure(1)
+plt.subplot(2,1,1)
+plt.title('Filtered Signal')
+plt.plot(yn1)
+
+plt.subplot(2,1,2)
+plt.title('Raw Signal')
+plt.plot(xn_rx_1)
+plt.tight_layout()
+plt.show()
+
 sample1 = np.argmax(yn1)-len(pulse)+1
 sample2 = np.argmax(yn2)-len(pulse)+1
 sample3 = np.argmax(yn3)-len(pulse)+1
@@ -112,12 +123,12 @@ if False:
     plt.show()
 
 #--------------------------------------------------------------------------
-toa = [t1, t2, t3]
-ref = np.argmin(toa)
-print("ref:", ref)
-tdoas2 = [float(t1 - toa[ref]), float(t2 - toa[ref]), float(t3 - toa[ref])]
-print("angle from", tdoas2, "is:", angle_calc2(tdoas=tdoas2, spd_sound=434.0, spacing=12))
-
-print(angle_calc2(tdoas2, 434.0, 12))
+# toa = [t1, t2, t3]
+# ref = np.argmin(toa)
+# print("ref:", ref)
+# tdoas2 = [float(t1 - toa[ref]), float(t2 - toa[ref]), float(t3 - toa[ref])]
+# print("angle from", tdoas2, "is:", angle_calc2(tdoas=tdoas2, spd_sound=434.0, spacing=12))
+#
+# print(angle_calc2(tdoas2, 434.0, 12))
 
 
