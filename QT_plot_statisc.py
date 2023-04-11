@@ -127,30 +127,37 @@ class Example(QWidget):
       list_line = {}
       for i in range(6):
          name = f'l_{i+1}'
-         #start_cord
-         list_line[name] = QLineF(start_cord[f'x_{i+1}'], start_cord[f'y_{i+1}'], end_cord[f'x_{i+1}'], end_cord[f'y_{i+1}'])
-         #list_line[name].isNull()
-         #print(f'hei_{i}')
-      #print(list_line['l_3'])
-      #veit = QLineF.IntersectionType(list_line['l_1'], list_line['l_2'])
-      #, list_line['l_2'], list_line['l_3'], list_line['l_4'], list_line['l_5'], list_line['l_6']
-      #print(veit)
-      #return list_line
-      #l1
-      #l1.isNull()
-      #print(list_line['l_1'].intersects(list_line['l_2']))
-      #list_line['l_1'].intersects(list_line['l_3'])
-      #list_line['l_1'].intersects(list_line['l_4'])
-      #list_line['l_1'].intersects(list_line['l_5'])
-      #veit = list_line['l_1'].intersects(list_line['l_6'])
-      #return veit
-      #for i in range(len(list_line)):
-         #print(list_line[f'l_{i+1}'])
+         p1 = QPointF(start_cord[f'x_{i+1}'], start_cord[f'y_{i+1}'])
+         p2 = QPointF(end_cord[f'x_{i+1}'], end_cord[f'y_{i+1}'])
+         list_line[name] = QLineF(p1, p2)
+
+      print()
+      par_1 = list_line['l_1'].intersects(list_line['l_6'])
+      par_2 = list_line['l_2'].intersects(list_line['l_4'])
+      par_3 = list_line['l_3'].intersects(list_line['l_5'])
+
+      final_cord = {'par 1': par_1, 'par 2': par_2, 'par 3': par_3}
+
+
+
+      # print('6')
+      # print(list_line['l_1'])
+      # test = list_line['l_1'].intersects(list_line['l_2'])
+      # fokk = QLineF(340., 340., test[1].x(), test[1].y())
+      # mamma = fokk.intersects(list_line['l_3'])
+      # print(mamma)
+      # list_line['l_1'].intersects(list_line['l_4'])
+      # print(list_line['l_1'])
+      # list_line['l_1'].intersects(list_line['l_5'])
+      # print(list_line['l_1'])
+      # final_cord = list_line['l_1'].intersects(list_line['l_6'])
+      return final_cord
+
 
 
 def cordinate(x, y):  # bære navn trengs
-   x_new = x + 350
-   y_new = -y + 350
+   x_new = x + 340
+   y_new = -y + 340
    return x_new, y_new
 
 def cordinate_list_version(list_cord: dict):  # bære navn trengs
@@ -158,8 +165,8 @@ def cordinate_list_version(list_cord: dict):  # bære navn trengs
    for i in range(6):
       name_x = f'x_{i+1}'
       name_y = f'y_{i+1}'
-      center_cord[name_x] = list_cord[name_x] + 350
-      center_cord[name_y] = -list_cord[name_y] + 350
+      center_cord[name_x] = list_cord[name_x] + 340
+      center_cord[name_y] = -list_cord[name_y] + 340
       #print(center_cord)
 
    return center_cord
@@ -176,10 +183,9 @@ def polar_to_cartesian_list_version(r, vinkel:dict):
    for i in range( 6):
       x_name = f'x_{i+1}'
       y_name = f'y_{i+1}'
-      x = r * np.cos(vinkel[f'angle {i+1}'])
-      y = r * np.sin(vinkel[f'angle {i+1}'])
-      list_cartesian_cord[x_name] = x
-      list_cartesian_cord[y_name] = y
+      list_cartesian_cord[x_name] = r * np.cos(vinkel[f'angle {i+1}'])
+      list_cartesian_cord[y_name] = r * np.sin(vinkel[f'angle {i+1}'])
+
 
    return list_cartesian_cord
 
@@ -197,7 +203,7 @@ def main():
    #ex.testUI(x3, y3)
    x3, y3 = polar_to_cartesian(200, np.pi / 4)
    x3, y3 = cordinate(x3, y3)
-   ex.testUI(x3, y3)
+   ex.testUI(350, 350)
    #print(f'x er {x}, y er {y}')
 
    #print(f'x er {x}, y er {y}')

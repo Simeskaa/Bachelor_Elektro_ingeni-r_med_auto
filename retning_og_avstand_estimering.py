@@ -137,13 +137,26 @@ def main():
     angle_list = anglechenanigens()
     app = QApplication(sys.argv)
     ex = Example()
+    #print('1')
+    #print(angle_list['angle 1']*180/np.pi)
+
     cart_cord = polar_to_cartesian_list_version(1000, angle_list)
-    center_cord = cordinate_list_version(cart_cord)
+    print('2')
+    print(cart_cord)
+
+    #center_cord = cordinate_list_version(cart_cord)
+    #print('3')
+    #print(center_cord['x_1'], center_cord['y_1'])
     start_cord = {'x_1': 6 * np.sqrt(2), 'y_1': 0, 'x_2': 6 * np.sqrt(2), 'y_2': 0,
                   'x_3': 3 * np.sqrt(2), 'y_3': -3 * np.sqrt(2), 'x_4': 9 * np.sqrt(2), 'y_4': 3 * np.sqrt(2),
                   'x_5': 3 * np.sqrt(2), 'y_5': 3 * np.sqrt(2), 'x_6': 9 * np.sqrt(2), 'y_6': -3 * np.sqrt(2)}
-    center_start_cord = cordinate_list_version(start_cord)
-    test = ex.make_line(start_cord= center_start_cord, end_cord= center_cord)
+    print('4')
+    print(start_cord)
+    #center_start_cord = cordinate_list_version(start_cord)
+    #print('5')
+    #print(center_start_cord['x_1'], center_start_cord['y_1'])
+    test = ex.make_line(start_cord= start_cord, end_cord= cart_cord)
+    #print('7')
     print(test)
 if __name__ == '__main__':
    main()
