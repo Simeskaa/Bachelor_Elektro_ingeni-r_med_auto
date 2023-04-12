@@ -5,7 +5,8 @@ import matplotlib.pyplot as plt             # Importer pyplot modulen i matplotl
 from scipy.io import wavfile
 from scipy.io.wavfile import write
 
-samplerate, data = wavfile.read('lyd_filer/140Hz_and_1000Hz.wav')
+#samplerate, data = wavfile.read('lyd_filer/Noise.wav')
+samplerate, data = wavfile.read('lyd_filer/140Hz n noise.wav')
 xn_rx = data.T / 0x7FFF
 
 def resize(a:list, old_size:int, new_size:int):
@@ -47,33 +48,61 @@ def IIR_filter(x: float):
 
 def FIR_filter(x: float):
     fs = 22050
-    fzero = 100
-    L= fs//fzero
-    w_bp = pi/80
+    fzero = 50
+    L = fs//fzero
+    w_bp = 1000/fs*2*np.pi
 
-    hn_bp = cos(w_bp*np.arange(L))*2*sig.hamming(L) #multipliser med 2 for å svare på spørmål b)
+    hn = np.ones(L)/L
+    hn_bp = cos(w_bp*np.arange(L))*sig.hamming(L) #multipliser med 2 for å svare på spørmål b)
     y = sig.convolve(x, hn_bp)
 
     # Vis Styrkegradsresponse
     if True:
-        w, Hw = sig.freqz(b = hn_bp, fs=fs, worN=512)  # Regn ut frekvensresponsen til filteret
+        w, Hw = sig.freqz(b = hn_bp, fs=fs, worN=4096)  # Regn ut frekvensresponsen til filteret
         Hw_amp = np.abs(Hw)
         Hw_phase = (np.angle(Hw))
 
+
+
         # Presenter frekvensresponsen grafisk.
-        plt.close(1); plt.figure(1)
-        plt.subplot(2,1,1)
-        plt.title(r'Frekvensrespons til digitalt filter')
-        plt.plot(w, Hw_amp)
-        plt.grid(True)
+        plt.close(1); plt.figure(1, figsize=(14,5))
+        plt.subplot(2, 2, 1); plt.xlim([50, 1100]); plt.grid(True); plt.plot(w, Hw_amp)
+        plt.title(r'Frekvensrespons')
         plt.ylabel(r'Styrkegrad')
 
-        plt.subplot(2,1,2)
-        plt.plot(w, Hw_phase)
-        plt.grid(True)
-        plt.xlabel(r'Digital Frekvens (Hz)')
-        plt.ylabel(r'Fase')
+        # Presenter frekvensresponsen grafisk.
+        plt.subplot(2, 2, 3); plt.xlim([50, 1100]); plt.grid(True); plt.plot(w, Hw_phase)
+        plt.title(r'Faseresponse')
+        plt.ylabel(r'Angle')
+
+        if True:
+            X = np.fft.fft(x)
+            #X = np.fft.fftshift(X)
+            ### Hent ut 1000 Hz informasjon
+            N = len(X)
+            k_bp = 1000/fs*N
+            print(k_bp, np.abs(X[round(k_bp)]))
+            Y = np.fft.fft(y)
+            #Y = np.fft.fftshift(Y)
+            samples = np.linspace(0, 2, 7)*len(x)
+            #peaks, _ = sig.find_peaks(abs(Y), distance=50000)
+
+            plt.subplot(2, 2, 2);  plt.xticks(samples, [r'$'+str(round(i,2))+'\pi$' for i in np.linspace(0, 2, 7)])
+            plt.semilogy(abs(X))
+            plt.title(r'FFT X')
+
+            plt.subplot(2, 2, 4); plt.xticks(samples, [r'$'+str(round(i,2))+'\pi$' for i in np.linspace(0, 2, 7)])
+            plt.semilogy(abs(Y))
+            #plt.stem(peaks, X[peaks], "x")
+            plt.legend()
+            plt.title(r'FFT Y')
+
+
+
+        plt.tight_layout()
         plt.show()
+
+
 
     # Vis Frekvensdomene
     if False:
@@ -452,7 +481,7 @@ def FIR_filter2(x: float):
 
 def main():
     yn = FIR_filter(xn_rx)
-    #write("Høypass.wav", samplerate, yn)
+    write("Middelverdi_bp.wav", samplerate, yn)
 
     # Plot før og etter av signalet
     if False:
