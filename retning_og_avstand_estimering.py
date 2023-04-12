@@ -86,13 +86,13 @@ def angle_calc6(tdoas:list, spd_sound: float, spacing_big: float, spacing_little
             name = f'angle {i + 1}'
             angle[name] = angle[name] + np.pi*3/2
 
-    # angle_read = {}
-    # #gjør radiana øve te grade
-    # for i in range(len(list_angles)):
-    #     name = f'angle {i + 1}'
-    #     angle_read[name] = angle[name] * 180 / np.pi
-    #
-    # print(angle_read)
+    angle_read = {}
+    #gjør radiana øve te grade
+    #for i in range(len(list_angles)):
+   #     name = f'angle {i + 1}'
+   #     angle_read[name] = angle[name] * 180 / np.pi
+
+    #print(angle_read)
     return angle
 
 def anglechenanigens():
@@ -100,7 +100,7 @@ def anglechenanigens():
     toad_45 = [0.0, 0.0, 0.03498542274, 0.03498542274]
     toad_34 = [0., (1.37 + 0.92) / 343, (1.37 + 0.92 + 9.506) / 343, (1.37 + 0.92 + 9.506 + 1.438 + 0.809) / 343]
 
-    nummer = 0
+    nummer = 2
 
     if nummer == 0:
         # alt ser ut te å fungera her
@@ -123,7 +123,7 @@ def anglechenanigens():
         t2 = toad_34[1]
         t3 = toad_34[2]
         t4 = toad_34[3]
-        mic = {'m1': 3, 'm2': t4, 'm3': t1, 'm4': t2}
+        mic = {'m1': t2, 'm2': t4, 'm3': t1, 'm4': t3}
 
     # print("")
     # print(mic)
@@ -140,23 +140,32 @@ def main():
     #print('1')
     #print(angle_list['angle 1']*180/np.pi)
 
-    cart_cord = polar_to_cartesian_list_version(1000, angle_list)
-    print('2')
-    print(cart_cord)
+    cart_cord = polar_to_cartesian_list_version(2000, angle_list)
+    #print('2')
+    #print(cart_cord)
 
     #center_cord = cordinate_list_version(cart_cord)
     #print('3')
     #print(center_cord['x_1'], center_cord['y_1'])
-    start_cord = {'x_1': 6 * np.sqrt(2), 'y_1': 0, 'x_2': 6 * np.sqrt(2), 'y_2': 0,
-                  'x_3': 3 * np.sqrt(2), 'y_3': -3 * np.sqrt(2), 'x_4': 9 * np.sqrt(2), 'y_4': 3 * np.sqrt(2),
-                  'x_5': 3 * np.sqrt(2), 'y_5': 3 * np.sqrt(2), 'x_6': 9 * np.sqrt(2), 'y_6': -3 * np.sqrt(2)}
-    print('4')
-    print(start_cord)
+    # start_cord = {'x_1': 6 * np.sqrt(2), 'y_1': 0, 'x_2': 6 * np.sqrt(2), 'y_2': 0,
+    #               'x_3': 3 * np.sqrt(2), 'y_3': -3 * np.sqrt(2), 'x_4': 9 * np.sqrt(2), 'y_4': 3 * np.sqrt(2),
+    #               'x_5': 3 * np.sqrt(2), 'y_5': 3 * np.sqrt(2), 'x_6': 9 * np.sqrt(2), 'y_6': -3 * np.sqrt(2)}
+
+    # start_cord = {'x_1': 0, 'y_1': 0, 'x_2': 6 * np.sqrt(2), 'y_2': 6 * np.sqrt(2), #HUSK AT START KORD MÅ FLYTTAS TE VENSTRE
+    #               'x_3': 0, 'y_3': 0, 'x_4': 6 * np.sqrt(2), 'y_4': 6 * np.sqrt(2),
+    #               'x_5': 0, 'y_5': 0, 'x_6': 6 * np.sqrt(2), 'y_6': -6 * np.sqrt(2)}
+
+    start_cord = {'x_1': -6 * np.sqrt(2), 'y_1': 0, 'x_2': 0, 'y_2': 6 * np.sqrt(2),
+                  'x_3': -6 * np.sqrt(2), 'y_3': 0, 'x_4': 0, 'y_4': 6 * np.sqrt(2),
+                  'x_5': -6 * np.sqrt(2), 'y_5': 0, 'x_6': 0, 'y_6': -6 * np.sqrt(2)}
+
+    #print('4')
+    #print(start_cord)
     #center_start_cord = cordinate_list_version(start_cord)
     #print('5')
     #print(center_start_cord['x_1'], center_start_cord['y_1'])
     test = ex.make_line(start_cord= start_cord, end_cord= cart_cord)
     #print('7')
-    print(test)
+    #print(test)
 if __name__ == '__main__':
    main()

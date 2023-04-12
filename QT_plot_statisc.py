@@ -131,27 +131,51 @@ class Example(QWidget):
          p2 = QPointF(end_cord[f'x_{i+1}'], end_cord[f'y_{i+1}'])
          list_line[name] = QLineF(p1, p2)
 
-      print()
-      par_1 = list_line['l_1'].intersects(list_line['l_6'])
-      par_2 = list_line['l_2'].intersects(list_line['l_4'])
-      par_3 = list_line['l_3'].intersects(list_line['l_5'])
+      par_1 = list_line['l_1'].intersects(list_line['l_4'])
+      par_2 = list_line['l_3'].intersects(list_line['l_6'])
+      par_3 = list_line['l_5'].intersects(list_line['l_2'])
 
       final_cord = {'par 1': par_1, 'par 2': par_2, 'par 3': par_3}
 
+      #par_11 = list_line['l_1'].intersects(list_line['l_4'])
+      #par_12 = list_line['l_1'].intersects(list_line['l_6'])
+      #par_13 = list_line['l_2'].intersects(list_line['l_3'])
+      #par_14 = list_line['l_2'].intersects(list_line['l_5'])
 
+      #final_cord = { 'par 1': par_11, 'par 2': par_12, 'par 3':par_13, 'par 4': par_14}
 
-      # print('6')
-      # print(list_line['l_1'])
-      # test = list_line['l_1'].intersects(list_line['l_2'])
-      # fokk = QLineF(340., 340., test[1].x(), test[1].y())
-      # mamma = fokk.intersects(list_line['l_3'])
-      # print(mamma)
-      # list_line['l_1'].intersects(list_line['l_4'])
-      # print(list_line['l_1'])
-      # list_line['l_1'].intersects(list_line['l_5'])
-      # print(list_line['l_1'])
-      # final_cord = list_line['l_1'].intersects(list_line['l_6'])
-      return final_cord
+      par_12 = list_line['l_1'].intersects(list_line['l_2'])
+      par_14 = list_line['l_1'].intersects(list_line['l_4'])
+      par_16 = list_line['l_1'].intersects(list_line['l_6'])
+      par_52 = list_line['l_5'].intersects(list_line['l_2'])
+      par_54 = list_line['l_5'].intersects(list_line['l_4'])
+      par_32 = list_line['l_3'].intersects(list_line['l_2'])
+      par_36 = list_line['l_3'].intersects(list_line['l_6'])
+      par_26 = list_line['l_2'].intersects(list_line['l_6'])
+      par_46 = list_line['l_4'].intersects(list_line['l_6'])
+
+      intersection_list = [par_12, par_14, par_16, par_52, par_54, par_32, par_36, par_26, par_46]
+      #print(par_12[0]==QLineF.BoundedIntersection)
+      #print(intersection_list[1][0])
+      bound_inter_list = []
+      for i in range(len(intersection_list)):
+         if intersection_list[i][0] == QLineF.BoundedIntersection:
+            bound_inter_list.append(intersection_list[i][1])
+      #print(bound_inter_list[0].x())
+      x = 0
+      y = 0
+      if len(bound_inter_list) > 0:
+         for i in range(len(bound_inter_list)):
+            x = bound_inter_list[i].x() + x
+            y = bound_inter_list[i].y() + y
+         x = x/len(bound_inter_list)
+         y = y/len(bound_inter_list)
+      else:
+         print('LAG ET SYSTEM DER VINKEL BLIR PASSA UT ISTEDE SÅ GUI-EN FÅR NÅE DATA!!!!!!!!')
+
+      final_cord = {'par 12': par_12, 'par 14': par_14, 'par 16': par_16, 'par 52': par_52, 'par 54': par_54,
+                    'par 32': par_32, 'par 36': par_36, 'par 26': par_26, 'par 46': par_46,}
+      return x,y
 
 
 

@@ -33,7 +33,9 @@ def main_1():
     # ref = np.argmin(mic)
     # print(ref)
     #angle_m2_m1 = np.arccos((0.035 * 343 % 12) / 12 ) * 180/np.pi
-    print(1,-1,1 >= 0)
+    #print(1,-1,1 >= 0)
+    h = 'h'
+    print(h.type)
 if __name__ == '__main__':
     main_1()
 
