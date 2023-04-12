@@ -75,7 +75,7 @@ class Example(QWidget):
       qp.end()
 
 
-def cordinate_center(x:float, y:float):  # bære navn trengs
+def cordinate_center(x:float, y:float):  # lag et system hvis x/2000 e øve 1
    center_cord_x = (315. * x / 2000) + 340.
    center_cord_y = -(315. * y / 2000) + 340.
    return center_cord_x, center_cord_y
