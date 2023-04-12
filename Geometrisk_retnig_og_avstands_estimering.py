@@ -6,10 +6,12 @@ class angle_cord_estimation():
 
     #opimaliserings problema som gjenstår:
     #når du kalle classen så må eg gjør det muliug å fornadra på lengden av trianguleringen uten å gå inn i classen
+    #samma med simulator vinkel
     #retunera angle hvis intersrection føkke seg opp
     #kommentera
     #fjærna dicts?
     #gjør koden clean(tenke hovedsaklig på dict/list kukeriet som e rundt forbi)
+    #laga mer passande navn te funksjoinan og variabel navnan
 
     def angle_calc6(self, tdoas: list, spd_sound: float, spacing_big: float, spacing_little: float):
         fake_mics = []
@@ -95,12 +97,12 @@ class angle_cord_estimation():
                 angle[name] = angle[name] + np.pi * 3 / 2
 
         angle_read = {}
-        # gjør radiana øve te grade
-        # for i in range(len(list_angles)):
-        #     name = f'angle {i + 1}'
-        #     angle_read[name] = angle[name] * 180 / np.pi
+        #gjør radiana øve te grade
+        for i in range(len(list_angles)):
+            name = f'angle {i + 1}'
+            angle_read[name] = angle[name] * 180 / np.pi
 
-        # print(angle_read)
+        print(angle_read)
         return angle
 
     def simulation(self, boat_placment: str):
@@ -131,10 +133,8 @@ class angle_cord_estimation():
             t2 = toad_34[1]
             t3 = toad_34[2]
             t4 = toad_34[3]
-            mic = {'m1': t2, 'm2': t4, 'm3': t1, 'm4': t3}
+            mic = {'m1': t4, 'm2': t3, 'm3': t2, 'm4': t1}
 
-        # print("")
-        # print(mic)
 
         toad = [mic['m1'], mic['m3'], mic['m2'], mic['m4']]
 
@@ -173,6 +173,12 @@ class angle_cord_estimation():
         par_46 = list_line['l_4'].intersects(list_line['l_6'])
 
         intersection_list = [par_12, par_14, par_16, par_52, par_54, par_32, par_36, par_26, par_46]
+        # print('start')
+        # print(start_cord)
+        # print('end')
+        # print(end_cord)
+        # print('intersection points')
+        # print(intersection_list)
 
         bound_inter_list = []
         for i in range(len(intersection_list)):
@@ -188,12 +194,13 @@ class angle_cord_estimation():
             y = y / len(bound_inter_list)
         else:
             print('LAG ET SYSTEM DER VINKEL BLIR PASSA UT ISTEDE SÅ GUI-EN FÅR NÅE DATA!!!!!!!!')
+        print(x,y)
         return x, y
 
     def timestamp2cord(self, timestamps: list,sim:bool ):
 
         if sim:
-            angles = self.angle_calc6(self.simulation('34'), 343, 12*np.sqrt(2), 12)
+            angles = self.angle_calc6(self.simulation('45'), 343, 12*np.sqrt(2), 12)
             start_coord, end_cords =  self.cord2lines(2000, angles)
             boat_coords = self.boat_cord_estimat(start_coord, end_cords)
 
