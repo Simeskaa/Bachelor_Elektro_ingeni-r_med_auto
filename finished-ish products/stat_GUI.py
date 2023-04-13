@@ -2,7 +2,6 @@ import sys
 from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
-import numpy as np
 from Geometrisk_retnig_og_avstands_estimering import angle_cord_estimation
 
 class Example(QWidget):
