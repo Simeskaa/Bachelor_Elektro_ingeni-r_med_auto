@@ -1,6 +1,7 @@
 import numpy as np
 import time
 from grove.adc import ADC
+from lpfilt import filter_sample
 
 
 class live_mic:

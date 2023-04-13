@@ -1,12 +1,12 @@
-prev_input = 0.0
-prev_output = 0.0
-alpha = 0.99
+class base_filter:
+    def __init__(self):
+        self.prev_input = 0.0
+        self.prev_output = 0.0
+        self.alpha = 0.99
 
-
-def filter_sample(x):
-    global prev_input, prev_output
-    y = alpha*x - alpha*prev_input - alpha*prev_output
-    prev_output = y
-    prev_input = x
-    return y
+    def filter_sample(self, x):
+        y = self.alpha * x - self.alpha * self.prev_input - self.alpha * self.prev_output
+        self.prev_output = y
+        self.prev_input = x
+        return y
 
