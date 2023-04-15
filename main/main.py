@@ -1,6 +1,5 @@
-from include.test_class import test_class
+from include.Geometrisk_retnig_og_avstands_estimering import angle_cord_estimation as ace
 
 
-t = test_class()
 
 
