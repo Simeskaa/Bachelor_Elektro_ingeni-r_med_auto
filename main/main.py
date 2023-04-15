@@ -1,4 +1,4 @@
-from include.Geometrisk_retnig_og_avstands_estimering import angle_cord_estimation as ace
+from include.direction_and_distance_estimation import angle_cord_estimation as ace
 from include.lpfilt import base_filter
 from include.microphones import mic_read
 from include.signal_processing import processing
