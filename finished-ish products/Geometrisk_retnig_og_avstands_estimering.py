@@ -16,6 +16,8 @@ class angle_cord_estimation():
         self.spd_sound = spd_sound
         self.boat_placment = boat_placment
         self.sim = sim
+        self.average_angle = 0
+        self.dist = 0
 
     def angle_calc6(self, tdoas: list):
         fake_mics = []
@@ -91,7 +93,7 @@ class angle_cord_estimation():
             for i in range(len(list_angles)):
                 list_angles[i] = list_angles[i] + 3*np.pi / 2
 
-        general_angle = sum(list_angles)/len(list_angles)
+        self.average_angle = sum(list_angles)/len(list_angles)
 
         # angle_read = {}
         # #gjør radiana øve te grade
@@ -100,7 +102,7 @@ class angle_cord_estimation():
         #     angle_read[name] = angle[name] * 180 / np.pi
         #
         # print(angle_read)
-        return list_angles, general_angle
+        return list_angles, self.average_angle
 
     def simulation(self):
         toad_78 = [0, 0.019, 0.029, 0.048]
@@ -189,8 +191,8 @@ class angle_cord_estimation():
         return x, y
 
     def distance (self, x:float, y:float):
-        dist = np.sqrt(x**2 + y**2)
-        return dist
+        self.dist = np.sqrt(x**2 + y**2)
+        return self.dist
 
     def timestamp2cord(self, timestamps: list ):
 
@@ -209,6 +211,14 @@ class angle_cord_estimation():
 
 
         return boat_coords, dist, avreage_angle
+
+    @property
+    def angle2boat(self) -> float:
+        return self.average_angle
+
+    @property
+    def dist2boat(self) -> float:
+        return self.dist
 
 
 
