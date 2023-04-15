@@ -13,9 +13,14 @@ class angle_cord_estimation():
     #gjør koden clean(tenke hovedsaklig på dict/list kukeriet som e rundt forbi)
     #laga mer passande navn te funksjoinan og variabel navnan
 
+    #def __init__(self, dist: float ):
+        #global dist
+
     def angle_calc6(self, tdoas: list, spd_sound: float, spacing_big: float, spacing_little: float):
         fake_mics = []
         tdoas_temp = copy.copy(tdoas)
+
+        #spacing_little = dist
 
         # snur koordinatsystemet
         for i in range(4):
