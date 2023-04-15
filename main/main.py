@@ -21,11 +21,7 @@ def fill_buff():
         m2_buffer.pop(-1)
 
 def main():
-    print(m1_buffer)
-
     fill_buff()
-
-    print(m1_buffer)
 
 if __name__ == "__main__":
     main()
