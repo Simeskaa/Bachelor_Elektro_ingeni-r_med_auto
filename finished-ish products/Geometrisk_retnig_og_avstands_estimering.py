@@ -5,22 +5,24 @@ from PySide6.QtCore import QLineF, QPointF
 class angle_cord_estimation():
 
     #opimaliserings problema som gjenstår:
-    #når du kalle classen så må eg gjør det muliug å fornadra på lengden av trianguleringen uten å gå inn i classen
     #samma med simulator vinkel
     #retunera angle hvis intersrection føkke seg opp
     #kommentera
-    #fjærna dicts?
     #gjør koden clean(tenke hovedsaklig på dict/list kukeriet som e rundt forbi)
     #laga mer passande navn te funksjoinan og variabel navnan
 
-    #def __init__(self, dist: float ):
-        #global dist
+    def __init__(self, dist_short_mic: float = 12, spd_sound: float = 343, boat_placment: str = '78', sim: bool = False):
+        self.dist_short_mic = dist_short_mic
+        self.spd_sound = spd_sound
+        self.boat_placment = boat_placment
+        self.sim = sim
 
-    def angle_calc6(self, tdoas: list, spd_sound: float, spacing_big: float, spacing_little: float):
+    def angle_calc6(self, tdoas: list):
         fake_mics = []
         tdoas_temp = copy.copy(tdoas)
 
-        #spacing_little = dist
+        spacing_little = self.dist_short_mic
+        spacing_big = np.sqrt(spacing_little**2 + spacing_little**2)
 
         # snur koordinatsystemet
         for i in range(4):
@@ -49,26 +51,19 @@ class angle_cord_estimation():
         else:
             fma = {'m1': fake_mics[1], 'm2': fake_mics[3], 'm3': fake_mics[0], 'm4': fake_mics[2]}
 
-        # beregne vinkla
-        angle_m2_m3 = np.arccos((fma['m2'] - fma['m3']) * spd_sound / spacing_big) + 0
-        angle_m1_m4 = np.arccos((fma['m1'] - fma['m4']) * spd_sound / spacing_big) - np.pi / 2
-        angle_m2_m4 = np.arccos((fma['m2'] - fma['m4']) * spd_sound / spacing_little) - np.pi / 4
-        angle_m1_m3 = np.arccos((fma['m1'] - fma['m3']) * spd_sound / spacing_little) - np.pi / 4
-        angle_m2_m1 = np.arccos((fma['m2'] - fma['m1']) * spd_sound / spacing_little) + np.pi / 4
-        angle_m4_m3 = np.arccos((fma['m4'] - fma['m3']) * spd_sound / spacing_little) + np.pi / 4
+
+        angle_m2_m3 = np.arccos((fma['m2'] - fma['m3']) * self.spd_sound / spacing_big) + 0
+        angle_m1_m4 = np.arccos((fma['m1'] - fma['m4']) * self.spd_sound / spacing_big) - np.pi / 2
+        angle_m2_m4 = np.arccos((fma['m2'] - fma['m4']) * self.spd_sound / spacing_little) - np.pi / 4
+        angle_m1_m3 = np.arccos((fma['m1'] - fma['m3']) * self.spd_sound / spacing_little) - np.pi / 4
+        angle_m2_m1 = np.arccos((fma['m2'] - fma['m1']) * self.spd_sound / spacing_little) + np.pi / 4
+        angle_m4_m3 = np.arccos((fma['m4'] - fma['m3']) * self.spd_sound / spacing_little) + np.pi / 4
 
         list_angles = [angle_m2_m3, angle_m1_m4, angle_m2_m4, angle_m1_m3, angle_m2_m1, angle_m4_m3]
 
-        # gjør det øve te ein dictonary
-        angle = {}
-        for i in range(6):
-            name = f'angle {i + 1}'
-            angle[name] = list_angles[i]
-
-        # negativ vinkel fix te problem vinklan
         if fma['m1'] > fma['m3']:
-            angle['angle 5'] = np.pi / 2 - angle['angle 5']
-            angle['angle 6'] = np.pi / 2 - angle['angle 6']
+            list_angles[4] = np.pi / 2 - list_angles[4]
+            list_angles[5] = np.pi / 2 - list_angles[5]
 
         # bestemme kvadrant
 
@@ -78,8 +73,6 @@ class angle_cord_estimation():
             ref = np.argmax(tdoas_temp2)
             tdoas_temp2.remove(tdoas_temp2[ref])
 
-        # print(fake_mics)
-
         # bestemme kvadrant
         if (tdoas_temp2 == [tdoas[0], tdoas[1]]):
             # print("Kvadrant 1, + 0deg")
@@ -87,52 +80,51 @@ class angle_cord_estimation():
 
         elif (tdoas_temp2 == [tdoas[0], tdoas[2]]):
             # print("Kvadrant 2, + 90deg")
-            for i in range(6):
-                name = f'angle {i + 1}'
-                angle[name] = angle[name] + np.pi / 2
+            for i in range(len(list_angles)):
+                list_angles[i] = list_angles[i] + np.pi / 2
         elif (tdoas_temp2 == [tdoas[2], tdoas[3]]):
             # print("Kvadrant 3, + 180deg")
-            for i in range(6):
-                name = f'angle {i + 1}'
-                angle[name] = angle[name] + np.pi
+            for i in range(len(list_angles)):
+                list_angles[i] = list_angles[i] + np.pi
         elif (tdoas_temp2 == [tdoas[1], tdoas[3]]):
             # print("Kvadrant 4, + 270deg")
-            for i in range(6):
-                name = f'angle {i + 1}'
-                angle[name] = angle[name] + np.pi * 3 / 2
+            for i in range(len(list_angles)):
+                list_angles[i] = list_angles[i] + 3*np.pi / 2
 
-        angle_read = {}
-        #gjør radiana øve te grade
-        for i in range(len(list_angles)):
-            name = f'angle {i + 1}'
-            angle_read[name] = angle[name] * 180 / np.pi
+        general_angle = sum(list_angles)/len(list_angles)
 
-        print(angle_read)
-        return angle
+        # angle_read = {}
+        # #gjør radiana øve te grade
+        # for i in range(len(list_angles)):
+        #     name = f'angle {i + 1}'
+        #     angle_read[name] = angle[name] * 180 / np.pi
+        #
+        # print(angle_read)
+        return list_angles, general_angle
 
-    def simulation(self, boat_placment: str):
+    def simulation(self):
         toad_78 = [0, 0.019, 0.029, 0.048]
         toad_45 = [0.0, 0.0, 0.03498542274, 0.03498542274]
         toad_34 = [0., (1.37 + 0.92) / 343, (1.37 + 0.92 + 9.506) / 343, (1.37 + 0.92 + 9.506 + 1.438 + 0.809) / 343]
 
 
 
-        if boat_placment == '78':
+        if self.boat_placment == '78':
             # alt ser ut te å fungera her
             t1 = toad_78[0]
             t2 = toad_78[1]
             t3 = toad_78[2]
             t4 = toad_78[3]
-            mic = {'m1': t1, 'm2': t3, 'm3': t2, 'm4': t4}
+            mic = {'m1': t3, 'm2': t4, 'm3': t1, 'm4': t2}
 
-        if boat_placment == '45':
+        if self.boat_placment == '45':
             t1 = toad_45[0]
             t2 = toad_45[1]
             t3 = toad_45[2]
             t4 = toad_45[3]
             mic = {'m1': t3, 'm2': t4, 'm3': t1, 'm4': t2}
 
-        if boat_placment == '34':
+        if self.boat_placment == '34':
             # må finna ein bære måte å beregna 45 gradaren på
             t1 = toad_34[0]
             t2 = toad_34[1]
@@ -145,14 +137,14 @@ class angle_cord_estimation():
 
         return toad
 
-    def cord2lines(self, r, vinkel: dict):
+    def cord2lines(self, r, vinkel: list):
         # vinkel += np.pi
         end_cords = {}
         for i in range(6):
             x_name = f'x_{i + 1}'
             y_name = f'y_{i + 1}'
-            end_cords[x_name] = r * np.cos(vinkel[f'angle {i + 1}'])
-            end_cords[y_name] = r * np.sin(vinkel[f'angle {i + 1}'])
+            end_cords[x_name] = r * np.cos(vinkel[i])
+            end_cords[y_name] = r * np.sin(vinkel[i])
         start_cords =  {'x_1': -6 * np.sqrt(2), 'y_1': 0, 'x_2': 0, 'y_2': 6 * np.sqrt(2),
                         'x_3': -6 * np.sqrt(2), 'y_3': 0, 'x_4': 0, 'y_4': 6 * np.sqrt(2),
                         'x_5': -6 * np.sqrt(2), 'y_5': 0, 'x_6': 0, 'y_6': -6 * np.sqrt(2)}
@@ -178,12 +170,6 @@ class angle_cord_estimation():
         par_46 = list_line['l_4'].intersects(list_line['l_6'])
 
         intersection_list = [par_12, par_14, par_16, par_52, par_54, par_32, par_36, par_26, par_46]
-        # print('start')
-        # print(start_cord)
-        # print('end')
-        # print(end_cord)
-        # print('intersection points')
-        # print(intersection_list)
 
         bound_inter_list = []
         for i in range(len(intersection_list)):
@@ -202,22 +188,32 @@ class angle_cord_estimation():
         print(x,y)
         return x, y
 
-    def timestamp2cord(self, timestamps: list,sim:bool ):
+    def distance (self, x:float, y:float):
+        dist = np.sqrt(x**2 + y**2)
+        return dist
 
-        if sim:
-            angles = self.angle_calc6(self.simulation('45'), 343, 12*np.sqrt(2), 12)
+    def timestamp2cord(self, timestamps: list ):
+
+        if self.sim:
+            angles, avreage_angle = self.angle_calc6(self.simulation())
             start_coord, end_cords =  self.cord2lines(2000, angles)
             boat_coords = self.boat_cord_estimat(start_coord, end_cords)
+            dist = self.distance(boat_coords[0], boat_coords[1])
+
 
         else:
-            angles = self.angle_calc6(timestamps, 343, 12 * np.sqrt(2), 12)
+            angles, avreage_angle = self.angle_calc6(timestamps)
             start_coord, end_cords = self.cord2lines(2000, angles)
             boat_coords = self.boat_cord_estimat(start_coord, end_cords)
+            dist = self.distance(boat_coords[0], boat_coords[1])
 
-        return boat_coords
+
+        return boat_coords, dist, avreage_angle
 
 
 
 if __name__ == '__main__':
-    boat = angle_cord_estimation()
-    print(boat.timestamp2cord([], True))
+    boat = angle_cord_estimation( dist_short_mic= 12 , spd_sound= 343, boat_placment= '78',sim= True)
+    print(boat.timestamp2cord([]))
+    #list_angle, gen_angle = boat.angle_calc6(boat.simulation('78'), 343, 12*np.sqrt(2), 12)
+    #print(list_angle, gen_angle, gen_angle*180/np.pi)
