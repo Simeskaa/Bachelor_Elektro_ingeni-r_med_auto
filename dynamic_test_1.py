@@ -17,12 +17,12 @@ class Dialog(QDialog):
 
         #plassering av sonan
         main_layout = QGridLayout()
-
-
         self._main_layout = main_layout
-        self.setLayout(self._main_layout)
+        #self.setLayout(self._main_layout)
         self.setGeometry(100, 100, 700, 700)
         self.setWindowTitle("Dynamic Layouts")
+        #self.update()
+
 
     def UiComponents(self, x, y):
         # creating the check-box
@@ -64,24 +64,35 @@ def polar_to_cartesian(r, vinkel):
    return x,y
 
 def go(dialog):
-    x, y = polar_to_cartesian(200, np.pi)
-    x, y = cordinate(x, y)
     n = 0
     print('fokk')
-    while n < 101:
-        if n == 100:
-            dialog.UiComponents(x, y)
+    while n < 1000001:
+        if n == 1000000:
+            dialog.UiComponents(380, 222)
+            dialog.update()
             print(n)
         n += 1
+def test(dialog):
+    print('test2')
+    print('test3')
+    dialog.exec()
 
 
 if __name__ == '__main__':
+    print('test4')
     app = QApplication(sys.argv)
     dialog = Dialog()
-    x = threading.Thread(target=go, args=(dialog,))
-    x.start()
-    #time.sleep(5)
+    print('test')
+    #x = threading.Thread(target=test, args=(dialog,))
+    x1 = threading.Thread(target=go, args=(dialog,))
+    #x.start()
+    x1.start()
     dialog.exec()
+
+
+
+    #time.sleep(5)
+    #dialog.exec()
 
     #invoke later eller invoke wait kø system
 
