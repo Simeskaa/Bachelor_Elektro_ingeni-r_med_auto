@@ -1,6 +1,6 @@
-from test import test
+from include.test_class import test_class
 
-t = test()
 
-print(t.num_add())
+t = test_class()
+
 
