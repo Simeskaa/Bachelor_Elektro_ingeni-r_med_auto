@@ -20,17 +20,15 @@ class UDP:
 
 
 if __name__ == "__main__":
-    get = False
-    if not(get):
-        UDP = UDP(ip_adress="192.168.0.101", port=5004, receive_msg= True)
-        n = 0
-        #
-        while True:
-            #UDP.send_message(f"test {n}")
-            #n += 1
-            print(UDP.get_message(4096))
-
+    get = True
     if get:
+        UDP = UDP(ip_adress="localhost", port=5004, receive_msg= True)
+        while True:
+            msg = UDP.get_message(4096)
+            message = json.loads(msg.decode('utf-8'))
+            print(message['mic 1'][0])
+
+    if not get:
         UDP = UDP(ip_adress="192.168.0.101", port=5004, receive_msg=False)
         n = 0
         msg = [[0, 1, 2, 3], [3, 2, 1, 0]]
