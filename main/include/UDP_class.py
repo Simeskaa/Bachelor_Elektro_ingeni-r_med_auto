@@ -26,7 +26,7 @@ if __name__ == "__main__":
         while True:
             msg = UDP.get_message(4096)
             message = json.loads(msg.decode('utf-8'))
-            print(message['mic 1'][0])
+            print(message['mic 1'])
 
     if not get:
         UDP = UDP(ip_adress="192.168.0.101", port=5004, receive_msg=False)
