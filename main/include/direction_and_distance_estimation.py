@@ -11,8 +11,8 @@ class angle_cord_estimation():
         self.dist_long_mic = np.sqrt(self.dist_short_mic ** 2 + self.dist_short_mic ** 2)
         self.spd_sound = spd_sound
         self.max_dist = max_distance
-        self.average_angle = 0
-        self.dist = 0
+        self.average_angle = None
+        self.dist = None
 
     def angle_calc(self, tdoa: list):
         # rotating the coordinate system to the first quadrant
