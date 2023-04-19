@@ -2,6 +2,7 @@ from include.direction_and_distance_estimation import angle_cord_estimation as a
 from include.lpfilt import base_filter
 from include.microphones import mic_read
 from include.signal_processing import processing
+from include.UDP_class import UDP
 
 
 buffer_size = 4096
