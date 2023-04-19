@@ -3,21 +3,29 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 import threading
+import time
 
 class Example(QWidget):
    def __init__(self):
        super(Example, self).__init__()
        self.initUI()
        self.updatesEnabled()
+       #x2 = threading.Thread(target=self.testUI, args=(200, 200,))
+       #x2.start()
+
 
 
 
    def initUI(self):
-      self.setGeometry(100,100, 700,700)  #(plassering x, plassering y, størrelse x, størrelse y) (x og y kan væra feil)
+      #self.setGeometry(40,40, 700,700)  #(plassering x, plassering y, størrelse x, størrelse y) (x og y kan væra feil)
+      self.setFixedSize(QSize(700,700))
       self.setWindowTitle('Draw Demo')
 
    def testUI(self,x,y):
+       time.sleep(5)
+       print('faen i helvete heste kuk')
        self.UiComponents(x, y)
+       self.update()
        #self.repaint()
 
 
@@ -82,7 +90,7 @@ if __name__ == '__main__':
     ex = Example()
     #x1 = threading.Thread(target=GUI, args=(app,ex,))
     #x1.start()
-    x2 = threading.Thread(target=componenet, args=(ex,))
-    x2.start()
+    #x2 = threading.Thread(target=componenet, args=(ex,))
+    #x2.start()
     ex.show()
     sys.exit(app.exec())
