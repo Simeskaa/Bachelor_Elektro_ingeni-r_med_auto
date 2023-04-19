@@ -11,8 +11,8 @@ class angle_cord_estimation():
         self.dist_long_mic = np.sqrt(self.dist_short_mic ** 2 + self.dist_short_mic ** 2)
         self.spd_sound = spd_sound
         self.max_dist = max_distance
-        self.average_angle = 0
-        self.dist = 0
+        self.average_angle = None
+        self.dist = None
 
     def angle_calc(self, tdoa: list):
         # rotating the coordinate system to the first quadrant
@@ -90,15 +90,15 @@ class angle_cord_estimation():
 
         return list_angles, self.average_angle
 
-    def angle_2_cord_calc(self, vinkel: list):
+    def angle_2_cord_calc(self, angles: list):
         # finding start and end coordinates
         # -------------------------------------------------
         end_cords = {}
-        for i in range(len(vinkel)):
+        for i in range(len(angles)):
             x_name = f'x_{i + 1}'
             y_name = f'y_{i + 1}'
-            end_cords[x_name] = self.max_dist * np.cos(vinkel[i])
-            end_cords[y_name] = self.max_dist * np.sin(vinkel[i])
+            end_cords[x_name] = self.max_dist * np.cos(angles[i])
+            end_cords[y_name] = self.max_dist * np.sin(angles[i])
 
         start_cords = {'x_1': -self.dist_long_mic / 2, 'y_1': 0, 'x_2': 0, 'y_2': self.dist_long_mic / 2,
                        'x_3': -self.dist_long_mic / 2, 'y_3': 0, 'x_4': 0, 'y_4': self.dist_long_mic / 2,
