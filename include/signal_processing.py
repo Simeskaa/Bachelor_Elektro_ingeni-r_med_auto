@@ -3,8 +3,8 @@ from numpy import cos, pi
 import scipy.signal as sig
 
 class processing():
-    def __init__(self, samplerate: int = 44100):
-        self.samplerate = samplerate
+    def __init__(self, Fs: int):
+        self.Fs = Fs
 
     # Harmonic Product Spectrum
     # Is used in order to find the dominating frequency in a signal
@@ -20,7 +20,7 @@ class processing():
             Yk *= Xk_mag[0:i:i*N]
 
         peak_location = np.argmax(Yk)
-        frequency = peak_location/L*self.samplerate
+        frequency = peak_location/L*self.Fs
 
         return frequency
 
@@ -28,8 +28,8 @@ class processing():
     # Simple filter that reduces unwanted frequencies
     def FIR_filter(self, xn, desired_hz: int = 140):
         width = 50
-        L = self.samplerate//width
-        w_bp = desired_hz/self.samplerate*2*pi
+        L = self.Fs//width
+        w_bp = desired_hz/self.Fs*2*pi
 
         hn_bp = cos(w_bp*np.arange(L))*2*sig.hamming(L)
         y = sig.convolve(xn, hn_bp)
@@ -49,10 +49,10 @@ class processing():
 
         # Calculate time delay between the two signals and,
         # the estimated distance between the two (mostly for debugging)
-        time_delay = round((np.argmax(r_12)/self.samplerate)*10**3, 2)  # present the result in milliseconds (ms)
-        distance = np.argmax(r_12)/self.samplerate*343  # 343m/s is the speed of sound
+        time_delay = round((np.argmax(r_12)/self.Fs)*10**3, 2)  # present the result in milliseconds (ms)
+        distance = np.argmax(r_12)/self.Fs*343  # 343m/s is the speed of sound
         return time_delay, distance
 
     @property
     def samplerate(self):
-        return self.samplerate
+        return self.Fs

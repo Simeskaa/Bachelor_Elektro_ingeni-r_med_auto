@@ -9,6 +9,7 @@ mic = mic_read(0, 2)
 
 def fill_buff():
     global m1_buffer, m2_buffer
+
     for i in range(buffer_size):
         x_1, x_2 = mic.read_mic()
         m1_buffer.insert(0, x_1)
