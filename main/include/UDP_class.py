@@ -16,6 +16,7 @@ class UDP:
 
     def get_message(self, buf_size):
         data, addr = self.sock.recvfrom(buf_size)
+        data = data.decode('utf-8')
         return data
 
 
@@ -25,7 +26,7 @@ if __name__ == "__main__":
         UDP = UDP(ip_adress="localhost", port=5004, receive_msg= True)
         while True:
             msg = UDP.get_message(4096)
-            message = json.loads(msg.decode('utf-8'))
+            message = json.loads(msg)
             print(message['mic 1'])
 
     if not get:
