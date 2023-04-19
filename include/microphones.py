@@ -7,7 +7,7 @@ class mic_read():
         self.adc = ADC()
 
     def read_mic(self):
-        mic0 = self.adc.read_raw(self.pin0)/0x1000
-        mic1 = self.adc.read_raw(self.pin1)/0x1000
+        mic0 = self.adc.read_raw(self.pin0)
+        mic1 = self.adc.read_raw(self.pin1)
         return mic0, mic1
 
