@@ -81,8 +81,9 @@ class MainWindow(QMainWindow):
 
     def item_placement_on_GUI(self):
         while True:
-            if self.counter > self.counted:
-                with self.lock:
+            with self.lock:
+                if self.counter > self.counted:
+                    #with self.lock:
                     logging.info("drive_func adding box")
                     self.make_circle(self.x[self.counter - 1], self.y[self.counter - 1])
                     self.counted += 1
@@ -90,9 +91,9 @@ class MainWindow(QMainWindow):
 
 
 
-            elif self.counter > 0:
-                if self.timer[0] < time.perf_counter():
-                    with self.lock:
+                elif self.counter > 0:
+                    if self.timer[0] < time.perf_counter():
+                        #with self.lock:
                         logging.info("drive_func is about to remove box")
                         self.x.pop(0)
                         self.y.pop(0)
