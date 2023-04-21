@@ -1,7 +1,7 @@
 import sys
 from PySide6.QtCore import Qt, QTimer
 from PySide6.QtGui import QPainter, QPixmap, QColor, QFont, QBrush
-from PySide6.QtWidgets import QApplication, QLabel, QMainWindow, QDial
+from PySide6.QtWidgets import QApplication, QLabel, QMainWindow, QDial, QPushButton
 import threading
 import time
 import logging
@@ -35,7 +35,14 @@ class MainWindow(QMainWindow):
         self.range = range
         self.delay = delay
 
-        self.timer = QTimer()  # set up your QTimer
+        # self.timer = QTimer()
+        # self.timer.setInterval(5000)
+        # #self.timer.setSingleShot(True)
+        # self.timer.timeout.connect(self.removing_from_GUI)
+        # self.timer.start()
+
+
+        #self.timer = QTimer()  # set up your QTimer
 
 
     def radar(self):
@@ -109,7 +116,7 @@ class MainWindow(QMainWindow):
         # self.timer.setInterval(5000)
         # self.timer.timeout.connect(self.removing_from_GUI())  # connect it to your update function
         # self.timer.start()
-        QTimer.singleShot(500, self.removing_from_GUI)
+        QTimer.singleShot(5, self.removing_from_GUI)
         logging.info("kjørt gjennom singelshot greiå")
 
 
@@ -243,4 +250,7 @@ x2.start()
 
 window.show()
 app.exec()
+
+#https://coderslegacy.com/python/pyqt5-qtimer/
+
 
