@@ -18,11 +18,12 @@ class MainWindow(QMainWindow):
         self.x = []
         self.y = []
         self.timer = []
+        self.red = []
+        self.blue = []
         self.counter = 0
         self.counted = 0
         self.lock = threading.Lock()
-        self.red = 0
-        self.blue = 0
+
         #self.box()
         #self.draw_something()
         #self.updatesEnabled()
@@ -46,20 +47,20 @@ class MainWindow(QMainWindow):
         painter.end()
         self.label.setPixmap(self.canvas)
 
-    def make_box(self, x, y):
+    def make_box(self, x, y, color_index:int):
         painter = QPainter(self.canvas)
         brush = QBrush()
-        brush.setColor(QColor(self.red,0,self.blue))
+        brush.setColor(QColor(self.red[color_index],0,self.blue[color_index]))
         brush.setStyle(Qt.BrushStyle.Dense1Pattern)
         painter.setBrush(brush)
         painter.drawRect(x, y, 10, 10)
         painter.end()
         self.label.setPixmap(self.canvas)
 
-    def make_circle(self, x, y):
+    def make_circle(self, x, y, color_index:int):
         painter = QPainter(self.canvas)
         brush = QBrush()
-        brush.setColor(QColor(self.red,0,self.blue))
+        brush.setColor(QColor(self.red[color_index],0,self.blue[color_index]))
         brush.setStyle(Qt.BrushStyle.Dense1Pattern)
         painter.setBrush(brush)
         painter.drawEllipse(x, y, 10, 10)
@@ -73,11 +74,11 @@ class MainWindow(QMainWindow):
                 self.counter += 1
                 self.timer.append(time.perf_counter()+5)
                 if hz == 260:
-                    self.red = 0
-                    self.blue = 255
+                    self.red.append(0)
+                    self.blue.append(255)
                 elif hz == 440:
-                    self.red = 255
-                    self.blue = 0
+                    self.red.append(255)
+                    self.blue.append(0)
 
     def item_placement_on_GUI(self):
         while True:
@@ -85,7 +86,7 @@ class MainWindow(QMainWindow):
                 if self.counter > self.counted:
                     #with self.lock:
                     logging.info("drive_func adding box")
-                    self.make_circle(self.x[self.counter - 1], self.y[self.counter - 1])
+                    self.make_circle(self.x[self.counter - 1], self.y[self.counter - 1], color_index=(self.counter-1))
                     self.counted += 1
                     logging.info("drive_func added box")
 
@@ -98,6 +99,8 @@ class MainWindow(QMainWindow):
                         self.x.pop(0)
                         self.y.pop(0)
                         self.timer.pop(0)
+                        self.red.pop(0)
+                        self.blue.pop(0)
                         self.counter -= 1
                         self.counted -= 1
                         logging.info("drive_func have removed box and clean radar")
@@ -105,7 +108,7 @@ class MainWindow(QMainWindow):
                         logging.info("drive_func have cleaned radar")
                         for i in range(len(self.x)):
                             logging.info("Drive_func is about to add remaining boxes")
-                            self.make_box(self.x[i], self.y[i])
+                            self.make_box(self.x[i], self.y[i], color_index= i)
                             logging.info("Drive_func have added one of remaining boxes")
 
 
@@ -113,11 +116,13 @@ class MainWindow(QMainWindow):
 def test():
     time.sleep(3)
     logging.info("Thread test is about to update 1")
-    window.update_GUI(400, 250, hz= 260)
+    window.update_GUI(400, 250, hz= 440)
     logging.info("Thread test is updated 1")
     time.sleep(3)
     logging.info("Thread test is about to update 2")
     window.update_GUI(500, 50, hz= 260)
+    time.sleep(0.1)
+    window.update_GUI(50, 50, hz= 440)
     logging.info("Thread test is updated 2")
     time.sleep(3)
     logging.info("Thread test is about to update 3")
