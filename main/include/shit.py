@@ -8,13 +8,6 @@ import logging
 from direction_and_distance_estimation import angle_cord_estimation
 
 
-# class Worker(QRunnable):
-#     def __init__(self, delete):
-#         super().__init__()
-#         shit = MainWindow()
-#     def run(self):
-#         QTimer.singleShot(1000, )
-
 class MainWindow(QMainWindow):
     def __init__(self, range:float = 2000., delay:int = 5):
         super().__init__()
@@ -42,6 +35,8 @@ class MainWindow(QMainWindow):
         self.counted_circle = 0
         self.range = range
         self.delay = delay
+        self.test = 0
+
 
         self.threadpool = QThreadPool()
 
@@ -122,13 +117,19 @@ class MainWindow(QMainWindow):
                 self.red_circle.append(255)
                 self.blue_circle.append(0)
 
-        self.item_placement_on_GUI()
-        pool = QThreadPool.globalInstance()
-        pool.start(QTimer.singleShot(1000, self.removing_from_GUI))
+        #self.item_placement_on_GUI()
+        #pool = QThreadPool.globalInstance()
+        #pool.start(QTimer.singleShot(1000, self.removing_from_GUI))
         # self.timer.setInterval(5000)
         # self.timer.timeout.connect(self.removing_from_GUI())  # connect it to your update function
         # self.timer.start()
         #QTimer.singleShot(5, self.removing_from_GUI)
+        if self.test == 0:
+            self.timer = QTimer()
+            self.timer.setInterval(5000)
+            self.timer.setSingleShot(True)
+            self.timer.timeout.connect(self.removing_from_GUI)
+            self.timer.start()
         logging.info("kjørt gjennom singelshot greiå")
 
 
@@ -174,6 +175,7 @@ class MainWindow(QMainWindow):
             self.blue_circle.pop(0)
             self.counter_circle -= 1
             self.counted_circle -= 1
+
             #logging.info("removing circle")
 
             for i in range(len(self.x_square)):
@@ -189,7 +191,6 @@ class MainWindow(QMainWindow):
         center_cord_x = (315. * x / self.range) + 340.
         center_cord_y = -(315. * y / self.range) + 340.
         return center_cord_x, center_cord_y
-
 
 
 def test():
