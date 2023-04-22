@@ -1,11 +1,19 @@
 import sys
-from PySide6.QtCore import Qt, QTimer
+from PySide6.QtCore import Qt, QTimer, QThreadPool, QRunnable
 from PySide6.QtGui import QPainter, QPixmap, QColor, QFont, QBrush
 from PySide6.QtWidgets import QApplication, QLabel, QMainWindow, QDial, QPushButton
 import threading
 import time
 import logging
 from direction_and_distance_estimation import angle_cord_estimation
+
+
+# class Worker(QRunnable):
+#     def __init__(self, delete):
+#         super().__init__()
+#         shit = MainWindow()
+#     def run(self):
+#         QTimer.singleShot(1000, )
 
 class MainWindow(QMainWindow):
     def __init__(self, range:float = 2000., delay:int = 5):
@@ -34,6 +42,8 @@ class MainWindow(QMainWindow):
         self.counted_circle = 0
         self.range = range
         self.delay = delay
+
+        self.threadpool = QThreadPool()
 
         # self.timer = QTimer()
         # self.timer.setInterval(5000)
@@ -113,10 +123,12 @@ class MainWindow(QMainWindow):
                 self.blue_circle.append(0)
 
         self.item_placement_on_GUI()
+        pool = QThreadPool.globalInstance()
+        pool.start(QTimer.singleShot(1000, self.removing_from_GUI))
         # self.timer.setInterval(5000)
         # self.timer.timeout.connect(self.removing_from_GUI())  # connect it to your update function
         # self.timer.start()
-        QTimer.singleShot(5, self.removing_from_GUI)
+        #QTimer.singleShot(5, self.removing_from_GUI)
         logging.info("kjørt gjennom singelshot greiå")
 
 
