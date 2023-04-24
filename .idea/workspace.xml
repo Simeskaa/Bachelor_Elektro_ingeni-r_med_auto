@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="shit" />
+    <list id="ca46afb5-6e55-48db-a910-0c171d34208c" name="Changes by dawid" comment="Changes by dawid" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/Development" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Statisk_test" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2LXsmBAFI95GQM3oYpqbrAIDerK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/zaime/Bachelor_Elektro_ingenior_med_auto&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zaime\Bachelor_Elektro_ingenior_med_auto" />
+      <recent name="C:\Users\zaime\Bachelor_Elektro_ingenior_med_auto\lyd_filer\GUI bok" />
+      <recent name="C:\Users\zaime\Bachelor_Elektro_ingenior_med_auto\main\include" />
+      <recent name="C:\Users\zaime\Bachelor_Elektro_ingenior_med_auto\finished-ish products" />
+      <recent name="C:\Users\zaime\Bachelor_Elektro_ingenior_med_auto\lyd_filer" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.GUI">
+    <configuration name="GUI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Bachelor_Elektro_ingenior_med_auto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main/include" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/include/GUI.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GUI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Bachelor_Elektro_ingenior_med_auto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main/include" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\zaime\Bachelor_Elektro_ingenior_med_auto\main\include\GUI.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GUI_med_høgare_prosent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Bachelor_Elektro_ingenior_med_auto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main/include" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/include/GUI_med_høgare_prosent.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fokk" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Bachelor_Elektro_ingenior_med_auto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main/include" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/include/fokk.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Bachelor_Elektro_ingenior_med_auto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Bachelor_Elektro_ingenior_med_auto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main/include" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/include/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.GUI" />
+        <item itemvalue="Python.GUI" />
+        <item itemvalue="Python.fokk" />
+        <item itemvalue="Python.GUI_med_høgare_prosent" />
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="" />
+      <created>1676028917865</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676028917865</updated>
+      <workItem from="1676028919323" duration="12489000" />
+      <workItem from="1676466566063" duration="2311000" />
+      <workItem from="1677145326479" duration="16234000" />
+      <workItem from="1677752970797" duration="7638000" />
+      <workItem from="1678536902161" duration="602000" />
+      <workItem from="1678961970539" duration="604000" />
+      <workItem from="1679904635204" duration="33198000" />
+      <workItem from="1680074250890" duration="23679000" />
+      <workItem from="1680248769162" duration="2042000" />
+      <workItem from="1680256539694" duration="7979000" />
+      <workItem from="1680511878923" duration="14078000" />
+      <workItem from="1680593422253" duration="7514000" />
+      <workItem from="1680678518055" duration="13901000" />
+      <workItem from="1680703511480" duration="2086000" />
+      <workItem from="1680767070986" duration="13204000" />
+      <workItem from="1681199661867" duration="10009000" />
+      <workItem from="1681374411334" duration="7146000" />
+      <workItem from="1681547635396" duration="19117000" />
+      <workItem from="1681722099926" duration="12769000" />
+      <workItem from="1681893331305" duration="12038000" />
+      <workItem from="1681978676012" duration="23839000" />
+      <workItem from="1682064393063" duration="24715000" />
+      <workItem from="1682150661440" duration="4129000" />
+      <workItem from="1682330908482" duration="3247000" />
+    </task>
+    <task id="LOCAL-00001" summary="adda lyd filer">
+      <created>1676037138889</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676037138889</updated>
+    </task>
+    <task id="LOCAL-00002" summary="adda lyd filer">
+      <created>1676045131965</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676045131965</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Changes by dawid">
+      <created>1676473279219</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676473279219</updated>
+    </task>
+    <task id="LOCAL-00004" summary="GUI">
+      <created>1677776183876</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677776183876</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fungerande statisk GUI, Eg he ikkje toge hensyyn te at boksen eg legge inn blir plassert i fra hjørna så det e litt gale, men ser mer inn på det seinare">
+      <created>1679906068186</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679906068186</updated>
+    </task>
+    <task id="LOCAL-00006" summary="prøve å finna ut av dynamisk GUI">
+      <created>1679912907142</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679912907142</updated>
+    </task>
+    <task id="LOCAL-00007" summary="retnings testing">
+      <created>1679925050804</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679925050804</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fungerende retnings estimator">
+      <created>1680013835535</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680013835535</updated>
+    </task>
+    <task id="LOCAL-00009" summary="dynamisk gui testing">
+      <created>1680088832807</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680088832807</updated>
+    </task>
+    <task id="LOCAL-00010" summary="idea te gui">
+      <created>1680260285833</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680260285833</updated>
+    </task>
+    <task id="LOCAL-00011" summary="forsetta testing av improved vinkel">
+      <created>1680268585644</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1680268585644</updated>
+    </task>
+    <task id="LOCAL-00012" summary="forsatte på retning og avstand estimator">
+      <created>1680531623124</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1680531623124</updated>
+    </task>
+    <task id="LOCAL-00013" summary="forsatte på retning og avstand estimator">
+      <created>1680615458301</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1680615458301</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fekk ein fungerande retnings estimator mellom 45 og 90 grade i kver kvadrant :)">
+      <created>1680703305623</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1680703305623</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fekk ein fungerande retnings estimator mellom 45 og 90 grade i kver kvadrant :)">
+      <created>1680703337773</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1680703337773</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Fungerende retnings estimering">
+      <created>1680793060101</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1680793060101</updated>
+    </task>
+    <task id="LOCAL-00017" summary="prøvd å fått te intersection">
+      <created>1681229689022</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1681229689022</updated>
+    </task>
+    <task id="LOCAL-00018" summary="små sortering">
+      <created>1681375330862</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1681375330862</updated>
+    </task>
+    <task id="LOCAL-00019" summary="testing av dynamisk GUI med threading">
+      <created>1681549259755</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1681549259755</updated>
+    </task>
+    <task id="LOCAL-00020" summary="testing av dynamisk GUI med threading">
+      <created>1681553406420</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1681553406420</updated>
+    </task>
+    <task id="LOCAL-00021" summary="testing av dynamisk GUI med threading">
+      <created>1681558959830</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1681558959830</updated>
+    </task>
+    <task id="LOCAL-00022" summary="testing av dynamisk GUI med threading">
+      <created>1681560309266</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1681560309266</updated>
+    </task>
+    <task id="LOCAL-00023" summary="test av git">
+      <created>1681560863054</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1681560863054</updated>
+    </task>
+    <task id="LOCAL-00024" summary="test av git">
+      <created>1681561329309</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1681561329309</updated>
+    </task>
+    <task id="LOCAL-00025" summary="gitteri">
+      <created>1681564114640</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1681564114640</updated>
+    </task>
+    <task id="LOCAL-00026" summary="rydda opp i funksjonan og gjorde an slutt klart">
+      <created>1681572771999</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1681572771999</updated>
+    </task>
+    <task id="LOCAL-00027" summary="rydda opp i funksjonan og gjorde an slutt klart">
+      <created>1681572800339</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1681572800339</updated>
+    </task>
+    <task id="LOCAL-00028" summary="rydda opp i funksjonan og gjorde an slutt klart">
+      <created>1681573121288</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1681573121288</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Lagt ein UDP protokoll">
+      <created>1681735692292</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1681735692293</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Lagt ein UDP protokoll">
+      <created>1681737924524</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1681737924524</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Lagt ein UDP protokoll">
+      <created>1681739143713</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1681739143713</updated>
+    </task>
+    <task id="LOCAL-00032" summary="liten endring">
+      <created>1681902957623</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1681902957623</updated>
+    </task>
+    <task id="LOCAL-00033" summary="adda bok">
+      <created>1681918853553</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1681918853553</updated>
+    </task>
+    <task id="LOCAL-00034" summary="GUI jobbing">
+      <created>1681923873968</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1681923873968</updated>
+    </task>
+    <task id="LOCAL-00035" summary="GUI jobbing">
+      <created>1682008855433</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1682008855433</updated>
+    </task>
+    <task id="LOCAL-00036" summary="GUI jobbing">
+      <created>1682066276012</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1682066276012</updated>
+    </task>
+    <task id="LOCAL-00037" summary="fungerande? GUI">
+      <created>1682093090302</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1682093090302</updated>
+    </task>
+    <task id="LOCAL-00038" summary="shit">
+      <created>1682103156711</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1682103156711</updated>
+    </task>
+    <task id="LOCAL-00039" summary="shit">
+      <created>1682154803381</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1682154803381</updated>
+    </task>
+    <task id="LOCAL-00040" summary="shit">
+      <created>1682335469035</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1682335469035</updated>
+    </task>
+    <task id="LOCAL-00041" summary="shit">
+      <created>1682335516495</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1682335516495</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Simen_dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adda lyd filer" />
+    <MESSAGE value="Changes by dawid" />
+    <MESSAGE value="GUI" />
+    <MESSAGE value="Fungerande statisk GUI, Eg he ikkje toge hensyyn te at boksen eg legge inn blir plassert i fra hjørna så det e litt gale, men ser mer inn på det seinare" />
+    <MESSAGE value="prøve å finna ut av dynamisk GUI" />
+    <MESSAGE value="retnings testing" />
+    <MESSAGE value="Fungerende retnings estimator" />
+    <MESSAGE value="dynamisk gui testing" />
+    <MESSAGE value="idea te gui" />
+    <MESSAGE value="forsetta testing av improved vinkel" />
+    <MESSAGE value="forsatte på retning og avstand estimator" />
+    <MESSAGE value="fekk ein fungerande retnings estimator mellom 45 og 90 grade i kver kvadrant :)" />
+    <MESSAGE value="Fungerende retnings estimering" />
+    <MESSAGE value="prøvd å fått te intersection" />
+    <MESSAGE value="små sortering" />
+    <MESSAGE value="testing av dynamisk GUI med threading" />
+    <MESSAGE value="test av git" />
+    <MESSAGE value="gitteri" />
+    <MESSAGE value="rydda opp i funksjonan og gjorde an slutt klart" />
+    <MESSAGE value="Lagt ein UDP protokoll" />
+    <MESSAGE value="liten endring" />
+    <MESSAGE value="adda bok" />
+    <MESSAGE value="GUI jobbing" />
+    <MESSAGE value="fungerande? GUI" />
+    <MESSAGE value="shit" />
+    <option name="LAST_COMMIT_MESSAGE" value="shit" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$cord_test.coverage" NAME="cord_test Coverage Results" MODIFIED="1679912469324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$Geometrisk_retnig_og_avstands_estimering__1_.coverage" NAME="Geometrisk_retnig_og_avstands_estimering (1) Coverage Results" MODIFIED="1681572301996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/include" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$stat_GUI.coverage" NAME="stat_GUI Coverage Results" MODIFIED="1681375266628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$led_test.coverage" NAME="led_test Coverage Results" MODIFIED="1677246080352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$chat_gpt_radar.coverage" NAME="chat_gpt_radar Coverage Results" MODIFIED="1677761645815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$statisk_test.coverage" NAME="statisk_test Coverage Results" MODIFIED="1680704236265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$main.coverage" NAME="main Coverage Results" MODIFIED="1676468108142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$fokk.coverage" NAME="fokk Coverage Results" MODIFIED="1682092990982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/include" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$QT_plot_statisc__1_.coverage" NAME="QT_plot_statisc (1) Coverage Results" MODIFIED="1681225771175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$dynamisk_GUI_nett.coverage" NAME="dynamisk_GUI_nett Coverage Results" MODIFIED="1680096453294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$UDP_server_class__1_.coverage" NAME="UDP_server_class (1) Coverage Results" MODIFIED="1681735251285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../AppData/Local/Temp/scp25357/home/guttagruppa42/Documents/Simen" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$UDP_class__1_.coverage" NAME="UDP_class (1) Coverage Results" MODIFIED="1681739086096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/include" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$QT_plot.coverage" NAME="QT_plot Coverage Results" MODIFIED="1679905902552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$UDP_server_class.coverage" NAME="UDP_server_class Coverage Results" MODIFIED="1681733032965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/include" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$dynamisk_test_1.coverage" NAME="dynamisk_test_1 Coverage Results" MODIFIED="1679915229882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$retning_og_avstand_estimering.coverage" NAME="retning_og_avstand_estimering Coverage Results" MODIFIED="1681228157573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$paint_qt_test.coverage" NAME="paint_qt_test Coverage Results" MODIFIED="1682065964934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$GUI.coverage" NAME="GUI Coverage Results" MODIFIED="1682151213535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/include" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$dyn_test_2.coverage" NAME="dyn_test_2 Coverage Results" MODIFIED="1681913409473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$GUI_med_høgare_prosent.coverage" NAME="GUI_med_høgare_prosent Coverage Results" MODIFIED="1682090761813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/include" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$shit.coverage" NAME="shit Coverage Results" MODIFIED="1682154587967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/include" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$dynamic_test_1.coverage" NAME="dynamic_test_1 Coverage Results" MODIFIED="1681381678115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$direction_and_distance_estimation.coverage" NAME="direction_and_distance_estimation Coverage Results" MODIFIED="1682076606009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/include" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1681739057472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/include" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$plot.coverage" NAME="pyplot_plot Coverage Results" MODIFIED="1677229302270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$test.coverage" NAME="test Coverage Results" MODIFIED="1682089473670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/include" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$UDP_server.coverage" NAME="UDP_server Coverage Results" MODIFIED="1681727429344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/include" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$direction_and_distance_estimation__1_.coverage" NAME="direction_and_distance_estimation (1) Coverage Results" MODIFIED="1681722964047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/include" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$QT_plot_dynamic.coverage" NAME="QT_plot_dynamic Coverage Results" MODIFIED="1681375369526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$Geometrisk_retnig_og_avstands_estimering.coverage" NAME="Geometrisk_retnig_og_avstands_estimering Coverage Results" MODIFIED="1681559762635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finished-ish products" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$UDP_client.coverage" NAME="UDP_client Coverage Results" MODIFIED="1681730925642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/include" />
+  </component>
+</project>
