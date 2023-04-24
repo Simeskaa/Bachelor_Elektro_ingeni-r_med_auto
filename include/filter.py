@@ -1,4 +1,3 @@
-import numpy as np
 
 class DC_remover():
     def __init__(self, alpha:float = 0.95):

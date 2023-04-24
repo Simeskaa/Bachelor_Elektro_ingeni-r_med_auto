@@ -1,13 +1,21 @@
 from include.direction_and_distance_estimation import angle_cord_estimation as ace
 from include.signal_processing import processing
 from include.UDP_class import UDP
+from include.filter import DC_remover
 import json
+import copy
 import numpy as np
 from numpy import cos, pi
 import scipy.signal as sig
+import matplotlib.pyplot as plt
+import time
 
 
 buffer_size = 1024
+list_mic_1 = []
+list_mic_2 = []
+filter_m1 = []
+filter_m2 = []
 
 
 def recv():
@@ -29,17 +37,36 @@ def norm_data(data):
     return m_1, m_2
 
 
-if __name__ == "__main__":
+def plotting(mic_1, mic_2, filter_1,filter_2):
+    fig, ax1 = plt.subplots(2,1)
+    ax1.plot(mic_1, 'r')
+    ax1.plot(mic_2, 'blue')
 
-    UDP = UDP(ip_adress="192.168.0.69", port=5005, receive_msg=True)
+    fig, ax2 = plt.subplots(2, 2)
+    ax2.plot(filter_1, 'r')
+    ax2.plot(filter_2, 'blue')
+
+def main():
+    UDP = UDP(ip_adress="192.168.0.101", port=5005, receive_msg=True)
+    print('ready to get')
     pro = processing(216)
-    while True:
+    DC = DC_remover(alpha=0.95)
+    while time.:
         inc_msg = recv()
         x_1, x_2 = norm_data(inc_msg)
-        print(x_1, "\n", x_2)
-        print(pro.hps(x_1), pro.hps(x_2), "\n")
+        fake_x1 = copy.copy(x_1)
+        fake_x2 = copy.copy(x_2)
+        filter_x1 = DC.block_data_DC_reomver(x_1)
+        filter_x2 = DC.block_data_DC_reomver(x_2)
+        list_mic_1.extend(fake_x1)
+        list_mic_2.extend(fake_x2)
+        filter_m1.extend(filter_x1)
+        filter_m2.extend(filter_x2)
+        # print(x_1, "\n", x_2)
+        # print(pro.hps(x_1), pro.hps(x_2), "\n")
+    plotting(mic_1= )
 
-
+if __name__ == "__main__":
 
 
 
