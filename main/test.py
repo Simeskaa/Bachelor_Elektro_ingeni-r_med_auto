@@ -3,4 +3,5 @@ y = [4,5,6]
 
 x.extend(y)
 
-print(x)
+#print(x)
+print(15//5)
