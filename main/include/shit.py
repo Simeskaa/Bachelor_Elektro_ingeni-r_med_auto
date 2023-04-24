@@ -23,19 +23,18 @@ class MainWindow(QMainWindow):
         self.timer_square = []
         self.red_square = []
         self.blue_square = []
-        self.counter_square = 0
-        self.counted_square = 0
-
         self.x_circle = []
         self.y_circle = []
         self.timer_circle = []
         self.red_circle = []
         self.blue_circle = []
+        self.counter_square = 0
+        self.counted_square = 0
         self.counter_circle = 0
         self.counted_circle = 0
+
         self.range = range
         self.delay = delay
-        self.test = 0
 
 
         self.threadpool = QThreadPool()
@@ -98,7 +97,7 @@ class MainWindow(QMainWindow):
             self.x_square.append(x_adjusted_square)
             self.y_square.append(y_adjusted_square)
             self.counter_square += 1
-            self.timer_square.append(time.perf_counter() + 5)
+            self.timer_square.append(time.perf_counter() + self.delay)
             if hz == 260:
                 self.red_square.append(0)
                 self.blue_square.append(255)
