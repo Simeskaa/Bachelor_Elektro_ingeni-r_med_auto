@@ -36,22 +36,12 @@ def norm_data(data):
 
     return m_1, m_2
 
-
-def plotting(mic_1, mic_2, filter_1,filter_2):
-    fig, ax1 = plt.subplots(2,1)
-    ax1.plot(mic_1, 'r')
-    ax1.plot(mic_2, 'blue')
-
-    fig, ax2 = plt.subplots(2, 2)
-    ax2.plot(filter_1, 'r')
-    ax2.plot(filter_2, 'blue')
-
-def main():
+if __name__ == "__main__":
     UDP = UDP(ip_adress="192.168.0.101", port=5005, receive_msg=True)
     print('ready to get')
     pro = processing(216)
     DC = DC_remover(alpha=0.95)
-    while time.:
+    while time.perf_counter() > time.perf_counter()+30:
         inc_msg = recv()
         x_1, x_2 = norm_data(inc_msg)
         fake_x1 = copy.copy(x_1)
@@ -64,10 +54,10 @@ def main():
         filter_m2.extend(filter_x2)
         # print(x_1, "\n", x_2)
         # print(pro.hps(x_1), pro.hps(x_2), "\n")
-    plotting(mic_1= )
+    fig, ax1 = plt.subplots(2,1)
+    ax1.plot(list_mic_1, 'r')
+    ax1.plot(list_mic_2, 'b')
 
-if __name__ == "__main__":
-
-
-
-
+    fig, ax2 = plt.subplots(2, 2)
+    ax2.plot(filter_m1, 'r')
+    ax2.plot(filter_m2, 'b')
