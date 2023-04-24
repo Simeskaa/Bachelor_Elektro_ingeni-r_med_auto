@@ -1,11 +1,19 @@
 import sys
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, QTimer, QThreadPool, QRunnable
 from PySide6.QtGui import QPainter, QPixmap, QColor, QFont, QBrush
-from PySide6.QtWidgets import QApplication, QLabel, QMainWindow
+from PySide6.QtWidgets import QApplication, QLabel, QMainWindow, QDial, QPushButton
 import threading
 import time
 import logging
 from direction_and_distance_estimation import angle_cord_estimation
+
+
+# class Worker(QRunnable):
+#     def __init__(self, delete):
+#         super().__init__()
+#         shit = MainWindow()
+#     def run(self):
+#         QTimer.singleShot(1000, )
 
 class MainWindow(QMainWindow):
     def __init__(self, range:float = 2000., delay:int = 5):
@@ -35,9 +43,16 @@ class MainWindow(QMainWindow):
         self.range = range
         self.delay = delay
 
-        self.lock = threading.Lock()
-        x1 = threading.Thread(target=self.removing_from_GUI)
-        x1.start()
+        self.threadpool = QThreadPool()
+
+        # self.timer = QTimer()
+        # self.timer.setInterval(5000)
+        # #self.timer.setSingleShot(True)
+        # self.timer.timeout.connect(self.removing_from_GUI)
+        # self.timer.start()
+
+
+        #self.timer = QTimer()  # set up your QTimer
 
 
     def radar(self):
@@ -83,33 +98,41 @@ class MainWindow(QMainWindow):
 
 
     def update_GUI(self, x:float, y:float, hz:int, angle_overrule:bool):
-        with self.lock:
-            if not angle_overrule:
-                x_adjusted_square , y_adjusted_square= self.coordinate_center(x=x, y=y)
-                self.x_square.append(x_adjusted_square)
-                self.y_square.append(y_adjusted_square)
-                self.counter_square += 1
-                self.timer_square.append(time.perf_counter() + 5)
-                if hz == 260:
-                    self.red_square.append(0)
-                    self.blue_square.append(255)
-                elif hz == 440:
-                    self.red_square.append(255)
-                    self.blue_square.append(0)
+        if not angle_overrule:
+            x_adjusted_square , y_adjusted_square= self.coordinate_center(x=x, y=y)
+            self.x_square.append(x_adjusted_square)
+            self.y_square.append(y_adjusted_square)
+            self.counter_square += 1
+            if hz == 260:
+                self.red_square.append(0)
+                self.blue_square.append(255)
+            elif hz == 440:
+                self.red_square.append(255)
+                self.blue_square.append(0)
 
-            elif angle_overrule:
-                x_adjusted_circle, y_adjusted_circle = self.coordinate_center(x=x, y=y)
-                self.x_circle.append(x_adjusted_circle)
-                self.y_circle.append(y_adjusted_circle)
-                self.counter_circle += 1
-                self.timer_circle.append(time.perf_counter() + self.delay)
-                if hz == 260:
-                    self.red_circle.append(0)
-                    self.blue_circle.append(255)
-                elif hz == 440:
-                    self.red_circle.append(255)
-                    self.blue_circle.append(0)
-            self.item_placement_on_GUI()
+        elif angle_overrule:
+            x_adjusted_circle, y_adjusted_circle = self.coordinate_center(x=x, y=y)
+            self.x_circle.append(x_adjusted_circle)
+            self.y_circle.append(y_adjusted_circle)
+            self.counter_circle += 1
+            if hz == 260:
+                self.red_circle.append(0)
+                self.blue_circle.append(255)
+            elif hz == 440:
+                self.red_circle.append(255)
+                self.blue_circle.append(0)
+
+        self.item_placement_on_GUI()
+        pool = QThreadPool.globalInstance()
+        pool.start(QTimer.singleShot(1000, self.removing_from_GUI))
+        # self.timer.setInterval(5000)
+        # self.timer.timeout.connect(self.removing_from_GUI())  # connect it to your update function
+        # self.timer.start()
+        #QTimer.singleShot(5, self.removing_from_GUI)
+        logging.info("kjørt gjennom singelshot greiå")
+
+
+
 
 
     def item_placement_on_GUI(self):
@@ -122,50 +145,43 @@ class MainWindow(QMainWindow):
             self.counted_circle += 1
 
     def removing_from_GUI(self):
-        while True:
-            with self.lock:
-                if self.counter_square > 0:
-                    if self.timer_square[0] < time.perf_counter():
-                        self.radar()
-                        self.x_square.pop(0)
-                        self.y_square.pop(0)
-                        self.timer_square.pop(0)
-                        self.red_square.pop(0)
-                        self.blue_square.pop(0)
-                        self.counter_square -= 1
-                        self.counted_square -= 1
-                        #self.square = True
+        logging.info("look at me, I am mr. REMOVING")
+        if self.counter_square > 0:
+            self.radar()
+            self.x_square.pop(0)
+            self.y_square.pop(0)
+            self.red_square.pop(0)
+            self.blue_square.pop(0)
+            self.counter_square -= 1
+            self.counted_square -= 1
+            #self.square = True
 
-                        for i in range(len(self.x_square)):
-                            # logging.info("Drive_func is about to add remaining boxes")
-                            self.make_square(self.x_square[i], self.y_square[i], color_index=i)
-                        #logging.info("removing box")
+            for i in range(len(self.x_square)):
+                # logging.info("Drive_func is about to add remaining boxes")
+                self.make_square(self.x_square[i], self.y_square[i], color_index=i)
+            #logging.info("removing box")
 
-                        for i in range(len(self.x_circle)):
-                            # logging.info("Drive_func is about to add remaining boxes")
-                            self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
-                        #logging.info("removed box")
-                        time.sleep(0.5)
+            for i in range(len(self.x_circle)):
+                # logging.info("Drive_func is about to add remaining boxes")
+                self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
+            #logging.info("removed box")
 
-                if self.counter_circle > 0:
-                    if self.timer_circle[0] < time.perf_counter():
-                        self.radar()
-                        self.x_circle.pop(0)
-                        self.y_circle.pop(0)
-                        self.timer_circle.pop(0)
-                        self.red_circle.pop(0)
-                        self.blue_circle.pop(0)
-                        self.counter_circle -= 1
-                        self.counted_circle -= 1
-                        #logging.info("removing circle")
+        if self.counter_circle > 0:
+            self.radar()
+            self.x_circle.pop(0)
+            self.y_circle.pop(0)
+            self.red_circle.pop(0)
+            self.blue_circle.pop(0)
+            self.counter_circle -= 1
+            self.counted_circle -= 1
+            #logging.info("removing circle")
 
-                        for i in range(len(self.x_square)):
-                            self.make_square(self.x_square[i], self.y_square[i], color_index=i)
+            for i in range(len(self.x_square)):
+                self.make_square(self.x_square[i], self.y_square[i], color_index=i)
 
-                        for i in range(len(self.x_circle)):
-                            self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
-                        #logging.info("removed circle")
-                        time.sleep(0.5)
+            for i in range(len(self.x_circle)):
+                self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
+            #logging.info("removed circle")
 
 
 
@@ -246,4 +262,7 @@ x2.start()
 
 window.show()
 app.exec()
+
+#https://coderslegacy.com/python/pyqt5-qtimer/
+
 
