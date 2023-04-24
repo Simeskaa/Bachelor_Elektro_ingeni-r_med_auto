@@ -23,11 +23,11 @@ class UDP:
 if __name__ == "__main__":
     get = True
     if get:
-        UDP = UDP(ip_adress="192.168.0.69", port=5004, receive_msg= True)
+        UDP = UDP(ip_adress="localhost", port=5004, receive_msg= True)
         while True:
-            msg = UDP.get_message(65508)
+            msg = UDP.get_message(4096)
             message = json.loads(msg)
-            print(message)
+            print(message['mic 1'])
 
     if not get:
         UDP = UDP(ip_adress="192.168.0.101", port=5004, receive_msg=False)

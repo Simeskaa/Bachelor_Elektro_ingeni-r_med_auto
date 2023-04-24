@@ -90,7 +90,7 @@ class angle_cord_estimation():
 
         return list_angles, self.average_angle
 
-    def angle_2_cord_calc(self, angles: list):
+    def angle_2_cord_calc(self, angles: list, average_angle: float):
         # finding start and end coordinates
         # -------------------------------------------------
         end_cords = {}
@@ -144,6 +144,8 @@ class angle_cord_estimation():
             angle_overrule = False
         else:
             angle_overrule = True
+            x = 500*np.cos(average_angle)
+            y = 500*np.sin(average_angle)
         return x, y, angle_overrule
 
     def coord_2_distance_calc(self, x: float, y: float):
@@ -156,9 +158,9 @@ class angle_cord_estimation():
         # combining the different functions for easier usage
         # -------------------------------------------------
         angles, average_angle = self.angle_calc(timestamps)
-        boat_coords_x, boat_coords_y, angle_over_rule = self.angle_2_cord_calc(angles)
+        boat_coords_x, boat_coords_y, angle_overrule = self.angle_2_cord_calc(angles, average_angle)
         dist = self.coord_2_distance_calc(boat_coords_x, boat_coords_y)
-        return boat_coords_x, boat_coords_y, dist, average_angle, angle_over_rule
+        return boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule
 
     @property
     def angle2boat(self) -> float:
