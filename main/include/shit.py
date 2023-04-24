@@ -41,12 +41,10 @@ class MainWindow(QMainWindow):
 
         self.timer = QTimer()
         self.timer.setInterval(100)
-        #self.timer.setSingleShot(True)
         self.timer.timeout.connect(self.removing_from_GUI)
         self.timer.start()
 
 
-        #self.timer = QTimer()  # set up your QTimer
 
 
     def radar(self):
@@ -119,12 +117,7 @@ class MainWindow(QMainWindow):
                 self.blue_circle.append(0)
 
         self.item_placement_on_GUI()
-        #pool = QThreadPool.globalInstance()
-        #pool.start(QTimer.singleShot(1000, self.removing_from_GUI))
-        # self.timer.setInterval(5000)
-        # self.timer.timeout.connect(self.removing_from_GUI())  # connect it to your update function
-        # self.timer.start()
-        #QTimer.singleShot(5, self.removing_from_GUI)
+
 
 
 
@@ -140,7 +133,6 @@ class MainWindow(QMainWindow):
             self.counted_circle += 1
 
     def removing_from_GUI(self):
-        #logging.info("look at me, I am mr. REMOVING")
         if self.counter_square > 0:
             if self.timer_square[0] < time.perf_counter():
                 self.radar()
@@ -151,18 +143,12 @@ class MainWindow(QMainWindow):
                 self.timer_square.pop(0)
                 self.counter_square -= 1
                 self.counted_square -= 1
-                #self.test -= 1
-                #self.square = True
 
                 for i in range(len(self.x_square)):
-                    # logging.info("Drive_func is about to add remaining boxes")
                     self.make_square(self.x_square[i], self.y_square[i], color_index=i)
-                #logging.info("removing box")
 
                 for i in range(len(self.x_circle)):
-                    # logging.info("Drive_func is about to add remaining boxes")
                     self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
-                #logging.info("removed box")
 
         if self.counter_circle > 0:
             if self.timer_circle[0] < time.perf_counter():
@@ -175,14 +161,11 @@ class MainWindow(QMainWindow):
                 self.counter_circle -= 1
                 self.counted_circle -= 1
 
-                #logging.info("removing circle")
-
                 for i in range(len(self.x_square)):
                     self.make_square(self.x_square[i], self.y_square[i], color_index=i)
 
                 for i in range(len(self.x_circle)):
                     self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
-            #logging.info("removed circle")
 
 
 
