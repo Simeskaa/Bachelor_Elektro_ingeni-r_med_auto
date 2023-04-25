@@ -1,7 +1,5 @@
-x = [1,2,3]
-y = [4,5,6]
+import numpy as np
 
-x.extend(y)
-
-#print(x)
-print(15//5)
+print(343/(440*2))
+h = 343/(440*2)*100
+print(np.sqrt((h**2)/2))

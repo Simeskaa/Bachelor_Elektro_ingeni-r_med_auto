@@ -1,7 +1,7 @@
 import sys
-from PySide6.QtCore import Qt, QTimer, QThreadPool, QRunnable
+from PySide6.QtCore import Qt, QTimer
 from PySide6.QtGui import QPainter, QPixmap, QColor, QFont, QBrush
-from PySide6.QtWidgets import QApplication, QLabel, QMainWindow, QDial, QPushButton
+from PySide6.QtWidgets import QApplication, QLabel, QMainWindow
 import threading
 import time
 import logging
@@ -35,9 +35,6 @@ class MainWindow(QMainWindow):
 
         self.range = range
         self.delay = delay
-
-
-        self.threadpool = QThreadPool()
 
         self.timer = QTimer()
         self.timer.setInterval(100)
@@ -117,11 +114,6 @@ class MainWindow(QMainWindow):
                 self.blue_circle.append(0)
 
         self.item_placement_on_GUI()
-
-
-
-
-
 
     def item_placement_on_GUI(self):
         if self.counter_square > self.counted_square:
