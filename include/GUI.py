@@ -1,7 +1,7 @@
 import sys
-from PySide6.QtCore import Qt, QTimer, QThreadPool, QRunnable
+from PySide6.QtCore import Qt, QTimer, QThreadPool
 from PySide6.QtGui import QPainter, QPixmap, QColor, QFont, QBrush
-from PySide6.QtWidgets import QApplication, QLabel, QMainWindow, QDial, QPushButton
+from PySide6.QtWidgets import QApplication, QLabel, QMainWindow
 import threading
 import time
 import logging
@@ -15,7 +15,7 @@ from direction_and_distance_estimation import angle_cord_estimation
 #     def run(self):
 #         QTimer.singleShot(1000, )
 
-class MainWindow(QMainWindow):
+class GUI(QMainWindow):
     def __init__(self, range:float = 2000., delay:int = 5):
         super().__init__()
         self.label = QLabel()
@@ -195,7 +195,7 @@ class MainWindow(QMainWindow):
 def test():
     while True:
         time.sleep(3)
-        logging.info("Thread test is about to update 1")
+        #logging.info("Thread test is about to update 1")
         boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule = boat.timestamp_2_cord(simulation('45'))
         window.update_GUI(x= boat_coords_x, y=boat_coords_y, hz= 440, angle_overrule= angle_overrule)
         #logging.info("Thread test is updated 1")
@@ -245,19 +245,19 @@ def simulation(boat_placment):
 
 
 app = QApplication(sys.argv)
-window = MainWindow()
-boat = angle_cord_estimation(dist_short_mic=12, spd_sound=343, max_distance=2000)
+window = GUI()
+#boat = angle_cord_estimation(dist_short_mic=12, spd_sound=343, max_distance=2000)
 
 #window.show()
 #x1 = threading.Thread(target=window.upd, args=())
-format = "%(asctime)s: %(message)s"
-
-logging.basicConfig(format=format, level=logging.INFO, datefmt="%H:%M:%S")
-
-
-x2 = threading.Thread(target=test)
-
-x2.start()
+# format = "%(asctime)s: %(message)s"
+#
+# logging.basicConfig(format=format, level=logging.INFO, datefmt="%H:%M:%S")
+#
+#
+# x2 = threading.Thread(target=test)
+#
+# x2.start()
 
 
 window.show()
