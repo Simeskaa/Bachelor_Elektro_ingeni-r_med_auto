@@ -24,17 +24,6 @@ class processing():
 
         return frequency
 
-    # Finite Iteration Filter
-    # Simple filter that reduces unwanted frequencies
-    def FIR_filter(self, xn, desired_hz: int = 140):
-        width = 50
-        L = self.Fs//width
-        w_bp = desired_hz/self.Fs*2*pi
-
-        hn_bp = cos(w_bp*np.arange(L))*2*sig.hamming(L)
-        y = sig.convolve(xn, hn_bp)
-        return y
-
     # Correlation between two signals, with Fast Fourier Transformation (FFT)
     def cross_correlation(self, xn_1, xn_2):
         # Convert to frequency domain
@@ -52,6 +41,40 @@ class processing():
         time_delay = round((np.argmax(r_12)/self.Fs)*10**3, 2)  # present the result in milliseconds (ms)
         distance = np.argmax(r_12)/self.Fs*343  # 343m/s is the speed of sound
         return time_delay, distance
+
+    def spectral_weighing(self, mic, a, y):
+        # Empty arrays
+        X_k = [0]*len(mic[0])
+        Xn_k = [0]*len(mic[0])
+        wk = [0]*len(mic[0])
+        we_k = [0]*len(mic[0])
+
+        # Find average between mics, std, and thereafter weight
+        for i in range(len(mic[0])):
+            X_k[i] = (mic[0][i] + mic[1][i])/len(mic) # Avg
+            # If this is removed, in some cases the program divide by zero,
+            # And values become Nan
+            #if X_k[i] == 0:
+            #    X_k[i] = 0.1
+
+            Xn_k[i] = max(0.01, np.sqrt(  ((mic[0][i] - X_k[i]) + (mic[1][i] - X_k[i]) )**2 /len(mic) ) ) # Std
+            wk[i] = max(0.1, ((X_k[i] - (a * Xn_k[i])) / (X_k[i])) )  # Weight
+
+            # based on function 5 in pdf: https://ieeexplore.ieee.org/document/1248813
+            # we_k has to be created
+            if X_k[i] <= Xn_k[i]:
+                we_k[i] = wk[i]
+            elif X_k[i] > Xn_k[i]:
+                we_k[i] = wk[i] * ( (X_k[i])/(Xn_k[i]) )**y
+
+            # Debugging purposes
+            if False:
+                print("Raw:{}, {}".format(round(mic[0][i],2), round(mic[1][i],2)),
+                      "\nAvg:{}".format(round(X_k[i], 2)),
+                      "\nStd:{}".format(round(Xn_k[i], 2)),
+                      "\nwk :{}\n".format(round(wk[i], 2))
+                     )
+        return we_k, wk, X_k, Xn_k
 
     @property
     def samplerate(self):
