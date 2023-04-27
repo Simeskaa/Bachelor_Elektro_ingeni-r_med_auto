@@ -8,6 +8,12 @@ import scipy.signal as sig
 import sys
 from PySide6.QtWidgets import QApplication
 
+from scipy.io import wavfile
+
+# TEST FILE:-----------------------------------
+samplerate, data = wavfile.read('/Users/dawid/Documents/NTNU/BACHELOR/Sound_triangulation/misc/lydfiler/440Hz_dist_20cm.wav')
+x = data.T
+# TEST FILE:-----------------------------------
 
 buffer_size = 4096
 ready = False
@@ -15,9 +21,10 @@ mics = [0]*4
 toad = [0]*4
 
 def recv():
-    msg = UDP.get_message(65508)
+    #msg = UDP.get_message(65508)
     #inc_msg = json.loads(msg)
-    return msg
+    #return msg
+    pass
 
 def verify_signals(signals: list, des_Hz: int = 440, width: int = 10):
     ready = False
@@ -50,15 +57,27 @@ def verify_signals(signals: list, des_Hz: int = 440, width: int = 10):
 
 if __name__ == "__main__":
     # Instancing of classes
-    UDP = UDP(ip_adress="192.168.0.69", port=5005, receive_msg=True)
+    #UDP = UDP(ip_adress="192.168.0.69", port=5005, receive_msg=True)
     pro = processing(216)
     ace = ace()
     GUI = GUI()
 
+    # TEST FILE: -----------------------------------
+    toad_78 = [0, 0.029, 0.019, 0.048]
+    mic1 = x
+    mic2 = pro.add_delay(x, toad_78[1]*343, fs=samplerate)+\
+           np.random.randn(len(x))*0.05
+    mic3 = pro.add_delay(x, toad_78[2]*343, fs=samplerate)+\
+           np.random.randn(len(x))*0.05
+    mic4 = pro.add_delay(x, toad_78[3]*343, fs=samplerate)+\
+           np.random.randn(len(x))*0.05
+    mics = [mic1, mic2, mic3, mic4]
+    # TEST FILE: -----------------------------------
+
     # Receive signal from FPGA
-    msg = recv()
-    for i in range(len(mics)):
-        mics[i] = msg[i] # mics[0] has data from mic 1
+    #msg = recv()
+    #for i in range(len(mics)):
+    #    mics[i] = msg[i] # mics[0] has data from mic 1
 
     # Signal verification
     start = verify_signals(signals=mics, des_Hz=440, width=10)

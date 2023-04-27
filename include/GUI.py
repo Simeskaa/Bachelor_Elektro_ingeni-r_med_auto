@@ -5,10 +5,9 @@ from PySide6.QtWidgets import QApplication, QLabel, QMainWindow
 import threading
 import time
 import logging
-from direction_and_distance_estimation import angle_cord_estimation
 
 
-class MainWindow(QMainWindow):
+class GUI(QMainWindow):
     def __init__(self, max_dist:float = 2000., delay:int = 5):
         super().__init__()
         # making the canvas and plotting the radar
@@ -185,9 +184,9 @@ class MainWindow(QMainWindow):
 def test():
     # simulating inputs from direction and angle class
     while True:
-        time.sleep(3)
-        boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule = boat.timestamp_2_cord(simulation('45'))
-        window.update_GUI(x= boat_coords_x, y=boat_coords_y, hz= 440, angle_overrule= angle_overrule)
+        #time.sleep(3)
+        #boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule = boat.timestamp_2_cord(simulation('45'))
+        #window.update_GUI(x= boat_coords_x, y=boat_coords_y, hz= 440, angle_overrule= angle_overrule)
         time.sleep(3)
         window.update_GUI(x=50, y=50, hz= 260, angle_overrule= False)
         time.sleep(2)
@@ -197,7 +196,7 @@ def test():
 
 def simulation(boat_placment):
     # simulating timestamps for the simulation
-    tdoa_78 = [0, 0.019, 0.029, 0.048]
+    tdoa_78 = [0, 0.029, 0.019, 0.048]
     tdoa_45 = [0.0, 0.0, 0.03498542274, 0.03498542274]
     tdoa_34 = [0., (1.37 + 0.92) / 343, (1.37 + 0.92 + 9.506) / 343, (1.37 + 0.92 + 9.506 + 1.438 + 0.809) / 343]
 
@@ -208,7 +207,7 @@ def simulation(boat_placment):
         t2 = tdoa_78[1]
         t3 = tdoa_78[2]
         t4 = tdoa_78[3]
-        mic = {'m1': t3, 'm2': t4, 'm3': t1, 'm4': t2}
+        mic = {'m1': t1, 'm2': t3, 'm3': t2, 'm4': t4}
 
     if boat_placment == '45':
         t1 = tdoa_45[0]
@@ -228,12 +227,12 @@ def simulation(boat_placment):
 
     return tdoa
 
+if __name__ == '__main__':
 
-
-app = QApplication(sys.argv)
-window = MainWindow()
-boat = angle_cord_estimation(dist_short_mic=12, spd_sound=343, max_distance=2000)
-x2 = threading.Thread(target=test)
-x2.start()
-window.show()
-app.exec()
+    app = QApplication(sys.argv)
+    window = GUI()
+    #boat = angle_cord_estimation(dist_short_mic=12, spd_sound=343, max_distance=2000)
+    x2 = threading.Thread(target=test)
+    x2.start()
+    window.show()
+    app.exec()

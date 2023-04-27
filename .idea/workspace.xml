@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="Updated signal_processing.py file, almost ready">
+    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="Single thread of main program ready (Not tested)">
+      <change afterPath="$PROJECT_DIR$/misc/lydfiler/440Hz_dist_20cm.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/include/GUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main.py" afterDir="false" />
     </list>
     <list id="ca46afb5-6e55-48db-a910-0c171d34208c" name="Changes by dawid" comment="Changes by dawid" />
@@ -36,11 +39,15 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2LXsmBAFI95GQM3oYpqbrAIDerK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
@@ -54,7 +61,7 @@
       <recent name="C:\Users\zaime\Bachelor_Elektro_ingenior_med_auto\lyd_filer" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.array_sum">
+  <component name="RunManager" selected="Python.main (1)">
     <configuration name="GUI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Bachelor_Elektro_ingenior_med_auto" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,7 +149,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="fokk" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Bachelor_Elektro_ingenior_med_auto" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -150,12 +157,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main/include" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/main" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/include/fokk.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -210,11 +216,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.array_sum" />
         <item itemvalue="Python.GUI" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.GUI_med_høgare_prosent" />
-        <item itemvalue="Python.fokk" />
       </list>
     </recent_temporary>
   </component>
@@ -552,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682604590235</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Single thread of main program ready (Not tested)">
+      <created>1682604980247</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1682604980247</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,7 +595,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changes by dawid" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="GUI" />
     <MESSAGE value="Fungerande statisk GUI, Eg he ikkje toge hensyyn te at boksen eg legge inn blir plassert i fra hjørna så det e litt gale, men ser mer inn på det seinare" />
     <MESSAGE value="prøve å finna ut av dynamisk GUI" />
@@ -607,7 +620,8 @@
     <MESSAGE value="fungerande? GUI" />
     <MESSAGE value="shit" />
     <MESSAGE value="Updated signal_processing.py file, almost ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated signal_processing.py file, almost ready" />
+    <MESSAGE value="Single thread of main program ready (Not tested)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Single thread of main program ready (Not tested)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$cord_test.coverage" NAME="cord_test Coverage Results" MODIFIED="1679912469324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
