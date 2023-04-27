@@ -89,9 +89,9 @@ if __name__ == "__main__":
     LIST_LP_FILTER_M2 = np.fft.fft(list_lp_filter_m2)
 
 #plotting av data
-    if False:
+    if True:
         plt.close(1); plt.figure(1, figsize=(10, 6))
-        plt.subplot(4, 1, 1); plt.plot(list_raw_values_m1, color ='r'); plt.plot(list_raw_values_m2, color ='b'); plt.title(f'RAW signal'); plt.grid(True)
+        plt.subplot(4, 1, 1); plt.plot(list_raw_values_m2, color ='b'); plt.plot(list_raw_values_m1, color ='r');  plt.title(f'RAW signal'); plt.grid(True)
         plt.subplot(4, 1, 2); plt.plot(list_block_filter_m1, color='r'); plt.plot(list_block_filter_m2, color='b'); plt.title(f'blokk filtrert signal'); plt.grid(True)
         plt.subplot(4, 1, 3); plt.plot(list_lp_filter_m2, 'b');plt.plot(list_lp_filter_m1, 'r'); plt.xlabel("lp filtrert signal"); plt.grid(True)
 
