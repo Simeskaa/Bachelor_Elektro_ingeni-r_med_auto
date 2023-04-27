@@ -1,7 +1,7 @@
 import numpy as np
 from numpy import cos, pi
 import scipy.signal as sig
-
+import copy
 class processing():
     def __init__(self, Fs: int):
         self.Fs = Fs
@@ -68,6 +68,8 @@ class processing():
         nr_mics = len(mic)       #  Amount of microphones
         nr_samples = len(mic[0]) #  This can be created with only 0, since all mics are same length
 
+        mic_copy = copy.copy(mic)
+
         # Empty arrays
         X_k = [0]*nr_samples
         Xn_k = [0]*nr_samples
@@ -76,15 +78,15 @@ class processing():
 
         # Convert the input values to frequency domain
         for j in range(nr_mics):
-            mic[j] = np.fft.fft(mic[j])
+            mic_copy[j] = np.fft.fft(mic_copy[j])
 
         # Calculate values for every sample between all microphones
         for i in range(nr_mics):
-            X_k[i] = (mic[0][i] + mic[1][i] + mic[2][i] + mic[3][i]) / nr_mics    # Average
-            Xn_k[i] = max(0.01, np.sqrt( ((mic[0][i] - X_k[i]) +
-                                          (mic[1][i] - X_k[i]) +
-                                          (mic[2][i] - X_k[i]) +
-                                          (mic[3][i] - X_k[i]))**2 / nr_mics ) )  # Std (noise)
+            X_k[i] = (mic_copy[0][i] + mic_copy[1][i] + mic_copy[2][i] + mic_copy[3][i]) / nr_mics    # Average
+            Xn_k[i] = max(0.01, np.sqrt( ((mic_copy[0][i] - X_k[i]) +
+                                          (mic_copy[1][i] - X_k[i]) +
+                                          (mic_copy[2][i] - X_k[i]) +
+                                          (mic_copy[3][i] - X_k[i]))**2 / nr_mics ) )  # Std (noise)
 
             wk[i] = max(0.1, ((X_k[i] - (a * Xn_k[i])) / (X_k[i])) )              # Weight
 

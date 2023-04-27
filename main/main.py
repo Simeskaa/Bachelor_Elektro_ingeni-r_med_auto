@@ -7,12 +7,14 @@ import numpy as np
 import scipy.signal as sig
 import sys
 from PySide6.QtWidgets import QApplication
+import matplotlib.pyplot as plt
+import time
 
 from scipy.io import wavfile
 
 # TEST FILE:-----------------------------------
-samplerate, data = wavfile.read('/Users/dawid/Documents/NTNU/BACHELOR/Sound_triangulation/misc/lydfiler/440Hz_dist_20cm.wav')
-x = data.T
+samplerate, data = wavfile.read('/Users/dawid/Documents/NTNU/BACHELOR/Sound_triangulation/misc/lydfiler/Piano_440Hz.wav')
+x = data
 # TEST FILE:-----------------------------------
 
 buffer_size = 4096
@@ -58,20 +60,23 @@ def verify_signals(signals: list, des_Hz: int = 440, width: int = 10):
 if __name__ == "__main__":
     # Instancing of classes
     #UDP = UDP(ip_adress="192.168.0.69", port=5005, receive_msg=True)
-    pro = processing(216)
+    pro = processing(samplerate)
     ace = ace()
-    GUI = GUI()
+    #app = QApplication(sys.argv)
+    #GUI = GUI()
+
 
     # TEST FILE: -----------------------------------
     toad_78 = [0, 0.029, 0.019, 0.048]
-    mic1 = x
+    mic1 = pro.add_delay(x, 0, fs=samplerate)+\
+           np.random.randn(len(x))*0.05
     mic2 = pro.add_delay(x, toad_78[1]*343, fs=samplerate)+\
            np.random.randn(len(x))*0.05
     mic3 = pro.add_delay(x, toad_78[2]*343, fs=samplerate)+\
            np.random.randn(len(x))*0.05
     mic4 = pro.add_delay(x, toad_78[3]*343, fs=samplerate)+\
            np.random.randn(len(x))*0.05
-    mics = [mic1, mic2, mic3, mic4]
+    mics = [mic1[100000:100000+buffer_size], mic2[100000:100000+buffer_size], mic3[100000:100000+buffer_size], mic4[100000:100000+buffer_size]]
     # TEST FILE: -----------------------------------
 
     # Receive signal from FPGA
@@ -80,25 +85,45 @@ if __name__ == "__main__":
     #    mics[i] = msg[i] # mics[0] has data from mic 1
 
     # Signal verification
-    start = verify_signals(signals=mics, des_Hz=440, width=10)
+    start = verify_signals(signals=mics, des_Hz=440, width=20)
+    print(start)
+
 
     # Signal processing
     if start:
         we = pro.spectral_weighing(mics, a=0.3, y=0.4)
-        for i in range(len(mics)):
-            toad[i] = pro.cross_correlation(mics[0], mics[i], we)
-
-        toad = pro.norm_values(toad)
+        for i in range(len(mics)-1):
+            toad[i] = pro.cross_correlation(mics[0], mics[i+1], we)
+        print(toad)
+        #toad = pro.norm_values(toad)
 
         # Convertion from time delays to position
-        boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule = ace.timestamp_2_cord(toad)
+        #boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule = ace.timestamp_2_cord(toad)
+
+        # Troubleshooting
+        if True:
+            # RAW
+            if False:
+                plt.close(1); plt.figure(1, figsize=(4,3))
+                plt.plot(mics[0], color='b', label='RAW signal 1')
+                plt.plot(mics[1], color='tab:orange',label="RAW signal 2 (behind)")
+                plt.plot(mics[2], color='r', label='RAW signal 1')
+                plt.plot(mics[3], color='g' ,label="RAW signal 2 (behind)")
+
+            # Weights
+            if False:
+                plt.close(2); plt.figure(2, figsize=(4,3))
+                plt.plot(we)
+
+            plt.show()
 
         # GUI representation
-        if False:
-            GUI.update_GUI(x= boat_coords_x, y=boat_coords_y, hz= 440, angle_overrule= angle_overrule)
 
-            # These have to bo threaded
-            #app = QApplication(sys.argv)
-            #window = GUI()
-            #window.show()
-            #app.exec()
+
+
+        # These have to bo threaded
+        GUI.show()
+        GUI.update_GUI(x= boat_coords_x, y=boat_coords_y, hz= 440, angle_overrule= angle_overrule)
+        print("GUI about to go")
+        app.exec()
+        print("GUI NOT")
