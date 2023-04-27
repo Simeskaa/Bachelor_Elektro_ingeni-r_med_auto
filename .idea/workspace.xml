@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="Updated signal_processing.py file, almost ready">
-      <change beforePath="$PROJECT_DIR$/include/signal_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/include/signal_processing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main.py" afterDir="false" />
     </list>
     <list id="ca46afb5-6e55-48db-a910-0c171d34208c" name="Changes by dawid" comment="Changes by dawid" />
@@ -23,7 +22,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/Development" />
+    <option name="BRANCH" value="origin/Development_comment" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -546,7 +545,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682603646331</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Updated signal_processing.py file, almost ready">
+      <created>1682604590235</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1682604590235</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -68,17 +68,18 @@ if __name__ == "__main__":
         we = pro.spectral_weighing(mics, a=0.3, y=0.4)
         for i in range(len(mics)):
             toad[i] = pro.cross_correlation(mics[0], mics[i], we)
-    # toad = [0, 0, 42, 42]
 
-    # Convertion from time delays to position
-    boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule = ace.timestamp_2_cord(toad)
+        toad = pro.norm_values(toad)
 
-    # GUI representation
-    if False:
-        GUI.update_GUI(x= boat_coords_x, y=boat_coords_y, hz= 440, angle_overrule= angle_overrule)
+        # Convertion from time delays to position
+        boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule = ace.timestamp_2_cord(toad)
 
-        # These have to bo threaded
-        #app = QApplication(sys.argv)
-        #window = GUI()
-        #window.show()
-        #app.exec()
+        # GUI representation
+        if False:
+            GUI.update_GUI(x= boat_coords_x, y=boat_coords_y, hz= 440, angle_overrule= angle_overrule)
+
+            # These have to bo threaded
+            #app = QApplication(sys.argv)
+            #window = GUI()
+            #window.show()
+            #app.exec()
