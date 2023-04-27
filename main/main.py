@@ -12,6 +12,7 @@ from PySide6.QtWidgets import QApplication
 buffer_size = 4096
 ready = False
 mics = [0]*4
+toad = [0]*4
 
 def recv():
     msg = UDP.get_message(65508)
@@ -65,7 +66,8 @@ if __name__ == "__main__":
     # Signal processing
     if start:
         we = pro.spectral_weighing(mics, a=0.3, y=0.4)
-
+        for i in range(len(mics)):
+            toad[i] = pro.cross_correlation(mics[0], mics[i], we)
     # toad = [0, 0, 42, 42]
 
     # Convertion from time delays to position

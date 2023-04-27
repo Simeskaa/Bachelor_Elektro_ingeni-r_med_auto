@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="shit">
-      <change beforePath="$PROJECT_DIR$/.idea/Bachelor_Elektro_ingenior_med_auto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Bachelor_Elektro_ingenior_med_auto.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="Updated signal_processing.py file, almost ready">
       <change beforePath="$PROJECT_DIR$/include/signal_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/include/signal_processing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main.py" afterDir="false" />
     </list>
@@ -542,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682335516495</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Updated signal_processing.py file, almost ready">
+      <created>1682603646331</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1682603646331</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,7 +576,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adda lyd filer" />
     <MESSAGE value="Changes by dawid" />
     <MESSAGE value="GUI" />
     <MESSAGE value="Fungerande statisk GUI, Eg he ikkje toge hensyyn te at boksen eg legge inn blir plassert i fra hjørna så det e litt gale, men ser mer inn på det seinare" />
@@ -597,7 +600,8 @@
     <MESSAGE value="GUI jobbing" />
     <MESSAGE value="fungerande? GUI" />
     <MESSAGE value="shit" />
-    <option name="LAST_COMMIT_MESSAGE" value="shit" />
+    <MESSAGE value="Updated signal_processing.py file, almost ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated signal_processing.py file, almost ready" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$cord_test.coverage" NAME="cord_test Coverage Results" MODIFIED="1679912469324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

@@ -99,11 +99,12 @@ class processing():
 
     # [0, -2, -4, 2]
     def norm_values(self, toad):
-        ans = min(a)
+        norm_toad = [0]*len(toad)
+        low_val = min(toad)  # Lowest value
 
-        for i in range(len(a)):
-            a[i] += abs(ans)
-        norm_toad =
+        for i in range(len(toad)):
+            norm_toad[i] = toad[i] + abs(low_val)
+
         return norm_toad
 
     @property
