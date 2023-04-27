@@ -18,31 +18,6 @@ def recv():
     #inc_msg = json.loads(msg)
     return msg
 
-# def verify_sig(signal: list, des_Hz: int = 440, width: int = 10, amount: int = 3) -> bool:
-#     global ready ,verified_array
-#     top = des_Hz + width
-#     bot = des_Hz - width
-#     freq = pro.hps(signal)
-#
-#     # Check if the detected frequency is within a range
-#     if bot <= freq <= top:
-#         verified_array.insert(0, freq)
-#
-#         # If there are enough verified values, return ready
-#         if len(verified_array) >= amount:
-#             ready = True
-#
-#         # If there are too many values verified, delete the oldest one
-#         if len(verified_array) > amount:
-#             verified_array.pop(-1)
-#
-#     else:
-#         # Reset the list to 0 verified frequencies
-#         print(f'List was reset, frequency detected:{freq}')
-#         ready = False
-#
-#     return ready
-
 def verify_signals(signals: list, des_Hz: int = 440, width: int = 10):
     ready = False
     top = des_Hz + width
@@ -89,7 +64,8 @@ if __name__ == "__main__":
 
     # Signal processing
     if start:
-        pro.
+        we = pro.spectral_weighing(mics, a=0.3, y=0.4)
+
     # toad = [0, 0, 42, 42]
 
     # Convertion from time delays to position
