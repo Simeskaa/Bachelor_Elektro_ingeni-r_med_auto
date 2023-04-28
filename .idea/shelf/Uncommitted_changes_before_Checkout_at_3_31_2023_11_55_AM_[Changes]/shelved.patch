@@ -1,0 +1,116 @@
+Index: statisk_test.py
+===================================================================
+diff --git a/statisk_test.py b/statisk_test.py
+--- a/statisk_test.py	
++++ b/statisk_test.py	
+@@ -79,16 +79,49 @@
+     #tdoas_temp = copy.copy(tdoas)
+     #tdoas_temp = tdoas_temp[1:]
+     #print(tdoas_temp)
+-    time_diff = tdoas[2] - tdoas[1]
+-    dist = time_diff * spd_sound
+-    angle = np.arccos(dist / spacing)
+-    print(dist)
+-    print(angle)
++    time_diff_1 = tdoas[2] - tdoas[1]
++    dist_1 = time_diff_1 * spd_sound
++    angle_1 = np.arccos(dist_1 / spacing)
++    #print(dist_1)
++    #print(angle_1)
+     if tdoas[0] > tdoas[3]:
+-        angle = 2*np.pi - angle
++        angle_1 = 2*np.pi - angle_1
++
++    time_diff_2 = tdoas[0] - tdoas[3]
++    dist_2 = time_diff_2 * spd_sound
++    angle_2 = np.arccos(dist_2 / spacing)
++    #print(dist_2)
++    #print(angle_2)
++
++
++    return angle
++
++def angle_calc5(tdoas: dict, spd_sound: float, spacing_big: float, spacing_little: float):
++    angle_m1_m2 = (np.arccos(((tdoas['m1'] - tdoas['m2']) * spd_sound) / spacing_little))# + (np.pi/4)) #% (2*np.pi)
++    angle_m3_m4 = (np.arccos(((tdoas['m3'] - tdoas['m4']) * spd_sound) / spacing_little))# + (np.pi/4)) #% (2*np.pi)
++    angle_m1_m3 = (np.arccos(((tdoas['m1'] - tdoas['m3']) * spd_sound) / spacing_little))# - (np.pi/4)) #% (2*np.pi)
++    angle_m2_m4 = (np.arccos(((tdoas['m2'] - tdoas['m4']) * spd_sound) / spacing_little))# - (np.pi/4)) #% (2*np.pi)
++    angle_m2_m3 = (np.arccos(((tdoas['m2'] - tdoas['m3']) * spd_sound) / spacing_big)) #% (2*np.pi)
++    angle_m1_m4 = (np.arccos(((tdoas['m1'] - tdoas['m4']) * spd_sound) / spacing_big))# - (np.pi/2)) #% (2*np.pi)
++    #print(angle_m2_m3*(180/np.pi), angle_m1_m4*(180/np.pi), angle_m2_m4*(180/np.pi), angle_m1_m3*(180/np.pi),  angle_m1_m2*(180/np.pi), angle_m3_m4*(180/np.pi))
++    angle = (angle_m2_m3 + angle_m1_m4  + angle_m1_m3 + angle_m2_m4 + angle_m3_m4 + angle_m1_m2) / 6
++    #print(angle*(180/np.pi))
++    list_of_angles = [angle_m2_m3 , angle_m1_m4  , angle_m1_m3 , angle_m2_m4 , angle_m3_m4 , angle_m1_m2]
++
++    if tdoas['m1'] > tdoas['m4']:
++        angle = 2 * np.pi - angle
++        for i in range(len(list_of_angles)):
++            list_of_angles[i] = 2 * np.pi - list_of_angles[i]
++    #print(angle*(180/np.pi))
++    for i in range(len(list_of_angles)):
++        list_of_angles[i] = list_of_angles[i] * 180/np.pi
++    print(list_of_angles)
+     return angle
+ 
+ 
++
++
++
+ #print("samplerate:", samplerate)
+ #print("Antall sampler:", len(xn_rx_1))
+ 
+@@ -132,20 +165,24 @@
+ t3 = 0.029
+ t4 = t3 + t2
+ 
+-toa = [t2, t4, t1, t3]
+-print(f't1 = {toa[0]}, t2 = {toa[1]}, t3 = {toa[2]}, t4 = {toa[3]}, angle = {angle_calc4(toa, 343.0, 12.*np.sqrt(2.))*180/(np.pi)}')
++toa = [t1, t2, t3, t4]
++toa_mic_test = {'m1':t3, 'm2':t4, 'm3': t1, 'm4':t2}
++
++
++ang1 = angle_calc4(toa, 343.0, 12.*np.sqrt(2.))#*180/np.pi
++#print(f't1 = {toa[0]}, t2 = {toa[1]}, t3 = {toa[2]}, t4 = {toa[3]}, angle 1 = {ang1*180/np.pi} angle 2 = ')
+ """
+ ref = np.argmin(toa)
+ tdoas = [float(toa[0] - toa[ref]), float(toa[1] - toa[ref]), float(toa[2]- toa[ref])]
+ """
+ #vinkel beregning
+-vinkel = angle_calc4(toa, 343.0, 12.*np.sqrt(2.))
++vinkel = angle_calc5(toa_mic_test, 343, 12.*np.sqrt(2.), 12)
+ 
+ #plotting av vinkel
+-app = QApplication(sys.argv)
+-ex = Example()
+-x,y = polar_to_cartesian(200, vinkel)
+-x, y = cordinate(x,y)
+-ex.testUI(x, y)
+-ex.show()
+-sys.exit(app.exec())
++# app = QApplication(sys.argv)
++# ex = Example()
++# x, y = polar_to_cartesian(200, vinkel)
++# x, y = cordinate(x, y)
++# ex.testUI(x, y)
++# ex.show()
++# sys.exit(app.exec())
+Index: test.py
+===================================================================
+diff --git a/test.py b/test.py
+--- a/test.py	
++++ b/test.py	
+@@ -2,4 +2,11 @@
+ 
+ print(np.arccos(-9.88/12)*(180/np.pi), np.arccos(9.88/12)*(180/np.pi))
+ print(np.sqrt(2)*12)
+-print(3/343, 9/343, 12.369/343 ,15/343)
+\ No newline at end of file
++print(3/343, 9/343, 12.369/343 ,15/343)
++
++l = [1,2,3,4]
++
++for i in range(len(l)):
++    l[i] += 5
++
++print(l)
+\ No newline at end of file
