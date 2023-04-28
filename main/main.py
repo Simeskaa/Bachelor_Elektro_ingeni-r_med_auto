@@ -46,19 +46,6 @@ def verify_signals(signals, des_Hz: int = 440, width: int = 10):
     return ready
 
 
-def norm_values(toad):
-    norm_toad = [0.0]*len(toad)
-    for i in range(len(toad)):
-        toad[i] *= -1
-    low_val_index = np.argmin(toad)  # Lowest value
-    low_val = toad[low_val_index]
-
-    for j in range(len(toad)):
-        norm_toad[j] = toad[j] + abs(low_val)
-
-    return norm_toad
-
-
 
 
 
@@ -105,7 +92,6 @@ if __name__ == "__main__":
         t14, d14 = pro.cross_correlation(mics[0], mics[3], we)
 
         toad = [0.0, t12, t13, t14]
-        toad = norm_values(toad)
 
         # Conversion from time delays to position
         boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule = ace.timestamp_2_cord(toad)

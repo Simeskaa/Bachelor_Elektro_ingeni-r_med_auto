@@ -14,6 +14,18 @@ class angle_cord_estimation():
         self.average_angle = None
         self.dist = None
 
+    def norm_values(self, toad: list):
+        norm_toad = [0.0]*len(toad)
+        for i in range(len(toad)):
+            toad[i] *= -1
+        low_val_index = np.argmin(toad)  # Lowest value
+        low_val = toad[low_val_index]
+
+        for j in range(len(toad)):
+            norm_toad[j] = toad[j] + abs(low_val)
+
+        return norm_toad
+
     def angle_calc(self, tdoa: list):
         # rotating the coordinate system to the first quadrant
         # -------------------------------------------------
@@ -157,7 +169,8 @@ class angle_cord_estimation():
     def timestamp_2_cord(self, timestamps: list):
         # combining the different functions for easier usage
         # -------------------------------------------------
-        angles, average_angle = self.angle_calc(timestamps)
+        toad = self.norm_values(timestamps) # time of arrival delay for this system
+        angles, average_angle = self.angle_calc(toad)
         boat_coords_x, boat_coords_y, angle_overrule = self.angle_2_cord_calc(angles, average_angle)
         dist = self.coord_2_distance_calc(boat_coords_x, boat_coords_y)
         return boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule
