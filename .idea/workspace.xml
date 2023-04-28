@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="Trying to test main, got error, am scared">
-      <change afterPath="$PROJECT_DIR$/misc/lydfiler/Piano_440Hz.wav" afterDir="false" />
+    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="Created a base for main that works, kinda. Wrong values, have to revaluate.">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_21_2023_10_07_AM_[Changes]1/create-gui-applications-pyqt6.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_21_2023_10_07_AM_[Changes]1/pyqt6-source.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_21_2023_10_07_AM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_21_2023_10_07_AM__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/include/GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/direction_and_distance_estimation.py" beforeDir="false" afterPath="$PROJECT_DIR$/include/direction_and_distance_estimation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/signal_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/include/signal_processing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main.py" afterDir="false" />
     </list>
@@ -216,8 +221,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.signal_processing" />
         <item itemvalue="Python.array_sum" />
+        <item itemvalue="Python.signal_processing" />
         <item itemvalue="Python.GUI" />
         <item itemvalue="Python.test" />
       </list>
@@ -571,7 +576,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682607093943</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Created a base for main that works, kinda. Wrong values, have to revaluate.">
+      <created>1682613111297</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1682613111297</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,7 +614,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fungerande statisk GUI, Eg he ikkje toge hensyyn te at boksen eg legge inn blir plassert i fra hjørna så det e litt gale, men ser mer inn på det seinare" />
     <MESSAGE value="prøve å finna ut av dynamisk GUI" />
     <MESSAGE value="retnings testing" />
     <MESSAGE value="Fungerende retnings estimator" />
@@ -627,14 +638,8 @@
     <MESSAGE value="Updated signal_processing.py file, almost ready" />
     <MESSAGE value="Single thread of main program ready (Not tested)" />
     <MESSAGE value="Trying to test main, got error, am scared" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to test main, got error, am scared" />
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="signals[0]" />
-      </configuration>
-    </watches-manager>
+    <MESSAGE value="Created a base for main that works, kinda. Wrong values, have to revaluate." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a base for main that works, kinda. Wrong values, have to revaluate." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$cord_test.coverage" NAME="cord_test Coverage Results" MODIFIED="1679912469324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

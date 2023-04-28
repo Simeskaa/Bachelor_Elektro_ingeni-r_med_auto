@@ -68,7 +68,11 @@ class processing():
         nr_mics = len(mic)       #  Amount of microphones
         nr_samples = len(mic[0]) #  This can be created with only 0, since all mics are same length
 
-        mic_copy = copy.copy(mic)
+        mic_fft = [0]*4
+        mic_fft[0] = np.fft.fft(mic[0])
+        mic_fft[1] = np.fft.fft(mic[1])
+        mic_fft[2] = np.fft.fft(mic[2])
+        mic_fft[3] = np.fft.fft(mic[3])
 
         # Empty arrays
         X_k = [0]*nr_samples
@@ -77,16 +81,16 @@ class processing():
         we_k = [0]*nr_samples
 
         # Convert the input values to frequency domain
-        for j in range(nr_mics):
-            mic_copy[j] = np.fft.fft(mic_copy[j])
+        #for j in range(nr_mics):
+        #    mic_fft[j] = np.fft.fft(mic_fft[j])
 
         # Calculate values for every sample between all microphones
-        for i in range(nr_mics):
-            X_k[i] = (mic_copy[0][i] + mic_copy[1][i] + mic_copy[2][i] + mic_copy[3][i]) / nr_mics    # Average
-            Xn_k[i] = max(0.01, np.sqrt( ((mic_copy[0][i] - X_k[i]) +
-                                          (mic_copy[1][i] - X_k[i]) +
-                                          (mic_copy[2][i] - X_k[i]) +
-                                          (mic_copy[3][i] - X_k[i]))**2 / nr_mics ) )  # Std (noise)
+        for i in range(nr_samples):
+            X_k[i] = (mic_fft[0][i] + mic_fft[1][i] + mic_fft[2][i] + mic_fft[3][i]) / nr_mics    # Average
+            Xn_k[i] = max(0.01, np.sqrt( ((mic_fft[0][i] - X_k[i]) +
+                                          (mic_fft[1][i] - X_k[i]) +
+                                          (mic_fft[2][i] - X_k[i]) +
+                                          (mic_fft[3][i] - X_k[i]))**2 / nr_mics ) )  # Std (noise)
 
             wk[i] = max(0.1, ((X_k[i] - (a * Xn_k[i])) / (X_k[i])) )              # Weight
 
@@ -97,17 +101,8 @@ class processing():
             elif X_k[i] > Xn_k[i]:
                 we_k[i] = wk[i] * ( (X_k[i])/(Xn_k[i]) )**y
 
-        return we_k
+        return we_k, wk
 
-    # [0, -2, -4, 2]
-    def norm_values(self, toad):
-        norm_toad = [0]*len(toad)
-        low_val = min(toad)  # Lowest value
-
-        for i in range(len(toad)):
-            norm_toad[i] = toad[i] + abs(low_val)
-
-        return norm_toad
 
     @property
     def samplerate(self):

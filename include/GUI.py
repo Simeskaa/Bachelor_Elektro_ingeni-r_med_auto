@@ -8,7 +8,7 @@ import logging
 
 
 class GUI(QMainWindow):
-    def __init__(self, max_dist:float = 2000., delay:int = 5):
+    def __init__(self, max_dist:float = 2000., delay: int = 5):
         super().__init__()
         # making the canvas and plotting the radar
         self.label = QLabel()
@@ -89,7 +89,7 @@ class GUI(QMainWindow):
         self.update()
 
 
-    def update_GUI(self, x:float, y:float, hz:int, angle_overrule:bool):
+    def update_GUI(self, x:float, y:float, hz:str, angle_overrule:bool):
         # updating GUI, if not angle overrule, the angle and distance estimation class found the distance and
         #  angle
         if not angle_overrule:
@@ -98,10 +98,10 @@ class GUI(QMainWindow):
             self.y_square.append(y_adjusted_square)
             self.counter_square += 1
             self.timer_square.append(time.perf_counter() + self.delay)
-            if hz == 260:
+            if hz == '260':
                 self.red_square.append(0)
                 self.blue_square.append(255)
-            elif hz == 440:
+            elif hz == '440':
                 self.red_square.append(255)
                 self.blue_square.append(0)
 
@@ -111,12 +111,12 @@ class GUI(QMainWindow):
             x_adjusted_circle, y_adjusted_circle = self.coordinate_center(x=x, y=y)
             self.x_circle.append(x_adjusted_circle)
             self.y_circle.append(y_adjusted_circle)
-            self.timer_circle.append(time.perf_counter() + 5)
+            self.timer_circle.append(time.perf_counter() + self.delay)
             self.counter_circle += 1
-            if hz == 260:
+            if hz == '260':
                 self.red_circle.append(0)
                 self.blue_circle.append(255)
-            elif hz == 440:
+            elif hz == '440':
                 self.red_circle.append(255)
                 self.blue_circle.append(0)
 

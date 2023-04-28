@@ -135,7 +135,7 @@ class angle_cord_estimation():
                 bound_inter_list.append(intersection_list[i][1])
         x = 0
         y = 0
-        if len(bound_inter_list) > 0:
+        if False: #len(bound_inter_list) > 0:
             for i in range(len(bound_inter_list)):
                 x = bound_inter_list[i].x() + x
                 y = bound_inter_list[i].y() + y
@@ -144,8 +144,8 @@ class angle_cord_estimation():
             angle_overrule = False
         else:
             angle_overrule = True
-            x = 500*np.cos(average_angle)
-            y = 500*np.sin(average_angle)
+            x = self.max_dist*np.cos(average_angle)/2
+            y = self.max_dist*np.sin(average_angle)/2
         return x, y, angle_overrule
 
     def coord_2_distance_calc(self, x: float, y: float):
@@ -182,7 +182,7 @@ def simulation(boat_placment):
         t2 = tdoa_78[1]
         t3 = tdoa_78[2]
         t4 = tdoa_78[3]
-        mic = {'m1': t3, 'm2': t4, 'm3': t1, 'm4': t2}
+        mic = {'m1': t1, 'm2': t3, 'm3': t2, 'm4': t4}
 
     if boat_placment == '45':
         t1 = tdoa_45[0]
