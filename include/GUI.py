@@ -1,5 +1,5 @@
 import sys
-from PySide6.QtCore import Qt, QTimer
+from PySide6.QtCore import Qt, QTimer, QRectF
 from PySide6.QtGui import QPainter, QPixmap, QColor, QFont, QBrush
 from PySide6.QtWidgets import QApplication, QLabel, QMainWindow
 import threading
@@ -24,19 +24,28 @@ class GUI(QMainWindow):
         self.timer_square = []
         self.red_square = []
         self.blue_square = []
+        self.counter_square = 0
+        self.counted_square = 0
+
         self.x_circle = []
         self.y_circle = []
         self.timer_circle = []
         self.red_circle = []
         self.blue_circle = []
-        self.counter_square = 0
-        self.counted_square = 0
         self.counter_circle = 0
         self.counted_circle = 0
 
+        self.x_chord = []
+        self.y_chord = []
+        self.timer_chord = []
+        self.red_chord = []
+        self.blue_chord = []
+        self.counter_chord = 0
+        self.counted_chord = 0
+
         # making timer for removel for objects
         self.timer = QTimer()
-        self.timer.setInterval(100)
+        self.timer.setInterval(500)
         self.timer.timeout.connect(self.removing_from_GUI)
         self.timer.start()
 
@@ -88,27 +97,53 @@ class GUI(QMainWindow):
         self.label.setPixmap(self.canvas)
         self.update()
 
+    def make_chord(self, x, y, color_index:int):
+        # making a squire for representation for object
+        painter = QPainter(self.canvas)
+        brush = QBrush()
+        brush.setColor(QColor(self.red_chord[color_index], 0, self.blue_chord[color_index]))
+        brush.setStyle(Qt.BrushStyle.Dense1Pattern)
+        painter.setBrush(brush)
+        painter.drawChord(x, y, 10, 10, 30 * 16, 250 * 16)
+        painter.end()
+        self.label.setPixmap(self.canvas)
+        self.update()
+
+
 
     def update_GUI(self, x:float, y:float, hz:str, angle_overrule:bool):
         # updating GUI, if not angle overrule, the angle and distance estimation class found the distance and
         #  angle
         if not angle_overrule:
-            x_adjusted_square , y_adjusted_square= self.coordinate_center(x=x, y=y)
-            self.x_square.append(x_adjusted_square)
-            self.y_square.append(y_adjusted_square)
-            self.counter_square += 1
-            self.timer_square.append(time.perf_counter() + self.delay)
-            if hz == '260':
-                self.red_square.append(0)
-                self.blue_square.append(255)
-            elif hz == '440':
-                self.red_square.append(255)
-                self.blue_square.append(0)
+            x_adjusted_square , y_adjusted_square, out_of_bound = self.coordinate_center(x=x, y=y)
+
+            if out_of_bound:
+                self.x_chord.append(x_adjusted_square)
+                self.y_chord.append(y_adjusted_square)
+                self.counter_chord += 1
+                self.timer_chord.append(time.perf_counter() + self.delay)
+                if hz == '260':
+                    self.red_chord.append(0)
+                    self.blue_chord.append(255)
+                elif hz == '440':
+                    self.red_chord.append(255)
+                    self.blue_chord.append(0)
+            else:
+                self.x_square.append(x_adjusted_square)
+                self.y_square.append(y_adjusted_square)
+                self.counter_square += 1
+                self.timer_square.append(time.perf_counter() + self.delay)
+                if hz == '260':
+                    self.red_square.append(0)
+                    self.blue_square.append(255)
+                elif hz == '440':
+                    self.red_square.append(255)
+                    self.blue_square.append(0)
 
         elif angle_overrule:
             # updating GUI, if angle overrule, the angle and distance estimation class couldn't find the distance and
             # only the angle
-            x_adjusted_circle, y_adjusted_circle = self.coordinate_center(x=x, y=y)
+            x_adjusted_circle, y_adjusted_circle, _ = self.coordinate_center(x=x, y=y)
             self.x_circle.append(x_adjusted_circle)
             self.y_circle.append(y_adjusted_circle)
             self.timer_circle.append(time.perf_counter() + self.delay)
@@ -132,6 +167,10 @@ class GUI(QMainWindow):
             self.make_circle(self.x_circle[self.counter_circle - 1], self.y_circle[self.counter_circle - 1], color_index=(self.counter_circle - 1))
             self.counted_circle += 1
 
+        elif self.counter_chord > self.counted_chord:
+            self.make_chord(self.x_chord[self.counter_chord - 1], self.y_chord[self.counter_chord - 1], color_index=(self.counter_chord - 1))
+            self.counted_chord += 1
+
     def removing_from_GUI(self):
         # removing the object from the radar
         if self.counter_square > 0:
@@ -150,8 +189,13 @@ class GUI(QMainWindow):
                 for i in range(len(self.x_square)):
                     self.make_square(self.x_square[i], self.y_square[i], color_index=i)
 
-                for i in range(len(self.x_circle)):
-                    self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
+                if self.counter_circle > 0:
+                    for i in range(len(self.x_circle)):
+                        self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
+
+                if self.counter_chord > 0:
+                    for i in range(len(self.x_chord)):
+                        self.make_chord(self.x_chord[i], self.y_chord[i], color_index=i)
 
         if self.counter_circle > 0:
             if self.timer_circle[0] < time.perf_counter():
@@ -166,19 +210,63 @@ class GUI(QMainWindow):
                 self.counted_circle -= 1
 
                 # adding the remaking objects on the radar again
-                for i in range(len(self.x_square)):
-                    self.make_square(self.x_square[i], self.y_square[i], color_index=i)
+                if self.counter_square > 0:
+                    for i in range(len(self.x_square)):
+                        self.make_square(self.x_square[i], self.y_square[i], color_index=i)
 
                 for i in range(len(self.x_circle)):
                     self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
 
+                if self.counter_chord > 0:
+                    for i in range(len(self.x_chord)):
+                        self.make_chord(self.x_chord[i], self.y_chord[i], color_index=i)
+
+        if self.counter_chord > 0:
+            if self.timer_chord[0] < time.perf_counter():
+                # deleting the oldest object in the different lists
+                self.radar()
+                self.x_chord.pop(0)
+                self.y_chord.pop(0)
+                self.red_chord.pop(0)
+                self.blue_chord.pop(0)
+                self.timer_chord.pop(0)
+                self.counter_chord -= 1
+                self.counted_chord -= 1
+
+                # adding the remaking objects on the radar again
+                if self.counter_square > 0:
+                    for i in range(len(self.x_square)):
+                        self.make_square(self.x_square[i], self.y_square[i], color_index=i)
+
+                if self.counter_circle > 0:
+                    for i in range(len(self.x_circle)):
+                        self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
+
+                for i in range(len(self.x_chord)):
+                    self.make_chord(self.x_chord[i], self.y_chord[i], color_index=i)
 
 
     def coordinate_center(self, x: float, y: float):
         # centring the coordinates so it fit the GUI
         center_cord_x = (315. * x / self.max_dist) + 340.
         center_cord_y = -(315. * y / self.max_dist) + 340.
-        return center_cord_x, center_cord_y
+
+        out_of_bound = False
+        if center_cord_x > 630.:
+            center_cord_x = 630
+            out_of_bound = True
+        elif center_cord_x < 60.:
+            center_cord_x = 60
+            out_of_bound = True
+
+        if center_cord_y > 630.:
+            center_cord_y = 630
+            out_of_bound = True
+        elif center_cord_y < 60.:
+            center_cord_y = 60
+            out_of_bound = True
+
+        return center_cord_x, center_cord_y, out_of_bound
 
 
 def test():
@@ -186,13 +274,17 @@ def test():
     while True:
         #time.sleep(3)
         #boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule = boat.timestamp_2_cord(simulation('45'))
-        #window.update_GUI(x= boat_coords_x, y=boat_coords_y, hz= 440, angle_overrule= angle_overrule)
+        window.update_GUI(x= 200, y=2500, hz= '440', angle_overrule= False)
         time.sleep(3)
-        window.update_GUI(x=50, y=50, hz= 260, angle_overrule= False)
+        window.update_GUI(x=2500, y=50, hz= '260', angle_overrule= False)
         time.sleep(2)
-        window.update_GUI(x=1000, y=1000, hz= 440, angle_overrule= True)
+        window.update_GUI(x=1000, y=1000, hz= '440', angle_overrule= True)
         time.sleep(3)
-        window.update_GUI(x=-1500, y=1500, hz= 260, angle_overrule= False)
+        window.update_GUI(x=-1500, y=1500, hz= '260', angle_overrule= False)
+        time.sleep(3)
+        window.update_GUI(x=-2500, y=1500, hz='260', angle_overrule=False)
+        time.sleep(3)
+        window.update_GUI(x=-2500, y=-2500, hz='260', angle_overrule=False)
 
 def simulation(boat_placment):
     # simulating timestamps for the simulation
