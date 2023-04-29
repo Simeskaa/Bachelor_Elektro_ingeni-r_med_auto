@@ -104,7 +104,7 @@ class GUI(QMainWindow):
         brush.setColor(QColor(self.red_chord[color_index], 0, self.blue_chord[color_index]))
         brush.setStyle(Qt.BrushStyle.Dense1Pattern)
         painter.setBrush(brush)
-        painter.drawChord(x, y, 10, 10, 30 * 16, 250 * 16)
+        painter.drawRoundedRect(x, y, 10, 10, 2, 2)
         painter.end()
         self.label.setPixmap(self.canvas)
         self.update()
@@ -248,23 +248,25 @@ class GUI(QMainWindow):
 
     def coordinate_center(self, x: float, y: float):
         # centring the coordinates so it fit the GUI
-        center_cord_x = (315. * x / self.max_dist) + 340.
-        center_cord_y = -(315. * y / self.max_dist) + 340.
-
+        x_scalar = x / self.max_dist
+        y_scalar = y / self.max_dist
         out_of_bound = False
-        if center_cord_x > 630.:
-            center_cord_x = 630
+
+        if x_scalar > 1.:
+            x_scalar = 1.
             out_of_bound = True
-        elif center_cord_x < 60.:
-            center_cord_x = 60
+        elif x_scalar < -1.:
+            x_scalar = -1.
+            out_of_bound = True
+        if y_scalar > 1.:
+            y_scalar = 1.
+            out_of_bound = True
+        elif y_scalar < -1.:
+            y_scalar = -1.
             out_of_bound = True
 
-        if center_cord_y > 630.:
-            center_cord_y = 630
-            out_of_bound = True
-        elif center_cord_y < 60.:
-            center_cord_y = 60
-            out_of_bound = True
+        center_cord_x = (300. * x_scalar) + 340.
+        center_cord_y = -(300. * y_scalar) + 340.
 
         return center_cord_x, center_cord_y, out_of_bound
 
