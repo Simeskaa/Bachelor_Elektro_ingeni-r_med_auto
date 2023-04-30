@@ -1,10 +1,11 @@
 import sys
-from PySide6.QtCore import Qt, QTimer, QRectF
+from PySide6.QtCore import Qt, QTimer, QThreadPool, QMutex
 from PySide6.QtGui import QPainter, QPixmap, QColor, QFont, QBrush
 from PySide6.QtWidgets import QApplication, QLabel, QMainWindow
 import threading
 import time
 import logging
+import numpy as np
 
 
 class GUI(QMainWindow):
@@ -43,15 +44,22 @@ class GUI(QMainWindow):
         self.counter_chord = 0
         self.counted_chord = 0
 
+        self.adding_object = False
+        self.threadpool = QThreadPool()
+        self.mutex = QMutex()
+
         # making timer for removel for objects
         self.timer = QTimer()
-        self.timer.setInterval(500)
+        self.timer.setInterval(100)
         self.timer.timeout.connect(self.removing_from_GUI)
         self.timer.start()
 
         # making variables for max distance and delay to removel of objects
         self.max_dist = max_dist
         self.delay = delay
+
+    def test(self, x:float, y:float, hz:str, angle_overrule:bool):
+        self.threadpool.start(self.update_GUI(x=x, y=y, hz=hz, angle_overrule=angle_overrule))
 
     def radar(self):
         # painting the radar on the canvas
@@ -114,12 +122,18 @@ class GUI(QMainWindow):
     def update_GUI(self, x:float, y:float, hz:str, angle_overrule:bool):
         # updating GUI, if not angle overrule, the angle and distance estimation class found the distance and
         #  angle
+        #self.mutex.lock()
+        if not self.mutex.tryLock():
+            logging.info("couldn't lock")
+            pass
+        self.adding_object = True
+        x_adjusted, y_adjusted, out_of_bound = self.coordinate_center(x=x, y=y)
         if not angle_overrule:
-            x_adjusted_square , y_adjusted_square, out_of_bound = self.coordinate_center(x=x, y=y)
-
+            logging.info("adjusting coord")
             if out_of_bound:
-                self.x_chord.append(x_adjusted_square)
-                self.y_chord.append(y_adjusted_square)
+                logging.info("adding chord")
+                self.x_chord.append(x_adjusted)
+                self.y_chord.append(y_adjusted)
                 self.counter_chord += 1
                 self.timer_chord.append(time.perf_counter() + self.delay)
                 if hz == '260':
@@ -129,8 +143,9 @@ class GUI(QMainWindow):
                     self.red_chord.append(255)
                     self.blue_chord.append(0)
             else:
-                self.x_square.append(x_adjusted_square)
-                self.y_square.append(y_adjusted_square)
+                logging.info("adding square")
+                self.x_square.append(x_adjusted)
+                self.y_square.append(y_adjusted)
                 self.counter_square += 1
                 self.timer_square.append(time.perf_counter() + self.delay)
                 if hz == '260':
@@ -143,9 +158,9 @@ class GUI(QMainWindow):
         elif angle_overrule:
             # updating GUI, if angle overrule, the angle and distance estimation class couldn't find the distance and
             # only the angle
-            x_adjusted_circle, y_adjusted_circle, _ = self.coordinate_center(x=x, y=y)
-            self.x_circle.append(x_adjusted_circle)
-            self.y_circle.append(y_adjusted_circle)
+            logging.info("adding circle")
+            self.x_circle.append(x_adjusted)
+            self.y_circle.append(y_adjusted)
             self.timer_circle.append(time.perf_counter() + self.delay)
             self.counter_circle += 1
             if hz == '260':
@@ -154,96 +169,108 @@ class GUI(QMainWindow):
             elif hz == '440':
                 self.red_circle.append(255)
                 self.blue_circle.append(0)
-
+        logging.info("adding object")
         self.item_placement_on_GUI()
+        logging.info("done adding object")
+        self.mutex.unlock()
+
 
     def item_placement_on_GUI(self):
         # placing the object on the radar
         if self.counter_square > self.counted_square:
+            logging.info("adding square")
             self.make_square(self.x_square[self.counter_square - 1], self.y_square[self.counter_square - 1], color_index=(self.counter_square - 1))
             self.counted_square += 1
 
         elif self.counter_circle > self.counted_circle:
+            logging.info("adding circle")
             self.make_circle(self.x_circle[self.counter_circle - 1], self.y_circle[self.counter_circle - 1], color_index=(self.counter_circle - 1))
             self.counted_circle += 1
 
         elif self.counter_chord > self.counted_chord:
+            logging.info("adding chord")
             self.make_chord(self.x_chord[self.counter_chord - 1], self.y_chord[self.counter_chord - 1], color_index=(self.counter_chord - 1))
             self.counted_chord += 1
+        self.adding_object = False
 
     def removing_from_GUI(self):
         # removing the object from the radar
-        if self.counter_square > 0:
-            if self.timer_square[0] < time.perf_counter():
-                # deleting the oldest object in the different lists
-                self.radar()
-                self.x_square.pop(0)
-                self.y_square.pop(0)
-                self.red_square.pop(0)
-                self.blue_square.pop(0)
-                self.timer_square.pop(0)
-                self.counter_square -= 1
-                self.counted_square -= 1
+        if not self.adding_object:
+            logging.info("trying to remove object")
+            if self.counter_square > 0:
+                if self.timer_square[0] < time.perf_counter():
+                    logging.info("removing square")
+                    # deleting the oldest object in the different lists
+                    self.radar()
+                    self.x_square.pop(0)
+                    self.y_square.pop(0)
+                    self.red_square.pop(0)
+                    self.blue_square.pop(0)
+                    self.timer_square.pop(0)
+                    self.counter_square -= 1
+                    self.counted_square -= 1
 
-                # adding the remaking objects on the radar again
-                for i in range(len(self.x_square)):
-                    self.make_square(self.x_square[i], self.y_square[i], color_index=i)
-
-                if self.counter_circle > 0:
-                    for i in range(len(self.x_circle)):
-                        self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
-
-                if self.counter_chord > 0:
-                    for i in range(len(self.x_chord)):
-                        self.make_chord(self.x_chord[i], self.y_chord[i], color_index=i)
-
-        if self.counter_circle > 0:
-            if self.timer_circle[0] < time.perf_counter():
-                # deleting the oldest object in the different lists
-                self.radar()
-                self.x_circle.pop(0)
-                self.y_circle.pop(0)
-                self.red_circle.pop(0)
-                self.blue_circle.pop(0)
-                self.timer_circle.pop(0)
-                self.counter_circle -= 1
-                self.counted_circle -= 1
-
-                # adding the remaking objects on the radar again
-                if self.counter_square > 0:
+                    # adding the remaking objects on the radar again
                     for i in range(len(self.x_square)):
                         self.make_square(self.x_square[i], self.y_square[i], color_index=i)
 
-                for i in range(len(self.x_circle)):
-                    self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
+                    if self.counter_circle > 0:
+                        for i in range(len(self.x_circle)):
+                            self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
 
-                if self.counter_chord > 0:
-                    for i in range(len(self.x_chord)):
-                        self.make_chord(self.x_chord[i], self.y_chord[i], color_index=i)
+                    if self.counter_chord > 0:
+                        for i in range(len(self.x_chord)):
+                            self.make_chord(self.x_chord[i], self.y_chord[i], color_index=i)
 
-        if self.counter_chord > 0:
-            if self.timer_chord[0] < time.perf_counter():
-                # deleting the oldest object in the different lists
-                self.radar()
-                self.x_chord.pop(0)
-                self.y_chord.pop(0)
-                self.red_chord.pop(0)
-                self.blue_chord.pop(0)
-                self.timer_chord.pop(0)
-                self.counter_chord -= 1
-                self.counted_chord -= 1
+            if self.counter_circle > 0:
+                if self.timer_circle[0] < time.perf_counter():
+                    logging.info("removing circle")
+                    # deleting the oldest object in the different lists
+                    self.radar()
+                    self.x_circle.pop(0)
+                    self.y_circle.pop(0)
+                    self.red_circle.pop(0)
+                    self.blue_circle.pop(0)
+                    self.timer_circle.pop(0)
+                    self.counter_circle -= 1
+                    self.counted_circle -= 1
 
-                # adding the remaking objects on the radar again
-                if self.counter_square > 0:
-                    for i in range(len(self.x_square)):
-                        self.make_square(self.x_square[i], self.y_square[i], color_index=i)
+                    # adding the remaking objects on the radar again
+                    if self.counter_square > 0:
+                        for i in range(len(self.x_square)):
+                            self.make_square(self.x_square[i], self.y_square[i], color_index=i)
 
-                if self.counter_circle > 0:
                     for i in range(len(self.x_circle)):
                         self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
 
-                for i in range(len(self.x_chord)):
-                    self.make_chord(self.x_chord[i], self.y_chord[i], color_index=i)
+                    if self.counter_chord > 0:
+                        for i in range(len(self.x_chord)):
+                            self.make_chord(self.x_chord[i], self.y_chord[i], color_index=i)
+
+            if self.counter_chord > 0:
+                if self.timer_chord[0] < time.perf_counter():
+                    logging.info("removing chord")
+                    # deleting the oldest object in the different lists
+                    self.radar()
+                    self.x_chord.pop(0)
+                    self.y_chord.pop(0)
+                    self.red_chord.pop(0)
+                    self.blue_chord.pop(0)
+                    self.timer_chord.pop(0)
+                    self.counter_chord -= 1
+                    self.counted_chord -= 1
+
+                    # adding the remaking objects on the radar again
+                    if self.counter_square > 0:
+                        for i in range(len(self.x_square)):
+                            self.make_square(self.x_square[i], self.y_square[i], color_index=i)
+
+                    if self.counter_circle > 0:
+                        for i in range(len(self.x_circle)):
+                            self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
+
+                    for i in range(len(self.x_chord)):
+                        self.make_chord(self.x_chord[i], self.y_chord[i], color_index=i)
 
 
     def coordinate_center(self, x: float, y: float):
@@ -265,8 +292,8 @@ class GUI(QMainWindow):
             y_scalar = -1.
             out_of_bound = True
 
-        center_cord_x = (300. * x_scalar) + 340.
-        center_cord_y = -(300. * y_scalar) + 340.
+        center_cord_x = (80 * np.pi * x_scalar) + 350.
+        center_cord_y = -(80. * np.pi * y_scalar) + 350.
 
         return center_cord_x, center_cord_y, out_of_bound
 
@@ -276,17 +303,20 @@ def test():
     while True:
         #time.sleep(3)
         #boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule = boat.timestamp_2_cord(simulation('45'))
-        window.update_GUI(x= 200, y=2500, hz= '440', angle_overrule= False)
+        logging.info("starting")
+        window.test(x= 200, y=2500, hz= '440', angle_overrule= False)
+        #time.sleep(3)
+        window.test(x=2500, y=50, hz= '260', angle_overrule= False)
+        #time.sleep(3)
+        window.test(x=1000, y=1000, hz= '440', angle_overrule= True)
         time.sleep(3)
-        window.update_GUI(x=2500, y=50, hz= '260', angle_overrule= False)
-        time.sleep(2)
-        window.update_GUI(x=1000, y=1000, hz= '440', angle_overrule= True)
+        window.test(x=-1500, y=1500, hz= '260', angle_overrule= False)
+        #time.sleep(3)
+        window.test(x=-2500, y=1500, hz='260', angle_overrule=False)
+        #time.sleep(3)
+        window.test(x=-2500, y=-2500, hz='260', angle_overrule=False)
         time.sleep(3)
-        window.update_GUI(x=-1500, y=1500, hz= '260', angle_overrule= False)
-        time.sleep(3)
-        window.update_GUI(x=-2500, y=1500, hz='260', angle_overrule=False)
-        time.sleep(3)
-        window.update_GUI(x=-2500, y=-2500, hz='260', angle_overrule=False)
+
 
 def simulation(boat_placment):
     # simulating timestamps for the simulation
@@ -325,6 +355,9 @@ if __name__ == '__main__':
 
     app = QApplication(sys.argv)
     window = GUI()
+    format = "%(asctime)s: %(message)s"
+    logging.basicConfig(format=format, level=logging.INFO,
+                        datefmt="%H:%M:%S")
     #boat = angle_cord_estimation(dist_short_mic=12, spd_sound=343, max_distance=2000)
     x2 = threading.Thread(target=test)
     x2.start()

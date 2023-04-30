@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="git forced me">
+    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="små oppdaterte an, feilen e der ennå">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/include/GUI.py" afterDir="false" />
     </list>
@@ -293,6 +293,7 @@
       <workItem from="1682150661440" duration="4129000" />
       <workItem from="1682330908482" duration="3247000" />
       <workItem from="1682804973856" duration="2195000" />
+      <workItem from="1682867091359" duration="12868000" />
     </task>
     <task id="LOCAL-00001" summary="adda lyd filer">
       <created>1676037138889</created>
@@ -623,7 +624,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682804238332</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="små oppdaterte an, feilen e der ennå">
+      <created>1682808437165</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1682808437165</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -655,7 +663,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="retnings testing" />
     <MESSAGE value="Fungerende retnings estimator" />
     <MESSAGE value="dynamisk gui testing" />
     <MESSAGE value="idea te gui" />
@@ -680,7 +687,8 @@
     <MESSAGE value="Trying to test main, got error, am scared" />
     <MESSAGE value="Created a base for main that works, kinda. Wrong values, have to revaluate." />
     <MESSAGE value="git forced me" />
-    <option name="LAST_COMMIT_MESSAGE" value="git forced me" />
+    <MESSAGE value="små oppdaterte an, feilen e der ennå" />
+    <option name="LAST_COMMIT_MESSAGE" value="små oppdaterte an, feilen e der ennå" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$dynamisk_GUI_nett.coverage" NAME="dynamisk_GUI_nett Coverage Results" MODIFIED="1680096453294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -708,7 +716,7 @@
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$UDP_server.coverage" NAME="UDP_server Coverage Results" MODIFIED="1681727429344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/include" />
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$statisk_test.coverage" NAME="statisk_test Coverage Results" MODIFIED="1680704236265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$retning_og_avstand_estimering.coverage" NAME="retning_og_avstand_estimering Coverage Results" MODIFIED="1681295169224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$GUI__1_.coverage" NAME="GUI (1) Coverage Results" MODIFIED="1682808364680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/include" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$GUI__1_.coverage" NAME="GUI (1) Coverage Results" MODIFIED="1682893673439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/include" />
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$UDP_server_class.coverage" NAME="UDP_server_class Coverage Results" MODIFIED="1681733032965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/include" />
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$QT_plot_statisc.coverage" NAME="QT_plot_statisc Coverage Results" MODIFIED="1681292051768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$cord_test.coverage" NAME="cord_test Coverage Results" MODIFIED="1679912469324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
