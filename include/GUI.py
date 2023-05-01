@@ -45,8 +45,8 @@ class GUI(QMainWindow):
         self.counted_chord = 0
 
         self.adding_object = False
-        self.threadpool = QThreadPool()
-        self.mutex = QMutex()
+        #self.threadpool = QThreadPool()
+        #self.mutex = QMutex()
 
         # making timer for removel for objects
         self.timer = QTimer()
@@ -58,8 +58,8 @@ class GUI(QMainWindow):
         self.max_dist = max_dist
         self.delay = delay
 
-    def test(self, x:float, y:float, hz:str, angle_overrule:bool):
-        self.threadpool.start(self.update_GUI(x=x, y=y, hz=hz, angle_overrule=angle_overrule))
+    #def test(self, x:float, y:float, hz:str, angle_overrule:bool):
+        #self.threadpool.start(self.update_GUI(x=x, y=y, hz=hz, angle_overrule=angle_overrule))
 
     def radar(self):
         # painting the radar on the canvas
@@ -123,10 +123,10 @@ class GUI(QMainWindow):
         # updating GUI, if not angle overrule, the angle and distance estimation class found the distance and
         #  angle
         #self.mutex.lock()
-        if not self.mutex.tryLock():
-            logging.info("couldn't lock")
-            pass
-        self.adding_object = True
+        #if not self.mutex.tryLock():
+        #    logging.info("couldn't lock")
+        #    pass
+        #self.adding_object = True
         x_adjusted, y_adjusted, out_of_bound = self.coordinate_center(x=x, y=y)
         if not angle_overrule:
             logging.info("adjusting coord")
@@ -172,7 +172,7 @@ class GUI(QMainWindow):
         logging.info("adding object")
         self.item_placement_on_GUI()
         logging.info("done adding object")
-        self.mutex.unlock()
+        #self.mutex.unlock()
 
 
     def item_placement_on_GUI(self):
@@ -191,11 +191,11 @@ class GUI(QMainWindow):
             logging.info("adding chord")
             self.make_chord(self.x_chord[self.counter_chord - 1], self.y_chord[self.counter_chord - 1], color_index=(self.counter_chord - 1))
             self.counted_chord += 1
-        self.adding_object = False
+        #self.adding_object = False
 
     def removing_from_GUI(self):
         # removing the object from the radar
-        if not self.adding_object:
+        #if not self.adding_object:
             logging.info("trying to remove object")
             if self.counter_square > 0:
                 if self.timer_square[0] < time.perf_counter():
@@ -292,8 +292,8 @@ class GUI(QMainWindow):
             y_scalar = -1.
             out_of_bound = True
 
-        center_cord_x = (80 * np.pi * x_scalar) + 350.
-        center_cord_y = -(80. * np.pi * y_scalar) + 350.
+        center_cord_x = (250. * x_scalar) + 350.
+        center_cord_y = -(250. * y_scalar) + 350.
 
         return center_cord_x, center_cord_y, out_of_bound
 
@@ -304,18 +304,18 @@ def test():
         #time.sleep(3)
         #boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule = boat.timestamp_2_cord(simulation('45'))
         logging.info("starting")
-        window.test(x= 200, y=2500, hz= '440', angle_overrule= False)
-        #time.sleep(3)
-        window.test(x=2500, y=50, hz= '260', angle_overrule= False)
-        #time.sleep(3)
-        window.test(x=1000, y=1000, hz= '440', angle_overrule= True)
-        time.sleep(3)
-        window.test(x=-1500, y=1500, hz= '260', angle_overrule= False)
-        #time.sleep(3)
-        window.test(x=-2500, y=1500, hz='260', angle_overrule=False)
-        #time.sleep(3)
-        window.test(x=-2500, y=-2500, hz='260', angle_overrule=False)
-        time.sleep(3)
+        window.update_GUI(x= 200, y=2500, hz= '440', angle_overrule= False)
+        time.sleep(1)
+        window.update_GUI(x=2500, y=50, hz= '260', angle_overrule= False)
+        time.sleep(1)
+        window.update_GUI(x=1000, y=1000, hz= '440', angle_overrule= True)
+        time.sleep(1)
+        window.update_GUI(x=-1500, y=1500, hz= '260', angle_overrule= False)
+        time.sleep(1)
+        window.update_GUI(x=-2500, y=1500, hz='260', angle_overrule=False)
+        time.sleep(1)
+        window.update_GUI(x=-2500, y=-2500, hz='260', angle_overrule=False)
+        time.sleep(1)
 
 
 def simulation(boat_placment):
