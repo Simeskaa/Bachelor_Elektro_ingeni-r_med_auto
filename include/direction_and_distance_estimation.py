@@ -1,6 +1,6 @@
 import numpy as np
 import copy
-from PySide6.QtCore import QLineF, QPointF
+#from PySide6.QtCore import QLineF, QPointF
 
 
 class angle_cord_estimation():
@@ -13,6 +13,18 @@ class angle_cord_estimation():
         self.max_dist = max_distance
         self.average_angle = None
         self.dist = None
+
+    def norm_values(self, toad):
+        norm_toad = [0.0] * len(toad)
+        for i in range(len(toad)):
+            toad[i] *= -1
+        low_val_index = np.argmin(toad)  # Lowest value
+        low_val = toad[low_val_index]
+
+        for j in range(len(toad)):
+            norm_toad[j] = toad[j] + abs(low_val)
+
+        return norm_toad
 
     def angle_calc(self, tdoa: list):
         # rotating the coordinate system to the first quadrant
