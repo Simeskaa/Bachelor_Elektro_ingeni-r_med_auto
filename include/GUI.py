@@ -126,7 +126,7 @@ class GUI(QMainWindow):
         #if not self.mutex.tryLock():
         #    logging.info("couldn't lock")
         #    pass
-        #self.adding_object = True
+        self.adding_object = True
         x_adjusted, y_adjusted, out_of_bound = self.coordinate_center(x=x, y=y)
         if not angle_overrule:
             logging.info("adjusting coord")
@@ -191,11 +191,11 @@ class GUI(QMainWindow):
             logging.info("adding chord")
             self.make_chord(self.x_chord[self.counter_chord - 1], self.y_chord[self.counter_chord - 1], color_index=(self.counter_chord - 1))
             self.counted_chord += 1
-        #self.adding_object = False
+        self.adding_object = False
 
     def removing_from_GUI(self):
         # removing the object from the radar
-        #if not self.adding_object:
+        if not self.adding_object:
             logging.info("trying to remove object")
             if self.counter_square > 0:
                 if self.timer_square[0] < time.perf_counter():

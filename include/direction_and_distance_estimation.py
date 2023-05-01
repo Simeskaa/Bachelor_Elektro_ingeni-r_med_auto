@@ -12,6 +12,7 @@ class angle_cord_estimation():
         self.max_dist = max_distance
         self.average_angle = None
         self.dist = None
+        self.U = None
 
     def norm_values(self,toad):
         norm_toad = [0.0] * len(toad)
@@ -65,7 +66,30 @@ class angle_cord_estimation():
         angle_m2_m1 = np.arccos((fma['m2'] - fma['m1']) * self.spd_sound / self.dist_short_mic) + np.pi / 4
         angle_m4_m3 = np.arccos((fma['m4'] - fma['m3']) * self.spd_sound / self.dist_short_mic) + np.pi / 4
 
-        list_angles = [angle_m2_m3, angle_m1_m4, angle_m2_m4, angle_m1_m3, angle_m2_m1, angle_m4_m3]
+        x1 = 0
+        x2 = self.dist_long_mic / 2
+        x3 = -self.dist_long_mic / 2
+        x4 = 0
+        y1 = self.dist_long_mic / 2
+        y2 = 0
+        y3 = 0
+        y4 = -self.dist_long_mic / 2
+        T_1 = tdoa[0]
+        T_2 = tdoa[1]
+        T_3 = tdoa[2]
+        T_4 = tdoa[3]
+        c = self.spd_sound
+
+        X = np.array([[x2 - x1, y2 - y1],
+                      [x3 - x1, y3 - y1],
+                      [x4 - x1, y4 - y1]])
+        T = np.array([[c * (T_2 - T_1)],
+                      [c * (T_3 - T_1)],
+                      [c * (T_4 - T_1)]])
+        self.U = np.linalg.pinv(X) @ T
+        angle_center = np.arctan(self.U[1] / self.U[0])
+
+        list_angles = [angle_m2_m3, angle_m1_m4, angle_m2_m4, angle_m1_m3, angle_m2_m1, angle_m4_m3, angle_center[0]]
 
         # removing negative angle from cos
         # -------------------------------------------------
@@ -95,9 +119,12 @@ class angle_cord_estimation():
         elif (tdoas_temp2 == [tdoa[1], tdoa[3]]):
             for i in range(len(list_angles)):
                 list_angles[i] = list_angles[i] + 3 * np.pi / 2
-
+        grad_list = []
         self.average_angle = sum(list_angles) / len(list_angles)
+        for i in range(len(list_angles)):
+            grad_list.append(list_angles[i]*180/np.pi)
 
+        print(f'\nvinkler: {grad_list} \n')
         return list_angles, self.average_angle
 
     def new_angle_calc(self, tdoa:list):
@@ -137,11 +164,16 @@ class angle_cord_estimation():
             y_name = f'y_{i + 1}'
             end_cords[x_name] = self.max_dist * np.cos(angles[i])
             end_cords[y_name] = self.max_dist * np.sin(angles[i])
+        end_cords['x_7'] = self.U[0][0]*self.max_dist
+        end_cords['y_7'] = self.U[1][0]*self.max_dist
+        print(f'end coords: {end_cords}'
+              f'\nU: {self.U}')
+
 
         start_cords = {'x_1': -self.dist_long_mic / 2, 'y_1': 0, 'x_2': 0, 'y_2': self.dist_long_mic / 2,
                        'x_3': -self.dist_long_mic / 2, 'y_3': 0, 'x_4': 0, 'y_4': self.dist_long_mic / 2,
-                       'x_5': -self.dist_long_mic / 2, 'y_5': 0, 'x_6': 0, 'y_6': -self.dist_long_mic / 2}
-
+                       'x_5': -self.dist_long_mic / 2, 'y_5': 0, 'x_6': 0, 'y_6': -self.dist_long_mic / 2,
+                       'x_7': -self.U[0][0]*self.max_dist, 'y_7': -self.U[1][0]*self.max_dist}
         # making the coords to lines to be used in intersection
         # -------------------------------------------------
         list_line = {}
@@ -163,7 +195,17 @@ class angle_cord_estimation():
         par_26 = list_line['l_2'].intersects(list_line['l_6'])
         par_46 = list_line['l_4'].intersects(list_line['l_6'])
 
-        intersection_list = [par_12, par_14, par_16, par_52, par_54, par_32, par_36, par_26, par_46]
+        intersection_list_test = [par_12, par_14, par_16, par_52, par_54, par_32, par_36, par_26, par_46]
+        print(f'\nintersecting test: {intersection_list_test}')
+
+        par_17 = list_line['l_1'].intersects(list_line['l_7'])
+        par_27 = list_line['l_2'].intersects(list_line['l_7'])
+        par_37 = list_line['l_3'].intersects(list_line['l_7'])
+        par_47 = list_line['l_4'].intersects(list_line['l_7'])
+        par_57 = list_line['l_5'].intersects(list_line['l_7'])
+        par_67 = list_line['l_6'].intersects(list_line['l_7'])
+
+        intersection_list = [par_17, par_27, par_37, par_47, par_57, par_67]
 
         # taking the useful intersections and finding the average of them
         # -------------------------------------------------
@@ -173,7 +215,7 @@ class angle_cord_estimation():
                 bound_inter_list.append(intersection_list[i][1])
         x = 0
         y = 0
-        if False: #len(bound_inter_list) > 0:
+        if len(bound_inter_list) > 0:
             for i in range(len(bound_inter_list)):
                 x = bound_inter_list[i].x() + x
                 y = bound_inter_list[i].y() + y
@@ -197,10 +239,10 @@ class angle_cord_estimation():
         # -------------------------------------------------
         toad = self.norm_values(timestamps)
         angles, average_angle = self.angle_calc(toad)
-        U = self.new_distance_calc(toad)
+        #U = self.new_distance_calc(toad)
         boat_coords_x, boat_coords_y, angle_overrule = self.angle_2_cord_calc(angles, average_angle)
         dist = self.coord_2_distance_calc(boat_coords_x, boat_coords_y)
-        return boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule, U
+        return boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule
 
     @property
     def angle2boat(self) -> float:

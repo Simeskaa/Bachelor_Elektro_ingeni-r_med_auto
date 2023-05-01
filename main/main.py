@@ -75,13 +75,13 @@ if __name__ == "__main__":
     dist_mics = [0.0, 15.012*10**-2, 23.116*10**-2, 38.128*10**-2]
 
     #  1 quadrant
-    mic1 = pro.add_delay(x, dist_mics[3], fs=samplerate)+\
+    mic1 = pro.add_delay(x, dist_mics[0], fs=samplerate)+\
            np.random.randn(len(x))*0.05
-    mic2 = pro.add_delay(x, dist_mics[2], fs=samplerate)+\
+    mic2 = pro.add_delay(x, dist_mics[1], fs=samplerate)+\
            np.random.randn(len(x))*0.05
-    mic3 = pro.add_delay(x, dist_mics[1], fs=samplerate)+\
+    mic3 = pro.add_delay(x, dist_mics[2], fs=samplerate)+\
            np.random.randn(len(x))*0.05
-    mic4 = pro.add_delay(x, dist_mics[0], fs=samplerate)+\
+    mic4 = pro.add_delay(x, dist_mics[3], fs=samplerate)+\
            np.random.randn(len(x))*0.05
 
     mics = [mic1[100000:100000+buffer_size],
@@ -108,11 +108,11 @@ if __name__ == "__main__":
         #toad = norm_values(toad)
 
         # Conversion from time delays to position
-        boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule, U = ace.timestamp_2_cord(toad)
-        #print(U)
+        boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule = ace.timestamp_2_cord(toad)
+        print(f'dist = {dist}')
 
         # GUI representation
-        if True:
+        if False:
             GUI.show()
             GUI.update_GUI(x= boat_coords_x, y=boat_coords_y, hz= desired_Hz, angle_overrule= angle_overrule)
             app.exec()
