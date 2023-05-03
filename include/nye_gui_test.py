@@ -6,7 +6,6 @@ import threading
 import time
 import logging
 import numpy as np
-from memory_profiler import profile
 
 
 class GUI(QMainWindow):
@@ -18,7 +17,6 @@ class GUI(QMainWindow):
         self.label.setPixmap(self.canvas)
         self.setCentralWidget(self.label)
         self.setFixedSize(700, 700)
-        self.radar()
 
         # making variables for placement of the objects
         self.x_square = []
@@ -58,29 +56,43 @@ class GUI(QMainWindow):
         # making variables for max distance and delay to removel of objects
         self.max_dist = max_dist
         self.delay = delay
+        self.radar()
+
 
     #def test(self, x:float, y:float, hz:str, angle_overrule:bool):
         #self.threadpool.start(self.update_GUI(x=x, y=y, hz=hz, angle_overrule=angle_overrule))
     #@profile
     def radar(self):
         # painting the radar on the canvas
-        self.canvas.fill(Qt.GlobalColor.white)
-        painter = QPainter(self.canvas)
-        painter.setPen(QColor(Qt.red))
-        painter.setPen(QColor(Qt.red))
-        painter.setFont(QFont('Arial', 20))
-        painter.drawText(348, 35, "0")  # x, y
-        painter.drawText(660, 350, "90")
-        painter.drawText(325, 680, "180")
-        painter.drawText(1, 350, "270")
-        painter.setPen(QColor(Qt.black))
-        painter.drawEllipse(350, 350, 2, 2)
-        painter.drawEllipse(200, 200, 300, 300)
-        painter.drawEllipse(50, 50, 600, 600)
-        painter.end()
-        self.label.setPixmap(self.canvas)
-        self.update()
+        while True:
+            self.canvas.fill(Qt.GlobalColor.white)
+            painter = QPainter(self.canvas)
+            painter.setPen(QColor(Qt.red))
+            painter.setPen(QColor(Qt.red))
+            painter.setFont(QFont('Arial', 20))
+            painter.drawText(348, 35, "0")  # x, y
+            painter.drawText(660, 350, "90")
+            painter.drawText(325, 680, "180")
+            painter.drawText(1, 350, "270")
+            painter.setPen(QColor(Qt.black))
+            painter.drawEllipse(350, 350, 2, 2)
+            painter.drawEllipse(200, 200, 300, 300)
+            painter.drawEllipse(50, 50, 600, 600)
+            painter.end()
+            self.label.setPixmap(self.canvas)
+            self.update()
+            if self.counter_square > self.counted_square:
+                for i in range(len(self.x_square)):
+                    self.make_square(self.x_square[i], self.y_square[i], color_index=i)
 
+            elif self.counter_circle > self.counted_circle:
+                for i in range(len(self.x_circle)):
+                    self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
+
+            elif self.counter_chord > self.counted_chord:
+                logging.info("adding chord")
+                for i in range(len(self.x_chord)):
+                    self.make_chord(self.x_chord[i], self.y_chord[i], color_index=i)
 
     def make_square(self, x, y, color_index:int):
         # making a squire for representation for object
@@ -170,28 +182,13 @@ class GUI(QMainWindow):
                 self.red_circle.append(255)
                 self.blue_circle.append(0)
         logging.info("adding object")
-        self.item_placement_on_GUI()
-        logging.info("done adding object")
+        #self.item_placement_on_GUI()
+        #logging.info("done adding object")
         #self.mutex.unlock()
 
     #@profile
-    def item_placement_on_GUI(self):
+    #def item_placement_on_GUI(self):
         # placing the object on the radar
-        if self.counter_square > self.counted_square:
-            logging.info("adding square")
-            self.make_square(self.x_square[self.counter_square - 1], self.y_square[self.counter_square - 1], color_index=(self.counter_square - 1))
-            self.counted_square += 1
-
-        elif self.counter_circle > self.counted_circle:
-            logging.info("adding circle")
-            self.make_circle(self.x_circle[self.counter_circle - 1], self.y_circle[self.counter_circle - 1], color_index=(self.counter_circle - 1))
-            self.counted_circle += 1
-
-        elif self.counter_chord > self.counted_chord:
-            logging.info("adding chord")
-            self.make_chord(self.x_chord[self.counter_chord - 1], self.y_chord[self.counter_chord - 1], color_index=(self.counter_chord - 1))
-            self.counted_chord += 1
-        self.adding_object = False
 
     #@profile
     def removing_from_GUI(self):
@@ -209,19 +206,7 @@ class GUI(QMainWindow):
                     self.blue_square.pop(0)
                     self.timer_square.pop(0)
                     self.counter_square -= 1
-                    self.counted_square -= 1
-
-                    # adding the remaking objects on the radar again
-                    for i in range(len(self.x_square)):
-                        self.make_square(self.x_square[i], self.y_square[i], color_index=i)
-
-                    if self.counter_circle > 0:
-                        for i in range(len(self.x_circle)):
-                            self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
-
-                    if self.counter_chord > 0:
-                        for i in range(len(self.x_chord)):
-                            self.make_chord(self.x_chord[i], self.y_chord[i], color_index=i)
+                    #self.counted_square -= 1
 
             if self.counter_circle > 0:
                 if self.timer_circle[0] < time.perf_counter():
@@ -234,19 +219,9 @@ class GUI(QMainWindow):
                     self.blue_circle.pop(0)
                     self.timer_circle.pop(0)
                     self.counter_circle -= 1
-                    self.counted_circle -= 1
+                    #self.counted_circle -= 1
 
                     # adding the remaking objects on the radar again
-                    if self.counter_square > 0:
-                        for i in range(len(self.x_square)):
-                            self.make_square(self.x_square[i], self.y_square[i], color_index=i)
-
-                    for i in range(len(self.x_circle)):
-                        self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
-
-                    if self.counter_chord > 0:
-                        for i in range(len(self.x_chord)):
-                            self.make_chord(self.x_chord[i], self.y_chord[i], color_index=i)
 
             if self.counter_chord > 0:
                 if self.timer_chord[0] < time.perf_counter():
@@ -259,19 +234,8 @@ class GUI(QMainWindow):
                     self.blue_chord.pop(0)
                     self.timer_chord.pop(0)
                     self.counter_chord -= 1
-                    self.counted_chord -= 1
+                    #self.counted_chord -= 1
 
-                    # adding the remaking objects on the radar again
-                    if self.counter_square > 0:
-                        for i in range(len(self.x_square)):
-                            self.make_square(self.x_square[i], self.y_square[i], color_index=i)
-
-                    if self.counter_circle > 0:
-                        for i in range(len(self.x_circle)):
-                            self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
-
-                    for i in range(len(self.x_chord)):
-                        self.make_chord(self.x_chord[i], self.y_chord[i], color_index=i)
 
 
     def coordinate_center(self, x: float, y: float):
