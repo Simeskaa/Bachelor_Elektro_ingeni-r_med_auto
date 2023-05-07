@@ -1,0 +1,6 @@
+21:35:19 **** Incremental Build of configuration Debug for project v6_udp_adc_81Mhz_app_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
+
+21:35:19 Build Finished (took 229ms)
+

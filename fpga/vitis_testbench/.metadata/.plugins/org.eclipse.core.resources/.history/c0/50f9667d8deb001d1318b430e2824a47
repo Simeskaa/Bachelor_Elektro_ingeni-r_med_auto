@@ -1,0 +1,10 @@
+
+#include "xil_types.h"
+#include "xil_assert.h"
+#include "xstatus.h"
+#include "xsysmon.h"
+
+
+/************** FUNCTION PROTOTYPES **************/
+void SysMonInterruptHandler(void *CallBackRef);
+int SysMonSetupInterruptSystem(INTC* IntcInstancePtr, XSysMon *SysMonPtr, u16 IntrId);

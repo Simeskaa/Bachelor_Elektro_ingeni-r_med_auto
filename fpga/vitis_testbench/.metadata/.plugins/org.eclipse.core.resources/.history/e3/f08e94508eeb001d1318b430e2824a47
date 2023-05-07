@@ -1,0 +1,20 @@
+#ifndef __ADC_INTC_CALLBACK__
+#define __ADC_INTC_CALLBACK__
+
+
+
+
+#include "xsysmon.h"
+#include "xparameters.h"
+#include "xstatus.h"
+#include "xil_exception.h"
+#include "xil_printf.h"
+#include "xintc.h"
+#include "xil_types.h"
+
+/************** FUNCTION PROTOTYPES **************/
+extern void SysMonInterruptHandler(void *CallBackRef);
+extern int SysMonSetupInterruptSystem(INTC* IntcInstancePtr, XSysMon *SysMonPtr, u16 IntrId);
+
+
+#endif

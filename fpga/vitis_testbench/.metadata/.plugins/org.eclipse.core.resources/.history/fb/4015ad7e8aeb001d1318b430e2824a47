@@ -1,0 +1,9 @@
+
+#include "xil_types.h"
+#include "xil_assert.h"
+#include "xstatus.h"
+
+extern void SysMonInterruptHandler(void *CallBackRef);
+
+
+extern int SysMonSetupInterruptSystem(INTC* IntcInstancePtr, XSysMon *SysMonPtr, u16 IntrId );

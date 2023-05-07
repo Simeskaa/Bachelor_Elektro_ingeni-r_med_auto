@@ -1,0 +1,63 @@
+21:31:58 DEBUG : Logs will be stored at 'C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench_w_adc/IDE.log'.
+21:32:04 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Bruker\Documents\Bachelor_Elektro_ingenior_med_auto\fpga\vitis_testbench_w_adc\temp_xsdb_launch_script.tcl
+21:32:05 INFO  : Platform repository initialization has completed.
+21:32:05 INFO  : Registering command handlers for Vitis TCF services
+21:32:09 INFO  : XSCT server has started successfully.
+21:32:09 INFO  : plnx-install-location is set to ''
+21:32:09 INFO  : Successfully done setting XSCT server connection channel  
+21:32:09 INFO  : Successfully done query RDI_DATADIR 
+21:32:10 INFO  : Successfully done setting workspace for the tool. 
+21:34:37 INFO  : Result from executing command 'getProjects': arty_sound_triangulation_platform
+21:34:37 INFO  : Result from executing command 'getPlatforms': 
+21:36:17 INFO  : Result from executing command 'getProjects': arty_sound_triangulation_platform
+21:36:17 INFO  : Result from executing command 'getPlatforms': arty_sound_triangulation_platform|C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench_w_adc/arty_sound_triangulation_platform/export/arty_sound_triangulation_platform/arty_sound_triangulation_platform.xpfm
+21:51:29 INFO  : Example project xsysmon_intr_example_1 has been created successfully.
+21:51:36 INFO  : Checking for BSP changes to sync application flags for project 'xsysmon_intr_example_1'...
+21:53:53 INFO  : Checking for BSP changes to sync application flags for project 'xsysmon_intr_example_1'...
+10:44:06 DEBUG : Logs will be stored at 'C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench_w_adc/IDE.log'.
+10:44:09 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Bruker\Documents\Bachelor_Elektro_ingenior_med_auto\fpga\vitis_testbench_w_adc\temp_xsdb_launch_script.tcl
+10:44:18 INFO  : Platform repository initialization has completed.
+10:44:18 INFO  : Registering command handlers for Vitis TCF services
+10:44:23 INFO  : XSCT server has started successfully.
+10:44:23 INFO  : Successfully done setting XSCT server connection channel  
+10:44:23 INFO  : plnx-install-location is set to ''
+10:44:56 INFO  : Successfully done setting workspace for the tool. 
+10:44:56 INFO  : Successfully done query RDI_DATADIR 
+11:07:31 DEBUG : Logs will be stored at 'C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench_w_adc/IDE.log'.
+11:07:33 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Bruker\Documents\Bachelor_Elektro_ingenior_med_auto\fpga\vitis_testbench_w_adc\temp_xsdb_launch_script.tcl
+11:07:40 INFO  : Platform repository initialization has completed.
+11:07:40 INFO  : Registering command handlers for Vitis TCF services
+11:07:43 INFO  : XSCT server has started successfully.
+11:07:43 INFO  : plnx-install-location is set to ''
+11:07:43 INFO  : Successfully done setting XSCT server connection channel  
+11:07:43 INFO  : Successfully done query RDI_DATADIR 
+11:07:43 INFO  : Successfully done setting workspace for the tool. 
+11:16:23 INFO  : Result from executing command 'getProjects': arty_sound_triangulation_platform
+11:16:23 INFO  : Result from executing command 'getPlatforms': arty_sound_triangulation_platform|C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench_w_adc/arty_sound_triangulation_platform/export/arty_sound_triangulation_platform/arty_sound_triangulation_platform.xpfm
+11:16:24 INFO  : Checking for BSP changes to sync application flags for project 'xadc'...
+11:28:51 DEBUG : Logs will be stored at 'C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench_w_adc/IDE.log'.
+11:28:53 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Bruker\Documents\Bachelor_Elektro_ingenior_med_auto\fpga\vitis_testbench_w_adc\temp_xsdb_launch_script.tcl
+11:29:03 INFO  : Platform repository initialization has completed.
+11:29:03 INFO  : XSCT server has started successfully.
+11:29:04 INFO  : Registering command handlers for Vitis TCF services
+11:29:04 INFO  : plnx-install-location is set to ''
+11:29:05 INFO  : Successfully done query RDI_DATADIR 
+11:29:05 INFO  : Successfully done setting XSCT server connection channel  
+11:29:05 INFO  : Successfully done setting workspace for the tool. 
+11:30:12 INFO  : Checking for BSP changes to sync application flags for project 'xadc'...
+11:31:04 INFO  : Result from executing command 'getProjects': arty_sound_triangulation_platform
+11:31:04 INFO  : Result from executing command 'getPlatforms': arty_sound_triangulation_platform|C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench_w_adc/arty_sound_triangulation_platform/export/arty_sound_triangulation_platform/arty_sound_triangulation_platform.xpfm
+11:31:04 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:31:25 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:32:26 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:32:43 INFO  : Result from executing command 'removePlatformRepo': 
+11:33:16 INFO  : Result from executing command 'getProjects': arty_sound_triangulation_platform
+11:33:16 INFO  : Result from executing command 'getPlatforms': 
+11:33:31 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+16:37:47 INFO  : Hardware specification for platform project 'arty_sound_triangulation_platform' is updated.
+16:38:38 INFO  : Result from executing command 'getProjects': arty_sound_triangulation_platform
+16:38:38 INFO  : Result from executing command 'getPlatforms': arty_sound_triangulation_platform|C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench_w_adc/arty_sound_triangulation_platform/export/arty_sound_triangulation_platform/arty_sound_triangulation_platform.xpfm
+16:38:39 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+16:40:22 INFO  : Result from executing command 'getProjects': arty_sound_triangulation_platform
+16:40:22 INFO  : Result from executing command 'getPlatforms': arty_sound_triangulation_platform|C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench_w_adc/arty_sound_triangulation_platform/export/arty_sound_triangulation_platform/arty_sound_triangulation_platform.xpfm
+16:40:23 INFO  : Checking for BSP changes to sync application flags for project 'test'...

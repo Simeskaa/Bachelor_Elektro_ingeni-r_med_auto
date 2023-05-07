@@ -1,0 +1,5 @@
+
+extern void SysMonInterruptHandler(void *CallBackRef);
+
+
+extern int SysMonSetupInterruptSystem(INTC* IntcInstancePtr, XSysMon *SysMonPtr, u16 IntrId );

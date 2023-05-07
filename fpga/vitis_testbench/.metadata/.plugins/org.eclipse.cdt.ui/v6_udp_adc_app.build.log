@@ -1,0 +1,26 @@
+15:50:39 **** Build of configuration Debug for project v6_udp_adc_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -IC:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/export/v6_udp_adc_81Mhz/sw/v6_udp_adc_81Mhz/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -IC:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/export/v6_udp_adc_81Mhz/sw/v6_udp_adc_81Mhz/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: v6_udp_adc_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/export/v6_udp_adc_81Mhz/sw/v6_udp_adc_81Mhz/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "v6_udp_adc_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: v6_udp_adc_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size v6_udp_adc_app.elf  |tee "v6_udp_adc_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2968	    340	   3108	   6416	   1910	v6_udp_adc_app.elf
+'Finished building: v6_udp_adc_app.elf.size'
+' '
+
+15:50:42 Build Finished (took 2s.782ms)
+

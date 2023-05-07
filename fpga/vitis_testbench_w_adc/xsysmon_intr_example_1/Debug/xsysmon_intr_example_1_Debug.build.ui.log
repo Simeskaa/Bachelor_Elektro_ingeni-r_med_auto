@@ -1,0 +1,13 @@
+2023-05-04T21:53:53.949773700255-21:53:53 **** Incremental Build of configuration Debug for project xsysmon_intr_example_1 ****
+000-make all 
+000-'Building file: ../src/xsysmon_intr_example.c'
+000-'Invoking: MicroBlaze gcc compiler'
+000-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xsysmon_intr_example.o" -IC:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench_w_adc/arty_sound_triangulation_platform/export/arty_sound_triangulation_platform/sw/arty_sound_triangulation_platform/standalone_domain/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xsysmon_intr_example.d" -MT"src/xsysmon_intr_example.o" -o "src/xsysmon_intr_example.o" "../src/xsysmon_intr_example.c"
+000/xsysmon_intr_example_1/src/xsysmon_intr_example.c54-1-1fatal error: xsysmon.h: No such file or directory2-../src/xsysmon_intr_example.c:54:10: fatal error: xsysmon.h: No such file or directory
+000-   54 | #include "xsysmon.h"
+000-      |          ^~~~~~~~~~~
+000-compilation terminated.
+000/xsysmon_intr_example_10-1-1make: *** [src/subdir.mk:23: src/xsysmon_intr_example.o] Error 12-make: *** [src/subdir.mk:23: src/xsysmon_intr_example.o] Error 1
+00255-
+21:53:54 Build Finished (took 364ms)
+

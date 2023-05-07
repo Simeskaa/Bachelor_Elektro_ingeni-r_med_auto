@@ -1,0 +1,504 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sun May  7 15:33:01 2023
+| Host         : DESKTOP-T99OIQI running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file arty_adc_eth_v4_wrapper_bus_skew_routed.rpt -pb arty_adc_eth_v4_wrapper_bus_skew_routed.pb -rpx arty_adc_eth_v4_wrapper_bus_skew_routed.rpx
+| Design       : arty_adc_eth_v4_wrapper
+| Device       : 7a35ti-csg324
+| Speed File   : -1L  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+Table of Contents
+-----------------
+1. Bus Skew Report Summary
+2. Bus Skew Report Per Constraint
+
+1. Bus Skew Report Summary
+--------------------------
+
+Id  Position  From                            To                              Corner  Requirement(ns)  Actual(ns)  Slack(ns)
+--  --------  ------------------------------  ------------------------------  ------  ---------------  ----------  ---------
+1   47        [get_cells [list {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]}]]
+                                              [get_cells [list {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
+                                                                              Slow             12.308       0.959     11.349
+2   49        [get_cells [list {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]}]]
+                                              [get_cells [list {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
+                                                                              Slow             12.308       0.574     11.734
+3   51        [get_cells [list {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]}]]
+                                              [get_cells [list {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
+                                                                              Slow             12.308       0.605     11.703
+4   53        [get_cells [list {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]}]]
+                                              [get_cells [list {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
+                                                                              Slow             12.308       0.733     11.575
+
+
+2. Bus Skew Report Per Constraint
+---------------------------------
+
+Id: 1
+set_bus_skew -from [get_cells [list {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]}]] -to [get_cells [list {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]] 12.308
+Requirement: 12.308ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+eth_mii_tx_clk        clk_pll_i_1           arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                                                            arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                                                            Slow         0.959     11.349
+
+
+Slack (MET) :             11.349ns  (requirement - actual skew)
+  Endpoint Source:        arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by eth_mii_tx_clk)
+  Endpoint Destination:   arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i_1)
+  Reference Source:       arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by eth_mii_tx_clk)
+  Reference Destination:  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            12.308ns
+  Endpoint Relative Delay:    1.865ns
+  Reference Relative Delay:   0.361ns
+  Relative CRPR:              0.545ns
+  Actual Bus Skew:            0.959ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock eth_mii_tx_clk rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  eth_mii_tx_clk (IN)
+                         net (fo=0)                   0.000     0.000    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/phy_tx_clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.479     1.479 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.TX_IBUF_INST/O
+                         net (fo=1, routed)           1.972     3.450    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/o
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.096     3.546 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.CLOCK_BUFG_TX/O
+                         net (fo=60, routed)          1.548     5.095    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X28Y24         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y24         FDRE (Prop_fdre_C_Q)         0.456     5.551 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/Q
+                         net (fo=1, routed)           0.944     6.494    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[0]
+    SLICE_X14Y24         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pll_i_1 rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    E3                   IBUF (Prop_ibuf_I_O)         1.418     1.418 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.241     2.659    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.083     2.742 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.147     3.889    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y0          BUFH (Prop_bufh_I_O)         0.081     3.970 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.737     4.707    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.129     1.578 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.581     3.159    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.250 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=16081, routed)       1.433     4.683    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X14Y24         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
+                         clock pessimism              0.000     4.683    
+    SLICE_X14Y24         FDRE (Setup_fdre_C_D)       -0.054     4.629    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
+  -------------------------------------------------------------------
+                         data arrival                           6.494    
+                         clock arrival                          4.629    
+  -------------------------------------------------------------------
+                         relative delay                         1.865    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock eth_mii_tx_clk rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  eth_mii_tx_clk (IN)
+                         net (fo=0)                   0.000     0.000    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/phy_tx_clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.408     1.408 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.TX_IBUF_INST/O
+                         net (fo=1, routed)           1.868     3.276    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/o
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091     3.367 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.CLOCK_BUFG_TX/O
+                         net (fo=60, routed)          1.443     4.811    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X15Y18         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y18         FDRE (Prop_fdre_C_Q)         0.367     5.178 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.414     5.592    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[3]
+    SLICE_X14Y18         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pll_i rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    E3                   IBUF (Prop_ibuf_I_O)         1.489     1.489 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.316     2.805    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.088     2.893 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.223     4.116    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y0          BUFH (Prop_bufh_I_O)         0.127     4.243 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.775     5.018    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.333     1.685 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.661     3.347    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.443 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=16081, routed)       1.558     5.001    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X14Y18         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000     5.001    
+    SLICE_X14Y18         FDRE (Hold_fdre_C_D)         0.230     5.231    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+  -------------------------------------------------------------------
+                         data arrival                           5.592    
+                         clock arrival                          5.231    
+  -------------------------------------------------------------------
+                         relative delay                         0.361    
+
+
+
+Id: 2
+set_bus_skew -from [get_cells [list {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]}]] -to [get_cells [list {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]] 12.308
+Requirement: 12.308ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+eth_mii_rx_clk        clk_pll_i_1           arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                            arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                                                                                            Slow         0.574     11.734
+
+
+Slack (MET) :             11.734ns  (requirement - actual skew)
+  Endpoint Source:        arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by eth_mii_rx_clk)
+  Endpoint Destination:   arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i_1)
+  Reference Source:       arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by eth_mii_rx_clk)
+  Reference Destination:  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i_1)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            12.308ns
+  Endpoint Relative Delay:    1.552ns
+  Reference Relative Delay:   0.369ns
+  Relative CRPR:              0.609ns
+  Actual Bus Skew:            0.574ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock eth_mii_rx_clk rise edge)
+                                                      0.000     0.000 r  
+    F15                                               0.000     0.000 r  eth_mii_rx_clk (IN)
+                         net (fo=0)                   0.000     0.000    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/phy_rx_clk
+    F15                  IBUF (Prop_ibuf_I_O)         1.482     1.482 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.RX_IBUF_INST/O
+                         net (fo=1, routed)           1.972     3.454    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.RX_IBUF_INST_n_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.550 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.CLOCK_BUFG_RX/O
+                         net (fo=64, routed)          1.555     5.105    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X31Y19         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y19         FDRE (Prop_fdre_C_Q)         0.419     5.524 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.444     5.968    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[1]
+    SLICE_X33Y19         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pll_i_1 rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    E3                   IBUF (Prop_ibuf_I_O)         1.418     1.418 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.241     2.659    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.083     2.742 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.147     3.889    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y0          BUFH (Prop_bufh_I_O)         0.081     3.970 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.737     4.707    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.129     1.578 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.581     3.159    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.250 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=16081, routed)       1.434     4.684    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X33Y19         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism              0.000     4.684    
+    SLICE_X33Y19         FDRE (Setup_fdre_C_D)       -0.268     4.416    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
+  -------------------------------------------------------------------
+                         data arrival                           5.968    
+                         clock arrival                          4.416    
+  -------------------------------------------------------------------
+                         relative delay                         1.552    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock eth_mii_rx_clk rise edge)
+                                                      0.000     0.000 r  
+    F15                                               0.000     0.000 r  eth_mii_rx_clk (IN)
+                         net (fo=0)                   0.000     0.000    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/phy_rx_clk
+    F15                  IBUF (Prop_ibuf_I_O)         1.412     1.412 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.RX_IBUF_INST/O
+                         net (fo=1, routed)           1.868     3.280    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.RX_IBUF_INST_n_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.371 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.CLOCK_BUFG_RX/O
+                         net (fo=64, routed)          1.437     4.808    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X31Y19         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y19         FDRE (Prop_fdre_C_Q)         0.367     5.175 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/Q
+                         net (fo=1, routed)           0.359     5.534    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[0]
+    SLICE_X33Y19         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pll_i_1 rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    E3                   IBUF (Prop_ibuf_I_O)         1.489     1.489 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.316     2.805    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.088     2.893 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.223     4.116    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y0          BUFH (Prop_bufh_I_O)         0.127     4.243 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.775     5.018    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.333     1.685 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.661     3.347    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.443 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=16081, routed)       1.553     4.996    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X33Y19         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
+                         clock pessimism              0.000     4.996    
+    SLICE_X33Y19         FDRE (Hold_fdre_C_D)         0.169     5.165    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
+  -------------------------------------------------------------------
+                         data arrival                           5.534    
+                         clock arrival                          5.165    
+  -------------------------------------------------------------------
+                         relative delay                         0.369    
+
+
+
+Id: 3
+set_bus_skew -from [get_cells [list {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]}]] -to [get_cells [list {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]] 12.308
+Requirement: 12.308ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_pll_i             eth_mii_rx_clk        arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                            arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                                                            Slow         0.605     11.703
+
+
+Slack (MET) :             11.703ns  (requirement - actual skew)
+  Endpoint Source:        arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i)
+  Endpoint Destination:   arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                            (rising edge-triggered cell FDRE clocked by eth_mii_rx_clk)
+  Reference Source:       arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i)
+  Reference Destination:  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                            (rising edge-triggered cell FDRE clocked by eth_mii_rx_clk)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            12.308ns
+  Endpoint Relative Delay:    1.316ns
+  Reference Relative Delay:   0.181ns
+  Relative CRPR:              0.531ns
+  Actual Bus Skew:            0.605ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pll_i rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    E3                   IBUF (Prop_ibuf_I_O)         1.489     1.489 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.316     2.805    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.088     2.893 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.223     4.116    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y0          BUFH (Prop_bufh_I_O)         0.127     4.243 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.775     5.018    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.333     1.685 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.661     3.347    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.443 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=16081, routed)       1.553     4.996    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X29Y20         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X29Y20         FDRE (Prop_fdre_C_Q)         0.419     5.415 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.444     5.859    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[1]
+    SLICE_X28Y18         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock eth_mii_rx_clk rise edge)
+                                                      0.000     0.000 r  
+    F15                                               0.000     0.000 r  eth_mii_rx_clk (IN)
+                         net (fo=0)                   0.000     0.000    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/phy_rx_clk
+    F15                  IBUF (Prop_ibuf_I_O)         1.412     1.412 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.RX_IBUF_INST/O
+                         net (fo=1, routed)           1.868     3.280    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.RX_IBUF_INST_n_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.371 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.CLOCK_BUFG_RX/O
+                         net (fo=64, routed)          1.440     4.811    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X28Y18         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism              0.000     4.811    
+    SLICE_X28Y18         FDRE (Setup_fdre_C_D)       -0.268     4.543    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
+  -------------------------------------------------------------------
+                         data arrival                           5.859    
+                         clock arrival                          4.543    
+  -------------------------------------------------------------------
+                         relative delay                         1.316    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pll_i rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    E3                   IBUF (Prop_ibuf_I_O)         1.418     1.418 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.241     2.659    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.083     2.742 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.147     3.889    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y0          BUFH (Prop_bufh_I_O)         0.081     3.970 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.737     4.707    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.129     1.578 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.581     3.159    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.250 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=16081, routed)       1.440     4.690    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X14Y18         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y18         FDRE (Prop_fdre_C_Q)         0.418     5.108 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.414     5.523    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[3]
+    SLICE_X14Y17         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock eth_mii_rx_clk rise edge)
+                                                      0.000     0.000 r  
+    F15                                               0.000     0.000 r  eth_mii_rx_clk (IN)
+                         net (fo=0)                   0.000     0.000    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/phy_rx_clk
+    F15                  IBUF (Prop_ibuf_I_O)         1.482     1.482 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.RX_IBUF_INST/O
+                         net (fo=1, routed)           1.972     3.454    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.RX_IBUF_INST_n_0
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.550 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.CLOCK_BUFG_RX/O
+                         net (fo=64, routed)          1.562     5.112    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X14Y17         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000     5.112    
+    SLICE_X14Y17         FDRE (Hold_fdre_C_D)         0.230     5.342    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+  -------------------------------------------------------------------
+                         data arrival                           5.523    
+                         clock arrival                          5.342    
+  -------------------------------------------------------------------
+                         relative delay                         0.181    
+
+
+
+Id: 4
+set_bus_skew -from [get_cells [list {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]}]] -to [get_cells [list {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]] 12.308
+Requirement: 12.308ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_pll_i             eth_mii_tx_clk        arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                            arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                                                            Slow         0.733     11.575
+
+
+Slack (MET) :             11.575ns  (requirement - actual skew)
+  Endpoint Source:        arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i)
+  Endpoint Destination:   arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                            (rising edge-triggered cell FDRE clocked by eth_mii_tx_clk)
+  Reference Source:       arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i)
+  Reference Destination:  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                            (rising edge-triggered cell FDRE clocked by eth_mii_tx_clk)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            12.308ns
+  Endpoint Relative Delay:    1.317ns
+  Reference Relative Delay:   0.040ns
+  Relative CRPR:              0.545ns
+  Actual Bus Skew:            0.733ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pll_i rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    E3                   IBUF (Prop_ibuf_I_O)         1.489     1.489 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.316     2.805    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.088     2.893 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.223     4.116    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y0          BUFH (Prop_bufh_I_O)         0.127     4.243 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.775     5.018    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.333     1.685 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.661     3.347    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.443 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=16081, routed)       1.547     4.990    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X31Y23         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y23         FDRE (Prop_fdre_C_Q)         0.419     5.409 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.445     5.854    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[1]
+    SLICE_X29Y23         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock eth_mii_tx_clk rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  eth_mii_tx_clk (IN)
+                         net (fo=0)                   0.000     0.000    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/phy_tx_clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.408     1.408 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.TX_IBUF_INST/O
+                         net (fo=1, routed)           1.868     3.276    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/o
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091     3.367 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.CLOCK_BUFG_TX/O
+                         net (fo=60, routed)          1.435     4.803    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X29Y23         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism              0.000     4.803    
+    SLICE_X29Y23         FDRE (Setup_fdre_C_D)       -0.266     4.537    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
+  -------------------------------------------------------------------
+                         data arrival                           5.854    
+                         clock arrival                          4.537    
+  -------------------------------------------------------------------
+                         relative delay                         1.317    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pll_i rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    E3                   IBUF (Prop_ibuf_I_O)         1.418     1.418 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.241     2.659    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.083     2.742 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.147     3.889    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y0          BUFH (Prop_bufh_I_O)         0.081     3.970 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.737     4.707    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.129     1.578 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.581     3.159    arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     3.250 r  arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=16081, routed)       1.433     4.683    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X28Y22         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y22         FDRE (Prop_fdre_C_Q)         0.367     5.050 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.259     5.309    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[3]
+    SLICE_X28Y21         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock eth_mii_tx_clk rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  eth_mii_tx_clk (IN)
+                         net (fo=0)                   0.000     0.000    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/phy_tx_clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.479     1.479 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.TX_IBUF_INST/O
+                         net (fo=1, routed)           1.972     3.450    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/o
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.096     3.546 r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/NO_LOOPBACK_GEN.INCLUDE_BUFG_GEN.CLOCK_BUFG_TX/O
+                         net (fo=60, routed)          1.554     5.101    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X28Y21         FDRE                                         r  arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000     5.101    
+    SLICE_X28Y21         FDRE (Hold_fdre_C_D)         0.169     5.270    arty_adc_eth_v4_i/axi_ethernetlite_0/U0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+  -------------------------------------------------------------------
+                         data arrival                           5.309    
+                         clock arrival                          5.270    
+  -------------------------------------------------------------------
+                         relative delay                         0.040    
+
+
+

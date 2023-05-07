@@ -1,0 +1,1275 @@
+TRACE::2023-05-07.15:48:44::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:44::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:44::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:44::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:48:44::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:44::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:48:44::SCWPlatform::Do not have an existing db opened. 
+TRACE::2023-05-07.15:48:45::SCWPlatform::Opened new HwDB with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:48:45::SCWWriter::formatted JSON is {
+	"platformName":	"v6_udp_adc_81Mhz",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"v6_udp_adc_81Mhz",
+	"platHandOff":	"C:/Users/Bruker/Documents/0_bachelor_fpga_designs/fpga/exported_hardware_versions/arty_adc_eth_v9_81MHz.xsa",
+	"platIntHandOff":	"<platformDir>/hw/arty_adc_eth_v9_81MHz.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	""
+}
+TRACE::2023-05-07.15:48:45::SCWWriter::formatted JSON is {
+	"platformName":	"v6_udp_adc_81Mhz",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"v6_udp_adc_81Mhz",
+	"platHandOff":	"C:/Users/Bruker/Documents/0_bachelor_fpga_designs/fpga/exported_hardware_versions/arty_adc_eth_v9_81MHz.xsa",
+	"platIntHandOff":	"<platformDir>/hw/arty_adc_eth_v9_81MHz.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"v6_udp_adc_81Mhz",
+	"systems":	[{
+			"systemName":	"v6_udp_adc_81Mhz",
+			"systemDesc":	"v6_udp_adc_81Mhz",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"v6_udp_adc_81Mhz"
+		}]
+}
+TRACE::2023-05-07.15:48:45::SCWPlatform::Boot application domains not present, creating them
+TRACE::2023-05-07.15:48:45::SCWPlatform::Pure FPGA device, no boot application will be created.
+TRACE::2023-05-07.15:48:45::SCWWriter::formatted JSON is {
+	"platformName":	"v6_udp_adc_81Mhz",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"v6_udp_adc_81Mhz",
+	"platHandOff":	"C:/Users/Bruker/Documents/0_bachelor_fpga_designs/fpga/exported_hardware_versions/arty_adc_eth_v9_81MHz.xsa",
+	"platIntHandOff":	"<platformDir>/hw/arty_adc_eth_v9_81MHz.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"v6_udp_adc_81Mhz",
+	"systems":	[{
+			"systemName":	"v6_udp_adc_81Mhz",
+			"systemDesc":	"v6_udp_adc_81Mhz",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"v6_udp_adc_81Mhz"
+		}]
+}
+TRACE::2023-05-07.15:48:45::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:48:45::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:48:45::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:48:45::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:48:45::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:48:45::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:48:45::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:48:45::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:48:45::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:48:45::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:48:45::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:48:45::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:48:45::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:48:45::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:48:45::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:48:45::SCWDomain::checking for install qemu data   : 
+TRACE::2023-05-07.15:48:45::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:48:45::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:48:45::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:48:45::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:48:45::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:48:45::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:48:45::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:48:45::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:48:45::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:48:45::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:48:45::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:48:45::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:48:45::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:48:45::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:48:45::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:48:45::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:48:45::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:48:45::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+
+TRACE::2023-05-07.15:48:45::SCWMssOS::No sw design opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:48:45::SCWMssOS::mss does not exists at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:48:45::SCWMssOS::Creating sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:48:45::SCWMssOS::Adding the swdes entry, created swdb C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss with des name C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:48:45::SCWMssOS::updating the scw layer changes to swdes at   C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:48:45::SCWMssOS::Writing mss at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:48:45::SCWMssOS::Completed writing the mss file at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp
+TRACE::2023-05-07.15:48:45::SCWMssOS::Picking up changes from newly written mss file into SCW Layer. 
+TRACE::2023-05-07.15:48:45::SCWMssOS::Updated the changes from newly written mss file into SCW Layer. 
+TRACE::2023-05-07.15:48:45::SCWMssOS::Completed writing the mss file at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp
+TRACE::2023-05-07.15:48:45::SCWMssOS::Forcing BSP Sources regeneration.
+TRACE::2023-05-07.15:49:01::SCWMssOS::Saving the mss changes C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss with des name system_4
+TRACE::2023-05-07.15:49:01::SCWMssOS::Writing the mss file completed C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::Commit changes completed.
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWWriter::formatted JSON is {
+	"platformName":	"v6_udp_adc_81Mhz",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"v6_udp_adc_81Mhz",
+	"platHandOff":	"C:/Users/Bruker/Documents/0_bachelor_fpga_designs/fpga/exported_hardware_versions/arty_adc_eth_v9_81MHz.xsa",
+	"platIntHandOff":	"<platformDir>/hw/arty_adc_eth_v9_81MHz.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"v6_udp_adc_81Mhz",
+	"systems":	[{
+			"systemName":	"v6_udp_adc_81Mhz",
+			"systemDesc":	"v6_udp_adc_81Mhz",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"v6_udp_adc_81Mhz",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone_domain",
+					"domainDesc":	"standalone_domain",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"45b179d633b4c66149506f625ec0ec63",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2023-05-07.15:49:01::SCWPlatform::Started generating the artifacts platform v6_udp_adc_81Mhz
+TRACE::2023-05-07.15:49:01::SCWPlatform::Sanity checking of platform is completed
+LOG::2023-05-07.15:49:01::SCWPlatform::Started generating the artifacts for system configuration v6_udp_adc_81Mhz
+LOG::2023-05-07.15:49:01::SCWSystem::Checking the domain standalone_domain
+LOG::2023-05-07.15:49:01::SCWSystem::Not a boot domain 
+LOG::2023-05-07.15:49:01::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2023-05-07.15:49:01::SCWDomain::Generating domain artifcats
+TRACE::2023-05-07.15:49:01::SCWMssOS::Generating standalone artifcats
+TRACE::2023-05-07.15:49:01::SCWMssOS:: Copying the user libraries. 
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::Completed writing the mss file at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp
+TRACE::2023-05-07.15:49:01::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2023-05-07.15:49:01::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2023-05-07.15:49:01::SCWDomain::Skipping the build for domain :  standalone_domain
+TRACE::2023-05-07.15:49:01::SCWMssOS::skipping the bsp build ... 
+TRACE::2023-05-07.15:49:01::SCWMssOS::Copying to export directory.
+TRACE::2023-05-07.15:49:01::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2023-05-07.15:49:01::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2023-05-07.15:49:01::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2023-05-07.15:49:01::SCWSystem::Completed Processing the sysconfig v6_udp_adc_81Mhz
+LOG::2023-05-07.15:49:01::SCWPlatform::Completed generating the artifacts for system configuration v6_udp_adc_81Mhz
+TRACE::2023-05-07.15:49:01::SCWPlatform::Started preparing the platform 
+TRACE::2023-05-07.15:49:01::SCWSystem::Writing the bif file for system config v6_udp_adc_81Mhz
+TRACE::2023-05-07.15:49:01::SCWSystem::dir created 
+TRACE::2023-05-07.15:49:01::SCWSystem::Writing the bif 
+TRACE::2023-05-07.15:49:01::SCWPlatform::Started writing the spfm file 
+TRACE::2023-05-07.15:49:01::SCWPlatform::Started writing the xpfm file 
+TRACE::2023-05-07.15:49:01::SCWPlatform::Completed generating the platform
+TRACE::2023-05-07.15:49:01::SCWMssOS::Saving the mss changes C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-05-07.15:49:01::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-05-07.15:49:01::SCWMssOS::Commit changes completed.
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWWriter::formatted JSON is {
+	"platformName":	"v6_udp_adc_81Mhz",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"v6_udp_adc_81Mhz",
+	"platHandOff":	"C:/Users/Bruker/Documents/0_bachelor_fpga_designs/fpga/exported_hardware_versions/arty_adc_eth_v9_81MHz.xsa",
+	"platIntHandOff":	"<platformDir>/hw/arty_adc_eth_v9_81MHz.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"v6_udp_adc_81Mhz",
+	"systems":	[{
+			"systemName":	"v6_udp_adc_81Mhz",
+			"systemDesc":	"v6_udp_adc_81Mhz",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"v6_udp_adc_81Mhz",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone_domain",
+					"domainDesc":	"standalone_domain",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"45b179d633b4c66149506f625ec0ec63",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2023-05-07.15:49:01::SCWPlatform::updated the xpfm file.
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::Saving the mss changes C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-05-07.15:49:01::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-05-07.15:49:01::SCWMssOS::Commit changes completed.
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWWriter::formatted JSON is {
+	"platformName":	"v6_udp_adc_81Mhz",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"v6_udp_adc_81Mhz",
+	"platHandOff":	"C:/Users/Bruker/Documents/0_bachelor_fpga_designs/fpga/exported_hardware_versions/arty_adc_eth_v9_81MHz.xsa",
+	"platIntHandOff":	"<platformDir>/hw/arty_adc_eth_v9_81MHz.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"v6_udp_adc_81Mhz",
+	"systems":	[{
+			"systemName":	"v6_udp_adc_81Mhz",
+			"systemDesc":	"v6_udp_adc_81Mhz",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"v6_udp_adc_81Mhz",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone_domain",
+					"domainDesc":	"standalone_domain",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"45b179d633b4c66149506f625ec0ec63",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::Saving the mss changes C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-05-07.15:49:01::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-05-07.15:49:01::SCWMssOS::Commit changes completed.
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWWriter::formatted JSON is {
+	"platformName":	"v6_udp_adc_81Mhz",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"v6_udp_adc_81Mhz",
+	"platHandOff":	"C:/Users/Bruker/Documents/0_bachelor_fpga_designs/fpga/exported_hardware_versions/arty_adc_eth_v9_81MHz.xsa",
+	"platIntHandOff":	"<platformDir>/hw/arty_adc_eth_v9_81MHz.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"v6_udp_adc_81Mhz",
+	"systems":	[{
+			"systemName":	"v6_udp_adc_81Mhz",
+			"systemDesc":	"v6_udp_adc_81Mhz",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"v6_udp_adc_81Mhz",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on microblaze_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"45b179d633b4c66149506f625ec0ec63",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2023-05-07.15:49:01::SCWMssOS::Saving the mss changes C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-05-07.15:49:01::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-05-07.15:49:01::SCWMssOS::Commit changes completed.
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_11
+TRACE::2023-05-07.15:49:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:01::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:01::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWWriter::formatted JSON is {
+	"platformName":	"v6_udp_adc_81Mhz",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"v6_udp_adc_81Mhz",
+	"platHandOff":	"C:/Users/Bruker/Documents/0_bachelor_fpga_designs/fpga/exported_hardware_versions/arty_adc_eth_v9_81MHz.xsa",
+	"platIntHandOff":	"<platformDir>/hw/arty_adc_eth_v9_81MHz.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"v6_udp_adc_81Mhz",
+	"systems":	[{
+			"systemName":	"v6_udp_adc_81Mhz",
+			"systemDesc":	"v6_udp_adc_81Mhz",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"v6_udp_adc_81Mhz",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on microblaze_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"45b179d633b4c66149506f625ec0ec63",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2023-05-07.15:49:01::SCWPlatform::Clearing the existing platform
+TRACE::2023-05-07.15:49:01::SCWSystem::Clearing the existing sysconfig
+TRACE::2023-05-07.15:49:01::SCWMssOS::Removing the swdes entry for  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:01::SCWSystem::Clearing the domains completed.
+TRACE::2023-05-07.15:49:01::SCWPlatform::Clearing the opened hw db.
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform location is C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Removing the HwDB with name C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:01::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:01::SCWPlatform::Do not have an existing db opened. 
+TRACE::2023-05-07.15:49:03::SCWPlatform::Opened new HwDB with name arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.15:49:03::SCWReader::Active system found as  v6_udp_adc_81Mhz
+TRACE::2023-05-07.15:49:03::SCWReader::Handling sysconfig v6_udp_adc_81Mhz
+TRACE::2023-05-07.15:49:03::SCWDomain::checking for install qemu data   : 
+TRACE::2023-05-07.15:49:03::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:03::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:03::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.15:49:03::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.15:49:03::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:03::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:03::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:03::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.15:49:03::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.15:49:03::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:03::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:03::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:03::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.15:49:03::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.15:49:03::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:03::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:03::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:03::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.15:49:03::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.15:49:03::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:03::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:03::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+
+TRACE::2023-05-07.15:49:03::SCWMssOS::No sw design opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:03::SCWMssOS::mss exists loading the mss file  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:03::SCWMssOS::Opened the sw design from mss  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:03::SCWMssOS::Adding the swdes entry C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss with des name system_4
+TRACE::2023-05-07.15:49:03::SCWMssOS::updating the scw layer about changes
+TRACE::2023-05-07.15:49:03::SCWMssOS::Opened the sw design.  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:03::SCWMssOS::Saving the mss changes C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:03::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-05-07.15:49:03::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-05-07.15:49:03::SCWMssOS::Commit changes completed.
+TRACE::2023-05-07.15:49:03::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2023-05-07.15:49:03::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2023-05-07.15:49:03::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:03::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:03::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:03::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.15:49:03::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.15:49:03::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:03::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:03::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:03::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:03::SCWReader::No isolation master present  
+LOG::2023-05-07.15:49:24::SCWPlatform::Started generating the artifacts platform v6_udp_adc_81Mhz
+TRACE::2023-05-07.15:49:24::SCWPlatform::Sanity checking of platform is completed
+LOG::2023-05-07.15:49:24::SCWPlatform::Started generating the artifacts for system configuration v6_udp_adc_81Mhz
+LOG::2023-05-07.15:49:24::SCWSystem::Checking the domain standalone_domain
+LOG::2023-05-07.15:49:24::SCWSystem::Not a boot domain 
+LOG::2023-05-07.15:49:24::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2023-05-07.15:49:24::SCWDomain::Generating domain artifcats
+TRACE::2023-05-07.15:49:24::SCWMssOS::Generating standalone artifcats
+TRACE::2023-05-07.15:49:24::SCWMssOS:: Copying the user libraries. 
+TRACE::2023-05-07.15:49:24::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:24::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:24::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:24::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:24::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:24::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:24::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.15:49:24::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.15:49:24::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:24::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:24::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:24::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:24::SCWMssOS::Completed writing the mss file at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp
+TRACE::2023-05-07.15:49:24::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:24::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2023-05-07.15:49:24::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2023-05-07.15:49:24::SCWDomain::Building the domain as part of full build :  standalone_domain
+TRACE::2023-05-07.15:49:24::SCWMssOS::doing bsp build ... 
+TRACE::2023-05-07.15:49:24::SCWMssOS::System Command Ran  C: & cd  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp & make 
+TRACE::2023-05-07.15:49:24::SCWMssOS::make --no-print-directory seq_libs
+
+TRACE::2023-05-07.15:49:24::SCWMssOS::'Finished building libraries sequentially.'
+
+TRACE::2023-05-07.15:49:24::SCWMssOS::make -j 2 --no-print-directory par_libs
+
+TRACE::2023-05-07.15:49:24::SCWMssOS::"Running Make include in microblaze_0/libsrc/bram_v4_8/src"
+
+TRACE::2023-05-07.15:49:25::SCWMssOS::make -C microblaze_0/libsrc/bram_v4_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+TRACE::2023-05-07.15:49:25::SCWMssOS::R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall 
+TRACE::2023-05-07.15:49:25::SCWMssOS::-Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-05-07.15:49:25::SCWMssOS::"Running Make include in microblaze_0/libsrc/cpu_v2_16/src"
+
+TRACE::2023-05-07.15:49:25::SCWMssOS::make -C microblaze_0/libsrc/cpu_v2_16/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+TRACE::2023-05-07.15:49:25::SCWMssOS::R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall 
+TRACE::2023-05-07.15:49:25::SCWMssOS::-Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-05-07.15:49:25::SCWMssOS::"Running Make include in microblaze_0/libsrc/emaclite_v4_7/src"
+
+TRACE::2023-05-07.15:49:25::SCWMssOS::make -C microblaze_0/libsrc/emaclite_v4_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+TRACE::2023-05-07.15:49:25::SCWMssOS::PILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -W
+TRACE::2023-05-07.15:49:25::SCWMssOS::all -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-05-07.15:49:25::SCWMssOS::"Running Make include in microblaze_0/libsrc/intc_v3_15/src"
+
+TRACE::2023-05-07.15:49:25::SCWMssOS::make -C microblaze_0/libsrc/intc_v3_15/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+TRACE::2023-05-07.15:49:25::SCWMssOS::ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall
+TRACE::2023-05-07.15:49:25::SCWMssOS:: -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-05-07.15:49:25::SCWMssOS::"Running Make include in microblaze_0/libsrc/standalone_v8_0/src"
+
+TRACE::2023-05-07.15:49:25::SCWMssOS::make -C microblaze_0/libsrc/standalone_v8_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "C
+TRACE::2023-05-07.15:49:25::SCWMssOS::OMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections 
+TRACE::2023-05-07.15:49:25::SCWMssOS::-Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-05-07.15:49:25::SCWMssOS::"Running Make include in microblaze_0/libsrc/sysmon_v7_7/src"
+
+TRACE::2023-05-07.15:49:25::SCWMssOS::make -C microblaze_0/libsrc/sysmon_v7_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
+TRACE::2023-05-07.15:49:25::SCWMssOS::LER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wal
+TRACE::2023-05-07.15:49:25::SCWMssOS::l -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-05-07.15:49:25::SCWMssOS::"Running Make include in microblaze_0/libsrc/tmrctr_v4_9/src"
+
+TRACE::2023-05-07.15:49:25::SCWMssOS::make -C microblaze_0/libsrc/tmrctr_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
+TRACE::2023-05-07.15:49:25::SCWMssOS::LER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wal
+TRACE::2023-05-07.15:49:25::SCWMssOS::l -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-05-07.15:49:26::SCWMssOS::"Running Make include in microblaze_0/libsrc/uartlite_v3_7/src"
+
+TRACE::2023-05-07.15:49:26::SCWMssOS::make -C microblaze_0/libsrc/uartlite_v3_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+TRACE::2023-05-07.15:49:26::SCWMssOS::PILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -W
+TRACE::2023-05-07.15:49:26::SCWMssOS::all -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-05-07.15:49:27::SCWMssOS::"Running Make libs in microblaze_0/libsrc/bram_v4_8/src"
+
+TRACE::2023-05-07.15:49:27::SCWMssOS::make -C microblaze_0/libsrc/bram_v4_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
+TRACE::2023-05-07.15:49:27::SCWMssOS::LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -We
+TRACE::2023-05-07.15:49:27::SCWMssOS::xtra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-05-07.15:49:27::SCWMssOS::"Running Make libs in microblaze_0/libsrc/cpu_v2_16/src"
+
+TRACE::2023-05-07.15:49:27::SCWMssOS::make -C microblaze_0/libsrc/cpu_v2_16/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
+TRACE::2023-05-07.15:49:27::SCWMssOS::LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -We
+TRACE::2023-05-07.15:49:27::SCWMssOS::xtra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-05-07.15:49:29::SCWMssOS::"Running Make libs in microblaze_0/libsrc/emaclite_v4_7/src"
+
+TRACE::2023-05-07.15:49:29::SCWMssOS::make -C microblaze_0/libsrc/emaclite_v4_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+TRACE::2023-05-07.15:49:29::SCWMssOS::ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall
+TRACE::2023-05-07.15:49:29::SCWMssOS:: -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-05-07.15:49:30::SCWMssOS::"Running Make libs in microblaze_0/libsrc/intc_v3_15/src"
+
+TRACE::2023-05-07.15:49:30::SCWMssOS::make -C microblaze_0/libsrc/intc_v3_15/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_
+TRACE::2023-05-07.15:49:30::SCWMssOS::FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -W
+TRACE::2023-05-07.15:49:30::SCWMssOS::extra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-05-07.15:49:31::SCWMssOS::"Running Make libs in microblaze_0/libsrc/standalone_v8_0/src"
+
+TRACE::2023-05-07.15:49:31::SCWMssOS::make -C microblaze_0/libsrc/standalone_v8_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+TRACE::2023-05-07.15:49:31::SCWMssOS::ILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wa
+TRACE::2023-05-07.15:49:31::SCWMssOS::ll -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-05-07.15:49:32::SCWMssOS::"Running Make libs in microblaze_0/libsrc/sysmon_v7_7/src"
+
+TRACE::2023-05-07.15:49:32::SCWMssOS::make -C microblaze_0/libsrc/sysmon_v7_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER
+TRACE::2023-05-07.15:49:32::SCWMssOS::_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -
+TRACE::2023-05-07.15:49:32::SCWMssOS::Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-05-07.15:49:34::SCWMssOS::"Running Make libs in microblaze_0/libsrc/tmrctr_v4_9/src"
+
+TRACE::2023-05-07.15:49:34::SCWMssOS::make -C microblaze_0/libsrc/tmrctr_v4_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER
+TRACE::2023-05-07.15:49:34::SCWMssOS::_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -
+TRACE::2023-05-07.15:49:34::SCWMssOS::Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-05-07.15:49:37::SCWMssOS::"Running Make libs in microblaze_0/libsrc/uartlite_v3_7/src"
+
+TRACE::2023-05-07.15:49:37::SCWMssOS::make -C microblaze_0/libsrc/uartlite_v3_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+TRACE::2023-05-07.15:49:37::SCWMssOS::ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall
+TRACE::2023-05-07.15:49:37::SCWMssOS:: -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-05-07.15:49:40::SCWMssOS::"DEBUG NON_LTO_OBJECTS is ../../../lib/microblaze_interrupt_handler.o"
+
+TRACE::2023-05-07.15:49:40::SCWMssOS::'Finished building libraries parallelly.'
+
+TRACE::2023-05-07.15:49:40::SCWMssOS::make --no-print-directory archive
+
+TRACE::2023-05-07.15:49:40::SCWMssOS::mb-ar -r  microblaze_0/lib/libxil.a microblaze_0/lib/_exit.o microblaze_0/lib/errno.o microblaze_0/lib/fcntl.o microblaze_0/lib
+TRACE::2023-05-07.15:49:40::SCWMssOS::/hw_exception_handler.o microblaze_0/lib/inbyte.o microblaze_0/lib/microblaze_disable_dcache.o microblaze_0/lib/microblaze_disa
+TRACE::2023-05-07.15:49:40::SCWMssOS::ble_exceptions.o microblaze_0/lib/microblaze_disable_icache.o microblaze_0/lib/microblaze_disable_interrupts.o microblaze_0/lib
+TRACE::2023-05-07.15:49:40::SCWMssOS::/microblaze_enable_dcache.o microblaze_0/lib/microblaze_enable_exceptions.o microblaze_0/lib/microblaze_enable_icache.o microbl
+TRACE::2023-05-07.15:49:40::SCWMssOS::aze_0/lib/microblaze_enable_interrupts.o microblaze_0/lib/microblaze_exception_handler.o microblaze_0/lib/microblaze_flush_cach
+TRACE::2023-05-07.15:49:40::SCWMssOS::e_ext.o microblaze_0/lib/microblaze_flush_cache_ext_range.o microblaze_0/lib/microblaze_flush_dcache.o microblaze_0/lib/microbl
+TRACE::2023-05-07.15:49:40::SCWMssOS::aze_flush_dcache_range.o microblaze_0/lib/microblaze_init_dcache_range.o microblaze_0/lib/microblaze_init_icache_range.o microb
+TRACE::2023-05-07.15:49:40::SCWMssOS::laze_0/lib/microblaze_interrupt_handler.o microblaze_0/lib/microblaze_interrupts_g.o microblaze_0/lib/microblaze_invalidate_cac
+TRACE::2023-05-07.15:49:40::SCWMssOS::he_ext.o microblaze_0/lib/microblaze_invalidate_cache_ext_range.o microblaze_0/lib/microblaze_invalidate_dcache.o microblaze_0/
+TRACE::2023-05-07.15:49:40::SCWMssOS::lib/microblaze_invalidate_dcache_range.o microblaze_0/lib/microblaze_invalidate_icache.o microblaze_0/lib/microblaze_invalidate
+TRACE::2023-05-07.15:49:40::SCWMssOS::_icache_range.o microblaze_0/lib/microblaze_scrub.o microblaze_0/lib/microblaze_selftest.o microblaze_0/lib/microblaze_sleep.o 
+TRACE::2023-05-07.15:49:40::SCWMssOS::microblaze_0/lib/microblaze_update_dcache.o microblaze_0/lib/microblaze_update_icache.o microblaze_0/lib/outbyte.o microblaze_0
+TRACE::2023-05-07.15:49:40::SCWMssOS::/lib/print.o microblaze_0/lib/pvr.o microblaze_0/lib/xbram.o microblaze_0/lib/xbram_g.o microblaze_0/lib/xbram_intr.o microblaz
+TRACE::2023-05-07.15:49:40::SCWMssOS::e_0/lib/xbram_selftest.o microblaze_0/lib/xbram_sinit.o microblaze_0/lib/xemaclite.o microblaze_0/lib/xemaclite_g.o microblaze_
+TRACE::2023-05-07.15:49:40::SCWMssOS::0/lib/xemaclite_intr.o microblaze_0/lib/xemaclite_l.o microblaze_0/lib/xemaclite_selftest.o microblaze_0/lib/xemaclite_sinit.o 
+TRACE::2023-05-07.15:49:40::SCWMssOS::microblaze_0/lib/xil_assert.o microblaze_0/lib/xil_cache.o microblaze_0/lib/xil_clocking.o microblaze_0/lib/xil_exception.o mic
+TRACE::2023-05-07.15:49:40::SCWMssOS::roblaze_0/lib/xil_mem.o microblaze_0/lib/xil_misc_psreset_api.o microblaze_0/lib/xil_printf.o microblaze_0/lib/xil_sleepcommon.
+TRACE::2023-05-07.15:49:40::SCWMssOS::o microblaze_0/lib/xil_testcache.o microblaze_0/lib/xil_testio.o microblaze_0/lib/xil_testmem.o microblaze_0/lib/xil_util.o mic
+TRACE::2023-05-07.15:49:40::SCWMssOS::roblaze_0/lib/xintc.o microblaze_0/lib/xintc_g.o microblaze_0/lib/xintc_intr.o microblaze_0/lib/xintc_l.o microblaze_0/lib/xint
+TRACE::2023-05-07.15:49:40::SCWMssOS::c_options.o microblaze_0/lib/xintc_selftest.o microblaze_0/lib/xinterrupt_wrap.o microblaze_0/lib/xio.o microblaze_0/lib/xplatf
+TRACE::2023-05-07.15:49:40::SCWMssOS::orm_info.o microblaze_0/lib/xsysmon.o microblaze_0/lib/xsysmon_g.o microblaze_0/lib/xsysmon_intr.o microblaze_0/lib/xsysmon_sel
+TRACE::2023-05-07.15:49:40::SCWMssOS::ftest.o microblaze_0/lib/xsysmon_sinit.o microblaze_0/lib/xtmrctr.o microblaze_0/lib/xtmrctr_g.o microblaze_0/lib/xtmrctr_intr.
+TRACE::2023-05-07.15:49:40::SCWMssOS::o microblaze_0/lib/xtmrctr_l.o microblaze_0/lib/xtmrctr_options.o microblaze_0/lib/xtmrctr_selftest.o microblaze_0/lib/xtmrctr_
+TRACE::2023-05-07.15:49:40::SCWMssOS::sinit.o microblaze_0/lib/xtmrctr_stats.o microblaze_0/lib/xuartlite.o microblaze_0/lib/xuartlite_g.o microblaze_0/lib/xuartlite
+TRACE::2023-05-07.15:49:40::SCWMssOS::_intr.o microblaze_0/lib/xuartlite_l.o microblaze_0/lib/xuartlite_selftest.o microblaze_0/lib/xuartlite_sinit.o microblaze_0/li
+TRACE::2023-05-07.15:49:40::SCWMssOS::b/xuartlite_stats.o
+
+TRACE::2023-05-07.15:49:40::SCWMssOS::'Finished building libraries'
+
+TRACE::2023-05-07.15:49:41::SCWMssOS::Copying to export directory.
+TRACE::2023-05-07.15:49:42::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2023-05-07.15:49:42::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2023-05-07.15:49:42::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2023-05-07.15:49:42::SCWSystem::Completed Processing the sysconfig v6_udp_adc_81Mhz
+LOG::2023-05-07.15:49:42::SCWPlatform::Completed generating the artifacts for system configuration v6_udp_adc_81Mhz
+TRACE::2023-05-07.15:49:42::SCWPlatform::Started preparing the platform 
+TRACE::2023-05-07.15:49:42::SCWSystem::Writing the bif file for system config v6_udp_adc_81Mhz
+TRACE::2023-05-07.15:49:42::SCWSystem::dir created 
+TRACE::2023-05-07.15:49:42::SCWSystem::Writing the bif 
+TRACE::2023-05-07.15:49:42::SCWPlatform::Started writing the spfm file 
+TRACE::2023-05-07.15:49:42::SCWPlatform::Started writing the xpfm file 
+TRACE::2023-05-07.15:49:42::SCWPlatform::Completed generating the platform
+TRACE::2023-05-07.15:49:42::SCWMssOS::Saving the mss changes C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:42::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-05-07.15:49:42::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-05-07.15:49:42::SCWMssOS::Commit changes completed.
+TRACE::2023-05-07.15:49:42::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:42::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:42::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:42::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:42::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:42::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:42::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.15:49:42::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.15:49:42::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:42::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:42::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:42::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:42::SCWWriter::formatted JSON is {
+	"platformName":	"v6_udp_adc_81Mhz",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"v6_udp_adc_81Mhz",
+	"platHandOff":	"C:/Users/Bruker/Documents/0_bachelor_fpga_designs/fpga/exported_hardware_versions/arty_adc_eth_v9_81MHz.xsa",
+	"platIntHandOff":	"<platformDir>/hw/arty_adc_eth_v9_81MHz.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"v6_udp_adc_81Mhz",
+	"systems":	[{
+			"systemName":	"v6_udp_adc_81Mhz",
+			"systemDesc":	"v6_udp_adc_81Mhz",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"v6_udp_adc_81Mhz",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on microblaze_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"45b179d633b4c66149506f625ec0ec63",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2023-05-07.15:49:42::SCWPlatform::updated the xpfm file.
+TRACE::2023-05-07.15:49:43::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:43::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:43::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:43::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.15:49:43::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.15:49:43::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.15:49:43::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.15:49:43::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.15:49:43::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.15:49:43::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.15:49:43::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.15:49:43::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.16:09:13::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.16:09:13::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.16:09:13::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.16:09:13::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.16:09:13::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.16:09:13::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.16:09:13::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.16:09:13::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.16:09:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.16:09:13::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.16:09:13::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.16:09:13::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.16:09:14::SCWMssOS::In reload Mss file.
+TRACE::2023-05-07.16:09:14::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.16:09:14::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.16:09:14::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.16:09:14::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.16:09:14::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.16:09:14::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.16:09:14::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.16:09:14::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.16:09:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.16:09:14::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.16:09:14::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+
+TRACE::2023-05-07.16:09:14::SCWMssOS::No sw design opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.16:09:14::SCWMssOS::mss exists loading the mss file  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.16:09:14::SCWMssOS::Opened the sw design from mss  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.16:09:14::SCWMssOS::Adding the swdes entry C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss with des name system_4
+TRACE::2023-05-07.16:09:14::SCWMssOS::updating the scw layer about changes
+TRACE::2023-05-07.16:09:14::SCWMssOS::Opened the sw design.  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.16:09:14::SCWMssOS::Saving the mss changes C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.16:09:14::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-05-07.16:09:14::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-05-07.16:09:14::SCWMssOS::Commit changes completed.
+TRACE::2023-05-07.16:09:14::SCWPlatform::Trying to open the hw design at C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.16:09:14::SCWPlatform::DSA given C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.16:09:14::SCWPlatform::DSA absoulate path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.16:09:14::SCWPlatform::DSA directory C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw
+TRACE::2023-05-07.16:09:14::SCWPlatform:: Platform Path C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/hw/arty_adc_eth_v9_81MHz.xsa
+TRACE::2023-05-07.16:09:14::SCWPlatform:: Unique name xilinx:arty-a7-35::0.0
+TRACE::2023-05-07.16:09:14::SCWPlatform::Trying to set the existing hwdb with name arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.16:09:14::SCWPlatform::Opened existing hwdb arty_adc_eth_v4_wrapper_12
+TRACE::2023-05-07.16:09:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-05-07.16:09:14::SCWMssOS::Checking the sw design at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.16:09:14::SCWMssOS::DEBUG:  swdes dump  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP/microblaze_0/standalone_domain/bsp/system.mss|system_3||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/microblaze_0/standalone_domain/bsp/system.mss|system_2||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v3_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v4_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_1||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/microblaze_0/standalone_domain/bsp/system.mss|system_0||
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss|system_4||
+
+TRACE::2023-05-07.16:09:14::SCWMssOS::Sw design exists and opened at  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss
+TRACE::2023-05-07.16:09:14::SCWMssOS::Removing the swdes entry for  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/microblaze_0/standalone_domain/bsp/system.mss

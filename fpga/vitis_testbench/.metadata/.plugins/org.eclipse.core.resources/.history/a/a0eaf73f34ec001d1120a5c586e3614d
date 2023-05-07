@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="adc_hack_app" location="C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/adc_hack_app" platform="C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/ARTY_UDP_N_ADC_platform/export/ARTY_UDP_N_ADC_platform/ARTY_UDP_N_ADC_platform.xpfm" platformUID="xilinx:arty-a7-35::0.0(custom)" systemProject="adc_hack_app_system" sysConfig="ARTY_UDP_N_ADC_platform" runtime="C/C++" cpu="standalone_domain" cpuInstance="microblaze_0" os="standalone" language="CPP" mssSignature="5cec5a653f6ad864ac36ae517ab86d29">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.1146407067">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.1668348067" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

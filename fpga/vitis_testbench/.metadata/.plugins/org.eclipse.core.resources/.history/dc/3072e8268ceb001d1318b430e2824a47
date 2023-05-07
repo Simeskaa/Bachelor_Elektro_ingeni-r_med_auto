@@ -1,0 +1,149 @@
+//#include "adc_intc_callback.h"
+#include "xsysmon.h"
+#include "xparameters.h"
+#include "xstatus.h"
+#include "xil_exception.h"
+#include "xil_printf.h"
+#include "xintc.h"
+#include "xil_types.h"
+
+/************************** Constant Definitions ****************************/
+
+/*
+ * The following constants map to the XPAR parameters created in the
+ * xparameters.h file. They are defined here such that a user can easily
+ * change all the needed parameters in one place.
+ */
+#ifndef TESTAPP_GEN
+#ifdef XPAR_INTC_0_DEVICE_ID
+#define SYSMON_DEVICE_ID	XPAR_SYSMON_0_DEVICE_ID
+#define INTC_DEVICE_ID		XPAR_INTC_0_DEVICE_ID
+#define INTR_ID			XPAR_INTC_0_SYSMON_0_VEC_ID
+#else
+#define SYSMON_DEVICE_ID	XPAR_SYSMON_0_DEVICE_ID
+#define INTC_DEVICE_ID		XPAR_SCUGIC_SINGLE_DEVICE_ID
+#define INTR_ID			XPAR_FABRIC_SYSTEM_MANAGEMENT_WIZ_0_IP2INTC_IRPT_INTR
+#endif
+#endif
+
+#ifdef XPAR_INTC_0_DEVICE_ID
+#define INTC		XIntc
+#define INTC_HANDLER	XIntc_InterruptHandler
+#else
+#define INTC		XScuGic
+#define INTC_HANDLER	XScuGic_InterruptHandler
+#endif
+
+/*****************************************************************************/
+/**
+ *
+ * This function is the Interrupt Service Routine for the System Monitor device.
+ * It will be called by the processor whenever an interrupt is asserted
+ * by the device.
+ *
+ * There are 10 different interrupts supported
+ *	- Over Temperature
+ *	- ALARM 0
+ *	- ALARM 1
+ *	- ALARM 2
+ *	- End of Sequence
+ *	- End of Conversion
+ *	- JTAG Locked
+ *	- JATG Modified
+ *	- Over Temperature deactivate
+ *	- ALARM 0 deactivate
+ *
+ * This function only handles ALARM 0 and ALARM 2 interrupts. User of this
+ * code may need to modify the code to meet needs of the application.
+ *
+ * @param	CallBackRef is the callback reference passed from the Interrupt
+ *		controller driver, which in our case is a pointer to the
+ *		driver instance.
+ *
+ * @return	None.
+ *
+ * @note		This function is called within interrupt context.
+ *
+ ******************************************************************************/
+void SysMonInterruptHandler(void *CallBackRef)
+{
+	u32 IntrStatusValue;
+	XSysMon *SysMonPtr = (XSysMon *) CallBackRef;
+
+	/*
+	 * Get the interrupt status from the device and check the value.
+	 */
+	IntrStatusValue = XSysMon_IntrGetStatus(SysMonPtr);
+
+	if (IntrStatusValue & XSM_SR_EOS_MASK) {
+		/*
+		 * Set Temperature interrupt flag so the code
+		 * in application context can be aware of this interrupt.
+		 */
+		TemperatureIntr = TRUE;
+	}
+
+	if (IntrStatusValue & XSM_IPIXR_VCCAUX_MASK) {
+		/*
+		 * Set VCCAUX interrupt flag so the code in application context
+		 * can be aware of this interrupt.
+		 */
+
+		VccauxIntr = TRUE;
+	}
+
+	/*
+	 * Clear all bits in Interrupt Status Register.
+	 */
+	XSysMon_IntrClear(SysMonPtr, IntrStatusValue);
+}
+
+/****************************************************************************/
+/**
+*
+* This function sets up the interrupt system so interrupts can occur for the
+* System Monitor/ADC.  The function is application-specific since the actual
+* system may or may not have an interrupt controller. The System Monitor/ADC
+* device could be directly connected to a processor without an interrupt
+* controller. The user should modify this function to fit the application.
+*
+* @param	IntcInstancePtr is a pointer to the Interrupt Controller
+*		driver Instance.
+* @param	SysMonPtr is a pointer to the driver instance for the System
+* 		Monitor device which is going to be connected to the interrupt
+*		controller.
+* @param	IntrId is XPAR_<INTC_instance>_<SYSMON_ADC_instance>_VEC_ID
+*		value from xparameters.h.
+*
+* @return	XST_SUCCESS if successful, or XST_FAILURE.
+*
+* @note		None.
+*
+*
+****************************************************************************/
+int SysMonSetupInterruptSystem(INTC* IntcInstancePtr, XSysMon *SysMonPtr, u16 IntrId)
+{
+	int Status;
+
+
+	/*
+	 * Connect the handler that will be called when an interrupt
+	 * for the device occurs, the handler defined above performs the
+	 * specific interrupt processing for the device.
+	 */
+	Status = XIntc_Connect(IntcInstancePtr,
+				IntrId,
+				(XInterruptHandler) SysMonInterruptHandler,
+				SysMonPtr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Enable the interrupt for the System Monitor/ADC device.
+	 */
+	XIntc_Enable(IntcInstancePtr, IntrId);
+
+	return XST_SUCCESS;
+}
+

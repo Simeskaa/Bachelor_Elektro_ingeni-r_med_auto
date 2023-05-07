@@ -1,0 +1,16 @@
+16:40:23 **** Incremental Build of configuration Debug for project test ****
+make all 
+'Building file: ../src/echo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -IC:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench_w_adc/arty_sound_triangulation_platform/export/arty_sound_triangulation_platform/sw/arty_sound_triangulation_platform/standalone_domain/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
+In file included from C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench_w_adc/arty_sound_triangulation_platform/export/arty_sound_triangulation_platform/sw/arty_sound_triangulation_platform/standalone_domain/bspinclude/include/lwip/opt.h:55,
+                 from C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench_w_adc/arty_sound_triangulation_platform/export/arty_sound_triangulation_platform/sw/arty_sound_triangulation_platform/standalone_domain/bspinclude/include/lwip/err.h:39,
+                 from ../src/echo.c:32:
+C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench_w_adc/arty_sound_triangulation_platform/export/arty_sound_triangulation_platform/sw/arty_sound_triangulation_platform/standalone_domain/bspinclude/include/mb_interface.h:30:10: fatal error: xil_types.h: No such file or directory
+   30 | #include "xil_types.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:53: src/echo.o] Error 1
+
+16:40:24 Build Finished (took 661ms)
+
