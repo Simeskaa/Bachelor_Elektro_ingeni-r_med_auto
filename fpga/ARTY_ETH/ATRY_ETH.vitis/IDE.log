@@ -1,0 +1,158 @@
+14:37:24 DEBUG : Logs will be stored at 'C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/IDE.log'.
+14:37:31 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Bruker\Documents\Bachelor_Elektro_ingenior_med_auto\fpga\ARTY_ETH\ATRY_ETH.vitis\temp_xsdb_launch_script.tcl
+14:37:33 INFO  : Registering command handlers for Vitis TCF services
+14:37:33 INFO  : Platform repository initialization has completed.
+14:37:35 INFO  : XSCT server has started successfully.
+14:38:00 INFO  : plnx-install-location is set to ''
+14:38:00 INFO  : Successfully done setting XSCT server connection channel  
+14:38:00 INFO  : Successfully done query RDI_DATADIR 
+14:38:00 INFO  : Successfully done setting workspace for the tool. 
+14:39:47 INFO  : Result from executing command 'getProjects': ARTY_ETH2_platform
+14:39:47 INFO  : Result from executing command 'getPlatforms': 
+14:46:06 INFO  : Result from executing command 'getProjects': ARTY_ETH2_platform
+14:46:06 INFO  : Result from executing command 'getPlatforms': ARTY_ETH2_platform|C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/ARTY_ETH2_platform.xpfm
+14:47:26 INFO  : Checking for BSP changes to sync application flags for project 'ARTY_ETH2_application'...
+14:47:37 INFO  : Checking for BSP changes to sync application flags for project 'ARTY_ETH2_application'...
+14:48:16 INFO  : Bit file 'C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_application/_ide/bitstream/download.bit' is generated.
+14:48:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:48:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty A7-35T 210319B57FF6A" && level==0 && jtag_device_ctx=="jsn-Arty A7-35T-210319B57FF6A-0362d093-0"}' command is executed.
+14:48:21 INFO  : Device configured successfully with "C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_application/_ide/bitstream/download.bit"
+14:49:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:49:18 INFO  : Jtag cable 'Digilent Arty A7-35T 210319B57FF6A' is selected.
+14:49:18 INFO  : 'jtag frequency' command is executed.
+14:49:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Arty A7-35T 210319B57FF6A" && level==0 && jtag_device_ctx=="jsn-Arty A7-35T-210319B57FF6A-0362d093-0"}' command is executed.
+14:49:19 INFO  : Device configured successfully with "C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_application/_ide/bitstream/download.bit"
+14:49:19 INFO  : Context for processor 'microblaze_0' is selected.
+14:49:19 INFO  : Hardware design and registers information is loaded from 'C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/hw/design_1_wrapper_hardware.xsa'.
+14:49:19 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:49:20 INFO  : Context for processor 'microblaze_0' is selected.
+14:49:20 INFO  : System reset is completed.
+14:49:23 INFO  : 'after 3000' command is executed.
+14:49:23 INFO  : Context for processor 'microblaze_0' is selected.
+14:49:23 INFO  : The application 'C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_application/Debug/ARTY_ETH2_application.elf' is downloaded to processor 'microblaze_0'.
+14:49:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Arty A7-35T 210319B57FF6A" && level==0 && jtag_device_ctx=="jsn-Arty A7-35T-210319B57FF6A-0362d093-0"}
+fpga -file C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_application/_ide/bitstream/download.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/hw/design_1_wrapper_hardware.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_application/Debug/ARTY_ETH2_application.elf
+----------------End of Script----------------
+
+14:49:23 INFO  : Context for processor 'microblaze_0' is selected.
+14:49:23 INFO  : 'con' command is executed.
+14:49:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:49:23 INFO  : Launch script is exported to file 'C:\Users\Bruker\Documents\Bachelor_Elektro_ingenior_med_auto\fpga\ARTY_ETH\ATRY_ETH.vitis\ARTY_ETH2_application_system\_ide\scripts\debugger_arty_eth2_application-default.tcl'
+18:47:33 INFO  : Disconnected from the channel tcfchan#2.
+12:50:54 DEBUG : Logs will be stored at 'C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/IDE.log'.
+12:50:57 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Bruker\Documents\Bachelor_Elektro_ingenior_med_auto\fpga\ARTY_ETH\ATRY_ETH.vitis\temp_xsdb_launch_script.tcl
+12:51:09 INFO  : Registering command handlers for Vitis TCF services
+12:51:09 INFO  : Platform repository initialization has completed.
+12:51:18 INFO  : XSCT server has started successfully.
+12:52:03 INFO  : plnx-install-location is set to ''
+12:52:03 INFO  : Successfully done query RDI_DATADIR 
+12:52:03 INFO  : Successfully done setting XSCT server connection channel  
+12:52:04 INFO  : Successfully done setting workspace for the tool. 
+13:21:49 INFO  : No changes in MSS file content so sources will not be generated.
+14:25:01 INFO  : Example project lwip_example_tftpclient_main_1 has been created successfully.
+14:31:42 INFO  : Example project freertos_lwip_example_tftpclient_main_1 has been created successfully.
+15:30:23 INFO  : No changes in MSS file content so sources will not be generated.
+16:03:24 INFO  : Checking for BSP changes to sync application flags for project 'ARTY_ETH2_application'...
+16:03:25 INFO  : Result from executing command 'getProjects': ARTY_ETH2_application;ARTY_ETH2_application_system;ARTY_ETH2_platform;RemoteSystemsTempFiles
+16:03:25 WARN  : Failed to closehw "C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/hw/design_1_wrapper_hardware.xsa"
+Reason: C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/hw/design_1_wrapper_hardware.xsa is not available in the current workspace
+use 'getprojects' command to see list of available projects in current workspace
+16:03:25 INFO  : Result from executing command 'getProjects': ARTY_ETH2_application;ARTY_ETH2_application_system;ARTY_ETH2_platform;RemoteSystemsTempFiles
+16:03:25 ERROR : Failed to openhw "C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/hw/design_1_wrapper_hardware.xsa"
+Reason: C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/hw/design_1_wrapper_hardware.xsa is not available in the current workspace
+use 'getprojects' command to see list of available projects in current workspace
+16:03:25 ERROR : Failed to update application flags from BSP for 'ARTY_ETH2_application'. Reason: null
+java.lang.NullPointerException: null
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.<init>(SDxSwPlatform.java:305) ~[com.xilinx.sdx.sw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.create(SDxSwPlatform.java:214) ~[com.xilinx.sdx.sw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformHelper.getSwPlatform(SdkPlatformHelper.java:64) ~[com.xilinx.sdx.sdk.core_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.getSwPlatform(SdkMakefileGenerationListener.java:160) ~[com.xilinx.sdx.sdk.core_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:78) [com.xilinx.sdx.sdk.core_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48) [com.xilinx.sdx.sdk.core_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91) [com.xilinx.sdk.managedbuilder_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40) [com.xilinx.sdk.managedbuilder_1.0.0.202210132147.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:515) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:405) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:180) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:?]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:?]
+16:03:27 ERROR : Failed to compute checksum of hardware specification file used by project 'ARTY_ETH2_application'
+16:03:27 INFO  : Result from executing command 'getProjects': ARTY_ETH2_application;ARTY_ETH2_application_system;ARTY_ETH2_platform;RemoteSystemsTempFiles
+16:03:27 ERROR : Failed to openhw "C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/hw/design_1_wrapper_hardware.xsa"
+Reason: C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/hw/design_1_wrapper_hardware.xsa is not available in the current workspace
+use 'getprojects' command to see list of available projects in current workspace
+16:03:27 INFO  : Result from executing command 'getProjects': ARTY_ETH2_application;ARTY_ETH2_application_system;ARTY_ETH2_platform;RemoteSystemsTempFiles
+16:03:27 ERROR : Failed to openhw "C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/hw/design_1_wrapper_hardware.xsa"
+Reason: C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/hw/design_1_wrapper_hardware.xsa is not available in the current workspace
+use 'getprojects' command to see list of available projects in current workspace
+16:03:28 INFO  : Result from executing command 'getProjects': ARTY_ETH2_application;ARTY_ETH2_application_system;ARTY_ETH2_platform;RemoteSystemsTempFiles
+16:03:28 ERROR : Failed to openhw "C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/hw/design_1_wrapper_hardware.xsa"
+Reason: C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/hw/design_1_wrapper_hardware.xsa is not available in the current workspace
+use 'getprojects' command to see list of available projects in current workspace
+16:04:04 INFO  : No changes in MSS file content so sources will not be generated.
+16:05:51 INFO  : Result from executing command 'getProjects': ARTY_ETH2_platform
+16:05:51 INFO  : Result from executing command 'getPlatforms': ARTY_ETH2_platform|C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/ARTY_ETH2_platform.xpfm
+16:05:52 INFO  : Checking for BSP changes to sync application flags for project 'ARTY_ETH2_application'...
+16:17:47 INFO  : Checking for BSP changes to sync application flags for project 'ARTY_ETH2_application'...
+16:18:30 INFO  : Checking for BSP changes to sync application flags for project 'ARTY_ETH2_application'...
+16:42:33 INFO  : Example project lwip_example_tftpclient_main_1 has been created successfully.
+14:54:05 DEBUG : Logs will be stored at 'C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/IDE.log'.
+14:54:08 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Bruker\Documents\Bachelor_Elektro_ingenior_med_auto\fpga\ARTY_ETH\ATRY_ETH.vitis\temp_xsdb_launch_script.tcl
+14:54:21 INFO  : Platform repository initialization has completed.
+14:54:21 INFO  : Registering command handlers for Vitis TCF services
+14:54:26 INFO  : XSCT server has started successfully.
+14:54:26 INFO  : plnx-install-location is set to ''
+14:54:54 INFO  : Successfully done setting XSCT server connection channel  
+14:54:54 INFO  : Successfully done query RDI_DATADIR 
+14:54:54 INFO  : Successfully done setting workspace for the tool. 
+16:09:54 INFO  : No changes in MSS file content so sources will not be generated.
+14:46:15 DEBUG : Logs will be stored at 'C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/IDE.log'.
+14:46:19 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Bruker\Documents\Bachelor_Elektro_ingenior_med_auto\fpga\ARTY_ETH\ATRY_ETH.vitis\temp_xsdb_launch_script.tcl
+14:46:29 INFO  : Platform repository initialization has completed.
+14:46:29 INFO  : Registering command handlers for Vitis TCF services
+14:46:34 INFO  : XSCT server has started successfully.
+14:47:01 INFO  : plnx-install-location is set to ''
+14:47:01 INFO  : Successfully done query RDI_DATADIR 
+14:47:01 INFO  : Successfully done setting XSCT server connection channel  
+14:47:01 INFO  : Successfully done setting workspace for the tool. 
+12:18:18 DEBUG : Logs will be stored at 'C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/IDE.log'.
+12:18:23 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Bruker\Documents\Bachelor_Elektro_ingenior_med_auto\fpga\ARTY_ETH\ATRY_ETH.vitis\temp_xsdb_launch_script.tcl
+12:18:34 INFO  : Platform repository initialization has completed.
+12:18:34 INFO  : Registering command handlers for Vitis TCF services
+12:18:40 INFO  : XSCT server has started successfully.
+12:19:15 INFO  : plnx-install-location is set to ''
+12:19:15 INFO  : Successfully done setting XSCT server connection channel  
+12:19:15 INFO  : Successfully done query RDI_DATADIR 
+12:19:15 INFO  : Successfully done setting workspace for the tool. 
+13:21:09 INFO  : Example project lwip_example_tftpclient_main_2 has been created successfully.
+13:22:18 INFO  : Result from executing command 'getProjects': ARTY_ETH2_platform
+13:22:18 INFO  : Result from executing command 'getPlatforms': ARTY_ETH2_platform|C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/ARTY_ETH2_platform.xpfm
+13:22:19 INFO  : Checking for BSP changes to sync application flags for project 'lwip_example_tftpclient_main_2'...
+13:23:37 INFO  : Bit file 'C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/lwip_example_tftpclient_main_1/_ide/bitstream/download.bit' is generated.

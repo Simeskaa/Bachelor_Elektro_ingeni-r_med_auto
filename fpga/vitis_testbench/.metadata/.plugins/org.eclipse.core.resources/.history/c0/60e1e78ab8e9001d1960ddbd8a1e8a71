@@ -1,0 +1,11 @@
+#ifndef __GLOBALS_H_
+#define __GLOBALS_H_
+
+
+#define REMOTE_UDP_PORT 5004
+#define REMOTE_IP		192,168,1,101
+#define LOCAL_IP		192,168,1,10
+
+
+
+#endif // __GLOBALS_H_

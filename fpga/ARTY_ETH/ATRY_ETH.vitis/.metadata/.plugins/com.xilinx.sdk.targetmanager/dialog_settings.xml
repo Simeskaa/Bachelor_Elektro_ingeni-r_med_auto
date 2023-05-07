@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="ARTY_ETH2_application_system-bitFile" value="${project_loc:ARTY_ETH2_application}/_ide/bitstream/design_1_wrapper_hardware.bit"/>
+	<item key="ARTY_ETH2_application_system-bmmFile" value="${project_loc:ARTY_ETH2_application}/_ide/bitstream/design_1_wrapper_hardware.mmi"/>
+	<item key="ARTY_ETH2_application_system-target" value="Local"/>
+	<item key="ARTY_ETH2_application_system-device" value="Auto Detect"/>
+	<item key="ARTY_ETH2_application_system-partial_bit" value="false"/>
+	<item key="ARTY_ETH2_application_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="lwip_example_tftpclient_main_1_system"/>
+	<item key="ARTY_ETH2_application_system-microblaze_0-initElf" value="bootloop"/>
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Arty A7-35T 210319B57FF6A&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Arty A7-35T-210319B57FF6A-0362d093-0&quot;}}]}"/>
+	<item key="lwip_example_tftpclient_main_1_system-bitFile" value="${project_loc:lwip_example_tftpclient_main_1}/_ide/bitstream/design_1_wrapper_hardware.bit"/>
+	<item key="lwip_example_tftpclient_main_1_system-bmmFile" value="${project_loc:lwip_example_tftpclient_main_1}/_ide/bitstream/design_1_wrapper_hardware.mmi"/>
+	<item key="lwip_example_tftpclient_main_1_system-target" value="Local"/>
+	<item key="lwip_example_tftpclient_main_1_system-device" value="Auto Detect"/>
+	<item key="lwip_example_tftpclient_main_1_system-partial_bit" value="false"/>
+	<item key="lwip_example_tftpclient_main_1_system-skip_rev_check" value="false"/>
+	<item key="lwip_example_tftpclient_main_1_system-microblaze_0-initElf" value="bootloop"/>
+</section>

@@ -1,0 +1,26 @@
+16:18:30 **** Incremental Build of configuration Debug for project ARTY_ETH2_application ****
+make all 
+'Building file: ../src/echo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -IC:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/sw/ARTY_ETH2_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
+'Finished building: ../src/echo.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -IC:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/sw/ARTY_ETH2_platform/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: ARTY_ETH2_application.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/sw/ARTY_ETH2_platform/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ARTY_ETH2_application.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: ARTY_ETH2_application.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ARTY_ETH2_application.elf  |tee "ARTY_ETH2_application.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90988	   1436	 750960	 843384	  cde78	ARTY_ETH2_application.elf
+'Finished building: ARTY_ETH2_application.elf.size'
+' '
+
+16:18:31 Build Finished (took 1s.646ms)
+

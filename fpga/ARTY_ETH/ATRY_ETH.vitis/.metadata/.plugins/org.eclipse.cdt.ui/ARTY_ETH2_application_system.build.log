@@ -1,0 +1,6 @@
+16:18:32 **** Incremental Build of configuration Debug for project ARTY_ETH2_application_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
+
+16:18:32 Build Finished (took 207ms)
+

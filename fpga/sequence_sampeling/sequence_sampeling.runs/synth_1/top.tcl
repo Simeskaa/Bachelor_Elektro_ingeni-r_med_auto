@@ -88,7 +88,9 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/sequence_sampeling/sequence_sampeling.srcs/sources_1/imports/new/pwm.v
+  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/sequence_sampeling/sequence_sampeling.srcs/sources_1/imports/new/clock_divider.v
+  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/sequence_sampeling/sequence_sampeling.srcs/sources_1/new/fill_buffer.v
+  C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/sequence_sampeling/sequence_sampeling.srcs/sources_1/new/get_samples.v
   C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/sequence_sampeling/sequence_sampeling.srcs/sources_1/new/top.v
 }
 read_ip -quiet C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/sequence_sampeling/sequence_sampeling.srcs/sources_1/ip/xadc_wiz_sequencer/xadc_wiz_sequencer.xci

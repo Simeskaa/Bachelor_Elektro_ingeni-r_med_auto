@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="lwip_example_tftpclient_main_1" location="C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/lwip_example_tftpclient_main_1" platform="C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/ARTY_ETH/ATRY_ETH.vitis/ARTY_ETH2_platform/export/ARTY_ETH2_platform/ARTY_ETH2_platform.xpfm" platformUID="xilinx:arty-a7-35::0.0(custom)" systemProject="lwip_example_tftpclient_main_1_system" sysConfig="ARTY_ETH2_platform" runtime="C/C++" cpu="standalone_domain" cpuInstance="microblaze_0" os="standalone" mssSignature="0ef1d9577db53347de0ad650b9a0d65b">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.1876552765" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.1638315761" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>
