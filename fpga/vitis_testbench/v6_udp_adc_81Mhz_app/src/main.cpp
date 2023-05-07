@@ -99,7 +99,7 @@ int main(void)
 
 			trym_counter++;
 
-			//printf("data: %d == %d == %d == %d\r\n\n", A0, A1, A2, A3);
+			xil_printf("data: %d == %d == %d == %d\r\n\n", A0, A1, A2, A3);
 			//A0 = A1 = A2 = A3 = 0;
 		}
 	}
@@ -258,10 +258,10 @@ void SysMonInterruptHandler(void *CallBackRef) {
 		/*
 		 * Read the ADC converted Data from the data registers.
 		 */
-		A0 = XSysMon_GetAdcData(SysMonInstPtr, XSM_SEQ_CH_AUX04);
-		A1 = XSysMon_GetAdcData(SysMonInstPtr, XSM_SEQ_CH_AUX05);
-		A2 = XSysMon_GetAdcData(SysMonInstPtr, XSM_SEQ_CH_AUX06);
-		A3 = XSysMon_GetAdcData(SysMonInstPtr, XSM_SEQ_CH_AUX07);
+		A0 = XSysMon_GetAdcData(SysMonInstPtr, XSM_CH_AUX_MIN+4);
+		A1 = XSysMon_GetAdcData(SysMonInstPtr, XSM_CH_AUX_MIN+5);
+		A2 = XSysMon_GetAdcData(SysMonInstPtr, XSM_CH_AUX_MIN+6);
+		A3 = XSysMon_GetAdcData(SysMonInstPtr, XSM_CH_AUX_MIN+7);
 
 		/*
 		 * Set eos interrupt flag so the code

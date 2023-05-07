@@ -17,3 +17,12 @@ platform generate -domains
 platform active {v6_udp_adc_81Mhz}
 platform generate
 bsp reload
+bsp reload
+bsp setlib -name lwip211 -ver 1.8
+bsp config phy_link_speed "CONFIG_LINKSPEED100"
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate -domains standalone_domain 
+platform generate -domains standalone_domain 
+platform generate

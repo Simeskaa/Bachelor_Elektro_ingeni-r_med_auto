@@ -1,48 +1,21 @@
-21:35:16 **** Incremental Build of configuration Debug for project v6_udp_adc_81Mhz_app ****
+00:56:55 **** Incremental Build of configuration Debug for project v6_udp_adc_81Mhz_app ****
 make all 
 'Building file: ../src/main.cpp'
 'Invoking: MicroBlaze g++ compiler'
 mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -IC:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/export/v6_udp_adc_81Mhz/sw/v6_udp_adc_81Mhz/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
-In file included from C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/export/v6_udp_adc_81Mhz/sw/v6_udp_adc_81Mhz/standalone_domain/bspinclude/include/xsysmon.h:219,
-                 from ../src/main.cpp:14:
-../src/main.cpp: In function 'void SysMonInterruptHandler(void*)':
-C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/export/v6_udp_adc_81Mhz/sw/v6_udp_adc_81Mhz/standalone_domain/bspinclude/include/xsysmon_hw.h:564:33: warning: unsigned conversion from 'int' to 'u8' {aka 'unsigned char'} changes value from '1048576' to '0' [-Woverflow]
-  564 | #define XSM_SEQ_CH_AUX04        0x00100000 /**< 5th Aux Channel */
-      |                                 ^~~~~~~~~~
-../src/main.cpp:261:56: note: in expansion of macro 'XSM_SEQ_CH_AUX04'
-  261 |                 A0 = XSysMon_GetAdcData(SysMonInstPtr, XSM_SEQ_CH_AUX04);
-      |                                                        ^~~~~~~~~~~~~~~~
-C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/export/v6_udp_adc_81Mhz/sw/v6_udp_adc_81Mhz/standalone_domain/bspinclude/include/xsysmon_hw.h:565:33: warning: unsigned conversion from 'int' to 'u8' {aka 'unsigned char'} changes value from '2097152' to '0' [-Woverflow]
-  565 | #define XSM_SEQ_CH_AUX05        0x00200000 /**< 6th Aux Channel */
-      |                                 ^~~~~~~~~~
-../src/main.cpp:262:56: note: in expansion of macro 'XSM_SEQ_CH_AUX05'
-  262 |                 A1 = XSysMon_GetAdcData(SysMonInstPtr, XSM_SEQ_CH_AUX05);
-      |                                                        ^~~~~~~~~~~~~~~~
-C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/export/v6_udp_adc_81Mhz/sw/v6_udp_adc_81Mhz/standalone_domain/bspinclude/include/xsysmon_hw.h:566:33: warning: unsigned conversion from 'int' to 'u8' {aka 'unsigned char'} changes value from '4194304' to '0' [-Woverflow]
-  566 | #define XSM_SEQ_CH_AUX06        0x00400000 /**< 7th Aux Channel */
-      |                                 ^~~~~~~~~~
-../src/main.cpp:263:56: note: in expansion of macro 'XSM_SEQ_CH_AUX06'
-  263 |                 A2 = XSysMon_GetAdcData(SysMonInstPtr, XSM_SEQ_CH_AUX06);
-      |                                                        ^~~~~~~~~~~~~~~~
-C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/export/v6_udp_adc_81Mhz/sw/v6_udp_adc_81Mhz/standalone_domain/bspinclude/include/xsysmon_hw.h:567:33: warning: unsigned conversion from 'int' to 'u8' {aka 'unsigned char'} changes value from '8388608' to '0' [-Woverflow]
-  567 | #define XSM_SEQ_CH_AUX07        0x00800000 /**< 8th Aux Channel */
-      |                                 ^~~~~~~~~~
-../src/main.cpp:264:56: note: in expansion of macro 'XSM_SEQ_CH_AUX07'
-  264 |                 A3 = XSysMon_GetAdcData(SysMonInstPtr, XSM_SEQ_CH_AUX07);
-      |                                                        ^~~~~~~~~~~~~~~~
 'Finished building: ../src/main.cpp'
 ' '
 'Building target: v6_udp_adc_81Mhz_app.elf'
 'Invoking: MicroBlaze g++ linker'
-mb-g++ -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/export/v6_udp_adc_81Mhz/sw/v6_udp_adc_81Mhz/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "v6_udp_adc_81Mhz_app.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/export/v6_udp_adc_81Mhz/sw/v6_udp_adc_81Mhz/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "v6_udp_adc_81Mhz_app.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
 'Finished building target: v6_udp_adc_81Mhz_app.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size v6_udp_adc_81Mhz_app.elf  |tee "v6_udp_adc_81Mhz_app.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   6924	    368	   3316	  10608	   2970	v6_udp_adc_81Mhz_app.elf
+  86420	   1772	   3376	  91568	  165b0	v6_udp_adc_81Mhz_app.elf
 'Finished building: v6_udp_adc_81Mhz_app.elf.size'
 ' '
 
-21:35:18 Build Finished (took 2s.265ms)
+00:56:58 Build Finished (took 2s.998ms)
 

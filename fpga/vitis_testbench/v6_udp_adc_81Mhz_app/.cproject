@@ -67,6 +67,8 @@
                                     								
                                 </option>
                                 								
+                                <option id="xilinx.gnu.compiler.inferred.swplatform.flags.1670287916" superClass="xilinx.gnu.compiler.inferred.swplatform.flags" value=" " valueType="string"/>
+                                								
                                 <inputType id="xilinx.gnu.compiler.input.874491653" name="C source files" superClass="xilinx.gnu.compiler.input"/>
                                 							
                             </tool>
@@ -90,6 +92,8 @@
                                     <listOptionValue builtIn="false" value="${resolvePlatformFile:project=v6_udp_adc_81Mhz_app,fileType=bspInclude}"/>
                                     								
                                 </option>
+                                								
+                                <option id="xilinx.gnu.compiler.inferred.swplatform.flags.2074168829" superClass="xilinx.gnu.compiler.inferred.swplatform.flags" value=" " valueType="string"/>
                                 								
                                 <inputType id="xilinx.gnu.mb.cxx.compiler.input.680985429" name="C++ source files" superClass="xilinx.gnu.mb.cxx.compiler.input"/>
                                 							
@@ -116,6 +120,8 @@
                                 <option id="xilinx.gnu.linker.inferred.swplatform.flags.2059944820" superClass="xilinx.gnu.linker.inferred.swplatform.flags" valueType="libs">
                                     									
                                     <listOptionValue builtIn="false" value="-Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="-Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group"/>
                                     								
                                 </option>
                                 								
@@ -152,6 +158,8 @@
                                 <option id="xilinx.gnu.linker.inferred.swplatform.flags.364551270" superClass="xilinx.gnu.linker.inferred.swplatform.flags" valueType="libs">
                                     									
                                     <listOptionValue builtIn="false" value="-Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="-Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group"/>
                                     								
                                 </option>
                                 								
@@ -253,6 +261,8 @@
                                     								
                                 </option>
                                 								
+                                <option id="xilinx.gnu.compiler.inferred.swplatform.flags.149692785" superClass="xilinx.gnu.compiler.inferred.swplatform.flags" value=" " valueType="string"/>
+                                								
                                 <inputType id="xilinx.gnu.compiler.input.690863222" name="C source files" superClass="xilinx.gnu.compiler.input"/>
                                 							
                             </tool>
@@ -276,6 +286,8 @@
                                     <listOptionValue builtIn="false" value="${resolvePlatformFile:project=v6_udp_adc_81Mhz_app,fileType=bspInclude}"/>
                                     								
                                 </option>
+                                								
+                                <option id="xilinx.gnu.compiler.inferred.swplatform.flags.2095085915" superClass="xilinx.gnu.compiler.inferred.swplatform.flags" value=" " valueType="string"/>
                                 								
                                 <inputType id="xilinx.gnu.mb.cxx.compiler.input.1393003812" name="C++ source files" superClass="xilinx.gnu.mb.cxx.compiler.input"/>
                                 							
@@ -302,6 +314,8 @@
                                 <option id="xilinx.gnu.linker.inferred.swplatform.flags.1689701366" superClass="xilinx.gnu.linker.inferred.swplatform.flags" valueType="libs">
                                     									
                                     <listOptionValue builtIn="false" value="-Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="-Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group"/>
                                     								
                                 </option>
                                 								
@@ -338,6 +352,8 @@
                                 <option id="xilinx.gnu.linker.inferred.swplatform.flags.755877972" superClass="xilinx.gnu.linker.inferred.swplatform.flags" valueType="libs">
                                     									
                                     <listOptionValue builtIn="false" value="-Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="-Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group"/>
                                     								
                                 </option>
                                 								
