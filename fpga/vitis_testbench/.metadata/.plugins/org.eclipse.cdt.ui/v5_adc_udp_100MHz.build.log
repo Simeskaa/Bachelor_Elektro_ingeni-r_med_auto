@@ -1,35 +1,8 @@
-14:17:32 **** Build of configuration Debug for project v5_adc_udp_100MHz ****
+18:25:26 **** Incremental Build of configuration Debug for project v5_adc_udp_100MHz ****
 make all 
 'Building file: ../src/main.cpp'
 'Invoking: MicroBlaze g++ compiler'
 mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -IC:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/export/v5_udp_adc/sw/v5_udp_adc/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
-In file included from C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/export/v5_udp_adc/sw/v5_udp_adc/standalone_domain/bspinclude/include/xsysmon.h:219,
-                 from ../src/main.cpp:14:
-../src/main.cpp: In function 'int main()':
-C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/export/v5_udp_adc/sw/v5_udp_adc/standalone_domain/bspinclude/include/xsysmon_hw.h:564:33: warning: unsigned conversion from 'int' to 'u8' {aka 'unsigned char'} changes value from '1048576' to '0' [-Woverflow]
-  564 | #define XSM_SEQ_CH_AUX04        0x00100000 /**< 5th Aux Channel */
-      |                                 ^~~~~~~~~~
-../src/main.cpp:81:64: note: in expansion of macro 'XSM_SEQ_CH_AUX04'
-   81 |                         A0 = XSysMon_GetAdcData(SysMonInstPtr, XSM_SEQ_CH_AUX04);
-      |                                                                ^~~~~~~~~~~~~~~~
-C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/export/v5_udp_adc/sw/v5_udp_adc/standalone_domain/bspinclude/include/xsysmon_hw.h:565:33: warning: unsigned conversion from 'int' to 'u8' {aka 'unsigned char'} changes value from '2097152' to '0' [-Woverflow]
-  565 | #define XSM_SEQ_CH_AUX05        0x00200000 /**< 6th Aux Channel */
-      |                                 ^~~~~~~~~~
-../src/main.cpp:82:64: note: in expansion of macro 'XSM_SEQ_CH_AUX05'
-   82 |                         A1 = XSysMon_GetAdcData(SysMonInstPtr, XSM_SEQ_CH_AUX05);
-      |                                                                ^~~~~~~~~~~~~~~~
-C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/export/v5_udp_adc/sw/v5_udp_adc/standalone_domain/bspinclude/include/xsysmon_hw.h:566:33: warning: unsigned conversion from 'int' to 'u8' {aka 'unsigned char'} changes value from '4194304' to '0' [-Woverflow]
-  566 | #define XSM_SEQ_CH_AUX06        0x00400000 /**< 7th Aux Channel */
-      |                                 ^~~~~~~~~~
-../src/main.cpp:83:64: note: in expansion of macro 'XSM_SEQ_CH_AUX06'
-   83 |                         A2 = XSysMon_GetAdcData(SysMonInstPtr, XSM_SEQ_CH_AUX06);
-      |                                                                ^~~~~~~~~~~~~~~~
-C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v5_udp_adc/export/v5_udp_adc/sw/v5_udp_adc/standalone_domain/bspinclude/include/xsysmon_hw.h:567:33: warning: unsigned conversion from 'int' to 'u8' {aka 'unsigned char'} changes value from '8388608' to '0' [-Woverflow]
-  567 | #define XSM_SEQ_CH_AUX07        0x00800000 /**< 8th Aux Channel */
-      |                                 ^~~~~~~~~~
-../src/main.cpp:84:64: note: in expansion of macro 'XSM_SEQ_CH_AUX07'
-   84 |                         A3 = XSysMon_GetAdcData(SysMonInstPtr, XSM_SEQ_CH_AUX07);
-      |                                                                ^~~~~~~~~~~~~~~~
 'Finished building: ../src/main.cpp'
 ' '
 'Building target: v5_adc_udp_100MHz.elf'
@@ -44,5 +17,5 @@ mb-size v5_adc_udp_100MHz.elf  |tee "v5_adc_udp_100MHz.elf.size"
 'Finished building: v5_adc_udp_100MHz.elf.size'
 ' '
 
-14:17:35 Build Finished (took 2s.961ms)
+18:25:29 Build Finished (took 3s.695ms)
 

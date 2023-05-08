@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="arty_adc_eth_v4_xadc_wiz_0_0_synth_1" LaunchPart="xc7a35ticsg324-1L" LaunchTime="1683400284">
+<GenRun Id="arty_adc_eth_v4_xadc_wiz_0_0_synth_1" LaunchPart="xc7a35ticsg324-1L" LaunchTime="1683543033">
   <File Type="PA-TCL" Name="arty_adc_eth_v4_xadc_wiz_0_0.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="arty_adc_eth_v4_xadc_wiz_0_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="arty_adc_eth_v4_xadc_wiz_0_0_reports.tcl"/>
   <File Type="RDS-RDS" Name="arty_adc_eth_v4_xadc_wiz_0_0.vds"/>
   <File Type="RDS-UTIL" Name="arty_adc_eth_v4_xadc_wiz_0_0_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="arty_adc_eth_v4_xadc_wiz_0_0_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="arty_adc_eth_v4_xadc_wiz_0_0.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="arty_adc_eth_v4_xadc_wiz_0_0_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="arty_adc_eth_v4_xadc_wiz_0_0_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/arty_adc_eth_v4_xadc_wiz_0_0">
     <File Path="$PSRCDIR/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_xadc_wiz_0_0/arty_adc_eth_v4_xadc_wiz_0_0.xci">
       <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -22,6 +26,7 @@
   <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/arty_adc_eth_v4_xadc_wiz_0_0">
     <File Path="$PSRCDIR/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_xadc_wiz_0_0/arty_adc_eth_v4_xadc_wiz_0_0.xci">
       <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

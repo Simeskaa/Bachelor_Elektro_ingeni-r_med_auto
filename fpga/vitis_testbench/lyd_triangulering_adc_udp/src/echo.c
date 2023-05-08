@@ -42,23 +42,20 @@
 struct udp_pcb *pcb_p;
 
 //payload
-static u8_t bjarne[] = "Hei Trym";
+
 volatile u8_t err_counter = 0;
 
 int transfer_data(struct pbuf *p, ip_addr_t *ip)
 {
 	err_t err;
 
-	p->payload  = bjarne;
-	p->len		= 8;
-	p->tot_len	= 8;
-	p->next		= 0;
-
 	// send 1 on udp
 	err = udp_sendto(pcb_p, p, ip, REMOTE_UDP_PORT);
 	if (err != ERR_OK)
 	{
 		err_counter++;
+		printf("\n\r udp send encountered an issue! \n\r"
+				"err_counter: %d\n\r", err_counter);
 	}
 
 
@@ -70,11 +67,11 @@ int transfer_data(struct pbuf *p, ip_addr_t *ip)
 void print_app_header()
 {
 #if (LWIP_IPV6==0)
-	xil_printf("\n\r\n\r-----lwIP TCP echo server ------\n\r");
+	xil_printf("\n\r\n\r-----lwIP UDP sound triangulation application by Trym Brabrand------\n\r");
 #else
 	xil_printf("\n\r\n\r-----lwIPv6 TCP echo server ------\n\r");
 #endif
-	xil_printf("TCP packets sent to port 6001 will be echoed back\n\r");
+	xil_printf("UDP packets sent to port %d will be echoed back\n\r", REMOTE_UDP_PORT);
 }
 
 
@@ -149,7 +146,7 @@ int start_application(const ip_addr_t *local_ip, const ip_addr_t *remote_ip)
 	}
 
 	/* bind to specified @port */
-	err = udp_bind(pcb_p, local_ip, 0);
+	err = udp_bind(pcb_p, local_ip, REMOTE_UDP_PORT); // TRYM Try switching out local port to be the same as remote port
 	if (err != ERR_OK) {
 		xil_printf("Unable to bind to port %d: err = %d\n\r", REMOTE_UDP_PORT, err);
 		return -2;

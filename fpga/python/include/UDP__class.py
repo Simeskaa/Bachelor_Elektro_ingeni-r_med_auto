@@ -1,5 +1,6 @@
 import socket
 import json
+import sys
 
 
 class UDP:
@@ -16,19 +17,28 @@ class UDP:
 
     def get_message(self, buf_size):
         data, addr = self.sock.recvfrom(buf_size)
-        data = data.decode('utf-8')
+        #for i in range(len(data)):
+        #    data = int.from_bytes(data[i:i+1], byteorder="little")
+        #    i+=1
+        #data = data.decode('utf-16')
         return data
-
 
 
 if __name__ == "__main__":
     get = True
-    if get:
+    if 0:
         UDP = UDP(ip_adress="192.168.1.50", port=5001, receive_msg=True)
         while True:
             msg = UDP.get_message(4096)
             #message = json.loads(msg)
             print(msg)
+
+    if get:
+        UDP = UDP(ip_adress="192.168.1.50", port=5001, receive_msg=True)
+        while True:
+            msg = UDP.get_message(65536)
+            print("First value in array", msg)
+
 
     if not get:
         UDP = UDP(ip_adress="192.168.1.50", port=5001, receive_msg=False)

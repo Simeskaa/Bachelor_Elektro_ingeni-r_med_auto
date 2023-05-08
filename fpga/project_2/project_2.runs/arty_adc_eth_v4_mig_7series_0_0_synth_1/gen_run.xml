@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="arty_adc_eth_v4_mig_7series_0_0_synth_1" LaunchPart="xc7a35ticsg324-1L" LaunchTime="1683464904">
+<GenRun Id="arty_adc_eth_v4_mig_7series_0_0_synth_1" LaunchPart="xc7a35ticsg324-1L" LaunchTime="1683543034">
   <File Type="PA-TCL" Name="arty_adc_eth_v4_mig_7series_0_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="arty_adc_eth_v4_mig_7series_0_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="arty_adc_eth_v4_mig_7series_0_0_reports.tcl"/>

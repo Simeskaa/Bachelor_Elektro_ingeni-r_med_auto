@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Sun May  7 15:06:49 2023
+//Date        : Mon May  8 12:49:06 2023
 //Host        : DESKTOP-T99OIQI running 64-bit major release  (build 9200)
 //Command     : generate_target arty_adc_eth_v4_wrapper.bd
 //Design      : arty_adc_eth_v4_wrapper

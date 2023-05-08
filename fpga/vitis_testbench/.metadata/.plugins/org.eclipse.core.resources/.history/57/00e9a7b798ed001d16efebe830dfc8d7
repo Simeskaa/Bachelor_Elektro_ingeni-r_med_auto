@@ -1,0 +1,399 @@
+/*
+ * Copyright (C) 2009 - 2019 Xilinx, Inc.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ *    this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ * 3. The name of the author may not be used to endorse or promote products
+ *    derived from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+ * SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+ * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+ * IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+ * OF SUCH DAMAGE.
+ *
+ */
+#if __MICROBLAZE__ || __PPC__
+#include "arch/cc.h"
+#include "platform.h"
+#include "platform_config.h"
+#include "xil_cache.h"
+#include "xparameters.h"
+#include "xintc.h"
+#include "xil_exception.h"
+#include "lwip/tcp.h"
+#include "netif/xadapter.h"
+#ifdef STDOUT_IS_16550
+#include "xuartns550_l.h"
+#endif
+
+#include "lwip/tcp.h"
+
+#if LWIP_DHCP==1
+volatile int dhcp_timoutcntr = 24;
+void dhcp_fine_tmr();
+void dhcp_coarse_tmr();
+#endif
+
+volatile int TcpFastTmrFlag = 0;
+volatile int TcpSlowTmrFlag = 0;
+
+extern struct netif *echo_netif;
+
+void
+timer_callback()
+{
+	static int DetectEthLinkStatus = 0;
+	/* we need to call tcp_fasttmr & tcp_slowtmr at intervals specified by lwIP.
+	 * It is not important that the timing is absoluetly accurate.
+	 */
+	static int odd = 1;
+#if LWIP_DHCP==1
+    static int dhcp_timer = 0;
+#endif
+
+	DetectEthLinkStatus++;
+	 TcpFastTmrFlag = 1;
+
+	odd = !odd;
+	if (odd) {
+
+#if LWIP_DHCP==1
+		dhcp_timer++;
+		dhcp_timoutcntr--;
+#endif
+		TcpSlowTmrFlag = 1;
+#if LWIP_DHCP==1
+		dhcp_fine_tmr();
+		if (dhcp_timer >= 120) {
+			dhcp_coarse_tmr();
+			dhcp_timer = 0;
+		}
+#endif
+	}
+
+	/* For detecting Ethernet phy link status periodically */
+	if (DetectEthLinkStatus == ETH_LINK_DETECT_INTERVAL) {
+		eth_link_detect(echo_netif);
+		DetectEthLinkStatus = 0;
+	}
+}
+
+static XIntc intc;
+
+/********************** ADC FUNCTIONS *****************************************/
+int InitIntC(XIntc *IntcInstancePtr, u16 DeviceId)
+{
+
+	int Status;
+
+#if 0 // TRYM !!!
+	/*
+	 * Initialize the interrupt controller driver so that it is
+	 * ready to use.
+	 */
+	Status = XIntc_Initialize(IntcInstancePtr, DeviceId);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+#endif
+	/*
+	 * Perform a self-test to ensure that the hardware was built  correctly.
+	 */
+	Status = XIntc_SelfTest(IntcInstancePtr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Initialize the exception table.
+	 */
+	Xil_ExceptionInit();
+
+	/*
+	 * Register the interrupt controller handler with the exception table.
+	 */
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+			(Xil_ExceptionHandler)XIntc_DeviceInterruptHandler,
+			(void*) 0);
+
+	/*
+	 * Enable exceptions.
+	 */
+	Xil_ExceptionEnable();
+
+#if 0
+	/*
+	 * Start the interrupt controller such that interrupts are enabled for
+	 * all devices that cause interrupts.
+	 */
+	Status = XIntc_Start(IntcInstancePtr, XIN_REAL_MODE);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+#endif
+
+	return XST_SUCCESS;
+}
+
+/*****************************************************/
+static int InitAdc()
+{
+	int Status;
+	u32 IntrStatus;
+	XSysMon_Config *ConfigPtr;
+	XIntc *intcp;
+	intcp = &intc;
+
+	/*
+	 * Initialize the SysMon driver.
+	 */
+	ConfigPtr = XSysMon_LookupConfig(SysMonDeviceId);
+	if (ConfigPtr == NULL) {
+		return XST_FAILURE;
+	}
+
+	XSysMon_CfgInitialize(SysMonInstPtr, ConfigPtr, ConfigPtr->BaseAddress);
+
+#if 0
+
+	/*
+	 * Disable the Channel Sequencer before configuring the Sequence
+	 * registers.
+	 */
+	XSysMon_SetSequencerMode(SysMonInstPtr, XSM_SEQ_MODE_SAFE);
+
+	/*
+	 * Enable the following channels in the Sequencer registers:
+	 * 	- On-chip Temperature
+	 * 	- On-chip VCCAUX supply sensor
+	 * 	- 1st Auxiliary Channel
+	 * 	- 16th Auxiliary Channel
+	 *
+	 * Uncertain if I need to set channels to sample from, since I've set it up in the hardware design.
+	 */
+	Status = XSysMon_SetSeqChEnables(SysMonInstPtr, XSM_SEQ_CH_AUX04 |
+													XSM_SEQ_CH_AUX05 |
+													XSM_SEQ_CH_AUX06 |
+													XSM_SEQ_CH_AUX07);
+	if (Status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+	/*
+	 * Enable the Channel Sequencer in continuous sequencer cycling mode.
+	 */
+	//XSysMon_SetSequencerMode(SysMonInstPtr, XSM_SEQ_MODE_CONTINPASS);
+	//XSysMon_SetSequencerMode(SysMonInstPtr, XSM_SEQ_MODE_ONEPASS);
+#endif
+
+	/*
+	 * Setup the interrupt system.
+	 */
+	Status = SysMonSetupInterruptSystem(intcp,
+					    SysMonInstPtr,
+					    SysMonIntrId);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Clear any bits set in the Interrupt Status Register.
+	 */
+	IntrStatus = XSysMon_IntrGetStatus(SysMonInstPtr);
+	XSysMon_IntrClear(SysMonInstPtr, IntrStatus);
+
+	return 0;
+}
+
+/*****************************************************/
+static void StartAdc()
+{
+	XIntc *intcp;
+	intcp = &intc;
+	/*
+	 * Enable end of sequence interrupt for vaux channels.
+	 */
+	XSysMon_IntrEnable(intcp, XSM_IPIXR_EOS_MASK);
+
+	/*
+	 * Enable global interrupt of System Monitor.
+	 */
+	XSysMon_IntrGlobalEnable(intcp);
+}
+
+/*****************************************************/
+void SysMonInterruptHandler(void *CallBackRef) {
+	u32 IntrStatusValue;
+	XSysMon *SysMonPtr = (XSysMon *) CallBackRef;
+
+	/*
+	 * Get the interrupt status from the device and check the value.
+	 */
+	IntrStatusValue = XSysMon_IntrGetStatus(SysMonPtr);
+
+	if (IntrStatusValue & XSM_IPIXR_EOS_MASK) {
+		/*
+		 * Read the ADC converted Data from the data registers.
+		 */
+		A0 = XSysMon_GetAdcData(SysMonInstPtr, XSM_CH_AUX_MIN+4);
+		A1 = XSysMon_GetAdcData(SysMonInstPtr, XSM_CH_AUX_MIN+5);
+		A2 = XSysMon_GetAdcData(SysMonInstPtr, XSM_CH_AUX_MIN+6);
+		A3 = XSysMon_GetAdcData(SysMonInstPtr, XSM_CH_AUX_MIN+7);
+
+		/*
+		 * Set eos interrupt flag so the code
+		 * in application context can be aware of this interrupt.
+		 */
+		eos_interrupt = TRUE;
+		trym_counter2++;
+		if(trym_counter2 > 10000)
+		{
+			trym_counter2 = 0;
+		}
+	}
+
+	/*
+	 * Clear all bits in Interrupt Status Register.
+	 */
+	XSysMon_IntrClear(SysMonPtr, IntrStatusValue);
+}
+
+/*****************************************************/
+int SysMonSetupInterruptSystem(XIntc* IntcInstancePtr, XSysMon *SysMonPtr, u16 IntrId) {
+
+	int Status;
+
+
+	/*
+	 * Connect the handler that will be called when an interrupt
+	 * for the device occurs, the handler defined above performs the
+	 * specific interrupt processing for the device.
+	 */
+	Status = XIntc_Connect(IntcInstancePtr,
+				IntrId,
+				(XInterruptHandler) SysMonInterruptHandler,
+				SysMonPtr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Enable the interrupt for the System Monitor/ADC device.
+	 */
+	XIntc_Enable(IntcInstancePtr, IntrId);
+
+	return XST_SUCCESS;
+}
+
+/********************** ADC STUFF END  ***********************************/
+
+void platform_setup_interrupts()
+{
+	XIntc *intcp;
+	intcp = &intc;
+
+	XIntc_Initialize(intcp, XPAR_INTC_0_DEVICE_ID);
+	XIntc_Start(intcp, XIN_REAL_MODE);
+
+	/* Start the interrupt controller */
+	XIntc_MasterEnable(XPAR_INTC_0_BASEADDR);
+
+#ifdef __PPC__
+	Xil_ExceptionInit();
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+			(XExceptionHandler)XIntc_DeviceInterruptHandler,
+			(void*) XPAR_INTC_0_DEVICE_ID);
+#elif __MICROBLAZE__
+	microblaze_register_handler((XInterruptHandler)XIntc_InterruptHandler, intcp);
+#endif
+
+	platform_setup_timer();
+
+#ifdef XPAR_ETHERNET_MAC_IP2INTC_IRPT_MASK
+	/* Enable timer and EMAC interrupts in the interrupt controller */
+	XIntc_EnableIntr(XPAR_INTC_0_BASEADDR,
+#ifdef __MICROBLAZE__
+			PLATFORM_TIMER_INTERRUPT_MASK |
+#endif
+			XPAR_ETHERNET_MAC_IP2INTC_IRPT_MASK);
+#endif
+
+
+#ifdef XPAR_INTC_0_LLTEMAC_0_VEC_ID
+#ifdef __MICROBLAZE__
+	XIntc_Enable(intcp, PLATFORM_TIMER_INTERRUPT_INTR);
+#endif
+	XIntc_Enable(intcp, XPAR_INTC_0_LLTEMAC_0_VEC_ID);
+#endif
+
+
+#ifdef XPAR_INTC_0_AXIETHERNET_0_VEC_ID
+	XIntc_Enable(intcp, PLATFORM_TIMER_INTERRUPT_INTR);
+	XIntc_Enable(intcp, XPAR_INTC_0_AXIETHERNET_0_VEC_ID);
+#endif
+
+
+#ifdef XPAR_INTC_0_EMACLITE_0_VEC_ID
+#ifdef __MICROBLAZE__
+	XIntc_Enable(intcp, PLATFORM_TIMER_INTERRUPT_INTR);
+#endif
+	XIntc_Enable(intcp, XPAR_INTC_0_EMACLITE_0_VEC_ID);
+#endif
+
+
+}
+
+void
+enable_caches()
+{
+#ifdef __PPC__
+	Xil_ICacheEnableRegion(CACHEABLE_REGION_MASK);
+	Xil_DCacheEnableRegion(CACHEABLE_REGION_MASK);
+#elif __MICROBLAZE__
+#ifdef XPAR_MICROBLAZE_USE_ICACHE
+	Xil_ICacheEnable();
+#endif
+#ifdef XPAR_MICROBLAZE_USE_DCACHE
+	Xil_DCacheEnable();
+#endif
+#endif
+}
+
+void
+disable_caches()
+{
+	Xil_DCacheDisable();
+	Xil_ICacheDisable();
+}
+
+void init_platform()
+{
+	enable_caches();
+
+#ifdef STDOUT_IS_16550
+	XUartNs550_SetBaud(STDOUT_BASEADDR, XPAR_XUARTNS550_CLOCK_HZ, 9600);
+	XUartNs550_SetLineControlReg(STDOUT_BASEADDR, XUN_LCR_8_DATA_BITS);
+#endif
+
+	platform_setup_interrupts();
+}
+
+void cleanup_platform()
+{
+	disable_caches();
+}
+#endif

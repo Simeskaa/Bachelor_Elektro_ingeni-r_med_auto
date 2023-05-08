@@ -10,7 +10,7 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source arty_adc_eth_v4_mig_7series_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 543.242 ; gain = 132.465
+create_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 544.473 ; gain = 112.691
 Command: synth_design -top arty_adc_eth_v4_mig_7series_0_0 -part xc7a35ticsg324-1L -incremental_mode off -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
@@ -18,7 +18,7 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35ticsg324-1L
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 13852
+INFO: [Synth 8-7075] Helper process launched with PID 1396
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/bachelor_2023/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 WARNING: [Synth 8-10515] begin/end is required for generate-for in this mode of Verilog [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/controller/mig_7series_v4_2_arb_row_col.v:253]
 INFO: [Synth 8-11241] undeclared symbol 'dbg_sel_po_incdec', assumed default net type 'wire' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/arty_adc_eth_v4_mig_7series_0_0_mig.v:1264]
@@ -26,7 +26,7 @@ INFO: [Synth 8-11241] undeclared symbol 'dbg_po_f_inc', assumed default net type
 INFO: [Synth 8-11241] undeclared symbol 'dbg_po_f_stg23_sel', assumed default net type 'wire' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/arty_adc_eth_v4_mig_7series_0_0_mig.v:1269]
 INFO: [Synth 8-11241] undeclared symbol 'dbg_po_f_dec', assumed default net type 'wire' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/arty_adc_eth_v4_mig_7series_0_0_mig.v:1270]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:29 . Memory (MB): peak = 1381.816 ; gain = 412.645
+Starting RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1381.207 ; gain = 412.586
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_mig_7series_0_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/arty_adc_eth_v4_mig_7series_0_0.v:70]
 INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_mig_7series_0_0_mig' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/arty_adc_eth_v4_mig_7series_0_0_mig.v:75]
@@ -300,7 +300,7 @@ INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_memc_ui_top_axi' [c:/
 	Parameter C_S_AXI_ID_WIDTH bound to: 2 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 28 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 128 - type: integer 
-	Parameter C_S_AXI_SUPPORTS_NARROW_BURST bound to: 0 - type: integer 
+	Parameter C_S_AXI_SUPPORTS_NARROW_BURST bound to: 1 - type: integer 
 	Parameter C_RD_WR_ARB_ALGORITHM bound to: RD_PRI_REG - type: string 
 	Parameter C_S_AXI_REG_EN0 bound to: 20'b00000000000000000000 
 	Parameter C_S_AXI_REG_EN1 bound to: 20'b00000000000000000000 
@@ -500,30 +500,31 @@ WARNING: [Synth 8-567] referenced signal 'not_strict_mode.rd_data_buf_addr_r_lcl
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ui_rd_data' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/ui/mig_7series_v4_2_ui_rd_data.v:140]
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ui_top' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/ui/mig_7series_v4_2_ui_top.v:71]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_axi_mc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc.v:90]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_axi_register_slice' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_axi_register_slice.v:63]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_axic_register_slice' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_axic_register_slice.v:61]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_axic_register_slice' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_axic_register_slice.v:61]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_axic_register_slice__parameterized0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_axic_register_slice.v:61]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_axic_register_slice__parameterized0' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_axic_register_slice.v:61]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_axic_register_slice__parameterized1' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_axic_register_slice.v:61]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_axic_register_slice__parameterized1' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_axic_register_slice.v:61]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_axic_register_slice__parameterized2' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_axic_register_slice.v:61]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_axic_register_slice__parameterized2' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_axic_register_slice.v:61]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_axi_register_slice' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_axi_register_slice.v:63]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_axi_mc_aw_channel' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_aw_channel.v:57]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_axi_mc_cmd_translator' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_cmd_translator.v:62]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_axi_mc_incr_cmd' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_incr_cmd.v:64]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_axi_mc_incr_cmd' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_incr_cmd.v:64]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_axi_mc_wrap_cmd' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_wrap_cmd.v:97]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_axi_upsizer' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_axi_upsizer.v:71]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_a_upsizer' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_a_upsizer.v:62]
+INFO: [Synth 8-6157] synthesizing module 'MUXCY' [D:/bachelor_2023/Vivado/2022.2/scripts/rt/data/unisim_comp.v:82805]
+INFO: [Synth 8-6155] done synthesizing module 'MUXCY' (0#1) [D:/bachelor_2023/Vivado/2022.2/scripts/rt/data/unisim_comp.v:82805]
+INFO: [Synth 8-6157] synthesizing module 'XORCY' [D:/bachelor_2023/Vivado/2022.2/scripts/rt/data/unisim_comp.v:136539]
+INFO: [Synth 8-6155] done synthesizing module 'XORCY' (0#1) [D:/bachelor_2023/Vivado/2022.2/scripts/rt/data/unisim_comp.v:136539]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_carry_latch_and' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_latch_and.v:61]
+INFO: [Synth 8-6157] synthesizing module 'AND2B1L' [D:/bachelor_2023/Vivado/2022.2/scripts/rt/data/unisim_comp.v:497]
+INFO: [Synth 8-6155] done synthesizing module 'AND2B1L' (0#1) [D:/bachelor_2023/Vivado/2022.2/scripts/rt/data/unisim_comp.v:497]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_carry_latch_and' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_latch_and.v:61]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_carry_and' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_and.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_carry_and' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_and.v:61]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_command_fifo' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_command_fifo.v:61]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_carry_latch_or' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_latch_or.v:61]
 INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_axi_mc_wrap_cmd' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_wrap_cmd.v:97]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_axi_mc_cmd_translator' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_cmd_translator.v:62]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_axi_mc_wr_cmd_fsm' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_wr_cmd_fsm.v:76]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_axi_mc_aw_channel' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_aw_channel.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_axi_mc_w_channel' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_w_channel.v:64]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_axi_mc_fifo' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_fifo.v:70]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_axi_mc_b_channel' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_b_channel.v:83]
+INFO: [Synth 8-6155] done synthesizing module 'OR2L' (0#1) [D:/bachelor_2023/Vivado/2022.2/scripts/rt/data/unisim_comp.v:94532]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_carry_latch_or' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_latch_or.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'FDRE' (0#1) [D:/bachelor_2023/Vivado/2022.2/scripts/rt/data/unisim_comp.v:38708]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_command_fifo' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_command_fifo.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_a_upsizer' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_a_upsizer.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_comparator_sel_static' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_comparator_sel_static.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_carry_or' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_carry_or.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'LUT6_2' (0#1) [D:/bachelor_2023/Vivado/2022.2/scripts/rt/data/unisim_comp.v:79227]
 INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_axic_register_slice.v:183]
 WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_r_channel.v:189]
 INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_r_channel.v:315]
 WARNING: [Synth 8-6014] Unused sequential element periodic_rd_generation.read_this_rank_r1_reg was removed.  [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/controller/mig_7series_v4_2_rank_cntrl.v:487]
@@ -670,6 +671,10 @@ WARNING: [Synth 8-3848] Net oclkdelay_center_calib_start in module/entity mig_7s
 WARNING: [Synth 8-3848] Net oclk_center_write_resume in module/entity mig_7series_v4_2_ddr_calib_top does not have driver. [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/phy/mig_7series_v4_2_ddr_calib_top.v:615]
 WARNING: [Synth 8-3848] Net oclkdelay_center_calib_done in module/entity mig_7series_v4_2_ddr_calib_top does not have driver. [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/phy/mig_7series_v4_2_ddr_calib_top.v:616]
 WARNING: [Synth 8-6014] Unused sequential element app_wdf_rdy_r_copy4_reg was removed.  [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/ui/mig_7series_v4_2_ui_wr_data.v:268]
+WARNING: [Synth 8-6014] Unused sequential element queue_id_reg was removed.  [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_a_upsizer.v:840]
+WARNING: [Synth 8-6014] Unused sequential element M_AXI_WUSER_II_reg was removed.  [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_w_upsizer.v:1056]
+WARNING: [Synth 8-6014] Unused sequential element queue_id_reg was removed.  [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_a_upsizer.v:840]
+WARNING: [Synth 8-6014] Unused sequential element ruser_wrap_buffer_reg was removed.  [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_ddr_r_upsizer.v:814]
 WARNING: [Synth 8-6014] Unused sequential element int_next_pending_r_reg was removed.  [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_incr_cmd.v:191]
 WARNING: [Synth 8-6014] Unused sequential element sel_first_r_reg was removed.  [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_incr_cmd.v:220]
 WARNING: [Synth 8-6014] Unused sequential element int_next_pending_r_reg was removed.  [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_wrap_cmd.v:221]
@@ -679,7 +684,7 @@ WARNING: [Synth 8-6014] Unused sequential element int_next_pending_r_reg was rem
 WARNING: [Synth 8-6014] Unused sequential element sel_first_r_reg was removed.  [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_incr_cmd.v:220]
 WARNING: [Synth 8-6014] Unused sequential element int_next_pending_r_reg was removed.  [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_wrap_cmd.v:221]
 WARNING: [Synth 8-6014] Unused sequential element sel_first_r_reg was removed.  [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_wrap_cmd.v:239]
-WARNING: [Synth 8-6014] Unused sequential element rd_last_r_reg was removed.  [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/axi/mig_7series_v4_2_axi_mc_r_channel.v:216]
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3848] Net error in module/entity mig_7series_v4_2_memc_ui_top_axi does not have driver. [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/ip_top/mig_7series_v4_2_memc_ui_top_axi.v:555]
 WARNING: [Synth 8-3848] Net app_correct_en_i in module/entity mig_7series_v4_2_memc_ui_top_axi does not have driver. [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/ip_top/mig_7series_v4_2_memc_ui_top_axi.v:500]
 WARNING: [Synth 8-3848] Net s_axi_ctrl_awvalid in module/entity arty_adc_eth_v4_mig_7series_0_0_mig does not have driver. [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/arty_adc_eth_v4_mig_7series_0_0_mig.v:785]
@@ -737,19 +742,52 @@ WARNING: [Synth 8-7129] Port awprot[2] in module mig_7series_v4_2_axi_mc_aw_chan
 WARNING: [Synth 8-7129] Port awprot[1] in module mig_7series_v4_2_axi_mc_aw_channel is either unconnected or has no load
 WARNING: [Synth 8-7129] Port awprot[0] in module mig_7series_v4_2_axi_mc_aw_channel is either unconnected or has no load
 WARNING: [Synth 8-7129] Port cmd_wr_bytes in module mig_7series_v4_2_axi_mc_aw_channel is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ACLK in module mig_7series_v4_2_ddr_axic_register_slice__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ARESET in module mig_7series_v4_2_ddr_axic_register_slice__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ACLK in module mig_7series_v4_2_ddr_axic_register_slice is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ARESET in module mig_7series_v4_2_ddr_axic_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module mig_7series_v4_2_ddr_axic_register_slice__parameterized8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module mig_7series_v4_2_ddr_axic_register_slice__parameterized8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module mig_7series_v4_2_ddr_axic_register_slice__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module mig_7series_v4_2_ddr_axic_register_slice__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module mig_7series_v4_2_ddr_axic_register_slice__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module mig_7series_v4_2_ddr_axic_register_slice__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module mig_7series_v4_2_ddr_axic_register_slice__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module mig_7series_v4_2_ddr_axic_register_slice__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWUSER[0] in module mig_7series_v4_2_ddr_axi_register_slice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WUSER[0] in module mig_7series_v4_2_ddr_axi_register_slice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARUSER[0] in module mig_7series_v4_2_ddr_axi_register_slice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BUSER[0] in module mig_7series_v4_2_ddr_axi_register_slice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RUSER[0] in module mig_7series_v4_2_ddr_axi_register_slice__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module mig_7series_v4_2_ddr_axic_register_slice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module mig_7series_v4_2_ddr_axic_register_slice__parameterized3 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ACLK in module mig_7series_v4_2_ddr_axic_register_slice__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ARESET in module mig_7series_v4_2_ddr_axic_register_slice__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ACLK in module mig_7series_v4_2_ddr_axic_register_slice__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ARESET in module mig_7series_v4_2_ddr_axic_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWUSER[0] in module mig_7series_v4_2_ddr_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WUSER[0] in module mig_7series_v4_2_ddr_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARUSER[0] in module mig_7series_v4_2_ddr_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BUSER[0] in module mig_7series_v4_2_ddr_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RUSER[0] in module mig_7series_v4_2_ddr_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module mig_7series_v4_2_ddr_axic_register_slice__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module mig_7series_v4_2_ddr_axic_register_slice__parameterized2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWUSER[0] in module mig_7series_v4_2_ddr_axi_register_slice is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_WUSER[0] in module mig_7series_v4_2_ddr_axi_register_slice is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_ARUSER[0] in module mig_7series_v4_2_ddr_axi_register_slice is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_AXI_BUSER[0] in module mig_7series_v4_2_ddr_axi_register_slice is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_AXI_RUSER[0] in module mig_7series_v4_2_ddr_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cmd_modified in module mig_7series_v4_2_ddr_r_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cmd_offset[3] in module mig_7series_v4_2_ddr_r_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cmd_offset[2] in module mig_7series_v4_2_ddr_r_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cmd_offset[1] in module mig_7series_v4_2_ddr_r_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cmd_offset[0] in module mig_7series_v4_2_ddr_r_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cmd_step[4] in module mig_7series_v4_2_ddr_r_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RUSER[0] in module mig_7series_v4_2_ddr_r_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AUSER[0] in module mig_7series_v4_2_ddr_a_upsizer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cmd_offset[3] in module mig_7series_v4_2_ddr_w_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cmd_offset[2] in module mig_7series_v4_2_ddr_w_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cmd_offset[1] in module mig_7series_v4_2_ddr_w_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cmd_offset[0] in module mig_7series_v4_2_ddr_w_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cmd_step[4] in module mig_7series_v4_2_ddr_w_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WUSER[0] in module mig_7series_v4_2_ddr_w_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AUSER[0] in module mig_7series_v4_2_ddr_a_upsizer is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ecc_multiple[7] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ecc_multiple[6] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ecc_multiple[5] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
@@ -757,54 +795,21 @@ WARNING: [Synth 8-7129] Port ecc_multiple[4] in module mig_7series_v4_2_ui_rd_da
 WARNING: [Synth 8-7129] Port ecc_multiple[3] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ecc_multiple[2] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ecc_multiple[1] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ecc_multiple[0] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ecc_single[7] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ecc_single[6] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ecc_single[5] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ecc_single[4] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ecc_single[3] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ecc_single[2] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ecc_single[1] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ecc_single[0] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port app_raw_not_ecc[7] in module mig_7series_v4_2_ui_wr_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port app_raw_not_ecc[6] in module mig_7series_v4_2_ui_wr_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port app_raw_not_ecc[5] in module mig_7series_v4_2_ui_wr_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port app_raw_not_ecc[4] in module mig_7series_v4_2_ui_wr_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port app_raw_not_ecc[3] in module mig_7series_v4_2_ui_wr_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port app_raw_not_ecc[2] in module mig_7series_v4_2_ui_wr_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port app_raw_not_ecc[1] in module mig_7series_v4_2_ui_wr_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port app_raw_not_ecc[0] in module mig_7series_v4_2_ui_wr_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wr_data_addr[4] in module mig_7series_v4_2_ui_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port accept in module mig_7series_v4_2_ui_top is either unconnected or has no load
-WARNING: [Synth 8-7129] Port calib_device_temp[11] in module mig_7series_v4_2_ddr_phy_tempmon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port calib_device_temp[10] in module mig_7series_v4_2_ddr_phy_tempmon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port calib_device_temp[9] in module mig_7series_v4_2_ddr_phy_tempmon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port calib_device_temp[8] in module mig_7series_v4_2_ddr_phy_tempmon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port calib_device_temp[7] in module mig_7series_v4_2_ddr_phy_tempmon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port calib_device_temp[6] in module mig_7series_v4_2_ddr_phy_tempmon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port calib_device_temp[5] in module mig_7series_v4_2_ddr_phy_tempmon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port calib_device_temp[4] in module mig_7series_v4_2_ddr_phy_tempmon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port calib_device_temp[3] in module mig_7series_v4_2_ddr_phy_tempmon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port calib_device_temp[2] in module mig_7series_v4_2_ddr_phy_tempmon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port calib_device_temp[1] in module mig_7series_v4_2_ddr_phy_tempmon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port calib_device_temp[0] in module mig_7series_v4_2_ddr_phy_tempmon is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dbg_phy_wrcal[99] in module mig_7series_v4_2_ddr_phy_wrcal is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dbg_phy_wrcal[98] in module mig_7series_v4_2_ddr_phy_wrcal is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:41 ; elapsed = 00:01:14 . Memory (MB): peak = 1678.531 ; gain = 709.359
+Finished RTL Elaboration : Time (s): cpu = 00:00:41 ; elapsed = 00:01:14 . Memory (MB): peak = 1697.734 ; gain = 729.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:01:18 . Memory (MB): peak = 1678.531 ; gain = 709.359
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:01:18 . Memory (MB): peak = 1697.734 ; gain = 729.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:44 ; elapsed = 00:01:18 . Memory (MB): peak = 1678.531 ; gain = 709.359
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:43 ; elapsed = 00:01:18 . Memory (MB): peak = 1697.734 ; gain = 729.113
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1678.531 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 110 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1697.734 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 345 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -824,27 +829,28 @@ Finished Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_m
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1787.203 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1802.078 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 71 instances were transformed.
+  A total of 95 instances were transformed.
   IBUFG => IBUF: 1 instance 
   IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
   IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 24 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 51 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.748 . Memory (MB): peak = 1787.254 ; gain = 0.051
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1802.078 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/bachelor_2023/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:23 ; elapsed = 00:02:21 . Memory (MB): peak = 1787.254 ; gain = 818.082
+Finished Constraint Validation : Time (s): cpu = 00:01:22 ; elapsed = 00:02:33 . Memory (MB): peak = 1802.078 ; gain = 833.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35ticsg324-1L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:23 ; elapsed = 00:02:22 . Memory (MB): peak = 1787.254 ; gain = 818.082
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:22 ; elapsed = 00:02:33 . Memory (MB): peak = 1802.078 ; gain = 833.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -853,7 +859,7 @@ Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  c
 Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/constraints/arty_adc_eth_v4_mig_7series_0_0.xdc, line 28).
 Applied set_property KEEP = true for sys_rst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:23 ; elapsed = 00:02:22 . Memory (MB): peak = 1787.254 ; gain = 818.082
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:23 ; elapsed = 00:02:34 . Memory (MB): peak = 1802.078 ; gain = 833.457
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'wl_state_r_reg' in module 'mig_7series_v4_2_ddr_phy_wrlvl'
 INFO: [Synth 8-802] inferred FSM for state register 'fine_adj_state_r_reg' in module 'mig_7series_v4_2_ddr_phy_dqs_found_cal_hr'
@@ -969,7 +975,7 @@ INFO: [Synth 8-3898] No Re-encoding of one hot register 'tempmon_state_reg' in m
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'mig_7series_v4_2_axi_mc_r_channel'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:49 ; elapsed = 00:03:01 . Memory (MB): peak = 1787.254 ; gain = 818.082
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:51 ; elapsed = 00:03:44 . Memory (MB): peak = 1802.078 ; gain = 833.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -982,12 +988,12 @@ Detailed RTL Component Info :
 	   2 Input   12 Bit       Adders := 15    
 	   2 Input   10 Bit       Adders := 6     
 	   2 Input    9 Bit       Adders := 4     
-	   2 Input    8 Bit       Adders := 8     
+	   2 Input    8 Bit       Adders := 9     
 	   2 Input    7 Bit       Adders := 3     
 	   2 Input    6 Bit       Adders := 30    
 	   3 Input    6 Bit       Adders := 3     
 	   2 Input    5 Bit       Adders := 37    
-	   2 Input    4 Bit       Adders := 34    
+	   2 Input    4 Bit       Adders := 36    
 	   2 Input    3 Bit       Adders := 21    
 	   3 Input    3 Bit       Adders := 1     
 	   2 Input    2 Bit       Adders := 51    
@@ -1004,16 +1010,18 @@ Detailed RTL Component Info :
 	   8 Input    1 Bit       Adders := 1     
 	   9 Input    1 Bit       Adders := 1     
 +---XORs : 
-	   2 Input      1 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 19    
 +---Registers : 
 	              144 Bit    Registers := 1     
-	              128 Bit    Registers := 5     
+	              133 Bit    Registers := 2     
+	              128 Bit    Registers := 6     
 	               88 Bit    Registers := 1     
 	               80 Bit    Registers := 3     
+	               60 Bit    Registers := 2     
 	               56 Bit    Registers := 1     
 	               32 Bit    Registers := 3     
 	               30 Bit    Registers := 1     
-	               28 Bit    Registers := 6     
+	               28 Bit    Registers := 8     
 	               16 Bit    Registers := 12    
 	               15 Bit    Registers := 4     
 	               14 Bit    Registers := 6     
@@ -1021,26 +1029,28 @@ Detailed RTL Component Info :
 	               12 Bit    Registers := 32    
 	               10 Bit    Registers := 4     
 	                9 Bit    Registers := 12    
-	                8 Bit    Registers := 15    
+	                8 Bit    Registers := 17    
 	                7 Bit    Registers := 3     
 	                6 Bit    Registers := 59    
 	                5 Bit    Registers := 48    
-	                4 Bit    Registers := 79    
-	                3 Bit    Registers := 48    
-	                2 Bit    Registers := 68    
-	                1 Bit    Registers := 1536  
+	                4 Bit    Registers := 89    
+	                3 Bit    Registers := 52    
+	                2 Bit    Registers := 80    
+	                1 Bit    Registers := 1560  
 +---Muxes : 
-	   2 Input  128 Bit        Muxes := 10    
+	   2 Input  133 Bit        Muxes := 1     
+	   2 Input  128 Bit        Muxes := 11    
 	   4 Input  128 Bit        Muxes := 1     
 	   2 Input  127 Bit        Muxes := 1     
 	   2 Input   80 Bit        Muxes := 6     
 	   2 Input   56 Bit        Muxes := 1     
+	   2 Input   37 Bit        Muxes := 2     
 	  24 Input   35 Bit        Muxes := 1     
 	   2 Input   35 Bit        Muxes := 22    
 	   2 Input   32 Bit        Muxes := 1     
 	   2 Input   30 Bit        Muxes := 12    
 	   4 Input   30 Bit        Muxes := 4     
-	   2 Input   28 Bit        Muxes := 11    
+	   2 Input   28 Bit        Muxes := 17    
 	   2 Input   21 Bit        Muxes := 8     
 	   2 Input   16 Bit        Muxes := 8     
 	   3 Input   16 Bit        Muxes := 1     
@@ -1054,9 +1064,9 @@ Detailed RTL Component Info :
 	   2 Input   10 Bit        Muxes := 7     
 	   4 Input    9 Bit        Muxes := 6     
 	   2 Input    9 Bit        Muxes := 18    
-	   2 Input    8 Bit        Muxes := 63    
+	   2 Input    8 Bit        Muxes := 97    
 	   5 Input    8 Bit        Muxes := 1     
-	   8 Input    8 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 3     
 	   2 Input    7 Bit        Muxes := 64    
 	   3 Input    7 Bit        Muxes := 2     
 	   4 Input    7 Bit        Muxes := 1     
@@ -1075,10 +1085,10 @@ Detailed RTL Component Info :
 	  24 Input    5 Bit        Muxes := 1     
 	   4 Input    5 Bit        Muxes := 2     
 	   3 Input    5 Bit        Muxes := 8     
-	   2 Input    4 Bit        Muxes := 71    
+	   2 Input    4 Bit        Muxes := 73    
 	  32 Input    4 Bit        Muxes := 1     
 	   3 Input    4 Bit        Muxes := 2     
-	   8 Input    4 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 5     
 	   7 Input    4 Bit        Muxes := 1     
 	  10 Input    4 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 69    
@@ -1087,18 +1097,18 @@ Detailed RTL Component Info :
 	   4 Input    3 Bit        Muxes := 3     
 	   9 Input    3 Bit        Muxes := 2     
 	   8 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 104   
-	   4 Input    2 Bit        Muxes := 7     
-	   3 Input    2 Bit        Muxes := 9     
+	   2 Input    2 Bit        Muxes := 110   
+	   4 Input    2 Bit        Muxes := 8     
+	   3 Input    2 Bit        Muxes := 10    
 	   8 Input    2 Bit        Muxes := 4     
 	  27 Input    2 Bit        Muxes := 1     
 	  24 Input    2 Bit        Muxes := 2     
 	   5 Input    2 Bit        Muxes := 1     
 	  10 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 508   
-	   3 Input    1 Bit        Muxes := 13    
+	   2 Input    1 Bit        Muxes := 538   
+	   3 Input    1 Bit        Muxes := 19    
 	   8 Input    1 Bit        Muxes := 4     
-	   4 Input    1 Bit        Muxes := 205   
+	   4 Input    1 Bit        Muxes := 207   
 	  27 Input    1 Bit        Muxes := 27    
 	   5 Input    1 Bit        Muxes := 1     
 	  16 Input    1 Bit        Muxes := 21    
@@ -1125,8 +1135,19 @@ WARNING: [Synth 8-3936] Found unconnected internal register 'byte_sel_data_map_r
 WARNING: [Synth 8-3936] Found unconnected internal register 'oclkdelay_start_dly_r_reg' and it is trimmed from '15' to '14' bits. [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v:1232]
 WARNING: [Synth 8-3936] Found unconnected internal register 'wrcal_start_dly_r_reg' and it is trimmed from '15' to '14' bits. [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v:1230]
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_cal1_state_r_reg[33]) is unused and will be removed from module mig_7series_v4_2_ddr_phy_rdlvl.
+WARNING: [Synth 8-3332] Sequential element (USE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.USE_FPGA_OUTPUT_PIPELINE.DATA_GEN[12].FDRE_inst) is unused and will be removed from module mig_7series_v4_2_axi_mc.
+WARNING: [Synth 8-3332] Sequential element (USE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.USE_FPGA_OUTPUT_PIPELINE.DATA_GEN[17].FDRE_inst) is unused and will be removed from module mig_7series_v4_2_axi_mc.
+WARNING: [Synth 8-3332] Sequential element (USE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.USE_FPGA_OUTPUT_PIPELINE.DATA_GEN[18].FDRE_inst) is unused and will be removed from module mig_7series_v4_2_axi_mc.
+WARNING: [Synth 8-3332] Sequential element (USE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.USE_FPGA_OUTPUT_PIPELINE.DATA_GEN[19].FDRE_inst) is unused and will be removed from module mig_7series_v4_2_axi_mc.
+WARNING: [Synth 8-3332] Sequential element (USE_UPSIZER.upsizer_d2/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.USE_FPGA_OUTPUT_PIPELINE.DATA_GEN[20].FDRE_inst) is unused and will be removed from module mig_7series_v4_2_axi_mc.
+WARNING: [Synth 8-3332] Sequential element (USE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.USE_FPGA_OUTPUT_PIPELINE.DATA_GEN[12].FDRE_inst) is unused and will be removed from module mig_7series_v4_2_axi_mc.
+WARNING: [Synth 8-3332] Sequential element (USE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.USE_FPGA_OUTPUT_PIPELINE.DATA_GEN[17].FDRE_inst) is unused and will be removed from module mig_7series_v4_2_axi_mc.
+WARNING: [Synth 8-3332] Sequential element (USE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.USE_FPGA_OUTPUT_PIPELINE.DATA_GEN[18].FDRE_inst) is unused and will be removed from module mig_7series_v4_2_axi_mc.
+WARNING: [Synth 8-3332] Sequential element (USE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.USE_FPGA_OUTPUT_PIPELINE.DATA_GEN[19].FDRE_inst) is unused and will be removed from module mig_7series_v4_2_axi_mc.
+WARNING: [Synth 8-3332] Sequential element (USE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.USE_FPGA_OUTPUT_PIPELINE.DATA_GEN[20].FDRE_inst) is unused and will be removed from module mig_7series_v4_2_axi_mc.
+WARNING: [Synth 8-3332] Sequential element (USE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.USE_FPGA_OUTPUT_PIPELINE.DATA_GEN[35].FDRE_inst) is unused and will be removed from module mig_7series_v4_2_axi_mc.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:05:56 ; elapsed = 00:07:59 . Memory (MB): peak = 2085.883 ; gain = 1116.711
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:06:05 ; elapsed = 00:09:09 . Memory (MB): peak = 2087.043 ; gain = 1118.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1162,13 +1183,13 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3321] set_false_path : Empty through list for constraint at line 374 of c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/constraints/arty_adc_eth_v4_mig_7series_0_0.xdc. [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/user_design/constraints/arty_adc_eth_v4_mig_7series_0_0.xdc:374]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:07 ; elapsed = 00:08:12 . Memory (MB): peak = 2085.883 ; gain = 1116.711
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:18 ; elapsed = 00:09:24 . Memory (MB): peak = 2087.043 ; gain = 1118.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:06:09 ; elapsed = 00:08:14 . Memory (MB): peak = 2085.883 ; gain = 1116.711
+Finished Timing Optimization : Time (s): cpu = 00:06:21 ; elapsed = 00:09:27 . Memory (MB): peak = 2087.043 ; gain = 1118.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1193,7 +1214,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:06:18 ; elapsed = 00:08:24 . Memory (MB): peak = 2085.883 ; gain = 1116.711
+Finished Technology Mapping : Time (s): cpu = 00:06:34 ; elapsed = 00:09:42 . Memory (MB): peak = 2087.043 ; gain = 1118.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1211,37 +1232,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:06:29 ; elapsed = 00:08:36 . Memory (MB): peak = 2085.883 ; gain = 1116.711
+Finished IO Insertion : Time (s): cpu = 00:06:45 ; elapsed = 00:09:56 . Memory (MB): peak = 2087.043 ; gain = 1118.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:06:29 ; elapsed = 00:08:36 . Memory (MB): peak = 2085.883 ; gain = 1116.711
+Finished Renaming Generated Instances : Time (s): cpu = 00:06:45 ; elapsed = 00:09:56 . Memory (MB): peak = 2087.043 ; gain = 1118.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:31 ; elapsed = 00:08:38 . Memory (MB): peak = 2085.883 ; gain = 1116.711
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:48 ; elapsed = 00:10:00 . Memory (MB): peak = 2087.043 ; gain = 1118.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:06:31 ; elapsed = 00:08:39 . Memory (MB): peak = 2085.883 ; gain = 1116.711
+Finished Renaming Generated Ports : Time (s): cpu = 00:06:49 ; elapsed = 00:10:00 . Memory (MB): peak = 2087.043 ; gain = 1118.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:06:32 ; elapsed = 00:08:39 . Memory (MB): peak = 2085.883 ; gain = 1116.711
+Finished Handling Custom Attributes : Time (s): cpu = 00:06:49 ; elapsed = 00:10:01 . Memory (MB): peak = 2087.043 ; gain = 1118.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:06:32 ; elapsed = 00:08:39 . Memory (MB): peak = 2085.883 ; gain = 1116.711
+Finished Renaming Generated Nets : Time (s): cpu = 00:06:49 ; elapsed = 00:10:01 . Memory (MB): peak = 2087.043 ; gain = 1118.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1293,74 +1314,80 @@ Report Cell Usage:
 +------+----------------------+------+
 |      |Cell                  |Count |
 +------+----------------------+------+
-|1     |BUFG                  |     8|
-|2     |BUFH                  |     1|
-|3     |BUFIO                 |     1|
-|4     |CARRY4                |   122|
-|5     |IDELAYCTRL            |     1|
-|6     |IDELAYE2              |    16|
-|7     |IN_FIFO               |     2|
-|8     |ISERDESE2             |    16|
-|9     |LUT1                  |   353|
-|10    |LUT2                  |   436|
-|11    |LUT3                  |  1032|
-|12    |LUT4                  |   913|
-|13    |LUT5                  |  1345|
-|14    |LUT6                  |  1262|
-|15    |MMCME2_ADV            |     1|
-|16    |MUXF7                 |    30|
-|17    |ODDR                  |     5|
-|18    |OSERDESE2             |    43|
-|21    |OUT_FIFO              |     4|
-|23    |PHASER_IN_PHY         |     2|
-|24    |PHASER_OUT_PHY        |     4|
-|26    |PHASER_REF            |     1|
-|27    |PHY_CONTROL           |     1|
-|28    |PLLE2_ADV             |     1|
-|29    |RAM32M                |   118|
-|30    |RAM32X1D              |     4|
-|31    |SRL16E                |    18|
-|32    |SRLC32E               |   132|
-|33    |FDCE                  |     2|
-|34    |FDPE                  |    72|
-|35    |FDRE                  |  3942|
-|36    |FDSE                  |   122|
-|37    |IBUFG                 |     1|
-|38    |IOBUFDS_INTERMDISABLE |     2|
-|39    |IOBUF_INTERMDISABLE   |    16|
-|40    |OBUF                  |    24|
-|41    |OBUFDS                |     1|
-|42    |OBUFT                 |     2|
+|1     |AND2B1L               |    10|
+|2     |BUFG                  |     8|
+|3     |BUFH                  |     1|
+|4     |BUFIO                 |     1|
+|5     |CARRY4                |   124|
+|6     |IDELAYCTRL            |     1|
+|7     |IDELAYE2              |    16|
+|8     |IN_FIFO               |     2|
+|9     |ISERDESE2             |    16|
+|10    |LUT1                  |   361|
+|11    |LUT2                  |   503|
+|12    |LUT3                  |  1075|
+|13    |LUT4                  |  1107|
+|14    |LUT5                  |  1586|
+|15    |LUT6                  |  1681|
+|17    |MMCME2_ADV            |     1|
+|18    |MUXCY                 |   131|
+|19    |MUXF7                 |    30|
+|20    |ODDR                  |     5|
+|21    |OR2L                  |     2|
+|22    |OSERDESE2             |    43|
+|25    |OUT_FIFO              |     4|
+|27    |PHASER_IN_PHY         |     2|
+|28    |PHASER_OUT_PHY        |     4|
+|30    |PHASER_REF            |     1|
+|31    |PHY_CONTROL           |     1|
+|32    |PLLE2_ADV             |     1|
+|33    |RAM32M                |   118|
+|34    |RAM32X1D              |     4|
+|35    |SRL16E                |    18|
+|36    |SRLC32E               |   195|
+|37    |XORCY                 |    58|
+|38    |FDCE                  |     2|
+|39    |FDPE                  |    72|
+|40    |FDRE                  |  4944|
+|41    |FDSE                  |   125|
+|42    |IBUFG                 |     1|
+|43    |IOBUFDS_INTERMDISABLE |     2|
+|44    |IOBUF_INTERMDISABLE   |    16|
+|45    |OBUF                  |    24|
+|46    |OBUFDS                |     1|
+|47    |OBUFT                 |     2|
 +------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:06:32 ; elapsed = 00:08:39 . Memory (MB): peak = 2085.883 ; gain = 1116.711
+Finished Writing Synthesis Report : Time (s): cpu = 00:06:49 ; elapsed = 00:10:01 . Memory (MB): peak = 2087.043 ; gain = 1118.422
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:05:27 ; elapsed = 00:08:04 . Memory (MB): peak = 2085.883 ; gain = 1007.988
-Synthesis Optimization Complete : Time (s): cpu = 00:06:32 ; elapsed = 00:08:40 . Memory (MB): peak = 2085.883 ; gain = 1116.711
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:05:45 ; elapsed = 00:09:16 . Memory (MB): peak = 2087.043 ; gain = 1014.078
+Synthesis Optimization Complete : Time (s): cpu = 00:06:50 ; elapsed = 00:10:01 . Memory (MB): peak = 2087.043 ; gain = 1118.422
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.579 . Memory (MB): peak = 2085.883 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 333 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.701 . Memory (MB): peak = 2087.043 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 548 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 2 inverter(s) to 16 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2085.883 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2087.043 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 142 instances were transformed.
+  A total of 207 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 41 instances
   IBUFG => IBUF: 1 instance 
   IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
   IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 24 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 118 instances
   RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
 
-Synth Design complete, checksum: 1ef60fef
+Synth Design complete, checksum: 2ba8ad12
 INFO: [Common 17-83] Releasing license: Synthesis
-248 Infos, 302 Warnings, 0 Critical Warnings and 0 Errors encountered.
+250 Infos, 316 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:06:47 ; elapsed = 00:09:15 . Memory (MB): peak = 2085.883 ; gain = 1485.047
-INFO: [Coretcl 2-1174] Renamed 88 cell refs.
+synth_design: Time (s): cpu = 00:07:06 ; elapsed = 00:10:45 . Memory (MB): peak = 2087.043 ; gain = 1483.273
+INFO: [Coretcl 2-1174] Renamed 175 cell refs.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/arty_adc_eth_v4_mig_7series_0_0_synth_1/arty_adc_eth_v4_mig_7series_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file arty_adc_eth_v4_mig_7series_0_0_utilization_synth.rpt -pb arty_adc_eth_v4_mig_7series_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun May  7 15:19:33 2023...
+INFO: [Common 17-206] Exiting Vivado at Mon May  8 13:03:01 2023...

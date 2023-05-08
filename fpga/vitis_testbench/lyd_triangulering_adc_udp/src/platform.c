@@ -39,7 +39,6 @@
 #include "xuartns550_l.h"
 #endif
 
-#include "lwip/tcp.h"
 
 #if LWIP_DHCP==1
 volatile int dhcp_timoutcntr = 24;
@@ -47,15 +46,16 @@ void dhcp_fine_tmr();
 void dhcp_coarse_tmr();
 #endif
 
+/********************** ADC STUFF ****************************************/
+// includes for ADC
+#include "xemaclite.h"
+#include "xtmrctr.h"
+#include "xsysmon.h"
+
 volatile int TcpFastTmrFlag = 0;
 volatile int TcpSlowTmrFlag = 0;
 
 extern struct netif *echo_netif;
-
-
-volatile u32_t tryms_tick = 0;
-
-
 
 void
 timer_callback()
@@ -68,9 +68,6 @@ timer_callback()
 #if LWIP_DHCP==1
     static int dhcp_timer = 0;
 #endif
-
-    tryms_tick++;
-
 
 	DetectEthLinkStatus++;
 	 TcpFastTmrFlag = 1;
@@ -99,7 +96,233 @@ timer_callback()
 	}
 }
 
+/********************** GLOBAL ADC DEFINISIONS *****************************/
+static XSysMon xadc_wiz_0_SysMon_ADC;
+static XSysMon *SysMonInstPtr = &xadc_wiz_0_SysMon_ADC;
+u16 SysMonDeviceId = XPAR_XADC_WIZ_0_DEVICE_ID;
+u16 SysMonIntrId = XPAR_MICROBLAZE_0_AXI_INTC_XADC_WIZ_0_IP2INTC_IRPT_INTR;
 static XIntc intc;
+
+/********************** ADC FUNCTIONS ****************************************/
+int InitIntC(u16 DeviceId)
+{
+	int Status;
+	XIntc *intcp;
+	intcp = &intc;
+
+#if 0 // TRYM !!!
+	/*
+	 * Initialize the interrupt controller driver so that it is
+	 * ready to use.
+	 */
+	Status = XIntc_Initialize(intcp, DeviceId);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+#endif
+	/*
+	 * Perform a self-test to ensure that the hardware was built  correctly.
+	 */
+	Status = XIntc_SelfTest(intcp);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Initialize the exception table.
+	 */
+	Xil_ExceptionInit();
+
+	/*
+	 * Register the interrupt controller handler with the exception table.
+	 */
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+			(Xil_ExceptionHandler)XIntc_DeviceInterruptHandler,
+			(void*) 0);
+
+	/*
+	 * Enable exceptions.
+	 */
+	Xil_ExceptionEnable();
+
+#if 0
+	/*
+	 * Start the interrupt controller such that interrupts are enabled for
+	 * all devices that cause interrupts.
+	 */
+	Status = XIntc_Start(intcp, XIN_REAL_MODE);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+#endif
+
+	return XST_SUCCESS;
+}
+
+/*****************************************************/
+int InitAdc()
+{
+	int Status;
+	u32 IntrStatus;
+	XSysMon_Config *ConfigPtr;
+
+	/*
+	 * Initialize the SysMon driver.
+	 */
+	ConfigPtr = XSysMon_LookupConfig(SysMonDeviceId);
+	if (ConfigPtr == NULL) {
+		return XST_FAILURE;
+	}
+
+	XSysMon_CfgInitialize(SysMonInstPtr, ConfigPtr, ConfigPtr->BaseAddress);
+
+#if 0
+
+	/*
+	 * Disable the Channel Sequencer before configuring the Sequence
+	 * registers.
+	 */
+	XSysMon_SetSequencerMode(SysMonInstPtr, XSM_SEQ_MODE_SAFE);
+
+	/*
+	 * Enable the following channels in the Sequencer registers:
+	 * 	- On-chip Temperature
+	 * 	- On-chip VCCAUX supply sensor
+	 * 	- 1st Auxiliary Channel
+	 * 	- 16th Auxiliary Channel
+	 *
+	 * Uncertain if I need to set channels to sample from, since I've set it up in the hardware design.
+	 */
+	Status = XSysMon_SetSeqChEnables(SysMonInstPtr, XSM_SEQ_CH_AUX04 |
+													XSM_SEQ_CH_AUX05 |
+													XSM_SEQ_CH_AUX06 |
+													XSM_SEQ_CH_AUX07);
+	if (Status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+	/*
+	 * Enable the Channel Sequencer in continuous sequencer cycling mode.
+	 */
+	//XSysMon_SetSequencerMode(SysMonInstPtr, XSM_SEQ_MODE_CONTINPASS);
+	//XSysMon_SetSequencerMode(SysMonInstPtr, XSM_SEQ_MODE_ONEPASS);
+#endif
+
+	/*
+	 * Setup the interrupt system.
+	 */
+	Status = SysMonSetupInterruptSystem(SysMonIntrId);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Clear any bits set in the Interrupt Status Register.
+	 */
+	IntrStatus = XSysMon_IntrGetStatus(SysMonInstPtr);
+	XSysMon_IntrClear(SysMonInstPtr, IntrStatus);
+
+	return 0;
+}
+
+/*****************************************************/
+void StartAdc()
+{
+	/*
+	 * Enable end of sequence interrupt for vaux channels.
+	 */
+	XSysMon_IntrEnable(SysMonInstPtr, XSM_IPIXR_EOS_MASK);
+
+	/*
+	 * Enable global interrupt of System Monitor.
+	 */
+	XSysMon_IntrGlobalEnable(SysMonInstPtr);
+}
+
+/**********************************************************
+                Buffer for ADC samples:
+**********************************************************/
+u16 adc_buffer[2*ADC_BUFFER_SIZE];  // Buffer is in fact two buffers
+
+u16 *adc_buff_write_p = adc_buffer;
+//u16 *adc_buff_read_p  = adc_buffer;
+
+u32 adc_buff_write_enable = TRUE;
+//u32 adc_buff_read_enable  = FALSE; // TRYM delete if not needed, remember in .h file too.
+
+u32 adc_buff_1_filled = FALSE;
+u32 adc_buff_2_filled = FALSE;
+
+/**********************************************************
+                ADC interrupt handler:
+**********************************************************/
+void SysMonInterruptHandler(void *CallBackRef)
+{
+	u32 IntrStatusValue;
+	XSysMon *SysMonPtr = (XSysMon *) CallBackRef;
+
+	IntrStatusValue = XSysMon_IntrGetStatus(SysMonPtr);  // Get Interrupt Status Register
+
+	if (IntrStatusValue & XSM_IPIXR_EOS_MASK)  // If this is End Of Sequence interrupt-
+    {
+        if (adc_buff_write_enable)  // -and we are allowed to write into adc_buffer:
+        {
+             // Move samples from the ADC into adc_buffer:
+            *(adc_buff_write_p++) = XSysMon_GetAdcData(SysMonInstPtr, XSM_CH_AUX_MIN+4);
+            *(adc_buff_write_p++) = XSysMon_GetAdcData(SysMonInstPtr, XSM_CH_AUX_MIN+5);
+            *(adc_buff_write_p++) = XSysMon_GetAdcData(SysMonInstPtr, XSM_CH_AUX_MIN+6);
+            *(adc_buff_write_p++) = XSysMon_GetAdcData(SysMonInstPtr, XSM_CH_AUX_MIN+7);
+
+            if (adc_buff_write_p >= &adc_buffer[2*ADC_BUFFER_SIZE])  // We are at the end of buffer-2:
+            {
+                adc_buff_write_p = adc_buffer;  // Start at beginning of buffer-1 next time
+                adc_buff_2_filled = TRUE;       // Tell main-loop that buffer-2 is ready
+                if (adc_buff_1_filled)              // If buffer-1 is still filled -
+                    adc_buff_write_enable = FALSE;  // - pause filling until buffer-1 is empty
+            }
+            else if (adc_buff_write_p == &adc_buffer[ADC_BUFFER_SIZE])  // We are at the end of buffer-1:
+            {
+                adc_buff_1_filled = TRUE;       // Tell main-loop that buffer-1 is ready
+                if (adc_buff_2_filled)              // If buffer-2 is still filled -
+                    adc_buff_write_enable = FALSE;  // - pause filling until buffer-2 is empty
+            }
+        }
+	}
+	XSysMon_IntrClear(SysMonPtr, IntrStatusValue);  // Clear interrupts from Interrupt Status Register
+}
+
+/*********************************************************/
+
+/*****************************************************/
+int SysMonSetupInterruptSystem(u16 IntrId) {
+
+	int Status;
+	XIntc *intcp;
+	intcp = &intc;
+
+	/*
+	 * Connect the handler that will be called when an interrupt
+	 * for the device occurs, the handler defined above performs the
+	 * specific interrupt processing for the device.
+	 */
+	Status = XIntc_Connect(intcp,
+				IntrId,
+				(XInterruptHandler) SysMonInterruptHandler,
+				SysMonInstPtr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Enable the interrupt for the System Monitor/ADC device.
+	 */
+	XIntc_Enable(intcp, IntrId);
+
+	return XST_SUCCESS;
+}
+
+/********************** ADC STUFF END  ***********************************/
 
 void platform_setup_interrupts()
 {
@@ -194,6 +417,13 @@ void init_platform()
 
 void cleanup_platform()
 {
+#if 0
+	/*
+	 * Disable global interrupt of System Monitor.
+	 * ADC STUFF
+	 */
+	XSysMon_IntrGlobalDisable(SysMonInstPtr);
+#endif
 	disable_caches();
 }
 #endif

@@ -1,6 +1,6 @@
-00:36:01 **** Incremental Build of configuration Debug for project lyd_triangulering_adc_udp_system ****
+21:37:21 **** Incremental Build of configuration Debug for project lyd_triangulering_adc_udp_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
 
-00:36:02 Build Finished (took 225ms)
+21:37:21 Build Finished (took 372ms)
 

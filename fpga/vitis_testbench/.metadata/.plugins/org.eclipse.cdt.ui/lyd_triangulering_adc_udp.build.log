@@ -1,21 +1,6 @@
-00:36:00 **** Incremental Build of configuration Debug for project lyd_triangulering_adc_udp ****
+21:37:19 **** Incremental Build of configuration Debug for project lyd_triangulering_adc_udp ****
 make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -IC:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/export/v6_udp_adc_81Mhz/sw/v6_udp_adc_81Mhz/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
-' '
-'Building target: lyd_triangulering_adc_udp.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/vitis_testbench/v6_udp_adc_81Mhz/export/v6_udp_adc_81Mhz/sw/v6_udp_adc_81Mhz/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lyd_triangulering_adc_udp.elf"  ./src/echo.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-'Finished building target: lyd_triangulering_adc_udp.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size lyd_triangulering_adc_udp.elf  |tee "lyd_triangulering_adc_udp.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  88572	   1476	 672176	 762224	  ba170	lyd_triangulering_adc_udp.elf
-'Finished building: lyd_triangulering_adc_udp.elf.size'
-' '
+make: Nothing to be done for 'all'.
 
-00:36:01 Build Finished (took 1s.349ms)
+21:37:20 Build Finished (took 580ms)
 

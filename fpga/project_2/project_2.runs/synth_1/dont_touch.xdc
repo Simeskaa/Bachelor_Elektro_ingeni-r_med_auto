@@ -66,12 +66,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==arty_adc_et
 # IP: bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_us_0/arty_adc_eth_v4_auto_us_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==arty_adc_eth_v4_auto_us_0 || ORIG_REF_NAME==arty_adc_eth_v4_auto_us_0} -quiet] -quiet
 
-# IP: bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_us_1/arty_adc_eth_v4_auto_us_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==arty_adc_eth_v4_auto_us_1 || ORIG_REF_NAME==arty_adc_eth_v4_auto_us_1} -quiet] -quiet
-
-# IP: bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_us_2/arty_adc_eth_v4_auto_us_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==arty_adc_eth_v4_auto_us_2 || ORIG_REF_NAME==arty_adc_eth_v4_auto_us_2} -quiet] -quiet
-
 # IP: bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_ds_0/arty_adc_eth_v4_auto_ds_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==arty_adc_eth_v4_auto_ds_0 || ORIG_REF_NAME==arty_adc_eth_v4_auto_ds_0} -quiet] -quiet
 

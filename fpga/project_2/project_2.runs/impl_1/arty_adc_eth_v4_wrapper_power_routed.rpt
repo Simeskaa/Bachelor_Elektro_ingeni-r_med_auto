@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Sun May  7 15:32:46 2023
+| Date             : Mon May  8 13:16:03 2023
 | Host             : DESKTOP-T99OIQI running 64-bit major release  (build 9200)
 | Command          : report_power -file arty_adc_eth_v4_wrapper_power_routed.rpt -pb arty_adc_eth_v4_wrapper_power_summary_routed.pb -rpx arty_adc_eth_v4_wrapper_power_routed.rpx
 | Design           : arty_adc_eth_v4_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.892        |
+| Total On-Chip Power (W)  | 0.852        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.827        |
+| Dynamic (W)              | 0.787        |
 | Device Static (W)        | 0.065        |
 | Effective TJA (C/W)      | 4.8          |
-| Max Ambient (C)          | 95.7         |
-| Junction Temperature (C) | 29.3         |
+| Max Ambient (C)          | 95.9         |
+| Junction Temperature (C) | 29.1         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,24 +52,25 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.043 |       49 |       --- |             --- |
-| Slice Logic              |     0.019 |    35724 |       --- |             --- |
-|   LUT as Logic           |     0.016 |    13371 |     20800 |           64.28 |
-|   Register               |    <0.001 |    14093 |     41600 |           33.88 |
-|   LUT as Distributed RAM |    <0.001 |      856 |      9600 |            8.92 |
-|   CARRY4                 |    <0.001 |      328 |      8150 |            4.02 |
-|   F7/F8 Muxes            |    <0.001 |      625 |     32600 |            1.92 |
-|   LUT as Shift Register  |    <0.001 |      514 |      9600 |            5.35 |
-|   Others                 |    <0.001 |     1336 |       --- |             --- |
-| Signals                  |     0.024 |    25968 |       --- |             --- |
-| Block RAM                |     0.030 |       22 |        50 |           44.00 |
+| Clocks                   |     0.038 |       49 |       --- |             --- |
+| Slice Logic              |     0.016 |    32162 |       --- |             --- |
+|   LUT as Logic           |     0.014 |    11480 |     20800 |           55.19 |
+|   Register               |    <0.001 |    12947 |     41600 |           31.12 |
+|   LUT as Distributed RAM |    <0.001 |      888 |      9600 |            9.25 |
+|   CARRY4                 |    <0.001 |      339 |      8150 |            4.16 |
+|   LUT as Shift Register  |    <0.001 |      463 |      9600 |            4.82 |
+|   F7/F8 Muxes            |    <0.001 |      229 |     32600 |            0.70 |
+|   Others                 |    <0.001 |     1468 |       --- |             --- |
+| Signals                  |     0.020 |    23462 |       --- |             --- |
+| Block RAM                |     0.001 |       12 |        50 |           24.00 |
 | MMCM                     |     0.224 |        2 |         5 |           40.00 |
 | PLL                      |     0.114 |        1 |         5 |           20.00 |
+| DSPs                     |     0.002 |        3 |        90 |            3.33 |
 | I/O                      |     0.263 |       78 |       210 |           37.14 |
 | PHASER                   |     0.108 |       14 |       --- |             --- |
 | XADC                     |     0.002 |        1 |       --- |             --- |
 | Static Power             |     0.065 |          |           |                 |
-| Total                    |     0.892 |          |           |                 |
+| Total                    |     0.852 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,7 +80,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       0.950 |     0.162 |       0.155 |      0.007 |       NA    | Unspecified | NA         |
+| Vccint    |       0.950 |     0.122 |       0.115 |      0.007 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.298 |       0.286 |      0.011 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -88,7 +89,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.118 |       0.117 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       0.950 |     0.003 |       0.002 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       0.950 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.019 |       0.001 |      0.018 |       NA    | Unspecified | NA         |
@@ -138,10 +139,10 @@ Table of Contents
 | arty_adc_eth_v4_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK                                                                                             | arty_adc_eth_v4_i/mdm_1/U0/Use_E2.BSCAN_I/DRCK                                                                                                                                                                                                |            33.3 |
 | arty_adc_eth_v4_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE                                                                                           | arty_adc_eth_v4_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0                                                                                                                                                                                        |            33.3 |
 | clk_out25_arty_adc_eth_v4_clk_wiz_0_0                                                                                                                       | arty_adc_eth_v4_i/clk_wiz_0/inst/clk_out25_arty_adc_eth_v4_clk_wiz_0_0                                                                                                                                                                        |            40.0 |
+| clk_pll_i                                                                                                                                                   | arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/CLK                                                                                                                                               |            12.3 |
 | clk_pll_i                                                                                                                                                   | arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i                                                                                                                                         |            12.3 |
-| clk_pll_i                                                                                                                                                   | arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0_0                                                                                                                                  |            12.3 |
+| clk_pll_i_1                                                                                                                                                 | arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/CLK                                                                                                                                               |            12.3 |
 | clk_pll_i_1                                                                                                                                                 | arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i                                                                                                                                         |            12.3 |
-| clk_pll_i_1                                                                                                                                                 | arty_adc_eth_v4_i/mig_7series_0/u_arty_adc_eth_v4_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0_0                                                                                                                                  |            12.3 |
 | clkfbout_arty_adc_eth_v4_clk_wiz_0_0                                                                                                                        | arty_adc_eth_v4_i/clk_wiz_0/inst/clkfbout_arty_adc_eth_v4_clk_wiz_0_0                                                                                                                                                                         |            49.2 |
 | eth_mii_rx_clk                                                                                                                                              | eth_mii_rx_clk                                                                                                                                                                                                                                |            40.0 |
 | eth_mii_tx_clk                                                                                                                                              | eth_mii_tx_clk                                                                                                                                                                                                                                |            40.0 |
@@ -195,30 +196,26 @@ Table of Contents
 +---------------------------------------------+-----------+
 | Name                                        | Power (W) |
 +---------------------------------------------+-----------+
-| arty_adc_eth_v4_wrapper                     |     0.827 |
-|   arty_adc_eth_v4_i                         |     0.824 |
+| arty_adc_eth_v4_wrapper                     |     0.787 |
+|   arty_adc_eth_v4_i                         |     0.784 |
 |     axi_ethernetlite_0                      |     0.006 |
 |       U0                                    |     0.006 |
 |     axi_timer_0                             |     0.002 |
 |       U0                                    |     0.002 |
 |     clk_wiz_0                               |     0.126 |
 |       inst                                  |     0.126 |
-|     microblaze_0                            |     0.038 |
-|       U0                                    |     0.038 |
-|     microblaze_0_axi_periph                 |     0.036 |
-|       m00_couplers                          |     0.005 |
-|       m02_couplers                          |     0.005 |
-|       m03_couplers                          |     0.005 |
-|       m04_couplers                          |     0.003 |
-|       m05_couplers                          |     0.005 |
+|     microblaze_0                            |     0.009 |
+|       U0                                    |     0.009 |
+|     microblaze_0_axi_periph                 |     0.026 |
+|       m00_couplers                          |     0.004 |
+|       m02_couplers                          |     0.004 |
+|       m03_couplers                          |     0.004 |
+|       m04_couplers                          |     0.002 |
+|       m05_couplers                          |     0.004 |
 |       s00_couplers                          |     0.003 |
-|       s01_couplers                          |     0.002 |
-|       s02_couplers                          |     0.001 |
-|       xbar                                  |     0.007 |
-|     microblaze_0_local_memory               |     0.004 |
-|       lmb_bram                              |     0.004 |
-|     mig_7series_0                           |     0.607 |
-|       u_arty_adc_eth_v4_mig_7series_0_0_mig |     0.606 |
+|       xbar                                  |     0.006 |
+|     mig_7series_0                           |     0.610 |
+|       u_arty_adc_eth_v4_mig_7series_0_0_mig |     0.609 |
 |     xadc_wiz_0                              |     0.003 |
 |       inst                                  |     0.003 |
 +---------------------------------------------+-----------+

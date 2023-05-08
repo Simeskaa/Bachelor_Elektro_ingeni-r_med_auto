@@ -70,8 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35ticsg324-1L
 
@@ -129,12 +127,6 @@ set_property used_in_implementation false [get_files -all c:/Users/Bruker/Docume
 set_property used_in_synthesis false [get_files -all c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_us_0/arty_adc_eth_v4_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_us_0/arty_adc_eth_v4_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_us_0/arty_adc_eth_v4_auto_us_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_us_1/arty_adc_eth_v4_auto_us_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_us_1/arty_adc_eth_v4_auto_us_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_us_1/arty_adc_eth_v4_auto_us_1_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_us_2/arty_adc_eth_v4_auto_us_2_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_us_2/arty_adc_eth_v4_auto_us_2_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_us_2/arty_adc_eth_v4_auto_us_2_ooc.xdc]
 set_property used_in_synthesis false [get_files -all c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_ds_0/arty_adc_eth_v4_auto_ds_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_ds_0/arty_adc_eth_v4_auto_ds_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_ds_0/arty_adc_eth_v4_auto_ds_0_ooc.xdc]

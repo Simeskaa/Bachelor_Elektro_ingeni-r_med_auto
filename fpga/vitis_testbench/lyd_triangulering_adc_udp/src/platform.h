@@ -34,6 +34,8 @@
  */
 #define ETH_LINK_DETECT_INTERVAL 4
 
+#include"xil_types.h"
+
 void init_platform();
 void cleanup_platform();
 #ifdef __MICROBLAZE__
@@ -44,5 +46,27 @@ void timer_callback();
 #endif
 void platform_setup_timer();
 void platform_enable_interrupts();
+
+/********************** PROTOTYPE ADC FUNCITONS *******************************/
+int InitIntC(u16 DeviceId);
+int InitAdc(void);
+void StartAdc(void);
+void SysMonInterruptHandler(void *CallBackRef);
+int SysMonSetupInterruptSystem(u16 IntrId);
 #endif
 
+/**********************************************************
+                Buffer for ADC samples:
+**********************************************************/
+#define ADC_BUFFER_SIZE  (4*4410)  // => appr.100ms of sample values. NB: MUST be a multiple of 4!!
+
+extern u16 adc_buffer[2*ADC_BUFFER_SIZE];
+
+extern u16 *adc_buff_write_p;
+extern u16 *adc_buff_read_p;
+
+extern u32 adc_buff_write_enable;
+extern u32 adc_buff_read_enable;
+
+extern u32 adc_buff_1_filled;
+extern u32 adc_buff_2_filled;

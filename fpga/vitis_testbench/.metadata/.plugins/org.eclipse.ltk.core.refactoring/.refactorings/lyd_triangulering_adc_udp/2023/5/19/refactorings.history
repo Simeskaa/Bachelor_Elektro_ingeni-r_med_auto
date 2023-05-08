@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;lyd_triangulering_adc_udp/src/platform.c&apos; to &apos;platform_old.c&apos;" description="Rename resource &apos;platform.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/platform.c" name="platform_old.c" stamp="1683546841519" updateReferences="true"/>
+</session>

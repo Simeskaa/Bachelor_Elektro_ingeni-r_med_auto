@@ -96,39 +96,45 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="arty_adc_eth_v4.bd" FileRelPathName="ip/arty_adc_eth_v4_microblaze_0_axi_intc_0/arty_adc_eth_v4_microblaze_0_axi_intc_0.xci">
-          <Proxy FileSetName="arty_adc_eth_v4_microblaze_0_axi_intc_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="arty_adc_eth_v4.bd" FileRelPathName="ip/arty_adc_eth_v4_xadc_wiz_0_0/arty_adc_eth_v4_xadc_wiz_0_0.xci">
           <Proxy FileSetName="arty_adc_eth_v4_xadc_wiz_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="arty_adc_eth_v4.bd" FileRelPathName="ip/arty_adc_eth_v4_rst_clk_wiz_0_100M_0/arty_adc_eth_v4_rst_clk_wiz_0_100M_0.xci">
           <Proxy FileSetName="arty_adc_eth_v4_rst_clk_wiz_0_100M_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="arty_adc_eth_v4.bd" FileRelPathName="ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0.xci">
-          <Proxy FileSetName="arty_adc_eth_v4_mig_7series_0_0"/>
+        <CompFileExtendedInfo CompFileName="arty_adc_eth_v4.bd" FileRelPathName="ip/arty_adc_eth_v4_ilmb_bram_if_cntlr_0/arty_adc_eth_v4_ilmb_bram_if_cntlr_0.xci">
+          <Proxy FileSetName="arty_adc_eth_v4_ilmb_bram_if_cntlr_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="arty_adc_eth_v4.bd" FileRelPathName="ip/arty_adc_eth_v4_clk_wiz_0_0/arty_adc_eth_v4_clk_wiz_0_0.xci">
           <Proxy FileSetName="arty_adc_eth_v4_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="arty_adc_eth_v4.bd" FileRelPathName="ip/arty_adc_eth_v4_xbar_0/arty_adc_eth_v4_xbar_0.xci">
-          <Proxy FileSetName="arty_adc_eth_v4_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="arty_adc_eth_v4.bd" FileRelPathName="ip/arty_adc_eth_v4_microblaze_0_0/arty_adc_eth_v4_microblaze_0_0.xci">
+          <Proxy FileSetName="arty_adc_eth_v4_microblaze_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="arty_adc_eth_v4.bd" FileRelPathName="ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0.xci">
+          <Proxy FileSetName="arty_adc_eth_v4_mig_7series_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="arty_adc_eth_v4.bd" FileRelPathName="ip/arty_adc_eth_v4_lmb_bram_0/arty_adc_eth_v4_lmb_bram_0.xci">
           <Proxy FileSetName="arty_adc_eth_v4_lmb_bram_0"/>
         </CompFileExtendedInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/mig_a.prj">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="ScopedToCell" Val="arty_adc_eth_v4_mig_7series_0_0"/>
-        </FileInfo>
+        <CompFileExtendedInfo CompFileName="arty_adc_eth_v4.bd" FileRelPathName="ip/arty_adc_eth_v4_microblaze_0_axi_intc_0/arty_adc_eth_v4_microblaze_0_axi_intc_0.xci">
+          <Proxy FileSetName="arty_adc_eth_v4_microblaze_0_axi_intc_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="arty_adc_eth_v4.bd" FileRelPathName="ip/arty_adc_eth_v4_xbar_0/arty_adc_eth_v4_xbar_0.xci">
+          <Proxy FileSetName="arty_adc_eth_v4_xbar_0"/>
+        </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/arty_adc_eth_v4/hdl/arty_adc_eth_v4_wrapper.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/mig_a.prj">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="ScopedToCell" Val="arty_adc_eth_v4_mig_7series_0_0"/>
         </FileInfo>
       </File>
       <Config>
@@ -229,6 +235,20 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="arty_adc_eth_v4_ilmb_bram_if_cntlr_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/arty_adc_eth_v4_ilmb_bram_if_cntlr_0" RelGenDir="$PGENDIR/arty_adc_eth_v4_ilmb_bram_if_cntlr_0">
+      <Config>
+        <Option Name="TopModule" Val="arty_adc_eth_v4_ilmb_bram_if_cntlr_0"/>
+        <Option Name="dataflowViewerSettings" Val="min_width=16"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="arty_adc_eth_v4_microblaze_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/arty_adc_eth_v4_microblaze_0_0" RelGenDir="$PGENDIR/arty_adc_eth_v4_microblaze_0_0">
+      <Config>
+        <Option Name="TopModule" Val="arty_adc_eth_v4_microblaze_0_0"/>
+        <Option Name="dataflowViewerSettings" Val="min_width=16"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -301,9 +321,7 @@
     </Run>
     <Run Id="arty_adc_eth_v4_microblaze_0_axi_intc_0_synth_1" Type="Ft3:Synth" SrcSet="arty_adc_eth_v4_microblaze_0_axi_intc_0" Part="xc7a35ticsg324-1L" ConstrsSet="arty_adc_eth_v4_microblaze_0_axi_intc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/arty_adc_eth_v4_microblaze_0_axi_intc_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_microblaze_0_axi_intc_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_microblaze_0_axi_intc_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -312,6 +330,26 @@
       <RQSFiles/>
     </Run>
     <Run Id="arty_adc_eth_v4_rst_clk_wiz_0_100M_0_synth_1" Type="Ft3:Synth" SrcSet="arty_adc_eth_v4_rst_clk_wiz_0_100M_0" Part="xc7a35ticsg324-1L" ConstrsSet="arty_adc_eth_v4_rst_clk_wiz_0_100M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/arty_adc_eth_v4_rst_clk_wiz_0_100M_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_rst_clk_wiz_0_100M_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_rst_clk_wiz_0_100M_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="arty_adc_eth_v4_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="arty_adc_eth_v4_xbar_0" Part="xc7a35ticsg324-1L" ConstrsSet="arty_adc_eth_v4_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/arty_adc_eth_v4_xbar_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_xbar_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_xbar_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="arty_adc_eth_v4_ilmb_bram_if_cntlr_0_synth_1" Type="Ft3:Synth" SrcSet="arty_adc_eth_v4_ilmb_bram_if_cntlr_0" Part="xc7a35ticsg324-1L" ConstrsSet="arty_adc_eth_v4_ilmb_bram_if_cntlr_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/arty_adc_eth_v4_ilmb_bram_if_cntlr_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_ilmb_bram_if_cntlr_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_ilmb_bram_if_cntlr_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -323,7 +361,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="arty_adc_eth_v4_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="arty_adc_eth_v4_xbar_0" Part="xc7a35ticsg324-1L" ConstrsSet="arty_adc_eth_v4_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/arty_adc_eth_v4_xbar_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_xbar_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_xbar_0_synth_1">
+    <Run Id="arty_adc_eth_v4_microblaze_0_0_synth_1" Type="Ft3:Synth" SrcSet="arty_adc_eth_v4_microblaze_0_0" Part="xc7a35ticsg324-1L" ConstrsSet="arty_adc_eth_v4_microblaze_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/arty_adc_eth_v4_microblaze_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_microblaze_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_microblaze_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -423,9 +461,7 @@
     </Run>
     <Run Id="arty_adc_eth_v4_microblaze_0_axi_intc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35ticsg324-1L" ConstrsSet="arty_adc_eth_v4_microblaze_0_axi_intc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="arty_adc_eth_v4_microblaze_0_axi_intc_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_microblaze_0_axi_intc_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_microblaze_0_axi_intc_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -441,6 +477,40 @@
       <RQSFiles/>
     </Run>
     <Run Id="arty_adc_eth_v4_rst_clk_wiz_0_100M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35ticsg324-1L" ConstrsSet="arty_adc_eth_v4_rst_clk_wiz_0_100M_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="arty_adc_eth_v4_rst_clk_wiz_0_100M_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_rst_clk_wiz_0_100M_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_rst_clk_wiz_0_100M_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="arty_adc_eth_v4_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35ticsg324-1L" ConstrsSet="arty_adc_eth_v4_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="arty_adc_eth_v4_xbar_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_xbar_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_xbar_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="arty_adc_eth_v4_ilmb_bram_if_cntlr_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35ticsg324-1L" ConstrsSet="arty_adc_eth_v4_ilmb_bram_if_cntlr_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="arty_adc_eth_v4_ilmb_bram_if_cntlr_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_ilmb_bram_if_cntlr_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_ilmb_bram_if_cntlr_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
           <Desc>Default settings for Implementation.</Desc>
@@ -459,7 +529,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="arty_adc_eth_v4_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35ticsg324-1L" ConstrsSet="arty_adc_eth_v4_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="arty_adc_eth_v4_xbar_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_xbar_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_xbar_0_impl_1">
+    <Run Id="arty_adc_eth_v4_microblaze_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a35ticsg324-1L" ConstrsSet="arty_adc_eth_v4_microblaze_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="arty_adc_eth_v4_microblaze_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_microblaze_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/arty_adc_eth_v4_microblaze_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
           <Desc>Default settings for Implementation.</Desc>

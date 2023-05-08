@@ -26,3 +26,5 @@ catch {bsp regenerate}
 platform generate -domains standalone_domain 
 platform generate -domains standalone_domain 
 platform generate
+platform active {v6_udp_adc_81Mhz}
+platform generate -domains 

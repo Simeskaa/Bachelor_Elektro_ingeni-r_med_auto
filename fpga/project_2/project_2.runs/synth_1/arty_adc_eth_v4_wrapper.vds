@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Sun May  7 15:19:39 2023
-# Process ID: 9416
+# Start of session at: Mon May  8 13:03:09 2023
+# Process ID: 236
 # Current directory: C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1
 # Command line: vivado.exe -log arty_adc_eth_v4_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source arty_adc_eth_v4_wrapper.tcl
 # Log file: C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/arty_adc_eth_v4_wrapper.vds
@@ -11,11 +11,11 @@
 # Running On: DESKTOP-T99OIQI, OS: Windows, CPU Frequency: 2712 MHz, CPU Physical cores: 2, Host memory: 8479 MB
 #-----------------------------------------------------------
 source arty_adc_eth_v4_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 543.621 ; gain = 118.875
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 544.047 ; gain = 124.918
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/bachelor_2023/Vivado/2022.2/data/ip'.
-add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 610.684 ; gain = 67.062
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 610.949 ; gain = 66.902
 Command: read_checkpoint -auto_incremental -incremental C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -28,178 +28,170 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 14096
+INFO: [Synth 8-7075] Helper process launched with PID 6992
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/bachelor_2023/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1417.418 ; gain = 411.031
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1418.172 ; gain = 410.586
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_wrapper' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/hdl/arty_adc_eth_v4_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:12]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_axi_ethernetlite_0_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_axi_ethernetlite_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_axi_ethernetlite_0_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_axi_ethernetlite_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_axi_timer_0_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_axi_timer_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_axi_timer_0_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_axi_timer_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'generateout0' of module 'arty_adc_eth_v4_axi_timer_0_0' is unconnected for instance 'axi_timer_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:449]
-WARNING: [Synth 8-7071] port 'generateout1' of module 'arty_adc_eth_v4_axi_timer_0_0' is unconnected for instance 'axi_timer_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:449]
-WARNING: [Synth 8-7071] port 'pwm0' of module 'arty_adc_eth_v4_axi_timer_0_0' is unconnected for instance 'axi_timer_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:449]
-WARNING: [Synth 8-7023] instance 'axi_timer_0' of module 'arty_adc_eth_v4_axi_timer_0_0' has 26 connections declared, but only 23 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:449]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_axi_uartlite_0_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_axi_uartlite_0_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_clk_wiz_0_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_clk_wiz_0_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_mdm_1_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_mdm_1_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_microblaze_0_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_microblaze_0_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_microblaze_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWID' of module 'arty_adc_eth_v4_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWADDR' of module 'arty_adc_eth_v4_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWLEN' of module 'arty_adc_eth_v4_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWSIZE' of module 'arty_adc_eth_v4_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWBURST' of module 'arty_adc_eth_v4_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWLOCK' of module 'arty_adc_eth_v4_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWCACHE' of module 'arty_adc_eth_v4_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWPROT' of module 'arty_adc_eth_v4_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWQOS' of module 'arty_adc_eth_v4_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_AWVALID' of module 'arty_adc_eth_v4_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_WDATA' of module 'arty_adc_eth_v4_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_WSTRB' of module 'arty_adc_eth_v4_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_WLAST' of module 'arty_adc_eth_v4_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_WVALID' of module 'arty_adc_eth_v4_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_BREADY' of module 'arty_adc_eth_v4_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-WARNING: [Synth 8-7071] port 'M_AXI_IC_ARID' of module 'arty_adc_eth_v4_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-WARNING: [Synth 8-7071] port 'M_AXI_DC_AWID' of module 'arty_adc_eth_v4_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-WARNING: [Synth 8-7071] port 'M_AXI_DC_ARID' of module 'arty_adc_eth_v4_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-WARNING: [Synth 8-7023] instance 'microblaze_0' of module 'arty_adc_eth_v4_microblaze_0_0' has 126 connections declared, but only 108 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:513]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_microblaze_0_axi_intc_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_microblaze_0_axi_intc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_microblaze_0_axi_intc_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_microblaze_0_axi_intc_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:990]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_10KLL7Q' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2734]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_ds_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_ds_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_pc_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_pc_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'arty_adc_eth_v4_auto_pc_0' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3085]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'arty_adc_eth_v4_auto_pc_0' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3085]
-WARNING: [Synth 8-7023] instance 'auto_pc' of module 'arty_adc_eth_v4_auto_pc_0' has 56 connections declared, but only 54 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3085]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_10KLL7Q' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2734]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_AM8W4O' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3142]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_AM8W4O' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3142]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_5GDVJV' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3414]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_ds_1' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_ds_1' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_pc_1' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_pc_1' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_1_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'arty_adc_eth_v4_auto_pc_1' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3765]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'arty_adc_eth_v4_auto_pc_1' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3765]
-WARNING: [Synth 8-7023] instance 'auto_pc' of module 'arty_adc_eth_v4_auto_pc_1' has 56 connections declared, but only 54 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3765]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_5GDVJV' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3414]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1EJAUPH' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3822]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_ds_2' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_ds_2' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_2_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_pc_2' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_pc_2' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_2_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'arty_adc_eth_v4_auto_pc_2' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4173]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'arty_adc_eth_v4_auto_pc_2' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4173]
-WARNING: [Synth 8-7023] instance 'auto_pc' of module 'arty_adc_eth_v4_auto_pc_2' has 56 connections declared, but only 54 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4173]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1EJAUPH' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3822]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_XF3SYL' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4230]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_ds_3' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_ds_3' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_3_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_pc_3' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_pc_3' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_3_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'arty_adc_eth_v4_auto_pc_3' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4581]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'arty_adc_eth_v4_auto_pc_3' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4581]
-WARNING: [Synth 8-7023] instance 'auto_pc' of module 'arty_adc_eth_v4_auto_pc_3' has 56 connections declared, but only 54 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4581]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_XF3SYL' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4230]
-INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1PL97PV' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4638]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_ds_4' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_4_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_ds_4' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_4_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_pc_4' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_4_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_pc_4' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_4_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'arty_adc_eth_v4_auto_pc_4' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4989]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'arty_adc_eth_v4_auto_pc_4' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4989]
-WARNING: [Synth 8-7023] instance 'auto_pc' of module 'arty_adc_eth_v4_auto_pc_4' has 56 connections declared, but only 54 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4989]
-INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1PL97PV' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4638]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_19BWURI' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5280]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_pc_5' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_5_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_pc_5' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_5_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_us_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_us_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_us_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_us_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'arty_adc_eth_v4_auto_us_0' is unconnected for instance 'auto_us' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5595]
-WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'arty_adc_eth_v4_auto_us_0' is unconnected for instance 'auto_us' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5595]
-WARNING: [Synth 8-7023] instance 'auto_us' of module 'arty_adc_eth_v4_auto_us_0' has 72 connections declared, but only 70 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5595]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_19BWURI' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5280]
-INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1X4N1S' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5668]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_us_1' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_us_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_us_1' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_us_1_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'arty_adc_eth_v4_auto_us_1' is unconnected for instance 'auto_us' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5947]
-WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'arty_adc_eth_v4_auto_us_1' is unconnected for instance 'auto_us' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5947]
-WARNING: [Synth 8-7023] instance 'auto_us' of module 'arty_adc_eth_v4_auto_us_1' has 72 connections declared, but only 70 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5947]
-INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1X4N1S' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5668]
-INFO: [Synth 8-6157] synthesizing module 's02_couplers_imp_E5NQW3' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:6020]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_us_2' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_us_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_us_2' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_us_2_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'arty_adc_eth_v4_auto_us_2' is unconnected for instance 'auto_us' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:6155]
-WARNING: [Synth 8-7023] instance 'auto_us' of module 'arty_adc_eth_v4_auto_us_2' has 34 connections declared, but only 33 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:6155]
-INFO: [Synth 8-6155] done synthesizing module 's02_couplers_imp_E5NQW3' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:6020]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_xbar_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_xbar_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_xbar_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_xbar_0_stub.v:5]
-WARNING: [Synth 8-689] width (2) of port connection 's_axi_awready' does not match port width (3) of module 'arty_adc_eth_v4_xbar_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2716]
-WARNING: [Synth 8-689] width (4) of port connection 's_axi_bresp' does not match port width (6) of module 'arty_adc_eth_v4_xbar_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2720]
-WARNING: [Synth 8-689] width (2) of port connection 's_axi_bvalid' does not match port width (3) of module 'arty_adc_eth_v4_xbar_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2721]
-WARNING: [Synth 8-689] width (2) of port connection 's_axi_wready' does not match port width (3) of module 'arty_adc_eth_v4_xbar_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2729]
-WARNING: [Synth 8-7071] port 's_axi_bid' of module 'arty_adc_eth_v4_xbar_0' is unconnected for instance 'xbar' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2655]
-WARNING: [Synth 8-7071] port 's_axi_rid' of module 'arty_adc_eth_v4_xbar_0' is unconnected for instance 'xbar' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2655]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'arty_adc_eth_v4_xbar_0' has 78 connections declared, but only 76 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2655]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:990]
-INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_1MRCL19' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5046]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_dlmb_bram_if_cntlr_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_dlmb_v10_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_dlmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_dlmb_v10_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_dlmb_v10_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'arty_adc_eth_v4_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5192]
-WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'arty_adc_eth_v4_dlmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5192]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_ilmb_bram_if_cntlr_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_ilmb_v10_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_ilmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_ilmb_v10_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_ilmb_v10_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'arty_adc_eth_v4_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5238]
-WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'arty_adc_eth_v4_ilmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5238]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_lmb_bram_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_lmb_bram_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_lmb_bram_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_lmb_bram_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'rsta_busy' of module 'arty_adc_eth_v4_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5263]
-WARNING: [Synth 8-7071] port 'rstb_busy' of module 'arty_adc_eth_v4_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5263]
-WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'arty_adc_eth_v4_lmb_bram_0' has 16 connections declared, but only 14 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5263]
-INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_1MRCL19' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5046]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_axi_ethernetlite_0_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_axi_ethernetlite_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_axi_ethernetlite_0_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_axi_ethernetlite_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_axi_timer_0_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_axi_timer_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_axi_timer_0_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_axi_timer_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'generateout0' of module 'arty_adc_eth_v4_axi_timer_0_0' is unconnected for instance 'axi_timer_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:401]
+WARNING: [Synth 8-7071] port 'generateout1' of module 'arty_adc_eth_v4_axi_timer_0_0' is unconnected for instance 'axi_timer_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:401]
+WARNING: [Synth 8-7071] port 'pwm0' of module 'arty_adc_eth_v4_axi_timer_0_0' is unconnected for instance 'axi_timer_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:401]
+WARNING: [Synth 8-7023] instance 'axi_timer_0' of module 'arty_adc_eth_v4_axi_timer_0_0' has 26 connections declared, but only 23 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:401]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_axi_uartlite_0_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_axi_uartlite_0_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_clk_wiz_0_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_clk_wiz_0_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_mdm_1_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_mdm_1_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_microblaze_0_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_microblaze_0_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_microblaze_0_axi_intc_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_microblaze_0_axi_intc_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:875]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_10KLL7Q' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2634]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_ds_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_ds_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_pc_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_pc_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'arty_adc_eth_v4_auto_pc_0' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2985]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'arty_adc_eth_v4_auto_pc_0' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2985]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'arty_adc_eth_v4_auto_pc_0' has 56 connections declared, but only 54 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2985]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_10KLL7Q' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2634]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_AM8W4O' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3042]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_AM8W4O' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3042]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_5GDVJV' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3314]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_ds_1' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_ds_1' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_pc_1' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_pc_1' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'arty_adc_eth_v4_auto_pc_1' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3665]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'arty_adc_eth_v4_auto_pc_1' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3665]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'arty_adc_eth_v4_auto_pc_1' has 56 connections declared, but only 54 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3665]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_5GDVJV' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3314]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1EJAUPH' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3722]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_ds_2' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_ds_2' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_pc_2' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_pc_2' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_2_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'arty_adc_eth_v4_auto_pc_2' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4073]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'arty_adc_eth_v4_auto_pc_2' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4073]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'arty_adc_eth_v4_auto_pc_2' has 56 connections declared, but only 54 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4073]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1EJAUPH' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:3722]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_XF3SYL' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4130]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_ds_3' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_ds_3' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_3_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_pc_3' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_pc_3' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_3_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'arty_adc_eth_v4_auto_pc_3' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4481]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'arty_adc_eth_v4_auto_pc_3' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4481]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'arty_adc_eth_v4_auto_pc_3' has 56 connections declared, but only 54 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4481]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_XF3SYL' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4130]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1PL97PV' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4538]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_ds_4' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_4_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_ds_4' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_ds_4_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_pc_4' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_4_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_pc_4' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_4_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'arty_adc_eth_v4_auto_pc_4' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4889]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'arty_adc_eth_v4_auto_pc_4' is unconnected for instance 'auto_pc' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4889]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'arty_adc_eth_v4_auto_pc_4' has 56 connections declared, but only 54 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4889]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1PL97PV' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4538]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_19BWURI' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5180]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_pc_5' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_5_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_pc_5' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_pc_5_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_auto_us_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_us_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_auto_us_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_auto_us_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'arty_adc_eth_v4_auto_us_0' is unconnected for instance 'auto_us' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5495]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'arty_adc_eth_v4_auto_us_0' is unconnected for instance 'auto_us' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5495]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'arty_adc_eth_v4_auto_us_0' has 72 connections declared, but only 70 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5495]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_19BWURI' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5180]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1X4N1S' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5568]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1X4N1S' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5568]
+WARNING: [Synth 8-7071] port 'M_AXI_arregion' of module 's01_couplers_imp_1X4N1S' is unconnected for instance 's01_couplers' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2446]
+WARNING: [Synth 8-7071] port 'M_AXI_awregion' of module 's01_couplers_imp_1X4N1S' is unconnected for instance 's01_couplers' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2446]
+WARNING: [Synth 8-7023] instance 's01_couplers' of module 's01_couplers_imp_1X4N1S' has 74 connections declared, but only 72 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2446]
+INFO: [Synth 8-6157] synthesizing module 's02_couplers_imp_E5NQW3' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5826]
+INFO: [Synth 8-6155] done synthesizing module 's02_couplers_imp_E5NQW3' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5826]
+WARNING: [Synth 8-7071] port 'M_AXI_arregion' of module 's02_couplers_imp_E5NQW3' is unconnected for instance 's02_couplers' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2519]
+WARNING: [Synth 8-7023] instance 's02_couplers' of module 's02_couplers_imp_E5NQW3' has 36 connections declared, but only 35 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2519]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_xbar_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_xbar_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_xbar_0_stub.v:5]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_awready' does not match port width (3) of module 'arty_adc_eth_v4_xbar_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2616]
+WARNING: [Synth 8-689] width (4) of port connection 's_axi_bresp' does not match port width (6) of module 'arty_adc_eth_v4_xbar_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2620]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_bvalid' does not match port width (3) of module 'arty_adc_eth_v4_xbar_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2621]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_wready' does not match port width (3) of module 'arty_adc_eth_v4_xbar_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2629]
+WARNING: [Synth 8-7071] port 's_axi_bid' of module 'arty_adc_eth_v4_xbar_0' is unconnected for instance 'xbar' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2555]
+WARNING: [Synth 8-7071] port 's_axi_rid' of module 'arty_adc_eth_v4_xbar_0' is unconnected for instance 'xbar' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2555]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'arty_adc_eth_v4_xbar_0' has 78 connections declared, but only 76 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:2555]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:875]
+WARNING: [Synth 8-7071] port 'S01_AXI_arready' of module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:544]
+WARNING: [Synth 8-7071] port 'S01_AXI_awready' of module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:544]
+WARNING: [Synth 8-7071] port 'S01_AXI_bresp' of module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:544]
+WARNING: [Synth 8-7071] port 'S01_AXI_bvalid' of module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:544]
+WARNING: [Synth 8-7071] port 'S01_AXI_rdata' of module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:544]
+WARNING: [Synth 8-7071] port 'S01_AXI_rlast' of module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:544]
+WARNING: [Synth 8-7071] port 'S01_AXI_rresp' of module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:544]
+WARNING: [Synth 8-7071] port 'S01_AXI_rvalid' of module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:544]
+WARNING: [Synth 8-7071] port 'S01_AXI_wready' of module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:544]
+WARNING: [Synth 8-7071] port 'S02_AXI_arready' of module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:544]
+WARNING: [Synth 8-7071] port 'S02_AXI_rdata' of module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:544]
+WARNING: [Synth 8-7071] port 'S02_AXI_rlast' of module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:544]
+WARNING: [Synth 8-7071] port 'S02_AXI_rresp' of module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:544]
+WARNING: [Synth 8-7071] port 'S02_AXI_rvalid' of module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:544]
+WARNING: [Synth 8-7023] instance 'microblaze_0_axi_periph' of module 'arty_adc_eth_v4_microblaze_0_axi_periph_0' has 212 connections declared, but only 198 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:544]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_1MRCL19' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4946]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_dlmb_bram_if_cntlr_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_dlmb_v10_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_dlmb_v10_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_dlmb_v10_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'arty_adc_eth_v4_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5092]
+WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'arty_adc_eth_v4_dlmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5092]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_ilmb_bram_if_cntlr_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_ilmb_v10_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_ilmb_v10_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_ilmb_v10_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'arty_adc_eth_v4_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5138]
+WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'arty_adc_eth_v4_ilmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5138]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_lmb_bram_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_lmb_bram_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_lmb_bram_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'arty_adc_eth_v4_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5163]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'arty_adc_eth_v4_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5163]
+WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'arty_adc_eth_v4_lmb_bram_0' has 16 connections declared, but only 14 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:5163]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_1MRCL19' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:4946]
 INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_microblaze_0_xlconcat_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_microblaze_0_xlconcat_0/synth/arty_adc_eth_v4_microblaze_0_xlconcat_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_microblaze_0_xlconcat_0' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_microblaze_0_xlconcat_0/synth/arty_adc_eth_v4_microblaze_0_xlconcat_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_mig_7series_0_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_mig_7series_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_mig_7series_0_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_mig_7series_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'ui_addn_clk_1' of module 'arty_adc_eth_v4_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:886]
-WARNING: [Synth 8-7071] port 'ui_addn_clk_2' of module 'arty_adc_eth_v4_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:886]
-WARNING: [Synth 8-7071] port 'ui_addn_clk_3' of module 'arty_adc_eth_v4_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:886]
-WARNING: [Synth 8-7071] port 'ui_addn_clk_4' of module 'arty_adc_eth_v4_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:886]
-WARNING: [Synth 8-7071] port 'app_sr_active' of module 'arty_adc_eth_v4_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:886]
-WARNING: [Synth 8-7071] port 'app_ref_ack' of module 'arty_adc_eth_v4_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:886]
-WARNING: [Synth 8-7071] port 'app_zq_ack' of module 'arty_adc_eth_v4_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:886]
-WARNING: [Synth 8-7071] port 'init_calib_complete' of module 'arty_adc_eth_v4_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:886]
-WARNING: [Synth 8-7071] port 'device_temp' of module 'arty_adc_eth_v4_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:886]
-WARNING: [Synth 8-7023] instance 'mig_7series_0' of module 'arty_adc_eth_v4_mig_7series_0_0' has 70 connections declared, but only 61 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:886]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_rst_clk_wiz_0_100M_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_rst_clk_wiz_0_100M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_rst_clk_wiz_0_100M_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_rst_clk_wiz_0_100M_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'arty_adc_eth_v4_rst_clk_wiz_0_100M_0' is unconnected for instance 'rst_clk_wiz_0_100M' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:948]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'arty_adc_eth_v4_rst_clk_wiz_0_100M_0' is unconnected for instance 'rst_clk_wiz_0_100M' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:948]
-WARNING: [Synth 8-7023] instance 'rst_clk_wiz_0_100M' of module 'arty_adc_eth_v4_rst_clk_wiz_0_100M_0' has 10 connections declared, but only 8 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:948]
-INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_xadc_wiz_0_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_xadc_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_xadc_wiz_0_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-9416-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_xadc_wiz_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'channel_out' of module 'arty_adc_eth_v4_xadc_wiz_0_0' is unconnected for instance 'xadc_wiz_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:957]
-WARNING: [Synth 8-7071] port 'busy_out' of module 'arty_adc_eth_v4_xadc_wiz_0_0' is unconnected for instance 'xadc_wiz_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:957]
-WARNING: [Synth 8-7071] port 'eoc_out' of module 'arty_adc_eth_v4_xadc_wiz_0_0' is unconnected for instance 'xadc_wiz_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:957]
-WARNING: [Synth 8-7071] port 'eos_out' of module 'arty_adc_eth_v4_xadc_wiz_0_0' is unconnected for instance 'xadc_wiz_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:957]
-WARNING: [Synth 8-7071] port 'alarm_out' of module 'arty_adc_eth_v4_xadc_wiz_0_0' is unconnected for instance 'xadc_wiz_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:957]
-WARNING: [Synth 8-7023] instance 'xadc_wiz_0' of module 'arty_adc_eth_v4_xadc_wiz_0_0' has 35 connections declared, but only 30 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:957]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_mig_7series_0_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_mig_7series_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_mig_7series_0_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_mig_7series_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'ui_addn_clk_1' of module 'arty_adc_eth_v4_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:771]
+WARNING: [Synth 8-7071] port 'ui_addn_clk_2' of module 'arty_adc_eth_v4_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:771]
+WARNING: [Synth 8-7071] port 'ui_addn_clk_3' of module 'arty_adc_eth_v4_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:771]
+WARNING: [Synth 8-7071] port 'ui_addn_clk_4' of module 'arty_adc_eth_v4_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:771]
+WARNING: [Synth 8-7071] port 'app_sr_active' of module 'arty_adc_eth_v4_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:771]
+WARNING: [Synth 8-7071] port 'app_ref_ack' of module 'arty_adc_eth_v4_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:771]
+WARNING: [Synth 8-7071] port 'app_zq_ack' of module 'arty_adc_eth_v4_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:771]
+WARNING: [Synth 8-7071] port 'init_calib_complete' of module 'arty_adc_eth_v4_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:771]
+WARNING: [Synth 8-7071] port 'device_temp' of module 'arty_adc_eth_v4_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:771]
+WARNING: [Synth 8-7023] instance 'mig_7series_0' of module 'arty_adc_eth_v4_mig_7series_0_0' has 70 connections declared, but only 61 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:771]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_rst_clk_wiz_0_100M_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_rst_clk_wiz_0_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_rst_clk_wiz_0_100M_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_rst_clk_wiz_0_100M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'arty_adc_eth_v4_rst_clk_wiz_0_100M_0' is unconnected for instance 'rst_clk_wiz_0_100M' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:833]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'arty_adc_eth_v4_rst_clk_wiz_0_100M_0' is unconnected for instance 'rst_clk_wiz_0_100M' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:833]
+WARNING: [Synth 8-7023] instance 'rst_clk_wiz_0_100M' of module 'arty_adc_eth_v4_rst_clk_wiz_0_100M_0' has 10 connections declared, but only 8 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:833]
+INFO: [Synth 8-6157] synthesizing module 'arty_adc_eth_v4_xadc_wiz_0_0' [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_xadc_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4_xadc_wiz_0_0' (0#1) [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/.Xil/Vivado-236-DESKTOP-T99OIQI/realtime/arty_adc_eth_v4_xadc_wiz_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'channel_out' of module 'arty_adc_eth_v4_xadc_wiz_0_0' is unconnected for instance 'xadc_wiz_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:842]
+WARNING: [Synth 8-7071] port 'busy_out' of module 'arty_adc_eth_v4_xadc_wiz_0_0' is unconnected for instance 'xadc_wiz_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:842]
+WARNING: [Synth 8-7071] port 'eoc_out' of module 'arty_adc_eth_v4_xadc_wiz_0_0' is unconnected for instance 'xadc_wiz_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:842]
+WARNING: [Synth 8-7071] port 'eos_out' of module 'arty_adc_eth_v4_xadc_wiz_0_0' is unconnected for instance 'xadc_wiz_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:842]
+WARNING: [Synth 8-7071] port 'alarm_out' of module 'arty_adc_eth_v4_xadc_wiz_0_0' is unconnected for instance 'xadc_wiz_0' [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:842]
+WARNING: [Synth 8-7023] instance 'xadc_wiz_0' of module 'arty_adc_eth_v4_xadc_wiz_0_0' has 35 connections declared, but only 30 given [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:842]
 INFO: [Synth 8-6155] done synthesizing module 'arty_adc_eth_v4' (0#1) [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/synth/arty_adc_eth_v4.v:12]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [D:/bachelor_2023/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902]
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [D:/bachelor_2023/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902]
@@ -306,18 +298,18 @@ WARNING: [Synth 8-7129] Port In102[0] in module xlconcat_v2_1_4_xlconcat is eith
 WARNING: [Synth 8-7129] Port In103[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1530.043 ; gain = 523.656
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1528.949 ; gain = 521.363
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1530.043 ; gain = 523.656
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1528.949 ; gain = 521.363
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1530.043 ; gain = 523.656
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1528.949 ; gain = 521.363
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.190 . Memory (MB): peak = 1530.043 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.178 . Memory (MB): peak = 1528.949 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -328,16 +320,16 @@ Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/f
 Finished Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_clk_wiz_0_0/arty_adc_eth_v4_clk_wiz_0_0/arty_adc_eth_v4_clk_wiz_0_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/clk_wiz_0'
 Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/mig_7series_0'
 Finished Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0/arty_adc_eth_v4_mig_7series_0_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/mig_7series_0'
-Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_microblaze_0_0/arty_adc_eth_v4_microblaze_0_0/xadc_eth_microblaze_0_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0'
-Finished Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_microblaze_0_0/arty_adc_eth_v4_microblaze_0_0/xadc_eth_microblaze_0_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0'
+Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_microblaze_0_0/arty_adc_eth_v4_microblaze_0_0/arty_adc_eth_v4_microblaze_0_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0'
+Finished Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_microblaze_0_0/arty_adc_eth_v4_microblaze_0_0/arty_adc_eth_v4_microblaze_0_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0'
 Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_dlmb_v10_0/arty_adc_eth_v4_dlmb_v10_0/design_1_ilmb_v10_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_local_memory/dlmb_v10'
 Finished Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_dlmb_v10_0/arty_adc_eth_v4_dlmb_v10_0/design_1_ilmb_v10_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_local_memory/dlmb_v10'
 Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_ilmb_v10_0/arty_adc_eth_v4_ilmb_v10_0/design_1_ilmb_v10_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_local_memory/ilmb_v10'
 Finished Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_ilmb_v10_0/arty_adc_eth_v4_ilmb_v10_0/design_1_ilmb_v10_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_local_memory/ilmb_v10'
 Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_dlmb_bram_if_cntlr_0/arty_adc_eth_v4_dlmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
 Finished Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_dlmb_bram_if_cntlr_0/arty_adc_eth_v4_dlmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_ilmb_bram_if_cntlr_0/arty_adc_eth_v4_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Finished Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_ilmb_bram_if_cntlr_0/arty_adc_eth_v4_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_ilmb_bram_if_cntlr_0/arty_adc_eth_v4_ilmb_bram_if_cntlr_0/arty_adc_eth_v4_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_ilmb_bram_if_cntlr_0/arty_adc_eth_v4_ilmb_bram_if_cntlr_0/arty_adc_eth_v4_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
 Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_lmb_bram_0/arty_adc_eth_v4_lmb_bram_0/arty_adc_eth_v4_lmb_bram_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_local_memory/lmb_bram'
 Finished Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_lmb_bram_0/arty_adc_eth_v4_lmb_bram_0/arty_adc_eth_v4_lmb_bram_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_local_memory/lmb_bram'
 Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_xbar_0/arty_adc_eth_v4_xbar_0/arty_adc_eth_v4_xbar_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_axi_periph/xbar'
@@ -346,10 +338,6 @@ Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/f
 Finished Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_pc_5/arty_adc_eth_v4_auto_pc_5/design_1_auto_pc_5_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_us_0/arty_adc_eth_v4_auto_us_0/design_1_auto_us_1_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_axi_periph/s00_couplers/auto_us'
 Finished Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_us_0/arty_adc_eth_v4_auto_us_0/design_1_auto_us_1_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_axi_periph/s00_couplers/auto_us'
-Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_us_1/arty_adc_eth_v4_auto_us_1/design_1_auto_us_1_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_axi_periph/s01_couplers/auto_us'
-Finished Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_us_1/arty_adc_eth_v4_auto_us_1/design_1_auto_us_1_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_axi_periph/s01_couplers/auto_us'
-Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_us_2/arty_adc_eth_v4_auto_us_2/design_1_auto_us_2_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_axi_periph/s02_couplers/auto_us'
-Finished Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_us_2/arty_adc_eth_v4_auto_us_2/design_1_auto_us_2_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_axi_periph/s02_couplers/auto_us'
 Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_ds_0/arty_adc_eth_v4_auto_ds_0/design_1_auto_ds_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_axi_periph/m00_couplers/auto_ds'
 Finished Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_ds_0/arty_adc_eth_v4_auto_ds_0/design_1_auto_ds_0_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_axi_periph/m00_couplers/auto_ds'
 Parsing XDC File [c:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.gen/sources_1/bd/arty_adc_eth_v4/ip/arty_adc_eth_v4_auto_pc_0/arty_adc_eth_v4_auto_pc_0/design_1_auto_pc_4_in_context.xdc] for cell 'arty_adc_eth_v4_i/microblaze_0_axi_periph/m00_couplers/auto_pc'
@@ -392,25 +380,25 @@ Parsing XDC File [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/f
 Finished Parsing XDC File [C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1548.707 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1548.160 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1548.707 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1548.160 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'arty_adc_eth_v4_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '12.308', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/bachelor_2023/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 1549.457 ; gain = 543.070
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1548.172 ; gain = 540.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35ticsg324-1L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 1549.457 ; gain = 543.070
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1548.172 ; gain = 540.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -529,8 +517,6 @@ Applied set_property KEEP_HIERARCHY = SOFT for arty_adc_eth_v4_i/microblaze_0_lo
 Applied set_property KEEP_HIERARCHY = SOFT for arty_adc_eth_v4_i/microblaze_0_axi_periph/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for arty_adc_eth_v4_i/microblaze_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for arty_adc_eth_v4_i/microblaze_0_axi_periph/s00_couplers/auto_us. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for arty_adc_eth_v4_i/microblaze_0_axi_periph/s01_couplers/auto_us. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for arty_adc_eth_v4_i/microblaze_0_axi_periph/s02_couplers/auto_us. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for arty_adc_eth_v4_i/microblaze_0_axi_periph/m00_couplers/auto_ds. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for arty_adc_eth_v4_i/microblaze_0_axi_periph/m00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for arty_adc_eth_v4_i/microblaze_0_axi_periph/m02_couplers/auto_ds. (constraint file  auto generated constraint).
@@ -551,10 +537,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for arty_adc_eth_v4_i/axi_timer_0. (c
 Applied set_property KEEP_HIERARCHY = SOFT for arty_adc_eth_v4_i/xadc_wiz_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for arty_adc_eth_v4_i/rst_clk_wiz_0_100M. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1549.457 ; gain = 543.070
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1548.172 ; gain = 540.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 1549.457 ; gain = 543.070
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 1548.172 ; gain = 540.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -577,25 +563,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 1549.457 ; gain = 543.070
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1548.172 ; gain = 540.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:53 . Memory (MB): peak = 1549.457 ; gain = 543.070
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:51 . Memory (MB): peak = 1548.172 ; gain = 540.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:53 . Memory (MB): peak = 1549.457 ; gain = 543.070
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:51 . Memory (MB): peak = 1548.172 ; gain = 540.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:53 . Memory (MB): peak = 1549.457 ; gain = 543.070
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 1548.172 ; gain = 540.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -613,37 +599,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:01:04 . Memory (MB): peak = 1549.457 ; gain = 543.070
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 1550.004 ; gain = 542.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:01:04 . Memory (MB): peak = 1549.457 ; gain = 543.070
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 1550.004 ; gain = 542.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:01:04 . Memory (MB): peak = 1549.457 ; gain = 543.070
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 1550.004 ; gain = 542.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:01:04 . Memory (MB): peak = 1549.457 ; gain = 543.070
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:01:02 . Memory (MB): peak = 1550.004 ; gain = 542.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:01:04 . Memory (MB): peak = 1549.457 ; gain = 543.070
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:01:02 . Memory (MB): peak = 1550.004 ; gain = 542.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:01:04 . Memory (MB): peak = 1549.457 ; gain = 543.070
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:01:02 . Memory (MB): peak = 1550.004 ; gain = 542.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -666,23 +652,21 @@ Report BlackBoxes:
 |11    |arty_adc_eth_v4_auto_pc_4               |         1|
 |12    |arty_adc_eth_v4_auto_pc_5               |         1|
 |13    |arty_adc_eth_v4_auto_us_0               |         1|
-|14    |arty_adc_eth_v4_auto_us_1               |         1|
-|15    |arty_adc_eth_v4_auto_us_2               |         1|
-|16    |arty_adc_eth_v4_axi_ethernetlite_0_0    |         1|
-|17    |arty_adc_eth_v4_axi_timer_0_0           |         1|
-|18    |arty_adc_eth_v4_axi_uartlite_0_0        |         1|
-|19    |arty_adc_eth_v4_clk_wiz_0_0             |         1|
-|20    |arty_adc_eth_v4_mdm_1_0                 |         1|
-|21    |arty_adc_eth_v4_microblaze_0_0          |         1|
-|22    |arty_adc_eth_v4_microblaze_0_axi_intc_0 |         1|
-|23    |arty_adc_eth_v4_mig_7series_0_0         |         1|
-|24    |arty_adc_eth_v4_rst_clk_wiz_0_100M_0    |         1|
-|25    |arty_adc_eth_v4_xadc_wiz_0_0            |         1|
-|26    |arty_adc_eth_v4_dlmb_bram_if_cntlr_0    |         1|
-|27    |arty_adc_eth_v4_dlmb_v10_0              |         1|
-|28    |arty_adc_eth_v4_ilmb_bram_if_cntlr_0    |         1|
-|29    |arty_adc_eth_v4_ilmb_v10_0              |         1|
-|30    |arty_adc_eth_v4_lmb_bram_0              |         1|
+|14    |arty_adc_eth_v4_axi_ethernetlite_0_0    |         1|
+|15    |arty_adc_eth_v4_axi_timer_0_0           |         1|
+|16    |arty_adc_eth_v4_axi_uartlite_0_0        |         1|
+|17    |arty_adc_eth_v4_clk_wiz_0_0             |         1|
+|18    |arty_adc_eth_v4_mdm_1_0                 |         1|
+|19    |arty_adc_eth_v4_microblaze_0_0          |         1|
+|20    |arty_adc_eth_v4_microblaze_0_axi_intc_0 |         1|
+|21    |arty_adc_eth_v4_mig_7series_0_0         |         1|
+|22    |arty_adc_eth_v4_rst_clk_wiz_0_100M_0    |         1|
+|23    |arty_adc_eth_v4_xadc_wiz_0_0            |         1|
+|24    |arty_adc_eth_v4_dlmb_bram_if_cntlr_0    |         1|
+|25    |arty_adc_eth_v4_dlmb_v10_0              |         1|
+|26    |arty_adc_eth_v4_ilmb_bram_if_cntlr_0    |         1|
+|27    |arty_adc_eth_v4_ilmb_v10_0              |         1|
+|28    |arty_adc_eth_v4_lmb_bram_0              |         1|
 +------+----------------------------------------+----------+
 
 Report Cell Usage: 
@@ -691,49 +675,49 @@ Report Cell Usage:
 +------+--------------------------------------+------+
 |1     |arty_adc_eth_v4_auto_ds               |     5|
 |6     |arty_adc_eth_v4_auto_pc               |     6|
-|12    |arty_adc_eth_v4_auto_us               |     3|
-|15    |arty_adc_eth_v4_axi_ethernetlite_0    |     1|
-|16    |arty_adc_eth_v4_axi_timer_0           |     1|
-|17    |arty_adc_eth_v4_axi_uartlite_0        |     1|
-|18    |arty_adc_eth_v4_clk_wiz_0             |     1|
-|19    |arty_adc_eth_v4_dlmb_bram_if_cntlr    |     1|
-|20    |arty_adc_eth_v4_dlmb_v10              |     1|
-|21    |arty_adc_eth_v4_ilmb_bram_if_cntlr    |     1|
-|22    |arty_adc_eth_v4_ilmb_v10              |     1|
-|23    |arty_adc_eth_v4_lmb_bram              |     1|
-|24    |arty_adc_eth_v4_mdm_1                 |     1|
-|25    |arty_adc_eth_v4_microblaze_0          |     1|
-|26    |arty_adc_eth_v4_microblaze_0_axi_intc |     1|
-|27    |arty_adc_eth_v4_mig_7series_0         |     1|
-|28    |arty_adc_eth_v4_rst_clk_wiz_0_100M    |     1|
-|29    |arty_adc_eth_v4_xadc_wiz_0            |     1|
-|30    |arty_adc_eth_v4_xbar                  |     1|
-|31    |IBUF                                  |    18|
-|32    |IOBUF                                 |     1|
-|33    |OBUF                                  |     9|
+|12    |arty_adc_eth_v4_auto_us               |     1|
+|13    |arty_adc_eth_v4_axi_ethernetlite_0    |     1|
+|14    |arty_adc_eth_v4_axi_timer_0           |     1|
+|15    |arty_adc_eth_v4_axi_uartlite_0        |     1|
+|16    |arty_adc_eth_v4_clk_wiz_0             |     1|
+|17    |arty_adc_eth_v4_dlmb_bram_if_cntlr    |     1|
+|18    |arty_adc_eth_v4_dlmb_v10              |     1|
+|19    |arty_adc_eth_v4_ilmb_bram_if_cntlr    |     1|
+|20    |arty_adc_eth_v4_ilmb_v10              |     1|
+|21    |arty_adc_eth_v4_lmb_bram              |     1|
+|22    |arty_adc_eth_v4_mdm_1                 |     1|
+|23    |arty_adc_eth_v4_microblaze_0          |     1|
+|24    |arty_adc_eth_v4_microblaze_0_axi_intc |     1|
+|25    |arty_adc_eth_v4_mig_7series_0         |     1|
+|26    |arty_adc_eth_v4_rst_clk_wiz_0_100M    |     1|
+|27    |arty_adc_eth_v4_xadc_wiz_0            |     1|
+|28    |arty_adc_eth_v4_xbar                  |     1|
+|29    |IBUF                                  |    18|
+|30    |IOBUF                                 |     1|
+|31    |OBUF                                  |     9|
 +------+--------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:01:04 . Memory (MB): peak = 1549.457 ; gain = 543.070
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:01:02 . Memory (MB): peak = 1550.004 ; gain = 542.418
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:58 . Memory (MB): peak = 1549.457 ; gain = 523.656
-Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:01:05 . Memory (MB): peak = 1549.457 ; gain = 543.070
+Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:57 . Memory (MB): peak = 1550.004 ; gain = 523.195
+Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:01:03 . Memory (MB): peak = 1550.004 ; gain = 542.418
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.195 . Memory (MB): peak = 1549.457 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.154 . Memory (MB): peak = 1550.004 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1563.926 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1567.684 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instance 
 
-Synth Design complete, checksum: 4387880f
+Synth Design complete, checksum: 368f64d3
 INFO: [Common 17-83] Releasing license: Synthesis
-121 Infos, 181 Warnings, 0 Critical Warnings and 0 Errors encountered.
+117 Infos, 177 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:16 . Memory (MB): peak = 1563.926 ; gain = 936.906
+synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:14 . Memory (MB): peak = 1567.684 ; gain = 937.641
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Bruker/Documents/Bachelor_Elektro_ingenior_med_auto/fpga/project_2/project_2.runs/synth_1/arty_adc_eth_v4_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file arty_adc_eth_v4_wrapper_utilization_synth.rpt -pb arty_adc_eth_v4_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun May  7 15:21:27 2023...
+INFO: [Common 17-206] Exiting Vivado at Mon May  8 13:04:55 2023...
