@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="testet ny måte å regne calc på, testet GUI også ser at det er noe feil med chord objetet når det blir lagt inn i GUI-en">
-      <change afterPath="$PROJECT_DIR$/include/memory_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/nye_gui_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_24_2023_12_26_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_24_2023_12_26_PM__Changes_.xml" beforeDir="false" />
+    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="teste ny gui forslag, funka ikkje">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/include/GUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/UDP_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/include/UDP_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/DC_remover.py" beforeDir="false" afterPath="$PROJECT_DIR$/include/DC_remover.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/nye_gui_test.py" beforeDir="false" />
     </list>
     <list id="ca46afb5-6e55-48db-a910-0c171d34208c" name="Changes by dawid" comment="Changes by dawid" />
     <option name="SHOW_DIALOG" value="false" />
@@ -276,14 +272,7 @@
       <workItem from="1682867091359" duration="12868000" />
       <workItem from="1683020049249" duration="7988000" />
       <workItem from="1683048688598" duration="561000" />
-      <workItem from="1683102812756" duration="7498000" />
-    </task>
-    <task id="LOCAL-00002" summary="adda lyd filer">
-      <created>1676045131965</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1676045131965</updated>
+      <workItem from="1683102812756" duration="9199000" />
     </task>
     <task id="LOCAL-00003" summary="Changes by dawid">
       <created>1676473279219</created>
@@ -621,7 +610,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682964625010</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="teste ny gui forslag, funka ikkje">
+      <created>1683120655702</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1683120655703</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -652,7 +648,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="dynamisk gui testing" />
     <MESSAGE value="idea te gui" />
     <MESSAGE value="forsetta testing av improved vinkel" />
     <MESSAGE value="forsatte på retning og avstand estimator" />
@@ -677,7 +672,8 @@
     <MESSAGE value="git forced me" />
     <MESSAGE value="små oppdaterte an, feilen e der ennå" />
     <MESSAGE value="testet ny måte å regne calc på, testet GUI også ser at det er noe feil med chord objetet når det blir lagt inn i GUI-en" />
-    <option name="LAST_COMMIT_MESSAGE" value="testet ny måte å regne calc på, testet GUI også ser at det er noe feil med chord objetet når det blir lagt inn i GUI-en" />
+    <MESSAGE value="teste ny gui forslag, funka ikkje" />
+    <option name="LAST_COMMIT_MESSAGE" value="teste ny gui forslag, funka ikkje" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$cord_test.coverage" NAME="cord_test Coverage Results" MODIFIED="1679912469324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
