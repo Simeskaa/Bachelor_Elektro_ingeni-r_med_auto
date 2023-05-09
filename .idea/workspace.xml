@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="Main program working, without FPGA">
-      <change afterPath="$PROJECT_DIR$/test_files/Byte_converting.py" afterDir="false" />
+    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="Commit before merging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/UDP_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/include/UDP_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main.py" afterDir="false" />
     </list>
     <list id="ca46afb5-6e55-48db-a910-0c171d34208c" name="Changes by dawid" comment="Changes by dawid" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Statisk_main_program" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -104,7 +105,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="array_sum" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="UDP_class" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Bachelor_Elektro_ingenior_med_auto" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -112,12 +113,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_files" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/include" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_files/array_sum.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/include/UDP_class.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -195,10 +195,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.Byte_converting" />
+        <item itemvalue="Python.UDP_class" />
         <item itemvalue="Python.Threading" />
         <item itemvalue="Python.formatting_test" />
-        <item itemvalue="Python.array_sum" />
+        <item itemvalue="Python.Byte_converting" />
       </list>
     </recent_temporary>
   </component>
@@ -564,7 +564,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683126909561</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Commit before merging">
+      <created>1683642993705</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1683642993705</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -595,7 +602,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fungerende retnings estimator" />
     <MESSAGE value="dynamisk gui testing" />
     <MESSAGE value="idea te gui" />
     <MESSAGE value="forsetta testing av improved vinkel" />
@@ -620,7 +626,8 @@
     <MESSAGE value="Created a base for main that works, kinda. Wrong values, have to revaluate." />
     <MESSAGE value="Git tvang meg" />
     <MESSAGE value="Main program working, without FPGA" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main program working, without FPGA" />
+    <MESSAGE value="Commit before merging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit before merging" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

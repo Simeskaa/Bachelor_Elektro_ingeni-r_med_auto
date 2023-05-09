@@ -2,6 +2,7 @@ from include.direction_and_distance_estimation import angle_cord_estimation as a
 from include.signal_processing import processing
 from include.UDP_class import UDP
 from include.GUI import GUI
+from include.DC_remover import DC_remover
 import json
 import numpy as np
 import scipy.signal as sig
@@ -25,14 +26,14 @@ logging.basicConfig(format=format, level=logging.INFO,
 #logging.getLogger().setLevel(logging.DEBUG)
 
 # TEST FILE:-----------------------------------
-samplerate, data = wavfile.read("/Users/dawid/Documents/NTNU/BACHELOR/Sound_triangulation/misc/lydfiler/Piano_440Hz.wav")
-x = data.T
+#samplerate, data = wavfile.read("/Users/dawid/Documents/NTNU/BACHELOR/Sound_triangulation/misc/lydfiler/Piano_440Hz.wav")
+#x = data.T
 # TEST FILE:-----------------------------------
 
-buffer_size = 4096
+buffer_size = 4410
 mics = [0.0]*4
 toad = [0.0]*4
-shift = samplerate
+#shift = samplerate
 q = queue.Queue()
 lock = Lock()
 
@@ -58,43 +59,39 @@ def verify_signals(signals, des_Hz: int = 440, width: int = 10):
         ready = True
     else:
         ready = False
-    logging.debug(f'worker: Frequencies detected -> {freq_array}')
+    logging.info(f'worker: Frequencies detected -> {freq_array}')
     return ready
 
 def prod(lock):
-    """
-    Receiving data here
-    until FPGA is ready, test data will be used
-    """
-        # TEST FILE: ------------------------------------------------------------------------------------------------------
-    shift = samplerate
-    dist_mics = [0.0, 15.012*10**-2, 23.116*10**-2, 38.128*10**-2]
-    #  1 quadrant
-    mic1 = pro.add_delay(x, dist_mics[0], fs=samplerate)+\
-           np.random.randn(len(x))*0.05
-    mic2 = pro.add_delay(x, dist_mics[1], fs=samplerate)+\
-           np.random.randn(len(x))*0.05
-    mic3 = pro.add_delay(x, dist_mics[2], fs=samplerate)+\
-           np.random.randn(len(x))*0.05
-    mic4 = pro.add_delay(x, dist_mics[3], fs=samplerate)+\
-           np.random.randn(len(x))*0.05
-    # TEST FILE: ------------------------------------------------------------------------------------------------------
+
     while True:
-        if samplerate+shift >= len(mic1):
-            logging.debug(f'prod  : quitting thread')
-            break
-        logging.debug("prod  : About to ask for lock")
+        data = UDP.get_message(65536)
+        a0 = []
+        a1 = []
+        a2 = []
+        a3 = []
+        if data is not None:
+            for i in range(0, len(data), 2):
+                b1 = data[i].to_bytes(1, "little")
+                b2 = data[i+1].to_bytes(1, "little")
+                if (i % 8) == 0:
+                    a0.append(int.from_bytes(b1 + b2, byteorder='little'))
+                elif (i % 8) == 2:
+                    a1.append(int.from_bytes(b1 + b2, byteorder='little'))
+                elif (i % 8) == 4:
+                    a2.append(int.from_bytes(b1 + b2, byteorder='little'))
+                elif (i % 8) == 6:
+                    a3.append(int.from_bytes(b1 + b2, byteorder='little'))
+        a0 = DC.mean_value_filter(a0)
+        a1 = DC.mean_value_filter(a1)
+        a2 = DC.mean_value_filter(a2)
+        a3 = DC.mean_value_filter(a3)
+        mics = [a0, a1, a2, a3]
         with lock:
             logging.debug("prod  : Got lock")
-            mics = \
-                [mic1[samplerate+shift:samplerate+buffer_size+shift],
-                 mic2[samplerate+shift:samplerate+buffer_size+shift],
-                 mic3[samplerate+shift:samplerate+buffer_size+shift],
-                 mic4[samplerate+shift:samplerate+buffer_size+shift]]
             q.put(mics)
-            logging.debug(f'prod  : Put {round(mics[0][0],2)} in queue')
+            logging.info(f'prod  : Put {round(mics[0][0],2)}, {round(mics[1][0],2)}, {round(mics[2][0],2)}, {round(mics[3][0],2)} in queue')
         logging.debug("prod  : lock is free")
-        shift = shift + buffer_size
         time.sleep(0.01)
 
 def worker(lock):
@@ -123,7 +120,7 @@ def worker(lock):
                 logging.info(f'worker: Signal verification determined state {start}')
 
                 """Signal processing"""
-                if start:
+                if True: #start:
                     logging.debug(f'worker: About to calculate weights')
                     we, wk = pro.spectral_weighing(mics, a=0.3, y=0.4)
                     logging.debug(f'worker: About to calculate correlation')
@@ -144,7 +141,7 @@ def worker(lock):
             else:
                 empty_vals = 1
                 empty_vals_array.append(empty_vals)
-                if len(empty_vals_array) > 5:
+                if len(empty_vals_array) > 50:
                     logging.debug(f'worker:  Too many empty values, EXITING thread')
                     break
                 logging.debug(f'worker: queue was empty, amount of empty {len(empty_vals_array)}')
@@ -157,8 +154,9 @@ def worker(lock):
 
 if __name__ == "__main__":
     # Instancing of classes
-    #UDP = UDP(ip_adress="192.168.0.69", port=5005, receive_msg=True)
-    pro = processing(samplerate)
+    UDP = UDP(ip_adress="192.168.1.50", port=5001, receive_msg=True)
+    DC = DC_remover()
+    pro = processing(44100)
     ace = ace(dist_short_mic=27.56*10**-2, max_distance=100)
     app = QApplication(sys.argv)
     GUI = GUI(max_dist=100, delay= 1000)
