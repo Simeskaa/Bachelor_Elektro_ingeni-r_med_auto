@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="teste ny gui forslag, funka ikkje">
+    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="fjerna unnøvendig kode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/DC_remover.py" beforeDir="false" afterPath="$PROJECT_DIR$/include/DC_remover.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/nye_gui_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/direction_and_distance_estimation.py" beforeDir="false" afterPath="$PROJECT_DIR$/include/direction_and_distance_estimation.py" afterDir="false" />
     </list>
     <list id="ca46afb5-6e55-48db-a910-0c171d34208c" name="Changes by dawid" comment="Changes by dawid" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,15 +52,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\zaime\Bachelor_Elektro_ingenior_med_auto" />
@@ -272,14 +272,8 @@
       <workItem from="1682867091359" duration="12868000" />
       <workItem from="1683020049249" duration="7988000" />
       <workItem from="1683048688598" duration="561000" />
-      <workItem from="1683102812756" duration="9199000" />
-    </task>
-    <task id="LOCAL-00003" summary="Changes by dawid">
-      <created>1676473279219</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1676473279219</updated>
+      <workItem from="1683102812756" duration="9296000" />
+      <workItem from="1683781977943" duration="7247000" />
     </task>
     <task id="LOCAL-00004" summary="GUI">
       <created>1677776183876</created>
@@ -617,7 +611,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683120655703</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="fjerna unnøvendig kode">
+      <created>1683650847937</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1683650847937</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -648,7 +649,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="idea te gui" />
     <MESSAGE value="forsetta testing av improved vinkel" />
     <MESSAGE value="forsatte på retning og avstand estimator" />
     <MESSAGE value="fekk ein fungerande retnings estimator mellom 45 og 90 grade i kver kvadrant :)" />
@@ -673,7 +673,8 @@
     <MESSAGE value="små oppdaterte an, feilen e der ennå" />
     <MESSAGE value="testet ny måte å regne calc på, testet GUI også ser at det er noe feil med chord objetet når det blir lagt inn i GUI-en" />
     <MESSAGE value="teste ny gui forslag, funka ikkje" />
-    <option name="LAST_COMMIT_MESSAGE" value="teste ny gui forslag, funka ikkje" />
+    <MESSAGE value="fjerna unnøvendig kode" />
+    <option name="LAST_COMMIT_MESSAGE" value="fjerna unnøvendig kode" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$cord_test.coverage" NAME="cord_test Coverage Results" MODIFIED="1679912469324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

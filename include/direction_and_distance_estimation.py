@@ -37,34 +37,34 @@ class angle_cord_estimation():
             tdoas_temp.remove(tdoas_temp[ref])
 
         # tdoa = time delay of arrivle
-        m2_m1 = tdoa[2] - tdoa[0]
-        m2_m3 = tdoa[2] - tdoa[1]
-        m2_m4 = tdoa[2] - tdoa[3]
+        m3_m1 = tdoa[2] - tdoa[0]
+        m3_m2 = tdoa[2] - tdoa[1]
+        m3_m4 = tdoa[2] - tdoa[3]
         m1_m4 = tdoa[0] - tdoa[3]
-        m1_m3 = tdoa[0] - tdoa[1]
-        m4_m3 = tdoa[3] - tdoa[1]
+        m1_m2 = tdoa[0] - tdoa[1]
+        m4_m2 = tdoa[3] - tdoa[1]
 
-        sound_diff_1 = ((m2_m1 >= 0) and (m2_m3 >= 0) and (m4_m3 >= 0)) and \
-                       ((m2_m4 < 0) and (m1_m4 < 0) and (m1_m3 < 0))
-        sound_diff_2 = ((m2_m1 < 0) and (m2_m3 < 0) and (m2_m4 < 0) and (m1_m4 < 0) and (m1_m3 < 0) and (m4_m3 < 0))
-        sound_diff_3 = ((m2_m1 < 0) and (m2_m3 < 0) and (m4_m3 < 0)) and \
-                       ((m2_m4 >= 0) and (m1_m4 >= 0) and (m1_m3 >= 0))
-        sound_diff_4 = ((m2_m1 >= 0) and (m2_m3 >= 0) and (m2_m4 >= 0) and (m1_m4 >= 0) and (m1_m3 >= 0) and (m4_m3 >= 0))
+        sound_diff_1 = ((m3_m1 >= 0) and (m3_m2 >= 0) and (m4_m2 >= 0)) and \
+                       ((m3_m4 < 0) and (m1_m4 < 0) and (m1_m2 < 0))
+        sound_diff_2 = ((m3_m1 < 0) and (m3_m2 < 0) and (m3_m4 < 0) and (m1_m4 < 0) and (m1_m2 < 0) and (m4_m2 < 0))
+        sound_diff_3 = ((m3_m1 < 0) and (m3_m2 < 0) and (m4_m2 < 0)) and \
+                       ((m3_m4 >= 0) and (m1_m4 >= 0) and (m1_m2 >= 0))
+        sound_diff_4 = ((m3_m1 >= 0) and (m3_m2 >= 0) and (m3_m4 >= 0) and (m1_m4 >= 0) and (m1_m2 >= 0) and (m4_m2 >= 0))
 
         if (sound_diff_1 or sound_diff_2 or sound_diff_3 or sound_diff_4):
             # fake microphone array
-            fma = {'m1': fake_mics[0], 'm2': fake_mics[2], 'm3': fake_mics[1], 'm4': fake_mics[3]}
+            fma = {'m1': fake_mics[0], 'm2': fake_mics[1], 'm3': fake_mics[2], 'm4': fake_mics[3]}
         else:
-            fma = {'m1': fake_mics[1], 'm2': fake_mics[3], 'm3': fake_mics[0], 'm4': fake_mics[2]}
+            fma = {'m1': fake_mics[1], 'm2': fake_mics[0], 'm3': fake_mics[3], 'm4': fake_mics[2]}
 
         # finding angles
         # -------------------------------------------------
-        angle_m2_m3 = np.arccos((fma['m2'] - fma['m3']) * self.spd_sound / self.dist_long_mic) + 0
+        angle_m3_m2 = np.arccos((fma['m3'] - fma['m2']) * self.spd_sound / self.dist_long_mic) + 0
         angle_m1_m4 = np.arccos((fma['m1'] - fma['m4']) * self.spd_sound / self.dist_long_mic) - np.pi / 2
-        angle_m2_m4 = np.arccos((fma['m2'] - fma['m4']) * self.spd_sound / self.dist_short_mic) - np.pi / 4
-        angle_m1_m3 = np.arccos((fma['m1'] - fma['m3']) * self.spd_sound / self.dist_short_mic) - np.pi / 4
-        angle_m2_m1 = np.arccos((fma['m2'] - fma['m1']) * self.spd_sound / self.dist_short_mic) + np.pi / 4
-        angle_m4_m3 = np.arccos((fma['m4'] - fma['m3']) * self.spd_sound / self.dist_short_mic) + np.pi / 4
+        angle_m3_m4 = np.arccos((fma['m3'] - fma['m4']) * self.spd_sound / self.dist_short_mic) - np.pi / 4
+        angle_m1_m2 = np.arccos((fma['m1'] - fma['m2']) * self.spd_sound / self.dist_short_mic) - np.pi / 4
+        angle_m3_m1 = np.arccos((fma['m3'] - fma['m1']) * self.spd_sound / self.dist_short_mic) + np.pi / 4
+        angle_m4_m2 = np.arccos((fma['m4'] - fma['m2']) * self.spd_sound / self.dist_short_mic) + np.pi / 4
 
         x1 = 0
         x2 = self.dist_long_mic / 2
@@ -89,7 +89,7 @@ class angle_cord_estimation():
         self.U = np.linalg.pinv(X) @ T
         angle_center = np.arctan(self.U[1] / self.U[0])
 
-        list_angles = [angle_m2_m3, angle_m1_m4, angle_m2_m4, angle_m1_m3, angle_m2_m1, angle_m4_m3, angle_center[0]]
+        list_angles = [angle_m3_m2, angle_m1_m4, angle_m3_m4, angle_m1_m2, angle_m3_m1, angle_m4_m2, angle_center[0]]
 
         # removing negative angle from cos
         # -------------------------------------------------
@@ -119,6 +119,8 @@ class angle_cord_estimation():
         elif (tdoas_temp2 == [tdoa[1], tdoa[3]]):
             for i in range(len(list_angles)):
                 list_angles[i] = list_angles[i] + 3 * np.pi / 2
+
+
         grad_list = []
         self.average_angle = sum(list_angles) / len(list_angles)
         for i in range(len(list_angles)):
