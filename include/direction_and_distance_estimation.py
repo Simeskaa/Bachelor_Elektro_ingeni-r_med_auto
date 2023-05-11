@@ -3,7 +3,7 @@ import copy
 from PySide6.QtCore import QLineF, QPointF
 
 class angle_cord_estimation():
-    def __init__(self, dist_short_mic: float = 12, spd_sound: float = 343, max_distance: float = 2000):
+    def __init__(self, dist_short_mic: float = 0.275610, spd_sound: float = 343, max_distance: float = 100):
         # making local variables in the class
         # -------------------------------------------------
         self.dist_short_mic = dist_short_mic
@@ -91,7 +91,7 @@ class angle_cord_estimation():
 
         list_angles = [angle_m3_m2, angle_m1_m4, angle_m3_m4, angle_m1_m2, angle_m3_m1, angle_m4_m2, angle_center[0]]
 
-        # removing negative angle from cos
+        # removing negative angle from co
         # -------------------------------------------------
         if fma['m1'] > fma['m3']:
             list_angles[4] = np.pi / 2 - list_angles[4]
@@ -288,5 +288,5 @@ def simulation(boat_placment):
 
 
 if __name__ == '__main__':
-    boat = angle_cord_estimation(dist_short_mic=12, spd_sound=343, max_distance=2000)
+    boat = angle_cord_estimation(dist_short_mic=0.27, spd_sound=343, max_distance=100)
     print(boat.timestamp_2_cord(simulation('45')))

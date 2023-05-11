@@ -10,7 +10,7 @@ from memory_profiler import profile
 
 
 class GUI(QMainWindow):
-    def __init__(self, max_dist:float = 2000., delay: int = 5):
+    def __init__(self, max_dist:float = 100., delay: int = 5):
         super().__init__()
         # making the canvas and plotting the radar
         self.label = QLabel()
@@ -37,17 +37,15 @@ class GUI(QMainWindow):
         self.counter_circle = 0
         self.counted_circle = 0
 
-        self.x_chord = []
-        self.y_chord = []
-        self.timer_chord = []
-        self.red_chord = []
-        self.blue_chord = []
-        self.counter_chord = 0
-        self.counted_chord = 0
+        self.x_rect_circle = []
+        self.y_rect_circle = []
+        self.timer_rect_circle = []
+        self.red_rect_circle = []
+        self.blue_rect_circle = []
+        self.counter_rect_circle = 0
+        self.counted_rect_circle = 0
 
         self.adding_object = False
-        #self.threadpool = QThreadPool()
-        #self.mutex = QMutex()
 
         # making timer for removel for objects
         self.timer = QTimer()
@@ -59,8 +57,6 @@ class GUI(QMainWindow):
         self.max_dist = max_dist
         self.delay = delay
 
-    #def test(self, x:float, y:float, hz:str, angle_overrule:bool):
-        #self.threadpool.start(self.update_GUI(x=x, y=y, hz=hz, angle_overrule=angle_overrule))
     #@profile
     def radar(self):
         # painting the radar on the canvas
@@ -106,11 +102,11 @@ class GUI(QMainWindow):
         self.label.setPixmap(self.canvas)
         self.update()
 
-    def make_chord(self, x, y, color_index:int):
+    def make_rect_circle(self, x, y, color_index:int):
         # making a squire for representation for object
         painter = QPainter(self.canvas)
         brush = QBrush()
-        brush.setColor(QColor(self.red_chord[color_index], 0, self.blue_chord[color_index]))
+        brush.setColor(QColor(self.red_rect_circle[color_index], 0, self.blue_rect_circle[color_index]))
         brush.setStyle(Qt.BrushStyle.Dense1Pattern)
         painter.setBrush(brush)
         painter.drawRoundedRect(x, y, 10, 10, 2, 2)
@@ -120,30 +116,21 @@ class GUI(QMainWindow):
 
     #@profile
     def update_GUI(self, x:float, y:float, hz:str, angle_overrule:bool):
-        # updating GUI, if not angle overrule, the angle and distance estimation class found the distance and
-        #  angle
-        #self.mutex.lock()
-        #if not self.mutex.tryLock():
-        #    logging.info("couldn't lock")
-        #    pass
         self.adding_object = True
         x_adjusted, y_adjusted, out_of_bound = self.coordinate_center(x=x, y=y)
         if not angle_overrule:
-            logging.info("adjusting coord")
             if out_of_bound:
-                logging.info("adding chord")
-                self.x_chord.append(x_adjusted)
-                self.y_chord.append(y_adjusted)
-                self.counter_chord += 1
-                self.timer_chord.append(time.perf_counter() + self.delay)
+                self.x_rect_circle.append(x_adjusted)
+                self.y_rect_circle.append(y_adjusted)
+                self.counter_rect_circle += 1
+                self.timer_rect_circle.append(time.perf_counter() + self.delay)
                 if hz == '260':
-                    self.red_chord.append(0)
-                    self.blue_chord.append(255)
+                    self.red_rect_circle.append(0)
+                    self.blue_rect_circle.append(255)
                 elif hz == '440':
-                    self.red_chord.append(255)
-                    self.blue_chord.append(0)
+                    self.red_rect_circle.append(255)
+                    self.blue_rect_circle.append(0)
             else:
-                logging.info("adding square")
                 self.x_square.append(x_adjusted)
                 self.y_square.append(y_adjusted)
                 self.counter_square += 1
@@ -158,7 +145,6 @@ class GUI(QMainWindow):
         elif angle_overrule:
             # updating GUI, if angle overrule, the angle and distance estimation class couldn't find the distance and
             # only the angle
-            logging.info("adding circle")
             self.x_circle.append(x_adjusted)
             self.y_circle.append(y_adjusted)
             self.timer_circle.append(time.perf_counter() + self.delay)
@@ -169,38 +155,30 @@ class GUI(QMainWindow):
             elif hz == '440':
                 self.red_circle.append(255)
                 self.blue_circle.append(0)
-        logging.info("adding object")
         self.item_placement_on_GUI()
-        logging.info("done adding object")
-        #self.mutex.unlock()
 
     #@profile
     def item_placement_on_GUI(self):
         # placing the object on the radar
         if self.counter_square > self.counted_square:
-            logging.info("adding square")
             self.make_square(self.x_square[self.counter_square - 1], self.y_square[self.counter_square - 1], color_index=(self.counter_square - 1))
             self.counted_square += 1
 
         elif self.counter_circle > self.counted_circle:
-            logging.info("adding circle")
             self.make_circle(self.x_circle[self.counter_circle - 1], self.y_circle[self.counter_circle - 1], color_index=(self.counter_circle - 1))
             self.counted_circle += 1
 
-        elif self.counter_chord > self.counted_chord:
-            logging.info("adding chord")
-            self.make_chord(self.x_chord[self.counter_chord - 1], self.y_chord[self.counter_chord - 1], color_index=(self.counter_chord - 1))
-            self.counted_chord += 1
+        elif self.counter_rect_circle > self.counted_rect_circle:
+            self.make_rect_circle(self.x_rect_circle[self.counter_rect_circle - 1], self.y_rect_circle[self.counter_rect_circle - 1], color_index=(self.counter_rect_circle - 1))
+            self.counted_rect_circle += 1
         self.adding_object = False
 
     #@profile
     def removing_from_GUI(self):
         # removing the object from the radar
         if not self.adding_object:
-            logging.info("trying to remove object")
             if self.counter_square > 0:
                 if self.timer_square[0] < time.perf_counter():
-                    logging.info("removing square")
                     # deleting the oldest object in the different lists
                     self.radar()
                     self.x_square.pop(0)
@@ -219,13 +197,12 @@ class GUI(QMainWindow):
                         for i in range(len(self.x_circle)):
                             self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
 
-                    if self.counter_chord > 0:
-                        for i in range(len(self.x_chord)):
-                            self.make_chord(self.x_chord[i], self.y_chord[i], color_index=i)
+                    if self.counter_rect_circle > 0:
+                        for i in range(len(self.x_rect_circle)):
+                            self.make_rect_circle(self.x_rect_circle[i], self.y_rect_circle[i], color_index=i)
 
             if self.counter_circle > 0:
                 if self.timer_circle[0] < time.perf_counter():
-                    logging.info("removing circle")
                     # deleting the oldest object in the different lists
                     self.radar()
                     self.x_circle.pop(0)
@@ -244,22 +221,21 @@ class GUI(QMainWindow):
                     for i in range(len(self.x_circle)):
                         self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
 
-                    if self.counter_chord > 0:
-                        for i in range(len(self.x_chord)):
-                            self.make_chord(self.x_chord[i], self.y_chord[i], color_index=i)
+                    if self.counter_rect_circle > 0:
+                        for i in range(len(self.x_rect_circle)):
+                            self.make_rect_circle(self.x_rect_circle[i], self.y_rect_circle[i], color_index=i)
 
-            if self.counter_chord > 0:
-                if self.timer_chord[0] < time.perf_counter():
-                    logging.info("removing chord")
+            if self.counter_rect_circle > 0:
+                if self.timer_rect_circle[0] < time.perf_counter():
                     # deleting the oldest object in the different lists
                     self.radar()
-                    self.x_chord.pop(0)
-                    self.y_chord.pop(0)
-                    self.red_chord.pop(0)
-                    self.blue_chord.pop(0)
-                    self.timer_chord.pop(0)
-                    self.counter_chord -= 1
-                    self.counted_chord -= 1
+                    self.x_rect_circle.pop(0)
+                    self.y_rect_circle.pop(0)
+                    self.red_rect_circle.pop(0)
+                    self.blue_rect_circle.pop(0)
+                    self.timer_rect_circle.pop(0)
+                    self.counter_rect_circle -= 1
+                    self.counted_rect_circle -= 1
 
                     # adding the remaking objects on the radar again
                     if self.counter_square > 0:
@@ -270,8 +246,8 @@ class GUI(QMainWindow):
                         for i in range(len(self.x_circle)):
                             self.make_circle(self.x_circle[i], self.y_circle[i], color_index=i)
 
-                    for i in range(len(self.x_chord)):
-                        self.make_chord(self.x_chord[i], self.y_chord[i], color_index=i)
+                    for i in range(len(self.x_rect_circle)):
+                        self.make_rect_circle(self.x_rect_circle[i], self.y_rect_circle[i], color_index=i)
 
 
     def coordinate_center(self, x: float, y: float):
@@ -305,11 +281,11 @@ def test():
         #time.sleep(3)
         #boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule = boat.timestamp_2_cord(simulation('45'))
         logging.info("starting")
-        window.update_GUI(x= 200, y=2500, hz= '440', angle_overrule= False)
+        window.update_GUI(x= 5, y=5, hz= '440', angle_overrule= False)
         time.sleep(1)
         window.update_GUI(x=2500, y=50, hz= '260', angle_overrule= False)
         time.sleep(1)
-        window.update_GUI(x=1000, y=1000, hz= '440', angle_overrule= True)
+        window.update_GUI(x=15, y=5, hz= '440', angle_overrule= True)
         time.sleep(1)
         window.update_GUI(x=-1500, y=1500, hz= '260', angle_overrule= False)
         time.sleep(1)
@@ -355,7 +331,7 @@ def simulation(boat_placment):
 if __name__ == '__main__':
 
     app = QApplication(sys.argv)
-    window = GUI()
+    window = GUI(max_dist=100, delay=10000)
     format = "%(asctime)s: %(message)s"
     logging.basicConfig(format=format, level=logging.INFO,
                         datefmt="%H:%M:%S")
