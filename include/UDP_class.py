@@ -16,7 +16,7 @@ class UDP:
 
     def get_message(self, buf_size):
         data, addr = self.sock.recvfrom(buf_size)
-        data = data.decode('utf-8')
+        #data = data.decode('utf-8')
         return data
 
 

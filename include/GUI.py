@@ -6,7 +6,7 @@ import threading
 import time
 import logging
 import numpy as np
-from memory_profiler import profile
+
 
 
 class GUI(QMainWindow):
