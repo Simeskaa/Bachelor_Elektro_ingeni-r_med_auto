@@ -10,7 +10,7 @@ from memory_profiler import profile
 
 
 class GUI(QMainWindow):
-    def __init__(self, max_dist:float = 100., delay: int = 5):
+    def __init__(self, max_dist:float = 100., showcase: int = 5):
         super().__init__()
         # making the canvas and plotting the radar
         self.label = QLabel()
@@ -55,7 +55,7 @@ class GUI(QMainWindow):
 
         # making variables for max distance and delay to removel of objects
         self.max_dist = max_dist
-        self.delay = delay
+        self.showcase = showcase
 
     #@profile
     def radar(self):
@@ -123,7 +123,7 @@ class GUI(QMainWindow):
                 self.x_rect_circle.append(x_adjusted)
                 self.y_rect_circle.append(y_adjusted)
                 self.counter_rect_circle += 1
-                self.timer_rect_circle.append(time.perf_counter() + self.delay)
+                self.timer_rect_circle.append(time.perf_counter() + self.showcase)
                 if hz == '260':
                     self.red_rect_circle.append(0)
                     self.blue_rect_circle.append(255)
@@ -134,7 +134,7 @@ class GUI(QMainWindow):
                 self.x_square.append(x_adjusted)
                 self.y_square.append(y_adjusted)
                 self.counter_square += 1
-                self.timer_square.append(time.perf_counter() + self.delay)
+                self.timer_square.append(time.perf_counter() + self.showcase)
                 if hz == '260':
                     self.red_square.append(0)
                     self.blue_square.append(255)
@@ -147,7 +147,7 @@ class GUI(QMainWindow):
             # only the angle
             self.x_circle.append(x_adjusted)
             self.y_circle.append(y_adjusted)
-            self.timer_circle.append(time.perf_counter() + self.delay)
+            self.timer_circle.append(time.perf_counter() + self.showcase)
             self.counter_circle += 1
             if hz == '260':
                 self.red_circle.append(0)
@@ -331,7 +331,7 @@ def simulation(boat_placment):
 if __name__ == '__main__':
 
     app = QApplication(sys.argv)
-    window = GUI(max_dist=100, delay=10000)
+    window = GUI(max_dist=100, showcase=5)
     format = "%(asctime)s: %(message)s"
     logging.basicConfig(format=format, level=logging.INFO,
                         datefmt="%H:%M:%S")

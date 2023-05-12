@@ -68,7 +68,7 @@ if __name__ == "__main__":
     pro = processing(samplerate)
     ace = ace(dist_short_mic= 27.56*10**-2, max_distance=100)
     app = QApplication(sys.argv)
-    GUI = GUI(max_dist=100, delay= 1000)
+    GUI = GUI(max_dist=100, showcase= 1000)
 
 
     # TEST FILE: ------------------------------------------------------------------------------------------------------

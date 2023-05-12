@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="fjerna unnøvendig kode">
+    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="små justering på navn, mer justeringa nødvednig">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/include/GUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/direction_and_distance_estimation.py" beforeDir="false" afterPath="$PROJECT_DIR$/include/direction_and_distance_estimation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/memory_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main.py" afterDir="false" />
     </list>
     <list id="ca46afb5-6e55-48db-a910-0c171d34208c" name="Changes by dawid" comment="Changes by dawid" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,16 +55,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\zaime\Bachelor_Elektro_ingenior_med_auto" />
@@ -71,7 +74,7 @@
       <recent name="C:\Users\zaime\Bachelor_Elektro_ingenior_med_auto\lyd_filer" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.UDP_class">
+  <component name="RunManager" selected="Python.direction_and_distance_estimation">
     <configuration name="GUI (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Bachelor_Elektro_ingenior_med_auto" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -116,6 +119,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="direction_and_distance_estimation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Bachelor_Elektro_ingenior_med_auto" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/include" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/include/direction_and_distance_estimation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -152,28 +177,6 @@
       <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="memory_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Bachelor_Elektro_ingenior_med_auto" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/include" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/include/memory_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -228,11 +231,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.direction_and_distance_estimation" />
         <item itemvalue="Python.UDP_class" />
         <item itemvalue="Python.nye_gui_test" />
         <item itemvalue="Python.trym_show" />
         <item itemvalue="Python.GUI (1)" />
-        <item itemvalue="Python.memory_test" />
       </list>
     </recent_temporary>
   </component>
@@ -273,14 +276,8 @@
       <workItem from="1683020049249" duration="7988000" />
       <workItem from="1683048688598" duration="561000" />
       <workItem from="1683102812756" duration="9296000" />
-      <workItem from="1683781977943" duration="7247000" />
-    </task>
-    <task id="LOCAL-00004" summary="GUI">
-      <created>1677776183876</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1677776183876</updated>
+      <workItem from="1683781977943" duration="7381000" />
+      <workItem from="1683881108751" duration="5773000" />
     </task>
     <task id="LOCAL-00005" summary="Fungerande statisk GUI, Eg he ikkje toge hensyyn te at boksen eg legge inn blir plassert i fra hjørna så det e litt gale, men ser mer inn på det seinare">
       <created>1679906068186</created>
@@ -618,7 +615,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683650847937</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="små justering på navn, mer justeringa nødvednig">
+      <created>1683801970371</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1683801970371</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -649,7 +653,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="forsetta testing av improved vinkel" />
     <MESSAGE value="forsatte på retning og avstand estimator" />
     <MESSAGE value="fekk ein fungerande retnings estimator mellom 45 og 90 grade i kver kvadrant :)" />
     <MESSAGE value="Fungerende retnings estimering" />
@@ -674,7 +677,24 @@
     <MESSAGE value="testet ny måte å regne calc på, testet GUI også ser at det er noe feil med chord objetet når det blir lagt inn i GUI-en" />
     <MESSAGE value="teste ny gui forslag, funka ikkje" />
     <MESSAGE value="fjerna unnøvendig kode" />
-    <option name="LAST_COMMIT_MESSAGE" value="fjerna unnøvendig kode" />
+    <MESSAGE value="små justering på navn, mer justeringa nødvednig" />
+    <option name="LAST_COMMIT_MESSAGE" value="små justering på navn, mer justeringa nødvednig" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/include/direction_and_distance_estimation.py</url>
+          <line>57</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/include/direction_and_distance_estimation.py</url>
+          <line>66</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$cord_test.coverage" NAME="cord_test Coverage Results" MODIFIED="1679912469324" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -708,7 +728,7 @@
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$GUI__1_.coverage" NAME="GUI (1) Coverage Results" MODIFIED="1683105265040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/include" />
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$shit.coverage" NAME="shit Coverage Results" MODIFIED="1682154587967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/include" />
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$dynamic_test_1.coverage" NAME="dynamic_test_1 Coverage Results" MODIFIED="1681381678115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$direction_and_distance_estimation.coverage" NAME="direction_and_distance_estimation Coverage Results" MODIFIED="1682955853822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/include" />
+    <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$direction_and_distance_estimation.coverage" NAME="direction_and_distance_estimation Coverage Results" MODIFIED="1683890301899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/include" />
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1681739057472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main/include" />
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$plot.coverage" NAME="pyplot_plot Coverage Results" MODIFIED="1677229302270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$test.coverage" NAME="test Coverage Results" MODIFIED="1682416368944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/main" />
