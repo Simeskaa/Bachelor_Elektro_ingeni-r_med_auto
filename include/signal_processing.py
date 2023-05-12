@@ -45,7 +45,7 @@ class processing():
         X2_k = np.fft.fft(xn_2)
 
         # Cross correlation
-        #R_12 = X1_k*np.convolve(X2_k)                             # Cross correlation (Cc)
+        #R_12 = X1_k*np.conjugate(X2_k)                            # Cross correlation (Cc)
         #R_12 = X1_k*np.conjugate(X2_k)/(abs(X1_k)*abs(X2_k))      # Cc + noise whitening (nw)
         R_12 = (we*X1_k*np.conjugate(X2_k))/(abs(X1_k)*abs(X2_k))  # Cc + nw + weights
 

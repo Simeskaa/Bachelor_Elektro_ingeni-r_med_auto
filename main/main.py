@@ -94,7 +94,7 @@ def prod(lock):
         logging.debug("prod  : lock is free")
         time.sleep(0.01)
 
-def worker(lock):
+def consumer(lock):
     empty_vals_array = []
     """Looping the code"""
     while True:
@@ -120,7 +120,7 @@ def worker(lock):
                 logging.info(f'worker: Signal verification determined state {start}')
 
                 """Signal processing"""
-                if True: #start:
+                if start:
                     logging.debug(f'worker: About to calculate weights')
                     we, wk = pro.spectral_weighing(mics, a=0.3, y=0.4)
                     logging.debug(f'worker: About to calculate correlation')
@@ -163,7 +163,7 @@ if __name__ == "__main__":
 
     # Turning on threads
     t1 = threading.Thread(target=prod, args=(lock,), daemon=True)
-    t2 = threading.Thread(target=worker, args=(lock,), daemon=True)
+    t2 = threading.Thread(target=consumer, args=(lock,), daemon=True)
     t1.start()
     t2.start()
 
@@ -171,46 +171,4 @@ if __name__ == "__main__":
     t1.join()
     t2.join()
     logging.info("Main: Program finished")
-
-
-    # TEST FILE: ------------------------------------------------------------------------------------------------------
-    # dist_mics = [0.0, 15.012*10**-2, 23.116*10**-2, 38.128*10**-2]
-
-    #  1 quadrant
-    # mic1 = pro.add_delay(x, dist_mics[0], fs=samplerate)+\
-    #        np.random.randn(len(x))*0.05
-    # mic2 = pro.add_delay(x, dist_mics[1], fs=samplerate)+\
-    #        np.random.randn(len(x))*0.05
-    # mic3 = pro.add_delay(x, dist_mics[2], fs=samplerate)+\
-    #        np.random.randn(len(x))*0.05
-    # mic4 = pro.add_delay(x, dist_mics[3], fs=samplerate)+\
-    #        np.random.randn(len(x))*0.05
-    #
-    # mics = \
-    #     [mic1[samplerate+shift:samplerate+buffer_size+shift],
-    #      mic2[samplerate+shift:samplerate+buffer_size+shift],
-    #      mic3[samplerate+shift:samplerate+buffer_size+shift],
-    #      mic4[samplerate+shift:samplerate+buffer_size+shift]]
-    # TEST FILE: ------------------------------------------------------------------------------------------------------
-
-    # Receive signal from FPGA
-    # Not ready yet
-
-    # Signal verification
-    # desired_Hz = '440'
-    # start = verify_signals(mics, des_Hz=int(desired_Hz), width=20)
-
-    # # Signal processing
-    # if start:
-    #     we, wk = pro.spectral_weighing(mics, a=0.3, y=0.4)
-    #     t12, d12 = pro.cross_correlation(mics[0], mics[1], we)
-    #     t13, d13 = pro.cross_correlation(mics[0], mics[2], we)
-    #     t14, d14 = pro.cross_correlation(mics[0], mics[3], we)
-    #
-    #     toad = [0.0, t12, t13, t14]
-    #     toad = ace.norm_values(toad)
-    #
-    #     # Conversion from time delays to position
-    #     boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule = ace.timestamp_2_cord(toad)
-    #     print(f'Angle Estimate: {round(average_angle*180/np.pi,2)} degrees')
 

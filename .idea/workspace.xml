@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="Commit before merging">
+    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="Code that reads data from FPGA with 2 threads">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/UDP_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/include/UDP_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main.py" afterDir="false" />
     </list>
     <list id="ca46afb5-6e55-48db-a910-0c171d34208c" name="Changes by dawid" comment="Changes by dawid" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +22,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="origin/Development_comment" />
+    <option name="BRANCH" value="origin/upd_GUI" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -571,7 +569,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683642993705</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Code that reads data from FPGA with 2 threads">
+      <created>1683651796503</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1683651796503</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,7 +607,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="dynamisk gui testing" />
     <MESSAGE value="idea te gui" />
     <MESSAGE value="forsetta testing av improved vinkel" />
     <MESSAGE value="forsatte på retning og avstand estimator" />
@@ -627,7 +631,8 @@
     <MESSAGE value="Git tvang meg" />
     <MESSAGE value="Main program working, without FPGA" />
     <MESSAGE value="Commit before merging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit before merging" />
+    <MESSAGE value="Code that reads data from FPGA with 2 threads" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code that reads data from FPGA with 2 threads" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
