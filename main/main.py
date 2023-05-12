@@ -58,7 +58,7 @@ def verify_signals(signals, des_Hz: int = 440, width: int = 10):
         ready = True
     else:
         ready = False
-    logging.debug(f'worker: Frequencies detected -> {freq_array}')
+    logging.info(f'worker: Frequencies detected -> {freq_array}')
     return ready
 
 def prod(lock):
@@ -120,7 +120,7 @@ def worker(lock):
                 """Signal verification"""
                 desired_Hz = '440'
                 start = verify_signals(mics, des_Hz=int(desired_Hz), width=20)
-                logging.info(f'worker: Signal verification determined state {start}')
+                logging.debug(f'worker: Signal verification determined state {start}')
 
                 """Signal processing"""
                 if start:
@@ -139,7 +139,7 @@ def worker(lock):
                     # Conversion from time delays to position
                     logging.debug(f'worker: about to calculate angle and distance')
                     boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule = ace.timestamp_2_cord(toad)
-                    logging.info(f'worker: Angle {round(average_angle*180/np.pi,2)} degrees')
+                    logging.debug(f'worker: Angle {round(average_angle*180/np.pi,2)} degrees')
                 logging.debug(f'worker: signal processing is done')
             else:
                 empty_vals = 1
@@ -149,7 +149,7 @@ def worker(lock):
                     break
                 logging.debug(f'worker: queue was empty, amount of empty {len(empty_vals_array)}')
         except:
-            logging.info(f'worker: Error occurred, terminating thread')
+            logging.debug(f'worker: Error occurred, terminating thread')
             break
         time.sleep(0.01)
 

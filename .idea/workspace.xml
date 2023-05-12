@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="Main program working, without FPGA">
-      <change afterPath="$PROJECT_DIR$/test_files/Byte_converting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main.py" afterDir="false" />
     </list>
     <list id="ca46afb5-6e55-48db-a910-0c171d34208c" name="Changes by dawid" comment="Changes by dawid" />
     <option name="SHOW_DIALOG" value="false" />
