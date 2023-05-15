@@ -124,7 +124,7 @@ class angle_cord_estimation():
         for i in range(len(list_angles)):
             grad_list.append(list_angles[i]*180/np.pi)
 
-        print(f'\nvinkler: {grad_list} \n')
+        #print(f'\nvinkler: {grad_list} \n')
         return list_angles, self.average_angle
 
     def new_angle_calc(self, tdoa:list):
@@ -149,8 +149,8 @@ class angle_cord_estimation():
                       [c*(T_3-T_1)],
                       [c*(T_4-T_1)]])
         U = np.linalg.pinv(X) @ T
-        print(f'psudo inv X = {np.linalg.pinv(X).shape} \n T = {T.shape}'
-              f'\nU = {U} angle = {np.arctan(U[1]/U[0])*180/np.pi}')
+        #print(f'psudo inv X = {np.linalg.pinv(X).shape} \n T = {T.shape}'
+        #      f'\nU = {U} angle = {np.arctan(U[1]/U[0])*180/np.pi}')
 
 
         return U
@@ -166,8 +166,8 @@ class angle_cord_estimation():
             end_cords[y_name] = self.max_dist * np.sin(angles[i])
         end_cords['x_7'] = self.U[0][0]*self.max_dist
         end_cords['y_7'] = self.U[1][0]*self.max_dist
-        print(f'end coords: {end_cords}'
-              f'\nU: {self.U}')
+        #print(f'end coords: {end_cords}'
+        #      f'\nU: {self.U}')
 
 
         start_cords = {'x_1': -self.dist_long_mic / 2, 'y_1': 0, 'x_2': 0, 'y_2': self.dist_long_mic / 2,
@@ -196,7 +196,7 @@ class angle_cord_estimation():
         par_46 = list_line['l_4'].intersects(list_line['l_6'])
 
         intersection_list_test = [par_12, par_14, par_16, par_52, par_54, par_32, par_36, par_26, par_46]
-        print(f'\nintersecting test: {intersection_list_test}')
+        #print(f'\nintersecting test: {intersection_list_test}')
 
         par_17 = list_line['l_1'].intersects(list_line['l_7'])
         par_27 = list_line['l_2'].intersects(list_line['l_7'])
@@ -287,4 +287,4 @@ def simulation(boat_placment):
 
 if __name__ == '__main__':
     boat = angle_cord_estimation(dist_short_mic=12, spd_sound=343, max_distance=2000)
-    print(boat.timestamp_2_cord(simulation('45')))
+    #print(boat.timestamp_2_cord(simulation('45')))
