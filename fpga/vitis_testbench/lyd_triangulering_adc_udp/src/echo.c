@@ -49,7 +49,7 @@ int transfer_data(struct pbuf *p, ip_addr_t *ip)
 {
 	err_t err;
 
-	// send 1 on udp
+	// transfer data with udp
 	err = udp_sendto(pcb_p, p, ip, REMOTE_UDP_PORT);
 	if (err != ERR_OK)
 	{
@@ -146,7 +146,7 @@ int start_application(const ip_addr_t *local_ip, const ip_addr_t *remote_ip)
 	}
 
 	/* bind to specified @port */
-	err = udp_bind(pcb_p, local_ip, REMOTE_UDP_PORT); // TRYM Try switching out local port to be the same as remote port
+	err = udp_bind(pcb_p, local_ip, REMOTE_UDP_PORT);
 	if (err != ERR_OK) {
 		xil_printf("Unable to bind to port %d: err = %d\n\r", REMOTE_UDP_PORT, err);
 		return -2;

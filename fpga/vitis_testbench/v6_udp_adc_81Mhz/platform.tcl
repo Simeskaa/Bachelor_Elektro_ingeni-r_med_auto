@@ -28,3 +28,22 @@ platform generate -domains standalone_domain
 platform generate
 platform active {v6_udp_adc_81Mhz}
 platform generate -domains 
+platform generate
+platform generate
+platform active {v6_udp_adc_81Mhz}
+bsp reload
+bsp setlib -name xiltimer -ver 1.1
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate -domains standalone_domain 
+bsp removelib -name xiltimer
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate -domains standalone_domain 
+platform generate -domains standalone_domain 
+platform active {v6_udp_adc_81Mhz}
+bsp reload
+platform generate
+bsp reload

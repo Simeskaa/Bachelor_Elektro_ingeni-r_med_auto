@@ -42,3 +42,6 @@ platform generate -domains
 platform active {ARTY_UDP_N_ADC_platform}
 bsp reload
 platform generate -domains 
+platform generate
+platform generate
+platform generate

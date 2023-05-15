@@ -1,0 +1,10 @@
+#ifndef __GLOBALS_H_
+#define __GLOBALS_H_
+
+
+#define REMOTE_UDP_PORT 5001
+#define DEBUG_ON 0
+
+
+
+#endif // __GLOBALS_H_

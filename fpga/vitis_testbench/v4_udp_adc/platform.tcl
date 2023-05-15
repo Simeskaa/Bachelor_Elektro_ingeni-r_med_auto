@@ -19,3 +19,6 @@ platform generate
 platform active {v4_udp_adc}
 bsp reload
 platform generate -domains 
+platform generate
+platform generate
+platform generate

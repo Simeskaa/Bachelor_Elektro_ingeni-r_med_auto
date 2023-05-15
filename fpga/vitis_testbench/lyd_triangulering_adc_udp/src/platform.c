@@ -104,62 +104,6 @@ u16 SysMonIntrId = XPAR_MICROBLAZE_0_AXI_INTC_XADC_WIZ_0_IP2INTC_IRPT_INTR;
 static XIntc intc;
 
 /********************** ADC FUNCTIONS ****************************************/
-int InitIntC(u16 DeviceId)
-{
-	int Status;
-	XIntc *intcp;
-	intcp = &intc;
-
-#if 0 // TRYM !!!
-	/*
-	 * Initialize the interrupt controller driver so that it is
-	 * ready to use.
-	 */
-	Status = XIntc_Initialize(intcp, DeviceId);
-	if (Status != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-
-#endif
-	/*
-	 * Perform a self-test to ensure that the hardware was built  correctly.
-	 */
-	Status = XIntc_SelfTest(intcp);
-	if (Status != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-
-	/*
-	 * Initialize the exception table.
-	 */
-	Xil_ExceptionInit();
-
-	/*
-	 * Register the interrupt controller handler with the exception table.
-	 */
-	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
-			(Xil_ExceptionHandler)XIntc_DeviceInterruptHandler,
-			(void*) 0);
-
-	/*
-	 * Enable exceptions.
-	 */
-	Xil_ExceptionEnable();
-
-#if 0
-	/*
-	 * Start the interrupt controller such that interrupts are enabled for
-	 * all devices that cause interrupts.
-	 */
-	Status = XIntc_Start(intcp, XIN_REAL_MODE);
-	if (Status != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-#endif
-
-	return XST_SUCCESS;
-}
-
 /*****************************************************/
 int InitAdc()
 {
@@ -176,38 +120,6 @@ int InitAdc()
 	}
 
 	XSysMon_CfgInitialize(SysMonInstPtr, ConfigPtr, ConfigPtr->BaseAddress);
-
-#if 0
-
-	/*
-	 * Disable the Channel Sequencer before configuring the Sequence
-	 * registers.
-	 */
-	XSysMon_SetSequencerMode(SysMonInstPtr, XSM_SEQ_MODE_SAFE);
-
-	/*
-	 * Enable the following channels in the Sequencer registers:
-	 * 	- On-chip Temperature
-	 * 	- On-chip VCCAUX supply sensor
-	 * 	- 1st Auxiliary Channel
-	 * 	- 16th Auxiliary Channel
-	 *
-	 * Uncertain if I need to set channels to sample from, since I've set it up in the hardware design.
-	 */
-	Status = XSysMon_SetSeqChEnables(SysMonInstPtr, XSM_SEQ_CH_AUX04 |
-													XSM_SEQ_CH_AUX05 |
-													XSM_SEQ_CH_AUX06 |
-													XSM_SEQ_CH_AUX07);
-	if (Status != XST_SUCCESS)
-	{
-		return XST_FAILURE;
-	}
-	/*
-	 * Enable the Channel Sequencer in continuous sequencer cycling mode.
-	 */
-	//XSysMon_SetSequencerMode(SysMonInstPtr, XSM_SEQ_MODE_CONTINPASS);
-	//XSysMon_SetSequencerMode(SysMonInstPtr, XSM_SEQ_MODE_ONEPASS);
-#endif
 
 	/*
 	 * Setup the interrupt system.
@@ -246,13 +158,10 @@ void StartAdc()
 u16 adc_buffer[2*ADC_BUFFER_SIZE];  // Buffer is in fact two buffers
 
 u16 *adc_buff_write_p = adc_buffer;
-//u16 *adc_buff_read_p  = adc_buffer;
-
 u32 adc_buff_write_enable = TRUE;
-//u32 adc_buff_read_enable  = FALSE; // TRYM delete if not needed, remember in .h file too.
-
 u32 adc_buff_1_filled = FALSE;
 u32 adc_buff_2_filled = FALSE;
+u32 interrupt_counter = 0;
 
 /**********************************************************
                 ADC interrupt handler:
@@ -261,6 +170,7 @@ void SysMonInterruptHandler(void *CallBackRef)
 {
 	u32 IntrStatusValue;
 	XSysMon *SysMonPtr = (XSysMon *) CallBackRef;
+	interrupt_counter++;
 
 	IntrStatusValue = XSysMon_IntrGetStatus(SysMonPtr);  // Get Interrupt Status Register
 

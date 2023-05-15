@@ -47,6 +47,8 @@
 #endif
 #endif
 
+//#include "xiltimer.h"
+
 /* defined by each RAW mode application */
 void print_app_header();
 int start_application();
@@ -147,6 +149,13 @@ int main()
 	}
 #endif
 
+	/*
+	XTimer timerInstance;
+	XTimer* InstancePtr = &timerInstance;
+
+	XilTickTimer_Init(InstancePtr);
+	*/
+
 	// Setup interrupts and enable caches
 	init_platform();
 
@@ -197,6 +206,9 @@ int main()
 	/* This is the threshold, it's ok to let the code go from here. */
 	netif_set_default(echo_netif);
 
+	/* specify that the network if is up */
+	netif_set_up(echo_netif);	// Try moving this before intr enabled. TRYM
+
 	/* now enable interrupts */
 	Status = InitAdc();
 	if (Status != 0)
@@ -206,9 +218,6 @@ int main()
 	}
 	StartAdc();
 	platform_enable_interrupts();
-
-	/* specify that the network if is up */
-	netif_set_up(echo_netif);	// Try moving this before intr enabled. TRYM
 
 #if (LWIP_IPV6 == 0)
 #if (LWIP_DHCP==1)
@@ -246,15 +255,18 @@ int main()
 /********************************************************************/
 	struct pbuf my_pbuf;
 
+	// Initializing the length of the buffer to transfer.
 	my_pbuf.payload = NULL;
-	my_pbuf.len		= ADC_BUFFER_SIZE;
-	my_pbuf.tot_len	= ADC_BUFFER_SIZE;
+	my_pbuf.len		= 2*ADC_BUFFER_SIZE;
+	my_pbuf.tot_len	= 2*ADC_BUFFER_SIZE;
 	my_pbuf.next	= 0;
 
+#if DEBUG_ON
     // Testing:
     u16 diff_counter = 10000;
     u32 time_counter = 0;
     // End Testing
+#endif
 
 	while (1)
 	{
@@ -262,30 +274,41 @@ int main()
 
         if (adc_buff_1_filled)
         {
+#if DEBUG_ON	// Testing timing between the filling of the buf and sending.
             diff_counter++;
             time_counter++;
+#endif
+            // sets the payload pointer to point at the first address in the buffer
             my_pbuf.payload = &adc_buffer[0];
             transfer_data(&my_pbuf, &remote_ip);
             adc_buff_1_filled = FALSE;
+            // Safety feature in case the buffer is filled faster than we can transfer data.
             if (!adc_buff_write_enable)
                 adc_buff_write_enable = TRUE;  // In case writing was paused due to buffer-1 full
         }
         else if (adc_buff_2_filled)
         {
+#if DEBUG_ON	// Testing timing between the filling of the buf and sending.
             diff_counter--;
             time_counter++;
+#endif
+            // sets the payload pointer to point at the first address in the second buffer
             my_pbuf.payload = &adc_buffer[ADC_BUFFER_SIZE];
             transfer_data(&my_pbuf, &remote_ip);
             adc_buff_2_filled = FALSE;
+            // Safety feature in case the buffer is filled faster than we can transfer data.
             if (!adc_buff_write_enable)
                 adc_buff_write_enable = TRUE;  // In case writing was paused due to buffer-2 full
         }
+#if DEBUG_ON	// Testing timing between the filling of the buf and sending.
         if (time_counter >= 10)
         {
             time_counter = 0;
+            //XTime_GetTime(Xtime_Global);
             xil_printf("10 ADC-buffers handled.\r\n");
             xil_printf("Buff-1.A0 = %d. Buff-2.A0 = %d.\r\n", adc_buffer[0], adc_buffer[ADC_BUFFER_SIZE]);
         }
+#endif
 	}
 	// Never reached:
 	cleanup_platform();

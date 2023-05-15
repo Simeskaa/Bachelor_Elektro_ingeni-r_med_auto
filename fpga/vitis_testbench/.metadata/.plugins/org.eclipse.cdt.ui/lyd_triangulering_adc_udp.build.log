@@ -1,6 +1,6 @@
-21:37:19 **** Incremental Build of configuration Debug for project lyd_triangulering_adc_udp ****
+19:51:39 **** Incremental Build of configuration Debug for project lyd_triangulering_adc_udp ****
 make all 
 make: Nothing to be done for 'all'.
 
-21:37:20 Build Finished (took 580ms)
+19:51:39 Build Finished (took 345ms)
 

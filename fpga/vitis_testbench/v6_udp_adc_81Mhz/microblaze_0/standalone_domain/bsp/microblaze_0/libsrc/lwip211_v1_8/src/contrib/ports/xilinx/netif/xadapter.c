@@ -380,8 +380,8 @@ void eth_link_detect(struct netif *netif)
 
 	phy_link_status = phy_link_detect(xemacp, phyaddrforemac);
 
-//	if ((eth_link_status == ETH_LINK_UP) && (!phy_link_status))
-//		eth_link_status = ETH_LINK_DOWN; TODO FIXME HELP TRYM
+	if ((eth_link_status == ETH_LINK_UP) && (!phy_link_status))
+		eth_link_status = ETH_LINK_DOWN;
 
 	switch (eth_link_status) {
 		case ETH_LINK_UNDEFINED:

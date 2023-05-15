@@ -16,3 +16,6 @@ platform write
 platform generate -domains 
 platform active {v5_udp_adc}
 platform generate
+platform generate
+platform generate
+platform generate

@@ -21,3 +21,6 @@ platform active {v3_udp_adc}
 platform generate -domains 
 platform active {v3_udp_adc}
 platform generate -domains 
+platform generate
+platform generate
+platform generate
