@@ -2,10 +2,12 @@ import numpy as np
 import copy
 from PySide6.QtCore import QLineF, QPointF
 
+
 class angle_cord_estimation():
     def __init__(self, dist_short_mic: float = 0.275610, spd_sound: float = 343, max_distance: float = 100):
         # making local variables in the class
         # -------------------------------------------------
+        self.grad_list = []
         self.dist_short_mic = dist_short_mic
         self.dist_long_mic = np.sqrt(self.dist_short_mic ** 2 + self.dist_short_mic ** 2)
         self.spd_sound = spd_sound
@@ -14,17 +16,18 @@ class angle_cord_estimation():
         self.dist = None
         self.U = None
 
-    def norm_values(self,toad):
-        norm_toad = [0.0] * len(toad)
-        for i in range(len(toad)):
-            toad[i] *= -1
-        low_val_index = np.argmin(toad)  # Lowest value
-        low_val = toad[low_val_index]
+    def norm_values(self, tdoa):
+        fake_tdoa = copy.copy(tdoa)
+        norm_tdoa = []
+        for i in range(len(fake_tdoa)):
+            fake_tdoa[i] *= -1
+        low_val_index = np.argmin(tdoa)  # Lowest value
+        low_val = tdoa[low_val_index]
 
-        for j in range(len(toad)):
-            norm_toad[j] = toad[j] + abs(low_val)
+        for j in range(len(tdoa)):
+            norm_tdoa.append(tdoa[j] + abs(low_val))
+        return norm_tdoa
 
-        return norm_toad
     def angle_calc(self, tdoa: list):
         # rotating the coordinate system to the first quadrant
         # -------------------------------------------------
@@ -49,7 +52,8 @@ class angle_cord_estimation():
         sound_diff_2 = ((m3_m1 < 0) and (m3_m2 < 0) and (m3_m4 < 0) and (m1_m4 < 0) and (m1_m2 < 0) and (m4_m2 < 0))
         sound_diff_3 = ((m3_m1 < 0) and (m3_m2 < 0) and (m4_m2 < 0)) and \
                        ((m3_m4 >= 0) and (m1_m4 >= 0) and (m1_m2 >= 0))
-        sound_diff_4 = ((m3_m1 >= 0) and (m3_m2 >= 0) and (m3_m4 >= 0) and (m1_m4 >= 0) and (m1_m2 >= 0) and (m4_m2 >= 0))
+        sound_diff_4 = (
+                    (m3_m1 >= 0) and (m3_m2 >= 0) and (m3_m4 >= 0) and (m1_m4 >= 0) and (m1_m2 >= 0) and (m4_m2 >= 0))
 
         if (sound_diff_1 or sound_diff_2 or sound_diff_3 or sound_diff_4):
             # fake microphone array
@@ -74,10 +78,10 @@ class angle_cord_estimation():
         y2 = 0
         y3 = 0
         y4 = -self.dist_long_mic / 2
-        T_1 = tdoa[0]
-        T_2 = tdoa[1]
-        T_3 = tdoa[2]
-        T_4 = tdoa[3]
+        T_1 = fma['m1']
+        T_2 = fma['m2']
+        T_3 = fma['m3']
+        T_4 = fma['m4']
         c = self.spd_sound
 
         X = np.array([[x2 - x1, y2 - y1],
@@ -91,16 +95,15 @@ class angle_cord_estimation():
 
         list_angles = [angle_m3_m2, angle_m1_m4, angle_m3_m4, angle_m1_m2, angle_m3_m1, angle_m4_m2, angle_center[0]]
 
-        # removing negative angle from co
+        # removing negative angle from coordinate
         # -------------------------------------------------
-        if fma['m1'] > fma['m3']:
+        if fma['m1'] > fma['m2']:
             list_angles[4] = np.pi / 2 - list_angles[4]
             list_angles[5] = np.pi / 2 - list_angles[5]
 
         # moving the angle to correct quadrant
         # -------------------------------------------------
         tdoas_temp2 = copy.copy(tdoa)
-
         for i in range(2):
             ref = np.argmax(tdoas_temp2)
             tdoas_temp2.remove(tdoas_temp2[ref])
@@ -119,6 +122,11 @@ class angle_cord_estimation():
         elif (tdoas_temp2 == [tdoa[1], tdoa[3]]):
             for i in range(len(list_angles)):
                 list_angles[i] = list_angles[i] + 3 * np.pi / 2
+
+        self.grad_list.clear()
+        for i in range(len(list_angles)):
+            self.grad_list.append(list_angles[i] * 180 / np.pi)
+
         return list_angles, self.average_angle
 
     def angle_2_cord_calc(self, angles: list, average_angle: float):
@@ -130,17 +138,17 @@ class angle_cord_estimation():
             y_name = f'y_{i + 1}'
             end_cords[x_name] = self.max_dist * np.cos(angles[i])
             end_cords[y_name] = self.max_dist * np.sin(angles[i])
-        end_cords['x_7'] = self.U[0][0]*self.max_dist
-        end_cords['y_7'] = self.U[1][0]*self.max_dist
+        end_cords['x_7'] = self.U[0][0] * self.max_dist
+        end_cords['y_7'] = self.U[1][0] * self.max_dist
 
         start_cords = {'x_1': -self.dist_long_mic / 2, 'y_1': 0, 'x_2': 0, 'y_2': self.dist_long_mic / 2,
                        'x_3': -self.dist_long_mic / 2, 'y_3': 0, 'x_4': 0, 'y_4': self.dist_long_mic / 2,
                        'x_5': -self.dist_long_mic / 2, 'y_5': 0, 'x_6': 0, 'y_6': -self.dist_long_mic / 2,
-                       'x_7': -self.U[0][0]*self.max_dist, 'y_7': -self.U[1][0]*self.max_dist}
+                       'x_7': -self.U[0][0] * self.max_dist, 'y_7': -self.U[1][0] * self.max_dist}
         # making the coords to lines to be used in intersection
         # -------------------------------------------------
         list_line = {}
-        for i in range(int(len(start_cords)/2)):
+        for i in range(int(len(start_cords) / 2)):
             name = f'l_{i + 1}'
             p1 = QPointF(start_cords[f'x_{i + 1}'], start_cords[f'y_{i + 1}'])
             p2 = QPointF(end_cords[f'x_{i + 1}'], end_cords[f'y_{i + 1}'])
@@ -159,7 +167,6 @@ class angle_cord_estimation():
         par_46 = list_line['l_4'].intersects(list_line['l_6'])
 
         intersection_list_test = [par_12, par_14, par_16, par_52, par_54, par_32, par_36, par_26, par_46]
-        print(f'\nintersecting test: {intersection_list_test}')
 
         par_17 = list_line['l_1'].intersects(list_line['l_7'])
         par_27 = list_line['l_2'].intersects(list_line['l_7'])
@@ -187,8 +194,8 @@ class angle_cord_estimation():
             angle_overrule = False
         else:
             angle_overrule = True
-            x = self.max_dist*np.cos(average_angle)/2
-            y = self.max_dist*np.sin(average_angle)/2
+            x = self.max_dist * np.cos(average_angle) / 2
+            y = self.max_dist * np.sin(average_angle) / 2
         return x, y, angle_overrule
 
     def coord_2_distance_calc(self, x: float, y: float):
@@ -203,8 +210,8 @@ class angle_cord_estimation():
         toad = self.norm_values(timestamps)
         angles, average_angle = self.angle_calc(toad)
         boat_coords_x, boat_coords_y, angle_overrule = self.angle_2_cord_calc(angles, average_angle)
-        dist = self.coord_2_distance_calc(boat_coords_x, boat_coords_y)
-        return boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule
+        self.coord_2_distance_calc(boat_coords_x, boat_coords_y)
+        return boat_coords_x, boat_coords_y, angle_overrule
 
     @property
     def angle2boat(self) -> float:
@@ -213,6 +220,11 @@ class angle_cord_estimation():
     @property
     def dist2boat(self) -> float:
         return self.dist
+
+    @property
+    def all_angles_grad(self) -> list:
+        return self.grad_list
+
 
 def simulation(boat_placment):
     tdoa_78 = [0, 0.019, 0.029, 0.048]

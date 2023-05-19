@@ -8,6 +8,8 @@ import logging
 import numpy as np
 from memory_profiler import profile
 
+from include.direction_and_distance_estimation import angle_cord_estimation
+
 
 class GUI(QMainWindow):
     def __init__(self, max_dist:float = 100., showcase: int = 5):
@@ -277,29 +279,29 @@ class GUI(QMainWindow):
 
 def test():
     # simulating inputs from direction and angle class
-    while True:
-        #time.sleep(3)
-        #boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule = boat.timestamp_2_cord(simulation('45'))
-        logging.info("starting")
-        window.update_GUI(x= 5, y=5, hz= '440', angle_overrule= False)
-        time.sleep(1)
-        window.update_GUI(x=2500, y=50, hz= '260', angle_overrule= False)
-        time.sleep(1)
-        window.update_GUI(x=15, y=5, hz= '440', angle_overrule= True)
-        time.sleep(1)
-        window.update_GUI(x=-1500, y=1500, hz= '260', angle_overrule= False)
-        time.sleep(1)
-        window.update_GUI(x=-2500, y=1500, hz='260', angle_overrule=False)
-        time.sleep(1)
-        window.update_GUI(x=-2500, y=-2500, hz='260', angle_overrule=False)
-        time.sleep(1)
+    boat_coords_x, boat_coords_y, angle_overrule = ace.timestamp_2_cord(simulation('78'))
+    print(f'object origin: 348 degrees and 20 m away, all angle estimates: {ace.grad_list}, distance estimate: {ace.dist2boat} \n')
+    window.update_GUI(x= boat_coords_x, y=boat_coords_y, hz= '440', angle_overrule= angle_overrule)
+    time.sleep(2)
+
+    boat_coords_x, boat_coords_y, angle_overrule = ace.timestamp_2_cord(simulation('45'))
+    print(f'object origin: 315 degrees and 12 m away, all angle estimates: {ace.grad_list}, distance estimate: {ace.dist2boat} \n')
+    window.update_GUI(x= boat_coords_x, y=boat_coords_y, hz= '440', angle_overrule= angle_overrule)
+    time.sleep(2)
+
+    boat_coords_x, boat_coords_y, angle_overrule = ace.timestamp_2_cord(simulation('34'))
+    print(
+        f'object origin: 304 degrees and 35 m away, all angle estimates: {ace.grad_list}, distance estimate: {ace.dist2boat} \n')
+    window.update_GUI(x= boat_coords_x, y=boat_coords_y, hz= '440', angle_overrule= angle_overrule)
+    time.sleep(2)
+
 
 
 def simulation(boat_placment):
     # simulating timestamps for the simulation
-    tdoa_78 = [0, 0.029, 0.019, 0.048]
-    tdoa_45 = [0.0, 0.0, 0.03498542274, 0.03498542274]
-    tdoa_34 = [0., (1.37 + 0.92) / 343, (1.37 + 0.92 + 9.506) / 343, (1.37 + 0.92 + 9.506 + 1.438 + 0.809) / 343]
+    tdoa_78 = [0.0, 0.150521 / 343., (0.081044 + 0.150521) / 343., (0.150119 + 0.081044 + 0.150521) / 343.]
+    tdoa_45 = [0.0, 0.0, 0.27563 / 343., 0.27563 / 343.]
+    tdoa_34 = [0.0, 0.052593 / 343., (0.217973 + 0.052593) / 343., (0.052593 + 0.217973 + 0.052593) / 343.]
 
     if boat_placment == '78':
         # static simulate time delay of arrive
@@ -308,34 +310,33 @@ def simulation(boat_placment):
         t2 = tdoa_78[1]
         t3 = tdoa_78[2]
         t4 = tdoa_78[3]
-        mic = {'m1': t1, 'm2': t3, 'm3': t2, 'm4': t4}
+        mic = {'m1': t3, 'm2': t1, 'm3': t4, 'm4': t2}
 
     if boat_placment == '45':
         t1 = tdoa_45[0]
         t2 = tdoa_45[1]
         t3 = tdoa_45[2]
         t4 = tdoa_45[3]
-        mic = {'m1': t3, 'm2': t4, 'm3': t1, 'm4': t2}
+        mic = {'m1': t3, 'm2': t1, 'm3': t4, 'm4': t2}
 
     if boat_placment == '34':
         t1 = tdoa_34[0]
         t2 = tdoa_34[1]
         t3 = tdoa_34[2]
         t4 = tdoa_34[3]
-        mic = {'m1': t4, 'm2': t3, 'm3': t2, 'm4': t1}
+        mic = {'m1': t4, 'm2': t2, 'm3': t3, 'm4': t1}
 
-    tdoa = [mic['m1'], mic['m3'], mic['m2'], mic['m4']]
+    tdoa = [mic['m1'], mic['m2'], mic['m3'], mic['m4']]
 
     return tdoa
 
 if __name__ == '__main__':
-
     app = QApplication(sys.argv)
-    window = GUI(max_dist=100, showcase=5)
+    window = GUI(max_dist=100, showcase=500000)
     format = "%(asctime)s: %(message)s"
     logging.basicConfig(format=format, level=logging.INFO,
                         datefmt="%H:%M:%S")
-    #boat = angle_cord_estimation(dist_short_mic=12, spd_sound=343, max_distance=2000)
+    ace = angle_cord_estimation(dist_short_mic=0.27563, spd_sound=343, max_distance=100)
     x2 = threading.Thread(target=test)
     x2.start()
     window.show()
