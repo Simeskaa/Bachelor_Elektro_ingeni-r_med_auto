@@ -48,7 +48,7 @@ def verify_signals(signals, des_Hz: float = 270.0, width: int = 10):
 
     # Populate the detected frequency array
     for i in range(len(signals)):
-        freq = pro.hps(signals[i])
+        freq, test, test2 = pro.HPS2(signals[i])
         freq_array.insert(0, freq)
         freq_array.pop(-1)
 
@@ -61,7 +61,7 @@ def verify_signals(signals, des_Hz: float = 270.0, width: int = 10):
         ready = True
     else:
         ready = False
-    logging.debug(f'worker: Frequencies detected -> {freq_array}')
+    logging.info(f'worker: Frequencies detected -> {freq_array}')
     return ready
 
 def prod(lock):
@@ -70,7 +70,7 @@ def prod(lock):
     a1_tot = []
     a2_tot = []
     a3_tot = []
-    stop_time = time.perf_counter() + 1.11
+    stop_time = time.perf_counter() + 10
     counter = 1
     while True:
         if time.perf_counter() >= stop_time:
@@ -81,7 +81,7 @@ def prod(lock):
             break
         data = UDP.get_message(65507)
 
-        logging.info(f'consumer: msg nr{counter}')
+        logging.debug(f'consumer: msg nr{counter}')
         counter += 1
         a0 = []
         a1 = []
@@ -99,13 +99,13 @@ def prod(lock):
                     a2.append(int.from_bytes(b1 + b2, byteorder='little'))#/0xffff)
                 elif (i % 8) == 6:
                     a3.append(int.from_bytes(b1 + b2, byteorder='little'))#/0xffff)
-        #a0 = DC0.mean_value_filter(a0)
+        a0 = DC0.mean_value_filter(a0)
         #a0 = DC0.lp_filter_start(a0)
-        #a1 = DC0.mean_value_filter(a1)
+        a1 = DC0.mean_value_filter(a1)
         #a1 = DC1.lp_filter_start(a1)
-        #a2 = DC0.mean_value_filter(a2)
+        a2 = DC0.mean_value_filter(a2)
         #a2 = DC2.lp_filter_start(a2)
-        #a3 = DC0.mean_value_filter(a3)
+        a3 = DC0.mean_value_filter(a3)
         #a3 = DC3.lp_filter_start(a3)
         mics = [a0, a1, a2, a3]
         a0_tot.extend(mics[0])
@@ -142,12 +142,15 @@ def consumer(lock):
                 mics = item
                 """Signal verification"""
                 desired_Hz = '440'
-                start = verify_signals(mics, des_Hz=int(desired_Hz), width=20)
-                #q.put(mics)
+                start = verify_signals(mics, des_Hz=int(desired_Hz), width=200)
+                if start:
+                    with lock:
+                        q.put(mics)
+                    break
                 logging.debug(f'worker: Signal verification determined state {start}')
 
                 """Signal processing"""
-                if start:
+                if False:
                     logging.debug(f'worker: About to calculate weights')
                     we, wk = pro.spectral_weighing(mics, a=0.3, y=0.4)
                     logging.debug(f'worker: About to calculate correlation')
@@ -298,10 +301,11 @@ if __name__ == "__main__":
     t2.join()
 
 
-    gathered_data[0] = DC0.mean_value_filter(gathered_data[0])
-    gathered_data[1] = DC0.mean_value_filter(gathered_data[1])
-    gathered_data[2] = DC0.mean_value_filter(gathered_data[2])
-    gathered_data[3] = DC0.mean_value_filter(gathered_data[3])
+    #gathered_data[0] = DC0.mean_value_filter(gathered_data[0])
+    #gathered_data[1] = DC0.mean_value_filter(gathered_data[1])
+    #gathered_data[2] = DC0.mean_value_filter(gathered_data[2])
+    #gathered_data[3] = DC0.mean_value_filter(gathered_data[3])
+    gathered_data = q.get()
     write("Live_data.wav", samplerate, np.array(gathered_data[0]).astype(np.int16))
 
     # Plotting of data

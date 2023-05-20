@@ -20,6 +20,23 @@ class processing():
 
         return sig.lfilter(hn, [1], xn)
 
+    def HPS2(self, xn, samplerate=44100):
+        L = len(xn)
+        hps_array = []
+        spectrum = np.abs(np.fft.rfft(xn))
+        hps_spectrum = np.copy(spectrum)
+        hps_array.append(spectrum)
+
+        for h in range(2, 5):  # Harmonics from 2 to 4 (adjust as needed)
+            downsampled_spectrum = np.copy(spectrum[::h])
+            hps_array.append(downsampled_spectrum)
+            hps_spectrum[:len(downsampled_spectrum)] *= downsampled_spectrum
+
+        peak_location = np.argmax(hps_spectrum)
+        frequency = peak_location/L*samplerate
+
+        return frequency, hps_array, hps_spectrum
+
     # Harmonic Product Spectrum
     # Is used in order to find the dominating frequency in a signal
     def hps(self, xn):
