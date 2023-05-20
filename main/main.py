@@ -325,21 +325,31 @@ if __name__ == "__main__":
 
         if True:
             # HPS
-            Yk1, Yk2, Yk3, Yk4, peak_location, frequency = hps_local(gathered_data[0], samplerate)
+            frequency, hps_array, hps_spectrum = HPS2(gathered_data[0], samplerate)
             plt.figure(2, figsize=(12,8))
             plt.subplot(4, 1, 1)
-            plt.plot(Yk1)
+            plt.plot(hps_array[0])
             plt.xlabel('Yk1')
+            plt.xlim(0,len(hps_spectrum))
+
             plt.subplot(4, 1, 2)
-            plt.plot(Yk2)
+            plt.plot(hps_array[1])
             plt.xlabel('Yk2')
+            plt.xlim(0,len(hps_spectrum))
+
             plt.subplot(4, 1, 3)
-            plt.plot(Yk3)
+            plt.plot(hps_array[2])
             plt.xlabel('Yk3')
+            plt.xlim(0,len(hps_spectrum))
+
             plt.subplot(4, 1, 4)
-            plt.plot(Yk4)
+            plt.plot(hps_array[3])
             plt.xlabel('Yk4')
-            plt.plot(peak_location, Yk4[peak_location], 'rs')
+            plt.xlim(0,len(hps_spectrum))
+
+            plt.figure(10)
+            plt.plot(hps_spectrum)
+            plt.plot(np.argmax(hps_spectrum), 'rs')
             plt.tight_layout()
 
         if True:
