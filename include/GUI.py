@@ -279,20 +279,23 @@ class GUI(QMainWindow):
 
 def test():
     # simulating inputs from direction and angle class
-    boat_coords_x, boat_coords_y, angle_overrule = ace.timestamp_2_cord(simulation('78'))
-    print(f'object origin: 348 degrees and 20 m away, all angle estimates: {ace.grad_list}, distance estimate: {ace.dist2boat} \n')
-    window.update_GUI(x= boat_coords_x, y=boat_coords_y, hz= '440', angle_overrule= angle_overrule)
+    #boat_coords_x, boat_coords_y, angle_overrule = ace.timestamp_2_cord(simulation('78'))
+    #print(f'object origin: 348 degrees and 20 m away, all angle estimates: {ace.grad_list}, distance estimate: {ace.dist2boat} \n')
+    window.update_GUI(x= 1000, y=1000, hz= '440', angle_overrule= False)
+    time.sleep(2)
+#
+    #boat_coords_x, boat_coords_y, angle_overrule = ace.timestamp_2_cord(simulation('45'))
+    #print(f'object origin: 315 degrees and 12 m away, all angle estimates: {ace.grad_list}, distance estimate: {ace.dist2boat} \n')
+    window.update_GUI(x= -1000, y=-1000, hz= '440', angle_overrule= False)
+    time.sleep(2)
+#
+    #boat_coords_x, boat_coords_y, angle_overrule = ace.timestamp_2_cord(simulation('34'))
+    #print(
+    #    f'object origin: 304 degrees and 35 m away, all angle estimates: {ace.grad_list}, distance estimate: {ace.dist2boat} \n')
+    window.update_GUI(x= -1000, y=1000, hz= '440', angle_overrule= False)
     time.sleep(2)
 
-    boat_coords_x, boat_coords_y, angle_overrule = ace.timestamp_2_cord(simulation('45'))
-    print(f'object origin: 315 degrees and 12 m away, all angle estimates: {ace.grad_list}, distance estimate: {ace.dist2boat} \n')
-    window.update_GUI(x= boat_coords_x, y=boat_coords_y, hz= '440', angle_overrule= angle_overrule)
-    time.sleep(2)
-
-    boat_coords_x, boat_coords_y, angle_overrule = ace.timestamp_2_cord(simulation('34'))
-    print(
-        f'object origin: 304 degrees and 35 m away, all angle estimates: {ace.grad_list}, distance estimate: {ace.dist2boat} \n')
-    window.update_GUI(x= boat_coords_x, y=boat_coords_y, hz= '440', angle_overrule= angle_overrule)
+    window.update_GUI(x= 1000, y=-1000, hz= '440', angle_overrule=False)
     time.sleep(2)
 
 
