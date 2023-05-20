@@ -36,7 +36,7 @@ toad = [0.0]*4
 q = queue.Queue()
 lock = Lock()
 gathered_data = list()
-samplerate = 43706
+samplerate = 44000
 
 
 
@@ -143,6 +143,7 @@ def consumer(lock):
                 """Signal verification"""
                 desired_Hz = '440'
                 start = verify_signals(mics, des_Hz=int(desired_Hz), width=20)
+                #q.put(mics)
                 logging.debug(f'worker: Signal verification determined state {start}')
 
                 """Signal processing"""
@@ -192,6 +193,23 @@ def hps_local(xn, samplerate):
     frequency = peak_location/L*samplerate
 
     return Yk, Yk2, Yk3, Yk4, peak_location, frequency
+
+def HPS2(xn, samplerate):
+    L = len(xn)
+    hps_array = []
+    spectrum = np.abs(np.fft.rfft(xn))
+    hps_spectrum = np.copy(spectrum)
+    hps_array.append(spectrum)
+
+    for h in range(2, 5):  # Harmonics from 2 to 4 (adjust as needed)
+        downsampled_spectrum = np.copy(spectrum[::h])
+        hps_array.append(downsampled_spectrum)
+        hps_spectrum[:len(downsampled_spectrum)] *= downsampled_spectrum
+
+    peak_location = np.argmax(hps_spectrum)
+    frequency = peak_location/L*samplerate
+
+    return frequency, hps_array, hps_spectrum
 
 def spectral_weighing(mic, a, y):
         nr_mics = len(mic)       #  Amount of microphones
@@ -282,9 +300,12 @@ if __name__ == "__main__":
 
     gathered_data[0] = DC0.mean_value_filter(gathered_data[0])
     gathered_data[1] = DC0.mean_value_filter(gathered_data[1])
+    gathered_data[2] = DC0.mean_value_filter(gathered_data[2])
+    gathered_data[3] = DC0.mean_value_filter(gathered_data[3])
     write("Live_data.wav", samplerate, np.array(gathered_data[0]).astype(np.int16))
 
-    if False:
+    # Plotting of data
+    if True:
         if True:
             # FFT raw file
             raw_file = gathered_data[0]
@@ -371,12 +392,17 @@ if __name__ == "__main__":
 
         plt.show()
 
-    Yk1, Yk2, Yk3, Yk4, peak_location, frequency = hps_local(gathered_data[0], samplerate)
-    Yk12, Yk22, Yk32, Yk42, peak_location2, frequency2 = hps_local(gathered_data[1], samplerate)
-    Yk13, Yk23, Yk33, Yk43, peak_location3, frequency3 = hps_local(gathered_data[2], samplerate)
-    Yk14, Yk24, Yk34, Yk44, peak_location4, frequency4 = hps_local(gathered_data[3], samplerate)
+    #Yk1, Yk2, Yk3, Yk4, peak_location, frequency = hps_local(gathered_data[0], samplerate)
+    #Yk12, Yk22, Yk32, Yk42, peak_location2, frequency2 = hps_local(gathered_data[1], samplerate)
+    #Yk13, Yk23, Yk33, Yk43, peak_location3, frequency3 = hps_local(gathered_data[2], samplerate)
+    #Yk14, Yk24, Yk34, Yk44, peak_location4, frequency4 = hps_local(gathered_data[3], samplerate)
 
-    freqs = [round(frequency, 2), round(frequency2,2), round(frequency3, 2), round(frequency4, 2)]
+    frequency, hps_array, hps_spectrum = HPS2(gathered_data[0], samplerate)
+    frequency1, hps_array1, hps_spectrum1 = HPS2(gathered_data[1], samplerate)
+    frequency2, hps_array2, hps_spectrum2 = HPS2(gathered_data[2], samplerate)
+    frequency3, hps_array3, hps_spectrum3 = HPS2(gathered_data[3], samplerate)
+
+    freqs = [frequency, frequency1, frequency2, frequency3]
     we_k, wk = spectral_weighing(gathered_data, 0.1, 0.4)
     X1_k, X2_k, R_12_CC, R_12_NW, R_12, r_12, time_delay, distance = cross_correlation(gathered_data[0], gathered_data[1], we_k, samplerate)
     X1_k2, X2_k2, R_12_CC2, R_12_NW2, R_122, r_122, time_delay2, distance2 = cross_correlation(gathered_data[0], gathered_data[2], we_k, samplerate)
