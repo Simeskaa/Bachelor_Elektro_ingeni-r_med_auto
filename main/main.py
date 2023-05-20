@@ -61,7 +61,7 @@ def verify_signals(signals, des_Hz: float = 270.0, width: int = 10):
         ready = True
     else:
         ready = False
-    logging.info(f'worker: Frequencies detected -> {freq_array}')
+    logging.debug(f'worker: Frequencies detected -> {freq_array}')
     return ready
 
 def prod(lock):
@@ -70,7 +70,8 @@ def prod(lock):
     a1_tot = []
     a2_tot = []
     a3_tot = []
-    stop_time = time.perf_counter() + 2
+    stop_time = time.perf_counter() + 1.11
+    counter = 1
     while True:
         if time.perf_counter() >= stop_time:
             gathered_data.append(a0_tot)
@@ -79,6 +80,9 @@ def prod(lock):
             gathered_data.append(a3_tot)
             break
         data = UDP.get_message(65507)
+
+        logging.info(f'consumer: msg nr{counter}')
+        counter += 1
         a0 = []
         a1 = []
         a2 = []
@@ -139,7 +143,7 @@ def consumer(lock):
                 """Signal verification"""
                 desired_Hz = '440'
                 start = verify_signals(mics, des_Hz=int(desired_Hz), width=20)
-                logging.info(f'worker: Signal verification determined state {start}')
+                logging.debug(f'worker: Signal verification determined state {start}')
 
                 """Signal processing"""
                 if start:
@@ -245,13 +249,14 @@ def cross_correlation(xn_1, xn_2, we, samplerate):
     sample_delay = np.argmax(r_12)
 
     # In case there is a peak and the wrong side of the correlation
-    if sample_delay > len(xn_1)/2:
-        sample_delay -= len(xn_1)
+    #if sample_delay > len(xn_1)/2:
+    #    sample_delay -= len(xn_1)
 
     # Calculate the time and distance
     time_delay = sample_delay/samplerate
     distance = time_delay*343
     return X1_k, X2_k, R_12_CC, R_12_NW, R_12, r_12, time_delay, distance
+
 
 
 if __name__ == "__main__":
@@ -263,8 +268,6 @@ if __name__ == "__main__":
     DC3 = DC_remover()
     pro = processing(samplerate)
     ace = ace(dist_short_mic=27.56*10**-2, max_distance=100)
-    #app = QApplication(sys.argv)
-    #GUI = GUI(max_dist=100, delay= 1000)
 
     # Turning on threads
     t1 = threading.Thread(target=prod, args=(lock,), daemon=True)
@@ -281,7 +284,7 @@ if __name__ == "__main__":
     gathered_data[1] = DC0.mean_value_filter(gathered_data[1])
     write("Live_data.wav", samplerate, np.array(gathered_data[0]).astype(np.int16))
 
-    if True:
+    if False:
         if True:
             # FFT raw file
             raw_file = gathered_data[0]
@@ -332,6 +335,9 @@ if __name__ == "__main__":
             # Cross correlation
             # Input signals
             X1_k, X2_k, R_12_CC, R_12_NW, R_12, r_12, time_delay, distance = cross_correlation(gathered_data[0], gathered_data[1], we_k, samplerate)
+            X1_k2, X2_k2, R_12_CC2, R_12_NW2, R_122, r_122, time_delay2, distance2 = cross_correlation(gathered_data[0], gathered_data[2], we_k, samplerate)
+            X1_k3, X2_k3, R_12_CC3, R_12_NW3, R_123, r_123, time_delay3, distance3 = cross_correlation(gathered_data[0], gathered_data[3], we_k, samplerate)
+            toad = [0, time_delay, time_delay2, time_delay3]
             plt.figure(4, figsize=(12,8))
             plt.subplot(2, 1, 1)
             plt.semilogy(np.abs(X1_k))
@@ -365,15 +371,19 @@ if __name__ == "__main__":
 
         plt.show()
 
-    """
-    v live data
-    v HPS
-    v fft
-    v weights
-    v fft with weights
-    v cross correlation in fft
-    v cross correlation in time
-    """
+    we_k, wk = spectral_weighing(gathered_data, 0.1, 0.4)
+    X1_k, X2_k, R_12_CC, R_12_NW, R_12, r_12, time_delay, distance = cross_correlation(gathered_data[0], gathered_data[1], we_k, samplerate)
+    X1_k2, X2_k2, R_12_CC2, R_12_NW2, R_122, r_122, time_delay2, distance2 = cross_correlation(gathered_data[0], gathered_data[2], we_k, samplerate)
+    X1_k3, X2_k3, R_12_CC3, R_12_NW3, R_123, r_123, time_delay3, distance3 = cross_correlation(gathered_data[0], gathered_data[3], we_k, samplerate)
+    toad = [0, time_delay, time_delay2, time_delay3]
+    #app = QApplication(sys.argv)
+    #window = GUI()
+    #GUI = GUI(max_dist=100, delay= 1000)
+    toad = ace.norm_values(toad)
+    boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule = ace.timestamp_2_cord(toad)
+    print((average_angle*180)/np.pi)
+    #window.show()
+    #app.exec()
 
     logging.info("Main: Program finished")
 

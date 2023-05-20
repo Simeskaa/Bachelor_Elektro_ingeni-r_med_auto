@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="Små fiks">
-      <change afterPath="$PROJECT_DIR$/main/Live_data.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/misc/Figurer/Figure_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/misc/Figurer/Figure_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/misc/Figurer/Figure_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/misc/Figurer/Figure_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/misc/Figurer/Figure_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/misc/Figurer/Figure_6.png" afterDir="false" />
+    <list default="true" id="2d30f280-72d1-49c0-9290-2213b35f16a4" name="Changes" comment="Printing results">
+      <change afterPath="$PROJECT_DIR$/misc/Figurer.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/DC_remover.py" beforeDir="false" afterPath="$PROJECT_DIR$/include/DC_remover.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/direction_and_distance_estimation.py" beforeDir="false" afterPath="$PROJECT_DIR$/include/direction_and_distance_estimation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/Live_data.wav" beforeDir="false" afterPath="$PROJECT_DIR$/main/Live_data.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/main.py" afterDir="false" />
     </list>
     <list id="ca46afb5-6e55-48db-a910-0c171d34208c" name="Changes by dawid" comment="Changes by dawid" />
@@ -66,7 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -249,13 +242,6 @@
       <workItem from="1682064393063" duration="24715000" />
       <workItem from="1682150661440" duration="4129000" />
       <workItem from="1682330908482" duration="3247000" />
-    </task>
-    <task id="LOCAL-00002" summary="adda lyd filer">
-      <created>1676045131965</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1676045131965</updated>
     </task>
     <task id="LOCAL-00003" summary="Changes by dawid">
       <created>1676473279219</created>
@@ -593,7 +579,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683881326181</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Printing results">
+      <created>1684172338757</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1684172338758</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -624,7 +617,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="forsetta testing av improved vinkel" />
     <MESSAGE value="forsatte på retning og avstand estimator" />
     <MESSAGE value="fekk ein fungerande retnings estimator mellom 45 og 90 grade i kver kvadrant :)" />
     <MESSAGE value="Fungerende retnings estimering" />
@@ -649,7 +641,8 @@
     <MESSAGE value="Commit before merging" />
     <MESSAGE value="Code that reads data from FPGA with 2 threads" />
     <MESSAGE value="Refactoring names" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring names" />
+    <MESSAGE value="Printing results" />
+    <option name="LAST_COMMIT_MESSAGE" value="Printing results" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Bachelor_Elektro_ingenior_med_auto$dynamisk_test_1.coverage" NAME="dynamisk_test_1 Coverage Results" MODIFIED="1679915229882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
