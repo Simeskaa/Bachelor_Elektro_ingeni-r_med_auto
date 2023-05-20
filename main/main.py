@@ -371,19 +371,27 @@ if __name__ == "__main__":
 
         plt.show()
 
+    Yk1, Yk2, Yk3, Yk4, peak_location, frequency = hps_local(gathered_data[0], samplerate)
+    Yk12, Yk22, Yk32, Yk42, peak_location2, frequency2 = hps_local(gathered_data[1], samplerate)
+    Yk13, Yk23, Yk33, Yk43, peak_location3, frequency3 = hps_local(gathered_data[2], samplerate)
+    Yk14, Yk24, Yk34, Yk44, peak_location4, frequency4 = hps_local(gathered_data[3], samplerate)
+
+    freqs = [round(frequency, 2), round(frequency2,2), round(frequency3, 2), round(frequency4, 2)]
     we_k, wk = spectral_weighing(gathered_data, 0.1, 0.4)
     X1_k, X2_k, R_12_CC, R_12_NW, R_12, r_12, time_delay, distance = cross_correlation(gathered_data[0], gathered_data[1], we_k, samplerate)
     X1_k2, X2_k2, R_12_CC2, R_12_NW2, R_122, r_122, time_delay2, distance2 = cross_correlation(gathered_data[0], gathered_data[2], we_k, samplerate)
     X1_k3, X2_k3, R_12_CC3, R_12_NW3, R_123, r_123, time_delay3, distance3 = cross_correlation(gathered_data[0], gathered_data[3], we_k, samplerate)
-    toad = [0, time_delay, time_delay2, time_delay3]
-    #app = QApplication(sys.argv)
-    #window = GUI()
-    #GUI = GUI(max_dist=100, delay= 1000)
+    toad = [0.0, time_delay, time_delay2, time_delay3]
+    print(f'Frequencies    : {freqs}\n'
+          f'Toad values    : {toad}\n'
+          f'Estimated angle: {ace.angle2boat}')
+    app = QApplication(sys.argv)
+    GUI = GUI(max_dist=100)
     toad = ace.norm_values(toad)
-    boat_coords_x, boat_coords_y, dist, average_angle, angle_overrule = ace.timestamp_2_cord(toad)
-    print((average_angle*180)/np.pi)
-    #window.show()
-    #app.exec()
+    boat_coords_x, boat_coords_y, angle_overrule = ace.timestamp_2_cord(toad)
+    GUI.update_GUI(x=boat_coords_x, y=boat_coords_y, hz="440", angle_overrule=angle_overrule)
+    GUI.show()
+    app.exec()
 
     logging.info("Main: Program finished")
 
